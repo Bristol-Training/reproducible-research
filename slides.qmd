@@ -1,0 +1,111 @@
+---
+title: "Course Title"
+subtitle: "Course slides"
+format: revealjs
+execute:
+  echo: true
+  eval: false
+  warning: false
+  message: false
+---
+
+## Today's mission {.center}
+
+::: {.big .center}
+One big statement<br>about what we'll<br>achieve today.
+:::
+
+::: notes
+Speaker notes go in a `notes` block. Press S during the presentation to see them.
+:::
+
+## How today works
+
+:::: {.columns}
+::: {.column width="50%"}
+::: {.big}
+We code.<br>You code.
+:::
+:::
+::: {.column width="50%"}
+- Type along in **your own script**: don't just watch
+- Errors are normal. Read them out loud!
+- Stuck? Raise your hand
+- The **notes** have everything in detail, plus an exercise for each section
+:::
+::::
+
+## The journey
+
+::: {.flow}
+[First section]{.step} [→]{.arrow} [Second section]{.step}
+:::
+
+# [01]{.section-number} First section {.section-divider background-color="var(--jgi-red)"}
+
+[What question does this section answer?]{.section-question}
+
+## A first example
+
+```{r}
+#| eval: true
+heights <- c(1.62, 1.75, 1.80, 1.68)
+mean(heights)
+```
+
+::: notes
+Live code this in the console, then move it into a script.
+:::
+
+## Key ideas
+
+::: {.cards}
+::: {.card}
+**Idea one**
+A short explanation
+:::
+::: {.card}
+**Idea two**
+A short explanation
+:::
+:::
+
+## Your turn ✍️
+
+::: {.your-turn}
+**Exercise 1** in the notes
+
+::: {.medium}
+Calculate the median of `heights`.
+:::
+
+::: {.muted}
+Answers are in the notes. Try it yourself first!
+:::
+:::
+
+# [02]{.section-number} Second section {.section-divider background-color="var(--jgi-red)"}
+
+[What question does this section answer?]{.section-question}
+
+## Do / don't
+
+::: {.good}
+✔ Something to do
+:::
+
+::: {.bad}
+✘ Something to avoid
+:::
+
+## Your turn ✍️
+
+::: {.your-turn}
+**Exercise 2** in the notes
+:::
+
+## Thank you {.center}
+
+::: {.big .center}
+Questions?
+:::

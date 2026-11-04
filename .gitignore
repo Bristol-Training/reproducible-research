@@ -1,0 +1,17 @@
+# Rendered output
+_site/
+
+# macOS
+.DS_Store
+
+# R / RStudio
+.Rhistory
+.RData
+.Rproj.user/
+
+# Quarto build leftovers
+/.quarto/
+*_files/
+**/*.quarto_ipynb
+
+/.luarc.json
