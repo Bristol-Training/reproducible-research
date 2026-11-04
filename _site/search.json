@@ -1,0 +1,163 @@
+[
+  {
+    "objectID": "instructor.html",
+    "href": "instructor.html",
+    "title": "Instructor notes",
+    "section": "",
+    "text": "Delivery model: live-code while attendees follow along in their own scripts. Use the slides to introduce each section, then switch to the editor.\nSuggested timings:\n\n\n\nSection\nTopic\nApprox. time\n\n\n\n\n1\nFirst section\n30 min\n\n\n2\nSecond section\n30 min\n\n\n\nLeave about 10 minutes per section for the exercise.\n\n\nAsk attendees to install the software before the session, as it can take a while on a slow connection."
+  },
+  {
+    "objectID": "instructor.html#workspace-setup",
+    "href": "instructor.html#workspace-setup",
+    "title": "Instructor notes",
+    "section": "",
+    "text": "Ask attendees to install the software before the session, as it can take a while on a slow connection."
+  },
+  {
+    "objectID": "instructor.html#a-first-example",
+    "href": "instructor.html#a-first-example",
+    "title": "Instructor notes",
+    "section": "1.1 A first example",
+    "text": "1.1 A first example\nLive code: type the vector in the console first, then move it into a script.\nPitfalls: people often forget the c()."
+  },
+  {
+    "objectID": "notes.html",
+    "href": "notes.html",
+    "title": "Course notes",
+    "section": "",
+    "text": "Welcome to this course! Replace this paragraph with a short description of what the course covers and who it is for.\nBy the end of this course you will:\n\nLearning outcome one.\nLearning outcome two.\nLearning outcome three.\n\n\n\nHow to read this document\n\nSmall snippets of code are shown in a grey box like this:\ncat(\"Hello!\")\nWhen the code is run, its output is shown below it, marked with a vertical red line:\n\ncat(\"Hello!\")\n\nHello!\n\n\nLarger pieces of code are shown as scripts with a filename:\n\n\nscript.R\n\nname &lt;- \"Jean Golding\"\ncat(\"Hello,\", name, \"!\")\n\nCommands to run in a terminal look like this:\n\n\nTerminal/Command Prompt\n\nRscript script.R\n\nAt the end of each section there is an exercise. Exercises are shown in blue boxes, followed by a yellow box that contains the answer. Try each exercise yourself before looking at the answer.\n\n\n\n\n\n\nNoteExercise\n\n\n\nThis is an exercise. Click the box below to see the answer.\n\n\n\n\n\n\n\n\nCautionAnswer (click to open)\n\n\n\n\n\nThis is the answer.\n\n\n\nImportant points are highlighted in green boxes like this one:\n\n\n\n\n\n\nTipKey points\n\n\n\nThese are important concepts and technical notes.\n\n\n\n\n\nPlease follow our installation instructions before the course."
+  },
+  {
+    "objectID": "notes.html#workspace-setup",
+    "href": "notes.html#workspace-setup",
+    "title": "Course notes",
+    "section": "",
+    "text": "Please follow our installation instructions before the course."
+  },
+  {
+    "objectID": "notes.html#a-first-example",
+    "href": "notes.html#a-first-example",
+    "title": "Course notes",
+    "section": "1.1 A first example",
+    "text": "1.1 A first example\nCode chunks are run when the notes are rendered, and their output appears underneath:\n\nheights &lt;- c(1.62, 1.75, 1.80, 1.68)\nmean(heights)\n\n[1] 1.7125"
+  },
+  {
+    "objectID": "notes.html#plots",
+    "href": "notes.html#plots",
+    "title": "Course notes",
+    "section": "1.2 Plots",
+    "text": "1.2 Plots\nFigures produced by code are embedded in the page:\n\nhist(\n  faithful$eruptions,\n  main = \"Old Faithful eruptions\",\n  xlab = \"Duration (minutes)\"\n)"
+  },
+  {
+    "objectID": "notes.html#deliberate-errors",
+    "href": "notes.html#deliberate-errors",
+    "title": "Course notes",
+    "section": "1.3 Deliberate errors",
+    "text": "1.3 Deliberate errors\nErrors are shown in the notes rather than stopping the render. Mark chunks that fail on purpose with #| purl: false, so a script extracted with knitr::purl() still runs from top to bottom:\n\nmean(heights_typo)\n\nError:\n! object 'heights_typo' not found"
+  },
+  {
+    "objectID": "notes.html#exercise",
+    "href": "notes.html#exercise",
+    "title": "Course notes",
+    "section": "Exercise",
+    "text": "Exercise\n\n\n\n\n\n\nNoteExercise\n\n\n\nCalculate the median of heights.\n\n\n\n\n\n\n\n\nCautionAnswer\n\n\n\n\n\n\nmedian(heights)\n\n[1] 1.715\n\n\n\n\n\n\n\n\n\n\n\nTipKey points\n\n\n\n\nKeep key points short.\nOne box per section."
+  },
+  {
+    "objectID": "notes.html#exercise-1",
+    "href": "notes.html#exercise-1",
+    "title": "Course notes",
+    "section": "Exercise",
+    "text": "Exercise\n\n\n\n\n\n\nNoteExercise\n\n\n\nAn exercise for the second section.\n\n\n\n\n\n\n\n\nCautionAnswer\n\n\n\n\n\nThe answer."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Reproducible Reseach",
+    "section": "",
+    "text": "Welcome to this course! Replace this paragraph with a short description of what the course covers and who it is for.\n\n\n\n\nExperience using an IDE for coding\nFamiliar with working in the terminal / CLI\n\nPlease follow our installation instructions before the course.\n\n\n\nBy the end of this course, you will:\n\nSetup project folders and data storage following best practices.\nUse R or Python environments for reproducibility.\nBuild reproducible reports in Quarto.\n\n\n\n\n\n\n\n\nNotes\nSlides\n\n\n\n\nInstructor notes\nRelated courses"
+  },
+  {
+    "objectID": "index.html#about-this-course",
+    "href": "index.html#about-this-course",
+    "title": "Reproducible Reseach",
+    "section": "",
+    "text": "Welcome to this course! Replace this paragraph with a short description of what the course covers and who it is for."
+  },
+  {
+    "objectID": "index.html#prerequisites",
+    "href": "index.html#prerequisites",
+    "title": "Reproducible Reseach",
+    "section": "",
+    "text": "Experience using an IDE for coding\nFamiliar with working in the terminal / CLI\n\nPlease follow our installation instructions before the course."
+  },
+  {
+    "objectID": "index.html#learning-objectives",
+    "href": "index.html#learning-objectives",
+    "title": "Reproducible Reseach",
+    "section": "",
+    "text": "By the end of this course, you will:\n\nSetup project folders and data storage following best practices.\nUse R or Python environments for reproducibility.\nBuild reproducible reports in Quarto."
+  },
+  {
+    "objectID": "slides.html#todays-mission",
+    "href": "slides.html#todays-mission",
+    "title": "Course Title",
+    "section": "Today’s mission",
+    "text": "Today’s mission\n\nOne big statementabout what we’llachieve today.\n\n\nSpeaker notes go in a notes block. Press S during the presentation to see them."
+  },
+  {
+    "objectID": "slides.html#how-today-works",
+    "href": "slides.html#how-today-works",
+    "title": "Course Title",
+    "section": "How today works",
+    "text": "How today works\n\n\n\nWe code.You code.\n\n\n\nType along in your own script: don’t just watch\nErrors are normal. Read them out loud!\nStuck? Raise your hand\nThe notes have everything in detail, plus an exercise for each section"
+  },
+  {
+    "objectID": "slides.html#the-journey",
+    "href": "slides.html#the-journey",
+    "title": "Course Title",
+    "section": "The journey",
+    "text": "The journey\n\nFirst section → Second section"
+  },
+  {
+    "objectID": "slides.html#a-first-example",
+    "href": "slides.html#a-first-example",
+    "title": "Course Title",
+    "section": "A first example",
+    "text": "A first example\n\nheights &lt;- c(1.62, 1.75, 1.80, 1.68)\nmean(heights)\n\n[1] 1.7125\n\n\n\nLive code this in the console, then move it into a script."
+  },
+  {
+    "objectID": "slides.html#key-ideas",
+    "href": "slides.html#key-ideas",
+    "title": "Course Title",
+    "section": "Key ideas",
+    "text": "Key ideas\n\n\nIdea one A short explanation\n\n\nIdea two A short explanation"
+  },
+  {
+    "objectID": "slides.html#your-turn",
+    "href": "slides.html#your-turn",
+    "title": "Course Title",
+    "section": "Your turn ✍️",
+    "text": "Your turn ✍️\n\nExercise 1 in the notes\n\nCalculate the median of heights.\n\n\nAnswers are in the notes. Try it yourself first!"
+  },
+  {
+    "objectID": "slides.html#do-dont",
+    "href": "slides.html#do-dont",
+    "title": "Course Title",
+    "section": "Do / don’t",
+    "text": "Do / don’t\n\n✔ Something to do\n\n\n✘ Something to avoid"
+  },
+  {
+    "objectID": "slides.html#your-turn-1",
+    "href": "slides.html#your-turn-1",
+    "title": "Course Title",
+    "section": "Your turn ✍️",
+    "text": "Your turn ✍️\n\nExercise 2 in the notes"
+  },
+  {
+    "objectID": "slides.html#thank-you",
+    "href": "slides.html#thank-you",
+    "title": "Course Title",
+    "section": "Thank you",
+    "text": "Thank you\n\nQuestions?"
+  }
+]
