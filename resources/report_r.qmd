@@ -1,0 +1,28 @@
+---
+title: "Penguin report"
+format: html
+---
+
+## Data
+
+```{r}
+clean <- read.csv("data/processed/penguins_clean.csv")
+
+# keep one species: filter out Adelie and Chinstrap
+gentoo <- subset(clean, species == "Gentoo")
+```
+
+After removing incomplete rows, there are `{r} nrow(clean)` penguins in the data. `{r} nrow(gentoo)` of them are Gentoo penguins, which is the species we look at here.
+
+## Results
+
+The mean body mass of Gentoo penguins was `{r} round(mean(gentoo$body_mass))` g.
+
+```{r}
+aggregate(body_mass ~ sex, data = gentoo, FUN = mean)
+```
+
+```{r}
+#| fig-alt: "Boxplot of Gentoo body mass, for females and males"
+boxplot(body_mass ~ sex, data = gentoo, ylab = "Body mass (g)")
+```

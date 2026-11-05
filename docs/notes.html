@@ -8,7 +8,7 @@
 
 <meta name="author" content="Jean Golding Institute">
 
-<title>Course notes – Reproducible Reseach</title>
+<title>Course notes – Reproducible Research</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -83,9 +83,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9813aef3d329c8bfdef88dfcf22e1cb3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-9813aef3d329c8bfdef88dfcf22e1cb3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-9813aef3d329c8bfdef88dfcf22e1cb3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d59d288c37aec90f53216c8a216448d2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d59d288c37aec90f53216c8a216448d2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d59d288c37aec90f53216c8a216448d2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -129,7 +129,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <img src="./assets/UoB_RGB_24.png" alt="University of Bristol" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Reproducible Reseach</span>
+    <span class="navbar-title">Reproducible Research</span>
     </a>
   </div>
         <div class="quarto-navbar-tools tools-end">
@@ -143,7 +143,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
     <h2 id="toc-title">Contents</h2>
    
   <ul class="collapse">
@@ -151,16 +151,47 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#workspace-setup" id="toc-workspace-setup" class="nav-link" data-scroll-target="#workspace-setup">Workspace setup</a></li>
   </ul></li>
-  <li><a href="#first-section" id="toc-first-section" class="nav-link" data-scroll-target="#first-section"><span class="header-section-number">1</span> First section</a>
+  <li><a href="#project-structures" id="toc-project-structures" class="nav-link" data-scroll-target="#project-structures"><span class="header-section-number">1</span> Project Structures</a>
   <ul class="collapse">
-  <li><a href="#a-first-example" id="toc-a-first-example" class="nav-link" data-scroll-target="#a-first-example"><span class="header-section-number">1.1</span> A first example</a></li>
-  <li><a href="#plots" id="toc-plots" class="nav-link" data-scroll-target="#plots"><span class="header-section-number">1.2</span> Plots</a></li>
-  <li><a href="#deliberate-errors" id="toc-deliberate-errors" class="nav-link" data-scroll-target="#deliberate-errors"><span class="header-section-number">1.3</span> Deliberate errors</a></li>
+  <li><a href="#why-bother" id="toc-why-bother" class="nav-link" data-scroll-target="#why-bother"><span class="header-section-number">1.1</span> Why bother?</a></li>
+  <li><a href="#a-messy-example" id="toc-a-messy-example" class="nav-link" data-scroll-target="#a-messy-example"><span class="header-section-number">1.2</span> A Messy Example</a></li>
+  <li><a href="#a-clean-example" id="toc-a-clean-example" class="nav-link" data-scroll-target="#a-clean-example"><span class="header-section-number">1.3</span> A Clean Example</a></li>
   <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a></li>
   </ul></li>
-  <li><a href="#second-section" id="toc-second-section" class="nav-link" data-scroll-target="#second-section"><span class="header-section-number">2</span> Second section</a>
+  <li><a href="#documentation-quarto" id="toc-documentation-quarto" class="nav-link" data-scroll-target="#documentation-quarto"><span class="header-section-number">2</span> Documentation &amp; Quarto</a>
   <ul class="collapse">
+  <li><a href="#types-of-documentation" id="toc-types-of-documentation" class="nav-link" data-scroll-target="#types-of-documentation"><span class="header-section-number">2.1</span> Types of documentation</a></li>
+  <li><a href="#readme.md" id="toc-readme.md" class="nav-link" data-scroll-target="#readme.md"><span class="header-section-number">2.2</span> README.md</a></li>
+  <li><a href="#data-dictionary" id="toc-data-dictionary" class="nav-link" data-scroll-target="#data-dictionary"><span class="header-section-number">2.3</span> Data dictionary</a></li>
+  <li><a href="#what-is-quarto" id="toc-what-is-quarto" class="nav-link" data-scroll-target="#what-is-quarto"><span class="header-section-number">2.4</span> What is Quarto?</a></li>
+  <li><a href="#why-use-quarto-for-reproducible-research" id="toc-why-use-quarto-for-reproducible-research" class="nav-link" data-scroll-target="#why-use-quarto-for-reproducible-research"><span class="header-section-number">2.5</span> Why use Quarto for reproducible research?</a></li>
+  <li><a href="#weaving-text-and-analysis-together" id="toc-weaving-text-and-analysis-together" class="nav-link" data-scroll-target="#weaving-text-and-analysis-together"><span class="header-section-number">2.6</span> Weaving text and analysis together</a></li>
+  <li><a href="#when-the-data-changes" id="toc-when-the-data-changes" class="nav-link" data-scroll-target="#when-the-data-changes"><span class="header-section-number">2.7</span> When the data changes</a></li>
+  <li><a href="#rendering" id="toc-rendering" class="nav-link" data-scroll-target="#rendering"><span class="header-section-number">2.8</span> Rendering</a></li>
+  <li><a href="#what-else-can-quarto-do" id="toc-what-else-can-quarto-do" class="nav-link" data-scroll-target="#what-else-can-quarto-do"><span class="header-section-number">2.9</span> What else can Quarto do?</a></li>
+  <li><a href="#learn-more-about-quarto" id="toc-learn-more-about-quarto" class="nav-link" data-scroll-target="#learn-more-about-quarto"><span class="header-section-number">2.10</span> Learn more about Quarto</a></li>
   <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">Exercise</a></li>
+  </ul></li>
+  <li><a href="#virtual-environments" id="toc-virtual-environments" class="nav-link" data-scroll-target="#virtual-environments"><span class="header-section-number">3</span> Virtual Environments</a>
+  <ul class="collapse">
+  <li><a href="#why-do-we-need-environments" id="toc-why-do-we-need-environments" class="nav-link" data-scroll-target="#why-do-we-need-environments"><span class="header-section-number">3.1</span> Why do we need environments?</a></li>
+  <li><a href="#what-is-an-environment-and-how-does-it-work" id="toc-what-is-an-environment-and-how-does-it-work" class="nav-link" data-scroll-target="#what-is-an-environment-and-how-does-it-work"><span class="header-section-number">3.2</span> What is an environment, and how does it work?</a></li>
+  <li><a href="#send-your-project-to-someone-and-it-works" id="toc-send-your-project-to-someone-and-it-works" class="nav-link" data-scroll-target="#send-your-project-to-someone-and-it-works"><span class="header-section-number">3.3</span> Send your project to someone, and it works</a></li>
+  <li><a href="#what-environments-dont-cover" id="toc-what-environments-dont-cover" class="nav-link" data-scroll-target="#what-environments-dont-cover"><span class="header-section-number">3.4</span> What environments don’t cover</a></li>
+  <li><a href="#what-if-i-use-excel" id="toc-what-if-i-use-excel" class="nav-link" data-scroll-target="#what-if-i-use-excel"><span class="header-section-number">3.5</span> What if I use Excel?</a></li>
+  <li><a href="#uv-python" id="toc-uv-python" class="nav-link" data-scroll-target="#uv-python"><span class="header-section-number">3.6</span> uv (Python)</a></li>
+  <li><a href="#renv-r" id="toc-renv-r" class="nav-link" data-scroll-target="#renv-r"><span class="header-section-number">3.7</span> renv (R)</a></li>
+  <li><a href="#ide-vs-cli" id="toc-ide-vs-cli" class="nav-link" data-scroll-target="#ide-vs-cli"><span class="header-section-number">3.8</span> IDE Vs CLI</a></li>
+  <li><a href="#learn-more-about-environments" id="toc-learn-more-about-environments" class="nav-link" data-scroll-target="#learn-more-about-environments"><span class="header-section-number">3.9</span> Learn more about environments</a></li>
+  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise</a></li>
+  </ul></li>
+  <li><a href="#sharing-data-q-fair" id="toc-sharing-data-q-fair" class="nav-link" data-scroll-target="#sharing-data-q-fair"><span class="header-section-number">4</span> Sharing Data: Q-FAIR</a>
+  <ul class="collapse">
+  <li><a href="#q-fair-data-principles" id="toc-q-fair-data-principles" class="nav-link" data-scroll-target="#q-fair-data-principles"><span class="header-section-number">4.1</span> Q-FAIR data principles</a></li>
+  <li><a href="#why-it-matters" id="toc-why-it-matters" class="nav-link" data-scroll-target="#why-it-matters"><span class="header-section-number">4.2</span> Why it matters</a></li>
+  <li><a href="#four-things-to-do" id="toc-four-things-to-do" class="nav-link" data-scroll-target="#four-things-to-do"><span class="header-section-number">4.3</span> Four things to do</a></li>
+  <li><a href="#where-next" id="toc-where-next" class="nav-link" data-scroll-target="#where-next"><span class="header-section-number">4.4</span> Where next?</a></li>
+  <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3">Exercise</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -195,13 +226,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="introduction" class="level1 unnumbered">
 <h1 class="unnumbered">Introduction</h1>
-<p>Welcome to this course! Replace this paragraph with a short description of what the course covers and who it is for.</p>
-<p>By the end of this course you will:</p>
-<ul>
-<li>Learning outcome one.</li>
-<li>Learning outcome two.</li>
-<li>Learning outcome three.</li>
-</ul>
+<p>Welcome to this course! These notes are a <strong>reference</strong>: the main way through the course is the slides and live demos, and every exercise is on the slides too. Use the notes afterwards to revisit the detail, copy commands and check the answers.</p>
+<p>The course introduces practical habits that make your research easier to re-run, understand and share, whether you work in R, Python or spreadsheets.</p>
+<p>By the end of this course you will be able to:</p>
+<ol type="1">
+<li>Organise a project into raw data, processed data, code and outputs, and explain why raw data is never edited.</li>
+<li>Write a README and a data dictionary that help others understand and use your project.</li>
+<li>Explain why Quarto helps reproducibility, and build a report that updates when the data changes.</li>
+<li>Explain why environments matter, and record the software a project needs so it can be re-run on another computer.</li>
+<li>Check a dataset against the Q-FAIR principles, and know where to find out more about sharing data.</li>
+</ol>
 <details class="how-to-read">
 <summary>
 How to read this document
@@ -230,7 +264,7 @@ How to read this document
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> script.R</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>At the end of each section there is an exercise. Exercises are shown in blue boxes, followed by a yellow box that contains the answer. Try each exercise yourself before looking at the answer.</p>
+<p>At the end of each section there is an exercise, which is also shown on the slides. Here, exercises are shown in blue boxes, followed by a yellow box that contains the answer. Try each exercise yourself before looking at the answer.</p>
 <div id="exampleN" class="callout callout-style-default callout-note no-icon callout-titled" title="Exercise">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -277,49 +311,148 @@ How to read this document
 </details>
 <section id="workspace-setup" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="workspace-setup">Workspace setup</h2>
-<p><strong>Please follow our <a href="https://bristol-training.github.io/data-science-project-setup/">installation instructions</a></strong> before the course.</p>
-</section>
-</section>
-<section id="first-section" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> First section</h1>
-<p>Each section opens with the question it answers.</p>
-<section id="a-first-example" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="a-first-example"><span class="header-section-number">1.1</span> A first example</h2>
-<p>Code chunks are run when the notes are rendered, and their output appears underneath:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">1.62</span>, <span class="fl">1.75</span>, <span class="fl">1.80</span>, <span class="fl">1.68</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(heights)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.7125</code></pre>
+<p><strong>Please follow our <a href="https://bristol-training.github.io/data-science-project-setup/">installation instructions</a></strong> before the course. You will also need <a href="https://quarto.org">Quarto</a>, and either <a href="https://docs.astral.sh/uv/">uv</a> (Python) or the <code>renv</code> package (R). If you use Excel, you don’t need to install anything extra.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This course is for people who use <strong>R</strong>, <strong>Python</strong> or <strong>spreadsheets such as Excel</strong>. The ideas are the same for everyone, and the slides flag where Excel users do something different. Where the steps differ, you will see tabs: click the one that matches how you work. Commands for the terminal are shown as code, and you can run them in the terminal built in to your IDE or in a separate terminal window.</p>
 </div>
 </div>
 </section>
-<section id="plots" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="plots"><span class="header-section-number">1.2</span> Plots</h2>
-<p>Figures produced by code are embedded in the page:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  faithful<span class="sc">$</span>eruptions,</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"Old Faithful eruptions"</span>,</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"Duration (minutes)"</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="notes_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" alt="Histogram of eruption durations of the Old Faithful geyser" width="672"></p>
-</figure>
+</section>
+<section id="project-structures" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Project Structures</h1>
+<p><em>How should I organise a project so that I, and others, can find things and re-run them?</em></p>
+<section id="why-bother" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="why-bother"><span class="header-section-number">1.1</span> Why bother?</h2>
+<p>A project that has grown organically tends to look like a folder full of files called <code>data.csv</code>, <code>data_final.csv</code>, <code>analysis2.R</code> and <code>analysis_NEW.py</code>. This causes three problems:</p>
+<ul>
+<li><strong>Hard to maintain:</strong> one change near the start breaks everything downstream.</li>
+<li><strong>Hard to run somewhere else:</strong> a new laptop, an HPC cluster or a colleague’s machine, and the code breaks.</li>
+<li><strong>Hard to understand:</strong> after a holiday you can’t remember which file to run first.</li>
+</ul>
+<p>Making a project more reproducible helps you first and others second:</p>
+<ul>
+<li><strong>Saving your future self:</strong> write code as if someone else will use it, because in six months that someone is you.</li>
+<li><strong>Speed:</strong> a project set up as a pipeline can be re-run quickly when the data or a reviewer’s comment changes.</li>
+<li><strong>Confidence:</strong> you understand how the work fits together, and where it might fail.</li>
+<li><strong>Publication and jobs:</strong> sharing code and data is an increasingly common requirement, and tidy work is easy to trust.</li>
+</ul>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="You don't need everything">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
 </div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>You don’t need everything
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>How much structure a project needs is a judgement call. A small one-off analysis may not need all of this. Aim for what is useful, not what is perfect.</p>
 </div>
 </div>
 </section>
-<section id="deliberate-errors" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="deliberate-errors"><span class="header-section-number">1.3</span> Deliberate errors</h2>
-<p>Errors are shown in the notes rather than stopping the render. Mark chunks that fail on purpose with <code>#| purl: false</code>, so a script extracted with <code>knitr::purl()</code> still runs from top to bottom:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(heights_typo)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error:
-! object 'heights_typo' not found</code></pre>
+<section id="a-messy-example" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="a-messy-example"><span class="header-section-number">1.2</span> A Messy Example</h2>
+<pre><code>my_project/
+├── data.csv
+├── data_final.csv
+├── data_final_v2.csv
+├── explore.ipynb
+├── clean_data.py
+├── analysis.py
+├── analysis_OLD.py
+├── fig1.png
+└── results.xlsx</code></pre>
+<p>Questions to ask of this layout:</p>
+<ul>
+<li>Which <code>data</code> file is the original?</li>
+<li>Which script should be run first?</li>
+<li>Which figure came from which version of the analysis?</li>
+</ul>
+<p>This happens naturally. You start by exploring a dataset in a notebook, a script or an Excel sheet. The analysis grows, then a second analysis is added, and it becomes hard to see how you got from the raw data to the results.</p>
+</section>
+<section id="a-clean-example" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="a-clean-example"><span class="header-section-number">1.3</span> A Clean Example</h2>
+<pre><code>my_project/
+├── README.md
+├── data/
+│   ├── raw/          &lt;- original data, never edited
+│   └── processed/    &lt;- cleaned data made by your code
+├── code/
+│   ├── 00_get_data.R
+│   └── 01_clean_data.R
+├── report.qmd
+└── outputs/
+    ├── figures/
+    └── tables/</code></pre>
+<p>The key ideas are:</p>
+<ol type="1">
+<li><strong>A README</strong> at the top of the project says what it is and how to use it (see the next section).</li>
+<li><strong>Raw data is read-only.</strong> Never overwrite your original data file. Save the cleaned version somewhere else.</li>
+<li><strong>Code is a pipeline.</strong> Each step reads the output of the previous step: <code>raw data -&gt; clean -&gt; analysis -&gt; outputs</code>. Numbering the files shows the order to run them in.</li>
+<li><strong>Outputs can be thrown away.</strong> Anything in <code>outputs/</code> and <code>data/processed/</code> should be re-creatable by running the code.</li>
+</ol>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Excel / no code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>code/01_clean_data.R</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8" data-filename="code/01_clean_data.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>raw <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/raw/penguins.csv"</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># drop any rows with missing values</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>clean <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(raw)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(clean, <span class="st">"data/processed/penguins_clean.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>code/01_clean_data.py</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-filename="code/01_clean_data.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>raw <span class="op">=</span> pd.read_csv(<span class="st">"data/raw/penguins.csv"</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># drop any rows with missing values</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>clean <span class="op">=</span> raw.dropna()</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>clean.to_csv(<span class="st">"data/processed/penguins_clean.csv"</span>, index<span class="op">=</span><span class="va">False</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>The same structure works for spreadsheets:</p>
+<ul>
+<li>Keep the original file in a <code>data/raw</code> folder and <strong>never edit it</strong>. Open it, then use <em>Save As</em> to put a working copy in <code>data/processed</code>.</li>
+<li>Use one sheet per step, in order, and name them (<code>1_raw</code>, <code>2_cleaned</code>, <code>3_results</code>) rather than leaving <code>Sheet1</code>.</li>
+<li>Write down in the README what you did to the data at each step, in enough detail that someone else could repeat it. Avoid manual changes you can’t describe.</li>
+<li>Put formulas in cells rather than pasting values, so the calculation is visible.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Tip: where to start a new project">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Tip: where to start a new project
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Some IDEs can create a new project with a sensible set of folders for you. Positron, RStudio and VS Code can all start a new project from a menu, and Python tools such as <code>uv init</code> create the starting files from the terminal. Use whatever is quickest, then add the <code>data/</code> and <code>outputs/</code> folders.</p>
 </div>
 </div>
 </section>
@@ -335,27 +468,45 @@ How to read this document
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Calculate the median of <code>heights</code>.</p>
+<p>Below is the file list for a messy project.</p>
+<pre><code>final.xlsx    final_v2.xlsx    notes.txt    plot.png    clean.R    model.R    penguins_raw.csv    penguins_edited.csv</code></pre>
+<ol type="1">
+<li>Sketch a clean folder layout for these files.</li>
+<li>Which file would you mark as read-only, and why?</li>
+<li>In what order would you run the scripts?</li>
+</ol>
 </div>
 </div>
-<div id="answer1" class="callout callout-style-default callout-caution no-icon callout-titled" title="Answer">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div id="answer1" class="callout callout-style-default callout-caution no-icon callout-titled" title="Answer (click to open)">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Caution</span>Answer
+<span class="screen-reader-only">Caution</span>Answer (click to open)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(heights)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.715</code></pre>
-</div>
-</div>
+<p>One possible layout:</p>
+<pre><code>project/
+├── README.md              &lt;- includes the notes from notes.txt
+├── data/
+│   ├── raw/penguins_raw.csv
+│   └── processed/penguins_edited.csv
+├── code/
+│   ├── 01_clean.R
+│   └── 02_model.R
+└── outputs/
+    ├── plot.png
+    └── final.xlsx</code></pre>
+<ol type="1">
+<li>See the layout above.</li>
+<li><code>penguins_raw.csv</code> is the original data and should be read-only, as everything else can be remade from it. <code>penguins_edited.csv</code> should be the output of <code>clean.R</code> rather than something edited by hand.</li>
+<li><code>clean.R</code> first, then <code>model.R</code>, because the model needs the cleaned data.</li>
+</ol>
+<p>Also, <code>final.xlsx</code> and <code>final_v2.xlsx</code> should be one file, with the history left to version control or the README. Delete or archive the old one.</p>
 </div>
 </div>
 </div>
@@ -370,16 +521,345 @@ How to read this document
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Keep key points short.</li>
-<li>One box per section.</li>
+<li>Separate raw data, processed data, code and outputs.</li>
+<li>Never overwrite the raw data.</li>
+<li>Think of the analysis as a pipeline that can be re-run from start to finish.</li>
+<li>This applies equally to scripts, notebooks and spreadsheets.</li>
 </ul>
 </div>
 </div>
 </section>
 </section>
-<section id="second-section" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Second section</h1>
-<p>More content goes here.</p>
+<section id="documentation-quarto" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Documentation &amp; Quarto</h1>
+<p><em>How do I explain my project, and report on it, so others (and future me) can use it?</em></p>
+<section id="types-of-documentation" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="types-of-documentation"><span class="header-section-number">2.1</span> Types of documentation</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Where</th>
+<th>Why</th>
+<th>Audience</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Comments in code</td>
+<td>Scripts, notebooks, function docstrings</td>
+<td>Explain or justify what isn’t obvious from the code</td>
+<td>Other researchers and developers</td>
+</tr>
+<tr class="even">
+<td>Files in the repository</td>
+<td><code>README.md</code></td>
+<td>Describe how to use the project</td>
+<td>Developers, and people running the code</td>
+</tr>
+<tr class="odd">
+<td>Data dictionary</td>
+<td>A CSV next to the data</td>
+<td>Explain what each column means, its units and missing values</td>
+<td>Anyone using the data</td>
+</tr>
+<tr class="even">
+<td>External documentation</td>
+<td>A website or report</td>
+<td>Describe what you are doing in less technical terms, with quickstart guides</td>
+<td>Users and less technical readers</td>
+</tr>
+</tbody>
+</table>
+<p>A good comment says <em>why</em>, not <em>what</em>. <code># remove outliers &gt; 3 SD, as agreed with the lab</code> is more useful than <code># remove outliers</code>.</p>
+</section>
+<section id="readme.md" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="readme.md"><span class="header-section-number">2.2</span> README.md</h2>
+<p>A README is a plain text file in the top folder of the project. It is the first thing someone reads, and it helps you in six months’ time as much as it helps anyone else. It should contain:</p>
+<ul>
+<li><strong>Summary:</strong> what the project is for, and its status (for example <em>ongoing</em> or <em>complete</em>).</li>
+<li><strong>Quickstart:</strong> the most important files, and in what order to run them.</li>
+<li><strong>Setup:</strong> what needs to be installed before running the code.</li>
+<li><strong>Contents:</strong> a description of what each folder holds.</li>
+</ul>
+<p>A README is written in <em>Markdown</em>, which is a simple way of marking up text:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Penguins analysis</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>Body measurements of penguins on three islands. **Status:** ongoing.</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Quickstart</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Put the raw data in <span class="in">`data/raw/`</span>.</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Run <span class="in">`code/01_clean_data`</span>, then render <span class="in">`report.qmd`</span>.</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## Setup</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>Requires R 4.5 or later (see "Virtual Environments").</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## Contents</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`data/raw/`</span> original data (read-only)</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`data/processed/`</span> cleaned data, and its data dictionary</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`code/`</span> analysis scripts</span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`outputs/`</span> figures and tables</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You can use a README in any project, whether or not you write code. For a spreadsheet project it is the place to record what each sheet does and how the data was collected.</p>
+</section>
+<section id="data-dictionary" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="data-dictionary"><span class="header-section-number">2.3</span> Data dictionary</h2>
+<p>A dataset on its own doesn’t explain itself. What does <code>bill_dep</code> mean? Is <code>body_mass</code> in grams or kilograms? Does a blank mean it wasn’t measured? Write this down in a <strong>data dictionary</strong>, a small table with one row per column:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>column</th>
+<th>type</th>
+<th>description</th>
+<th>units / values</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>species</code></td>
+<td>text</td>
+<td>Penguin species</td>
+<td><code>Adelie</code>, <code>Chinstrap</code>, <code>Gentoo</code></td>
+</tr>
+<tr class="even">
+<td><code>island</code></td>
+<td>text</td>
+<td>Island where the penguin was observed</td>
+<td><code>Biscoe</code>, <code>Dream</code>, <code>Torgersen</code></td>
+</tr>
+<tr class="odd">
+<td><code>bill_len</code></td>
+<td>number</td>
+<td>Bill length</td>
+<td>mm</td>
+</tr>
+<tr class="even">
+<td><code>bill_dep</code></td>
+<td>number</td>
+<td>Bill depth</td>
+<td>mm</td>
+</tr>
+<tr class="odd">
+<td><code>flipper_len</code></td>
+<td>number</td>
+<td>Flipper length</td>
+<td>mm</td>
+</tr>
+<tr class="even">
+<td><code>body_mass</code></td>
+<td>number</td>
+<td>Body mass</td>
+<td>grams</td>
+</tr>
+<tr class="odd">
+<td><code>sex</code></td>
+<td>text</td>
+<td>Sex of the penguin</td>
+<td><code>female</code>, <code>male</code>; blank if not recorded</td>
+</tr>
+<tr class="even">
+<td><code>year</code></td>
+<td>number</td>
+<td>Year of the study</td>
+<td>2007, 2008 or 2009</td>
+</tr>
+</tbody>
+</table>
+<p>Save it next to the data (for example <code>data/processed/penguins_clean_dictionary.csv</code>) and refer to it from your README. You can also include a short description of the whole dataset: who collected it, when, how, and any known problems. A dictionary is one of the most valuable things you can write, because only the person who knows the data can.</p>
+<p>To make one, copy your column names into a spreadsheet or CSV file, then add columns for the type, a description, and the units or values. Fill them in by hand, and save the file as a CSV next to the data.</p>
+</section>
+<section id="what-is-quarto" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="what-is-quarto"><span class="header-section-number">2.4</span> What is Quarto?</h2>
+<p><a href="https://quarto.org">Quarto</a> is a free, open-source tool for writing documents that combine <strong>text</strong> and <strong>code</strong>. You write one file (<code>report.qmd</code>). When you <em>render</em> it, the code runs, and the results (numbers, tables and figures) are put into a finished document, such as an HTML page, a PDF or a Word file.</p>
+<p>Quarto works with R, Python and other languages, from the IDE you already use. The slides, the notes and the website for this course are all made with Quarto.</p>
+</section>
+<section id="why-use-quarto-for-reproducible-research" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="why-use-quarto-for-reproducible-research"><span class="header-section-number">2.5</span> Why use Quarto for reproducible research?</h2>
+<p>A report is often the last step of an analysis, and the easiest place to introduce mistakes: a number is copied from the wrong run, or a figure is from an older version of the data. Quarto removes that step.</p>
+<ul>
+<li><strong>No copy and paste.</strong> Numbers, tables and figures come straight from the code, so they can’t drift out of sync with the analysis.</li>
+<li><strong>Always up to date.</strong> If the data changes, render again and the whole report updates.</li>
+<li><strong>One source, many outputs.</strong> The same file can make HTML, PDF, Word, slides and websites.</li>
+<li><strong>Plain text.</strong> A <code>.qmd</code> file is easy to share, compare and keep in version control, in any editor.</li>
+</ul>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Without Quarto</th>
+<th>With Quarto</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Run the analysis</td>
+<td>Write the report once, with the code in it</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Copy numbers and plots into a Word document</td>
+<td>Render</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>The data changes</td>
+<td>The data changes</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Repeat by hand, and hope you caught every number</td>
+<td>Render again</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="weaving-text-and-analysis-together" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="weaving-text-and-analysis-together"><span class="header-section-number">2.6</span> Weaving text and analysis together</h2>
+<p>A Quarto file has four ingredients:</p>
+<ol type="1">
+<li>A <strong>header</strong> with the title and the output format (between two lines of <code>---</code>).</li>
+<li><strong>Text</strong>, written in Markdown: headings, paragraphs, lists and links.</li>
+<li><strong>Code chunks</strong>: R or Python code in a fenced block. When you render, the code runs and its output (a table, a plot) appears underneath.</li>
+<li><strong>Inline code</strong>: a result inside a sentence, which is recalculated every time you render.</li>
+</ol>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Excel / no code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>report.qmd</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-filename="report.qmd"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Penguin report"</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>clean <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/processed/penguins_clean.csv"</span>)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="co"># keep one species: filter out Adelie and Chinstrap</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>gentoo <span class="ot">&lt;-</span> <span class="fu">subset</span>(clean, species <span class="sc">==</span> <span class="st">"Gentoo"</span>)</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>After removing incomplete rows, there are <span class="in">`{r} nrow(clean)`</span> penguins in the data. <span class="in">`{r} nrow(gentoo)`</span> of them are Gentoo penguins.</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Results</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>The mean body mass of Gentoo penguins was <span class="in">`{r} round(mean(gentoo$body_mass))`</span> g.</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(body_mass <span class="sc">~</span> sex, <span class="at">data =</span> gentoo, <span class="at">ylab =</span> <span class="st">"Body mass (g)"</span>)</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>report.qmd</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14" data-filename="report.qmd"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Penguin report"</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>clean <span class="op">=</span> pd.read_csv(<span class="st">"data/processed/penguins_clean.csv"</span>)</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="co"># keep one species: filter out Adelie and Chinstrap</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>gentoo <span class="op">=</span> clean[clean[<span class="st">"species"</span>] <span class="op">==</span> <span class="st">"Gentoo"</span>]</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>After removing incomplete rows, there are <span class="in">`{python} len(clean)`</span> penguins in the data. <span class="in">`{python} len(gentoo)`</span> of them are Gentoo penguins.</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Results</span></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>The mean body mass of Gentoo penguins was <span class="in">`{python} round(gentoo["body_mass"].mean())`</span> g.</span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>gentoo.boxplot(column<span class="op">=</span><span class="st">"body_mass"</span>, by<span class="op">=</span><span class="st">"sex"</span>)</span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>(The plot needs the <code>matplotlib</code> package.)</p>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p>Quarto can be used for the written part of a project even if your analysis is in a spreadsheet. Save your final table as a CSV, then include it in the report:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>report.qmd</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-filename="report.qmd"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Penguin report"</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>Results from the spreadsheet analysis:</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">read.csv</span>(<span class="st">"outputs/tables/results.csv"</span>))</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>This still needs R installed. If you’d rather not use code at all, a README and clearly labelled sheets are the best documentation you can write.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="when-the-data-changes" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="when-the-data-changes"><span class="header-section-number">2.7</span> When the data changes</h2>
+<p>Because the numbers in the report come from code, a change in the data flows through to the report:</p>
+<pre><code>new data  -&gt;  re-run the cleaning script  -&gt;  render the report  -&gt;  updated report</code></pre>
+<p>Every number, table and figure is recalculated, and sentences with inline code update too. There is nothing to copy and paste. This is the main reason to use Quarto for reproducible research: change the data (or the code), not the report.</p>
+</section>
+<section id="rendering" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="rendering"><span class="header-section-number">2.8</span> Rendering</h2>
+<p>Render the report from the terminal, or with the <em>Render</em> button in your IDE:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal/Command Prompt</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render report.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>The result, <code>report.html</code>, appears next to <code>report.qmd</code>.</p>
+</section>
+<section id="what-else-can-quarto-do" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="what-else-can-quarto-do"><span class="header-section-number">2.9</span> What else can Quarto do?</h2>
+<ul>
+<li><strong>Reports</strong> in HTML, PDF and Word, with tables, figures and references.</li>
+<li><strong>Slides</strong>: the slides for this course are a Quarto presentation.</li>
+<li><strong>Websites</strong>: this course website is built with Quarto.</li>
+<li><strong>Papers and books</strong>: journal articles, theses and books, with citations and cross-references.</li>
+</ul>
+</section>
+<section id="learn-more-about-quarto" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="learn-more-about-quarto"><span class="header-section-number">2.10</span> Learn more about Quarto</h2>
+<ul>
+<li><a href="https://quarto.org/docs/get-started/">Get started</a> and the <a href="https://quarto.org/docs/guide/">guide</a>.</li>
+<li>Using code: <a href="https://quarto.org/docs/computations/r.html">R</a>, <a href="https://quarto.org/docs/computations/python.html">Python</a> and <a href="https://quarto.org/docs/computations/inline-code.html">inline code</a>.</li>
+<li><a href="https://quarto.org/docs/output-formats/all-formats.html">Output formats</a>, <a href="https://quarto.org/docs/websites/">websites</a> and <a href="https://quarto.org/docs/presentations/">presentations</a>.</li>
+<li><a href="https://quarto.org/docs/gallery/">The Quarto gallery</a>: examples to copy from.</li>
+</ul>
+</section>
 <section id="exercise-1" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="exercise-1">Exercise</h2>
 <div id="exercise2" class="callout callout-style-default callout-note no-icon callout-titled" title="Exercise">
@@ -392,23 +872,477 @@ How to read this document
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>An exercise for the second section.</p>
+<ol type="1">
+<li>Write a <code>README.md</code> for one of your own projects, or the clean example above, including a summary, a quickstart and setup. Then write a data dictionary for a dataset, with one row per column.</li>
+<li>If you use R or Python, create a <code>report.qmd</code> that reads a CSV file and shows a number in a sentence and a table or plot. Render it.</li>
+<li>Change something the report depends on (for example, a filter) and render again. Did it update?</li>
+</ol>
 </div>
 </div>
-<div id="answer2" class="callout callout-style-default callout-caution no-icon callout-titled" title="Answer">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div id="answer2" class="callout callout-style-default callout-caution no-icon callout-titled" title="Answer (click to open)">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Caution</span>Answer
+<span class="screen-reader-only">Caution</span>Answer (click to open)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The answer.</p>
+<p>A good README answers these questions in the first minute of reading:</p>
+<ul>
+<li>What is this project and is it finished?</li>
+<li>If I just want to run it, what do I do first?</li>
+<li>What do I need installed?</li>
+</ul>
+<p>A data dictionary has a plain-English description, units and missing-value codes for every column.</p>
+<p>For the report, check that the rendered HTML file shows both your text and the results. Then change something the report depends on, such as a filter, and render again: the number in the report should change.</p>
 </div>
+</div>
+</div>
+<div id="keypoints2" class="callout callout-style-default callout-tip no-icon callout-titled" title="Key points">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Key points
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Document at several levels: comments, the README, a data dictionary and external write-ups.</li>
+<li>Every project should have a README, and every dataset a data dictionary.</li>
+<li>Quarto turns code and text into a report that can be re-created at any time.</li>
+<li>If the data changes, render again and the whole report updates.</li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="virtual-environments" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Virtual Environments</h1>
+<p><em>How do I make sure my code still runs next month, or on someone else’s computer?</em></p>
+<section id="why-do-we-need-environments" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="why-do-we-need-environments"><span class="header-section-number">3.1</span> Why do we need environments?</h2>
+<p>Imagine this sequence:</p>
+<ol type="1">
+<li>Last year you wrote an analysis, and it runs, using version 1.2.1 of a package (here, the R package <code>tidyr</code>).</li>
+<li>This year you start a new project that needs version 1.3.1, so you update.</li>
+<li>You re-run last year’s analysis, and it breaks, or gives different results.</li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Old project</th>
+<th>New project</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Program</td>
+<td>R 4.3.0</td>
+<td>R 4.3.0</td>
+</tr>
+<tr class="even">
+<td><code>tidyr</code></td>
+<td>1.2.1</td>
+<td>1.3.1</td>
+</tr>
+<tr class="odd">
+<td><code>ggplot2</code></td>
+<td>3.3.5</td>
+<td>3.5.0</td>
+</tr>
+</tbody>
+</table>
+<p>Your computer has <strong>one shared set of packages</strong>, so two projects that need different versions can’t both be happy. This happens for several reasons:</p>
+<ul>
+<li><strong>Packages change.</strong> Functions are renamed, defaults change and bugs are fixed.</li>
+<li><strong>Your code depends on them.</strong> The same code with a different package version can give a different result.</li>
+<li><strong>Other computers differ.</strong> A colleague, a new laptop or an HPC cluster will have different versions installed: “it works on my machine”.</li>
+<li><strong>Nothing records it.</strong> Your project doesn’t say which versions it needs, so nobody can tell what went wrong.</li>
+</ul>
+</section>
+<section id="what-is-an-environment-and-how-does-it-work" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="what-is-an-environment-and-how-does-it-work"><span class="header-section-number">3.2</span> What is an environment, and how does it work?</h2>
+<p>An <strong>environment</strong> is a project’s own set of packages, at the versions it needs. Instead of one shared library for every project, each project has its own, so projects can’t interfere with each other.</p>
+<p>Environments work with two things:</p>
+<ul>
+<li>A <strong>lock file</strong> is the recipe: an exact list of packages and versions. It is a small text file, and you keep it with your project.</li>
+<li>The <strong>environment</strong> is what gets built from the lock file: the installed packages, in their own folder. Your code only sees the packages in its own environment.</li>
+</ul>
+<p>The environment is <strong>disposable</strong>: you can delete it, and rebuild it from the lock file whenever you like. The lock file is the thing you keep.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Python</th>
+<th>R</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tool</td>
+<td><code>uv</code></td>
+<td><code>renv</code></td>
+</tr>
+<tr class="even">
+<td>Lock file (keep it)</td>
+<td><code>uv.lock</code></td>
+<td><code>renv.lock</code></td>
+</tr>
+<tr class="odd">
+<td>Environment (disposable)</td>
+<td><code>.venv</code></td>
+<td><code>renv/library</code></td>
+</tr>
+<tr class="even">
+<td>Rebuild it</td>
+<td><code>uv sync</code></td>
+<td><code>renv::restore()</code></td>
+</tr>
+</tbody>
+</table>
+<p>Other tools do the same job: <code>venv</code>, <code>conda</code> and <code>pixi</code> for Python, and <code>conda</code> or <code>pixi</code> for R. The idea is the same whichever you use: a file that records what the project needs.</p>
+</section>
+<section id="send-your-project-to-someone-and-it-works" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="send-your-project-to-someone-and-it-works"><span class="header-section-number">3.3</span> Send your project to someone, and it works</h2>
+<p>This is the payoff. Because the lock file records exactly what the project needs, you can send your project to a colleague, a reviewer, or yourself on a new laptop, and they can rebuild the same environment with one command:</p>
+<pre><code>your project + lock file  -&gt;  colleague rebuilds the environment  -&gt;  same packages, same results</code></pre>
+<ul>
+<li><strong>Send:</strong> your code, README and lock file (and the data, if you can share it).</li>
+<li><strong>Don’t send:</strong> the environment itself. It is large, and specific to your computer.</li>
+</ul>
+</section>
+<section id="what-environments-dont-cover" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="what-environments-dont-cover"><span class="header-section-number">3.4</span> What environments don’t cover</h2>
+<ul>
+<li>They record <strong>packages</strong>. Also write down the version of <strong>R or Python</strong> in your README. (<code>uv</code> can pin the Python version; <code>renv</code> records the R version but doesn’t install it.)</li>
+<li>The <strong>operating system</strong> and hardware can still differ.</li>
+<li>They don’t include your <strong>data</strong>.</li>
+</ul>
+<p>That is good enough for almost every project. Perfect is not the goal.</p>
+</section>
+<section id="what-if-i-use-excel" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="what-if-i-use-excel"><span class="header-section-number">3.5</span> What if I use Excel?</h2>
+<p>There are no packages to install, but the software version can still matter: formulas and functions differ between Excel versions, and add-ins vary. Write the program and its version in your README (for example <em>Excel for Microsoft 365, version 2410</em>), along with any add-ins used. The next person then knows what you used, which is the same idea.</p>
+</section>
+<section id="uv-python" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="uv-python"><span class="header-section-number">3.6</span> uv (Python)</h2>
+<p><a href="https://docs.astral.sh/uv/">uv</a> creates the environment and records the packages for you.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal/Command Prompt</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init my_project          <span class="co"># create a new project</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> my_project</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add pandas matplotlib    <span class="co"># install packages and record them</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run python code/01_clean_data.py   <span class="co"># run a script inside the environment</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>This creates two files that you keep with your code:</p>
+<ul>
+<li><code>pyproject.toml</code> lists the packages you asked for.</li>
+<li><code>uv.lock</code> records the exact versions installed.</li>
+</ul>
+<p>Someone with your project folder can recreate the environment with:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal/Command Prompt</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> sync</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="renv-r" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="renv-r"><span class="header-section-number">3.7</span> renv (R)</h2>
+<p><a href="https://rstudio.github.io/renv/">renv</a> does the same job for R packages. Run these in the R console:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"renv"</span>)   <span class="co"># once, on your computer</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">init</span>()               <span class="co"># start using renv in this project</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()           <span class="co"># record the packages used in renv.lock</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The <code>renv.lock</code> file records the packages and versions. Someone who opens your project can run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">restore</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>to install the same versions. renv does not change the version of R itself. To manage that, use a tool such as <code>rig</code>, and record the R version in your README.</p>
+</section>
+<section id="ide-vs-cli" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="ide-vs-cli"><span class="header-section-number">3.8</span> IDE Vs CLI</h2>
+<p>Everything above can be done either by typing commands in a terminal (the <strong>CLI</strong>) or through the menus of your IDE. They do the same thing.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Task</th>
+<th>CLI</th>
+<th>In an IDE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>New Python project with environment</td>
+<td><code>uv init</code></td>
+<td>e.g.&nbsp;Positron: <em>New Folder from Template</em> then choose a Python project with a new environment</td>
+</tr>
+<tr class="even">
+<td>Install a package</td>
+<td><code>uv add pandas</code> or <code>install.packages()</code></td>
+<td>Package panel, if your IDE has one</td>
+</tr>
+<tr class="odd">
+<td>Re-create an environment</td>
+<td><code>uv sync</code> or <code>renv::restore()</code></td>
+<td>Often prompted for when you open the project</td>
+</tr>
+<tr class="even">
+<td>Render a report</td>
+<td><code>quarto render report.qmd</code></td>
+<td>The <em>Render</em> button</td>
+</tr>
+</tbody>
+</table>
+<p>We recommend learning the CLI commands, because:</p>
+<ul>
+<li>they are the same whatever IDE you use, and in instructions you read online;</li>
+<li>they work on a remote server or HPC, where there may be no IDE;</li>
+<li>they are easy to copy into a README so others can follow them.</li>
+</ul>
+<p>Use whichever you find faster day to day. What matters is that the environment is <strong>recorded in a file</strong> that is stored with your project.</p>
+</section>
+<section id="learn-more-about-environments" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="learn-more-about-environments"><span class="header-section-number">3.9</span> Learn more about environments</h2>
+<ul>
+<li><a href="https://docs.astral.sh/uv/">uv</a>: Python projects and environments.</li>
+<li><a href="https://rstudio.github.io/renv/articles/renv.html">renv</a>: R environments.</li>
+<li><a href="https://realpython.com/effective-python-environment/">Effective Python environment management</a>: <code>venv</code> and <code>conda</code>.</li>
+<li><a href="https://jatonline.github.io/managing-dependencies-using-uv-and-pixi/">Managing dependencies with uv and pixi</a>.</li>
+</ul>
+</section>
+<section id="exercise-2" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="exercise-2">Exercise</h2>
+<div id="exercise3" class="callout callout-style-default callout-note no-icon callout-titled" title="Exercise">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Choose the tab for your language.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">Excel / no code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<ol type="1">
+<li>Create a new project with <code>uv init</code>.</li>
+<li>Add a package with <code>uv add</code>.</li>
+<li>Look at <code>pyproject.toml</code> and <code>uv.lock</code>. What do they contain?</li>
+<li>Delete the <code>.venv</code> folder, then run <code>uv sync</code>. What happens?</li>
+</ol>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<ol type="1">
+<li>Open a project folder and run <code>renv::init()</code>.</li>
+<li>Install a package and run <code>renv::snapshot()</code>.</li>
+<li>Look at <code>renv.lock</code>. What does it contain?</li>
+<li>Delete the <code>renv/library</code> folder, then run <code>renv::restore()</code>. What happens?</li>
+</ol>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<ol type="1">
+<li>Open a spreadsheet you use regularly and find its program version (in Excel: <em>File &gt; Account &gt; About Excel</em>).</li>
+<li>Add a “Setup” section to your README noting the program, version and any add-ins.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="answer3" class="callout callout-style-default callout-caution no-icon callout-titled" title="Answer (click to open)">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Answer (click to open)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>The <code>pyproject.toml</code> / <code>renv.lock</code> file lists your packages. The lock file also records exact versions.</li>
+<li>After deleting the environment folder and running <code>uv sync</code> or <code>renv::restore()</code>, the packages are installed again. This is the point of a <strong>disposable</strong> environment: the folder and its lock file are all you need to share.</li>
+<li>For the spreadsheet, the README note is the equivalent. It will not install anything, but it tells the next person what you used.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="keypoints3" class="callout callout-style-default callout-tip no-icon callout-titled" title="Key points">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Key points
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Use a separate environment for every project.</li>
+<li>Record it in a lock file and keep that file with your code.</li>
+<li>An environment should be disposable and easy to recreate.</li>
+<li>Send the lock file, not the environment: your colleague can rebuild it with one command.</li>
+<li>The CLI and IDE do the same thing: use what suits you.</li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="sharing-data-q-fair" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Sharing Data: Q-FAIR</h1>
+<p><em>How do I know my data is good enough to share, and how do I share it?</em></p>
+<section id="q-fair-data-principles" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="q-fair-data-principles"><span class="header-section-number">4.1</span> Q-FAIR data principles</h2>
+<p>The <a href="https://www.go-fair.org/fair-principles/">FAIR principles</a> are a well-known checklist for sharing data. Q-FAIR adds <strong>Q</strong>uality at the start:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Letter</th>
+<th>Principle</th>
+<th>What it means in practice</th>
+<th>Where we met it</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Q</strong></td>
+<td>Data <strong>Q</strong>uality</td>
+<td>Data is accurate, complete and documented. You know where it came from and what was done to it.</td>
+<td>Raw data is never overwritten; the pipeline records every change.</td>
+</tr>
+<tr class="even">
+<td><strong>F</strong></td>
+<td><strong>F</strong>indable</td>
+<td>People, and computers, can find it. It has a clear name and description.</td>
+<td>Clear folder layout and a README.</td>
+</tr>
+<tr class="odd">
+<td><strong>A</strong></td>
+<td><strong>A</strong>ccessible</td>
+<td>It is clear how to get the data, and under what conditions.</td>
+<td>README setup and access notes.</td>
+</tr>
+<tr class="even">
+<td><strong>I</strong></td>
+<td><strong>I</strong>nteroperable</td>
+<td>It uses open, standard formats that other tools can read.</td>
+<td>See “Four things to do”.</td>
+</tr>
+<tr class="odd">
+<td><strong>R</strong></td>
+<td><strong>R</strong>eusable</td>
+<td>Others can understand and re-use it, with a clear licence.</td>
+<td>See “Four things to do”.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="why-it-matters" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="why-it-matters"><span class="header-section-number">4.2</span> Why it matters</h2>
+<ul>
+<li><strong>Funders and journals</strong> increasingly expect data to be shared.</li>
+<li><strong>Others can build on your work</strong>, and check it.</li>
+<li><strong>Future you</strong> can find and understand your own data.</li>
+<li>Your work <strong>gets cited</strong>.</li>
+</ul>
+</section>
+<section id="four-things-to-do" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="four-things-to-do"><span class="header-section-number">4.3</span> Four things to do</h2>
+<p><strong>1. Use open file formats.</strong> Share data as <strong>CSV</strong> (comma-separated values), which is plain text that every tool can read, rather than a format that needs one program. In Excel, use <em>File &gt; Save As</em> and choose <strong>CSV UTF-8</strong>. A CSV holds one sheet only, and keeps values, not formulas.</p>
+<p><strong>2. Describe your data.</strong> Write a data dictionary, with one row per column, as in the Documentation section, and keep it next to the data.</p>
+<p><strong>3. Add a licence.</strong> Without one, others don’t know whether they can reuse your work. Common choices are <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> for data and text, and <a href="https://choosealicense.com/licenses/mit/">MIT</a> for code. The <a href="https://creativecommons.org/chooser/">Creative Commons chooser</a> and <a href="https://choosealicense.com">choosealicense.com</a> can help. Your funder or institution may have requirements, so check first.</p>
+<p><strong>4. Deposit it.</strong> Put the data in a repository that gives it a permanent home and a <strong>DOI</strong> (a persistent identifier you can cite), such as <a href="https://zenodo.org">Zenodo</a>, your institution’s data repository (at Bristol this is <em>data.bris</em>), or one specific to your field.</p>
+<p><strong>Sensitive data.</strong> Some data can’t be shared openly, for example because it contains personal information. You can usually still share the <strong>metadata</strong> (the README and data dictionary) and explain how others can apply for access. Check with your research data team or ethics committee before depositing anything involving people.</p>
+</section>
+<section id="where-next" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="where-next"><span class="header-section-number">4.4</span> Where next?</h2>
+<ul>
+<li><a href="https://www.go-fair.org/fair-principles/">The FAIR principles</a> and <a href="https://book.the-turing-way.org/reproducible-research/rdm">The Turing Way guide to research data management</a>: community guides to sharing data, in depth.</li>
+<li><a href="https://bristol-training.github.io/">Bristol Training courses</a>: including Intermediate R, Intermediate Python and Best Practices in Software Engineering.</li>
+<li><strong>Version control</strong> with git lets you go back to a version that worked, develop new features in branches, and collaborate. Use it for every project. We cover it in a separate git and GitHub course.</li>
+<li><strong>Functions and testing</strong> make analysis code easier to read and trust. See the Bristol and Turing Way courses above.</li>
+</ul>
+<p>Getting the balance right is hard: do what you can. You learn by doing, so try to put one or two of these ideas into your next project.</p>
+</section>
+<section id="exercise-3" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="exercise-3">Exercise</h2>
+<div id="exercise4" class="callout callout-style-default callout-note no-icon callout-titled" title="Exercise">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pick a dataset: the penguins data from the demos, or one of your own. For each letter of <strong>Q-FAIR</strong>, write down one thing the data already does well and one thing you could improve.</p>
+</div>
+</div>
+<div id="answer4" class="callout callout-style-default callout-caution no-icon callout-titled" title="Answer (click to open)">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Answer (click to open)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>There is no single right answer. Typical improvements are:</p>
+<ul>
+<li><strong>Q:</strong> keep raw data read-only and describe each cleaning step.</li>
+<li><strong>F:</strong> add a README and give files descriptive names.</li>
+<li><strong>A:</strong> say where the data is stored and who can use it, or how to request access if it is restricted.</li>
+<li><strong>I:</strong> save data as CSV rather than a proprietary format.</li>
+<li><strong>R:</strong> add a data dictionary and a licence.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="keypoints4" class="callout callout-style-default callout-tip no-icon callout-titled" title="Key points">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Key points
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Q-FAIR: data <strong>Q</strong>uality, <strong>F</strong>indable, <strong>A</strong>ccessible, <strong>I</strong>nteroperable, <strong>R</strong>eusable.</li>
+<li>Share data in open formats such as CSV, with a data dictionary and a licence.</li>
+<li>Deposit it in a repository that gives it a DOI.</li>
+<li>If data can’t be shared, share the metadata and explain how to ask for access.</li>
+</ul>
 </div>
 </div>
 

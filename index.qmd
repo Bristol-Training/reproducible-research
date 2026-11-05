@@ -1,5 +1,5 @@
 ---
-title: "Reproducible Reseach"
+title: "Reproducible Research"
 format: html
 toc: false
 number-sections: false
@@ -11,22 +11,39 @@ number-sections: false
 
 ## About this course
 
-Welcome to this course! Replace this paragraph with a short description of what the course covers and who it is for.
+A reproducible project can be re-run, understood and shared by other people. It is also easier for you to return to months later.
+
+This course introduces the practical habits that make this possible. It covers project structure, documentation, Quarto reports, virtual environments and sharing data.
+
+The course takes about two hours. It is taught mainly through live demos and hands-on exercises, and notes are provided for reference.
 
 ## Prerequisites
 
-- Experience using an IDE for coding
-- Familiar with working in the terminal / CLI
+- Some experience of working with data
+- If you code: you have an IDE of your choice and can run simple terminal / CLI commands
 
 Please follow our [installation instructions](https://bristol-training.github.io/data-science-project-setup/) before the course.
 
 ## Learning objectives
 
-By the end of this course, you will:
+By the end of this course, you will be able to:
 
-- Setup project folders and data storage following best practices.
-- Use R or Python environments for reproducibility.
-- Build reproducible reports in Quarto.
+1. Organise a project into raw data, processed data, code and outputs, and explain why raw data is never edited.
+2. Write a README and a data dictionary that help others understand and use your project.
+3. Explain why Quarto helps reproducibility, and build a report that updates when the data changes.
+4. Explain why environments matter, and record the software a project needs so it can be re-run on another computer.
+5. Check a dataset against the Q-FAIR principles, and know where to find out more about sharing data.
+
+## Course outline
+
+| Section | Topic | Time |
+|---|---|---|
+| 1 | Project structures | 30 min |
+| 2 | Documentation & Quarto | 45 min |
+| 3 | Virtual environments | 30 min |
+| 4 | Sharing data: Q-FAIR | 15 min |
+
+Sections 1 to 3 each have slides, live demos and a hands-on exercise. Section 4 is a shorter overview, with a short exercise.
 
 ::::
 
@@ -37,9 +54,9 @@ By the end of this course, you will:
 ::: {.course-sidebar}
 ### Course materials
 
-[Notes](notes.qmd){.btn .btn-primary .btn-lg target="_blank"}
-
 [Slides](slides.qmd){.btn .btn-primary .btn-lg target="_blank"}
+
+[Notes](notes.qmd){.btn .btn-primary .btn-lg target="_blank"}
 
 ### More
 

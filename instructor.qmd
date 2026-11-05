@@ -5,29 +5,265 @@ format: html
 
 # Introduction {.unnumbered}
 
-**Delivery model:** live-code while attendees follow along in their own scripts. Use the slides to introduce each section, then switch to the editor.
+**Delivery model:** Online course, delivered mainly through the **slides and live demos**. Attendees should be able to follow along from the slides alone: each exercise (the task and any files or data it needs) is on its own slide, followed by an answer slide to show afterwards. The notes are a reference for attendees to use after the session, not something to work through in it.
+
+Each demo is marked by a slide with a red **Live demo** tag. It shows the title, roughly how long the demo takes, where to switch to, and three short steps at most. **The full script and timings are in these notes**, and a reminder is in the speaker notes of each demo slide. There are four demos.
 
 **Suggested timings:**
 
-| Section | Topic | Approx. time |
-|---|---|---|
-| 1 | First section | 30 min |
-| 2 | Second section | 30 min |
+| Section | Topic | Approx. time | Of which: demo |
+|---|---|---|---|
+| 1 | Project Structures| 30 min | 10 min |
+| 2 | Documentation & Quarto| 45 min | 6 + 12 min |
+| 3 | Virtual Environments (R, Python & no-code) | 30 min | 10 min |
+| 4 | Sharing Data: Q-FAIR (highlights only) | 15 min | none |
 
-Leave about 10 minutes per section for the exercise.
+The whole course is **2 hours**. Section 2 is the longest, because Quarto is the main new tool, and section 4 is a signpost rather than a tutorial. Leave 8-12 minutes per section for the exercise (5 minutes in section 4). If you are running late, the easiest things to shorten are the live demos: say less while you run them, or skip the second part of a demo. Show the exercise slide, give people time, then show the "answer" slide and discuss. There is no need to send people to the notes.
+
+## Learning objectives {.unnumbered}
+
+The same five objectives appear on the home page, in the notes and on a slide near the start of the deck. The recap slide at the end repeats them, so you can tick them off. Each one is taught in a section and practised in an exercise:
+
+| # | By the end, attendees will be able to... | Taught in | Practised in |
+|---|---|---|---|
+| 1 | Organise a project into raw data, processed data, code and outputs, and explain why raw data is never edited | Section 1, demo 1 | Exercise 1 |
+| 2 | Write a README and a data dictionary that help others understand and use their project | Section 2, demo 2 | Exercise 2, step 1 |
+| 3 | Explain why Quarto helps reproducibility, and build a report that updates when the data changes | Section 2, demo 3 | Exercise 2, steps 2 and 3 |
+| 4 | Explain why environments matter, and record the software a project needs so it can be re-run on another computer | Section 3, demo 4 | Exercise 3 |
+| 5 | Check a dataset against the Q-FAIR principles, and know where to find out more about sharing data | Section 4 | Exercise 4 |
+
+For attendees who work in spreadsheets, objectives 3 and 4 become: see what Quarto can do, and record the program and its version in a README. The exercises have a version for them.
 
 ## Workspace setup {.unnumbered}
 
 Ask attendees to install the software *before* the session, as it can take a while on a slow connection.
 
-# First section
+Attendees will use different languages and tools, so ask in advance which they use:
 
-## A first example
+- **R** (4.5.0 or later, if they want the built-in `penguins` data; with RStudio or Positron), **Python** (VS Code, Positron, PyCharm, Jupyter, ...), or **Excel / no code**.
+- Everyone needs [Quarto](https://quarto.org) installed. Python users need [uv](https://docs.astral.sh/uv/); R users need the `renv` package.
+- The slides flag where Excel users do something different, and the notes (reference) use tabs (R | Python | Excel / no code) so each person can follow their own route. Spreadsheet users follow the same concepts and write their steps down in a README instead of installing packages.
 
-**Live code:** type the vector in the console first, then move it into a script.
+You will demo in Positron, which can create a new project with a ready-made structure and environment from the interface. Always follow it by showing the equivalent terminal command, as not everyone will be using Positron.
 
-**Pitfalls:** people often forget the `c()`.
+## Demo data and scripts {.unnumbered}
 
-# Second section
+This is not a course on writing code, so everything the demos need is ready-made in the **`resources/`** folder of the course repository: the data and scripts for each step (in R), a README template and a report. Copy them into your demo project, and change the locations if you like. See `resources/README.md` for where each file goes.
 
-This section often runs over. If short on time, skip straight to the exercise.
+Work in **one project folder** throughout, so each demo builds on the last:
+
+| Demo | Files used | What happens |
+|---|---|---|
+| 1 | `code/00_get_data.R`, `code/01_clean_data.R` | The built-in `penguins` data is saved as the raw CSV in `data/raw`; the script removes incomplete rows and writes a clean copy to `data/processed` |
+| 2 | `README_template.md` | A README is written, and a data dictionary is started and filled in for the clean CSV |
+| 3 | `report_r.qmd`, `code/01_clean_data.R` | A report is built from the clean CSV; then a line in the cleaning script is changed, and the report is re-rendered |
+| 4 | none | An environment is created for the project |
+
+The data is R's built-in **`penguins`** dataset (R 4.5.0 or later): 344 penguins, with species, island, bill and flipper measurements, body mass, sex and year. You do not need to teach any biology: it is just a dataset with columns everyone can understand. It has 11 incomplete rows (`NA`s), which the cleaning script removes, leaving 333. For anyone on an older version of R, `resources/data/penguins.csv` is the same data saved as a file.
+
+The scripts are in **R only**, to keep the resources simple to manage. Python and Excel users follow the same steps: the concepts are the same, and the notes show Python versions of the examples. Say this at the start of the first demo.
+
+In the demos, **walk through the scripts rather than writing them**: open the file, explain each step in a sentence, then run it. Rehearse every demo once beforehand with the files in place.
+
+# Project Structures
+
+**Aim (objective 1):** attendees can lay out a project so that raw data, processed data, code and outputs are separate, and can explain why raw data is never edited.
+
+## Timings
+
+| Time | Activity |
+|---|---|
+| 0-8 min | Slides: why bother, messy vs clean project, the pipeline |
+| 8-18 min | **Live demo 1:** A clean project |
+| 18-30 min | Exercise 1 and answer |
+
+## A Messy Example
+
+- Show the messy layout slide and ask who has a project like it. Most people will.
+- Draw out the three problems: hard to maintain, hard to run elsewhere, hard to understand.
+- Emphasise that this *happens naturally*: it starts as exploration in a notebook, script or spreadsheet, then grows. Nobody is being criticised.
+
+## A Clean Example
+
+**Live demo 1: A clean project (10 min)**
+
+| Time | Step |
+|---|---|
+| 0-2 | **Set up the folders.** Make `data/raw`, `data/processed`, `code` and `outputs`, either from Positron's project template or with `mkdir -p data/raw data/processed code outputs`. Show the tree. |
+| 2-3 | **Raw data in.** Copy `00_get_data.R` from `resources/code` into `code/` and run it: it saves the built-in `penguins` data as `data/raw/penguins.csv`. Open the CSV and point out the missing values (`NA`), but don't fix them by hand. |
+| 3-8 | **Clean data out.** Copy `01_clean_data.R` from `resources/code` into `code/`. Open it and walk through it: read the raw CSV, drop the rows with missing values, write the result to `data/processed`. It is three lines, so there is time to explain each one. Run it. |
+| 8-10 | **Run it again.** Show that `data/processed` has the new file and `data/raw` is unchanged. Run the script a second time to show it gives the same result. |
+
+Point out: the raw data is never edited, and the script can be re-run at any time.
+
+**Spreadsheet users:** make sure you speak to the "Excel / no code" tab. The rule is the same: keep an untouched original, work on a copy, name steps, describe what was done. Show it in a spreadsheet if you can: open the raw file, use *Save As* to make a working copy in `data/processed`.
+
+**Common pitfalls:**
+
+- "It is quicker to fix the typo in the raw file." Explain the cost: no record, can't re-run.
+- Over-engineering. Remind people that small projects need less structure.
+- Absolute paths such as `C:/Users/me/...`. Suggest relative paths from the project folder.
+
+**Exercise 1** (about 10 min): the task and file list are on the exercise slide, with an answer slide to follow. Ask a few people to share their layout. There are many valid answers, so focus on whether raw data is protected and the order of scripts is clear.
+
+# Documentation & Quarto
+
+**Aim (objectives 2 and 3):** attendees can write a useful README and a data dictionary, explain why Quarto helps reproducibility, and build a report that weaves text and analysis together, so that it updates when the data changes.
+
+## Timings
+
+| Time | Activity |
+|---|---|
+| 0-8 min | Slides: four kinds of documentation, README, template, data dictionary |
+| 8-14 min | **Live demo 2:** README and data dictionary |
+| 14-24 min | Slides: what Quarto is, why it helps, old way vs new way, weaving text and code, when the data changes, what else it does, rendering |
+| 24-36 min | **Live demo 3:** A Quarto report |
+| 36-45 min | Exercise 2 and answer, then the "Learn more" slide |
+
+## README.md
+
+- Show a real README (yours, or the Turing Way example in the source deck) and tick off summary, quickstart, setup, contents.
+- Stress the audience: you in six months.
+- A README is plain text in Markdown and needs no code, so it suits everyone.
+
+**Data dictionary:** a dataset doesn't explain itself, and only the person who knows it can write the descriptions. Prompt: "If I gave this file to a colleague next year, what would they need to ask me?" Whatever they list belongs in the dictionary. It supports Quality, Findable and Reusable (section 4).
+
+**Live demo 2: README and data dictionary (6 min)**
+
+| Time | Step |
+|---|---|
+| 0-2 | **Start the README from a template.** In the project from demo 1, copy in `README_template.md` as `README.md`. Walk through status, quickstart, setup and contents, and edit a line or two live so they are true for the demo project. |
+| 2-4 | **Start a data dictionary.** Open the clean CSV, and copy its column names into a new spreadsheet or CSV with columns for type, description and units / values. There is nothing clever here, which is the point: anyone can do it. |
+| 4-6 | **Fill in some descriptions.** Write real descriptions, units and missing-value codes for two or three columns (for example, what `bill_dep` is, and what a blank `sex` means). Mention it in the README. |
+
+Point out: copying the column names is the easy bit. The *description* is where the value is.
+
+## Quarto: the framing
+
+This is the part of the course to spend time on. Aim to leave people knowing **what** Quarto is, **why** it matters for reproducibility, and **how** text and analysis fit together.
+
+- **Open with the problem.** Ask: "Who has copied a number into a Word document, and then found the data had changed?" Everyone has.
+- **What it is:** one file with text and code in it. Rendering runs the code and builds the report. It is free, and works with R and Python.
+- **Why it helps:** the four cards. The key idea is that *the report is the analysis*: anyone can see how every number was made, and re-create it.
+- **Old way vs Quarto way:** let the "hope you caught every number" line land.
+- **Anatomy slide:** point at each part in turn: header, text, code chunk, inline code. In a real file the header sits between two lines of three dashes. The inline number in a sentence is the clever bit.
+- **When the data changes:** this sets up demo 3. Say what you are about to show.
+- **Quarto can do more:** this deck, the notes and the course website are all Quarto.
+
+**Excel / no code:** Quarto is optional for them. The README and the idea (results that come from a recorded process) are what matter. They can still follow the demo to see what is possible.
+
+## Report.qmd
+
+**Live demo 3: A Quarto report (12 min)**
+
+| Time | Step |
+|---|---|
+| 0-1 | **Copy it in.** Copy `report_r.qmd` into the project as `report.qmd`. |
+| 1-5 | **Walk through it.** The header, a chunk that reads the clean CSV and keeps one species, a sentence with inline numbers (how many penguins), a mean in a sentence, a table, and a plot. |
+| 5-7 | **Render it.** Use the *Render* button, then `quarto render report.qmd` in the terminal. Open `report.html` and find the numbers, table and plot. |
+| 7-10 | **Change the data.** In `code/01_clean_data.R`, uncomment the line that keeps only 2008 and later. Re-run the script, then render again. The number of penguins and the results change, with no copying and pasting. |
+| 10-12 | **Change the report.** Change the species in the filter (for example, to `"Adelie"`) and render again. Recap: change the data or the code, not the report. |
+
+Point out: every number in the sentences came from code, so nothing had to be updated by hand.
+
+**Pitfalls:**
+
+- Inline code (the `{r}` expressions in sentences) needs Quarto 1.4 or later.
+- Quarto needs the right engine: Python users need `jupyter` available. If the render fails, check the environment (this leads on to the next section).
+- Relative paths: the report runs from its own folder, so `data/...` may need to be `../data/...` if the report is in a subfolder.
+- Excel users need R installed to use the Excel example for Quarto. If they don't have it, they should focus on the README and treat Quarto as something to explore later.
+
+**Exercise 2:** circulate and look at READMEs and reports. Good prompts for READMEs: "Could a stranger run this?" and "Where would I look first?" For reports: "Which numbers will change if the data does?" Finish on the "Learn more about Quarto" slide, and mention the gallery as a source of examples to copy.
+
+# Virtual Environments
+
+**Aim (objective 4):** attendees understand *why* environments matter, *how* they work in outline (a lock file that records the packages, and a disposable environment built from it), and that this lets them send a project to someone and have it run. They can create and restore one in their language.
+
+## Timings
+
+| Time | Activity |
+|---|---|
+| 0-10 min | Slides: the problem, why it happens, what an environment is, how it works, the tools, sending your project, what environments don't cover |
+| 10-20 min | **Live demo 4:** An environment |
+| 20-22 min | Slide: IDE vs CLI (no separate demo) |
+| 22-30 min | Exercise 3 and answer, then the "Learn more" slide |
+
+## Why environments matter
+
+Spend the time on the *why*: the code on the demo is the easy bit.
+
+- **The problem:** tell the "it worked last year" story, and ask who has had it. The old vs new versions table is in the notes if you want it on screen.
+- **Why it happens:** packages change, your code depends on them, other computers differ, and nothing records it. The phrase "it works on my machine" usually gets a laugh.
+- **What an environment is:** a project's own set of packages, at the versions it needs, so projects can't interfere with each other.
+- **How it works:** the *lock file* is the recipe and the *environment* is what is built from it. The environment is disposable; the lock file is what you keep. Key words: *recorded in a file*, *per project*, *disposable*.
+- **The tools:** `uv` for Python and `renv` for R. Mention that others (`venv`, `conda`, `pixi`) do the same job.
+- **Send your project to someone:** this is the payoff. Send the code, README and lock file, not the environment, and your colleague rebuilds it with one command. It will run first time.
+- **What they don't cover:** R or Python version (write it in the README), operating system, and data. Don't let people think this is a guarantee of everything.
+- **Excel users:** the equivalent is writing down the program and version in the README. Make sure they don't feel left out: the idea is that the next person knows what you used.
+
+## uv (Python) and renv (R)
+
+**Live demo 4: An environment (10 min)**
+
+| Time | Step |
+|---|---|
+| 0-1 | Frame it. The demo project is in R, so do **R** in that project (the one from demos 1 to 3), and **Python** in a scratch folder. |
+| 1-4 | **R: create and look.** In the demo project, run `renv::init()`, install a package, then `renv::snapshot()`. Open `renv.lock`. |
+| 4-7 | **Python: create and look.** In a new scratch folder in the terminal, run `uv init`, then `uv add pandas`. Open `pyproject.toml` and `uv.lock`. |
+| 7-10 | **Delete it, then restore it.** Delete `renv/library` and run `renv::restore()`. Delete `.venv` and run `uv sync`. |
+
+Point out: the environment is disposable, and the lock file is the thing you keep. When you delete and restore, say: "this is what your colleague does when you send them the project". Note that `renv` records package versions but not the version of R itself, and say so out loud.
+
+If your audience is only R or only Python, do just that tool, and spend the time on the delete-and-restore step.
+
+## IDE Vs CLI
+
+**IDE vs CLI (2 min, no separate demo)**
+
+Show the slide, and while you talk, show where your IDE creates a project with a new environment (in Positron, *New Folder from Template* and choose a Python project with a new environment). Then show the matching `uv init` in the terminal, and point out that the files are the same.
+
+- The point is *not* which is better. The file (`uv.lock`, `renv.lock`) is what matters, and the CLI is what works everywhere (HPC, remote servers, instructions online).
+- Attendees use all kinds of IDEs, so avoid teaching menu paths in detail. Say "your IDE will have something similar".
+
+**Pitfalls:**
+
+- `uv` or `quarto` not on the PATH after installation: restart the terminal or IDE.
+- Corporate laptops that block installs. Pair people up.
+- Mixed up Python versions. `uv` can manage these, but keep it simple unless someone asks.
+- People confusing the *environment* (disposable, can be deleted) with the *lock file* (must be kept).
+
+**Exercise 3:** attendees choose their tab. Excel users do the README exercise. Check that each person has actually deleted and restored the environment, as this is the key moment. Finish on the "Learn more about environments" slide.
+
+# Sharing Data: Q-FAIR
+
+**Aim (objective 5):** attendees can check data against Q-FAIR, and know why sharing data matters, the four practical things to do, and where to learn more. This section is a **signpost, not a tutorial**: there is no demo, and the links do the work.
+
+## Timings
+
+| Time | Activity |
+|---|---|
+| 0-4 min | Slides: Q-FAIR principles, why it matters |
+| 4-9 min | Slide: four things to do (formats, dictionary, licence, deposit) |
+| 9-15 min | Exercise 4 and answer, then the recap and "Where next?" |
+
+## Q-FAIR and why it matters
+
+- Q-FAIR stands for Data **Q**uality, **F**indable, **A**ccessible, **I**nteroperable, **R**eusable.
+- Link the first letters back to something done earlier: raw data read-only (Q), README and names (F), setup and access notes (A). Then say the rest is about I and R.
+- Why it matters: funders and journals, others building on and checking your work, future you, and citations. Quality comes first: there is no point sharing data nobody can trust.
+
+## Four things to do
+
+Go through the table row by row, in a sentence or two each, and point to the links. Don't teach any of them in depth.
+
+- **Open formats:** CSV, not a format that needs one program. **Excel / no code:** *File > Save As > CSV UTF-8*; one sheet per file; formulas become values. Pitfalls: "CSV (Macintosh)" or non-UTF-8 files, and `;` as the separator in some European locales.
+- **Describe it:** a data dictionary has one row per column, with a description, units and missing-value codes. A good prompt: "If I gave this file to a colleague next year, what would they need to ask me?"
+- **Licence:** data and text CC BY 4.0, code MIT. Check your funder and institution first.
+- **Deposit:** explain what a DOI is, and show the Zenodo front page. Check the name of the institutional repository before the session, so it is current.
+- **Sensitive data:** this often causes the most questions. Not all data can be shared, and sharing the README and data dictionary is still valuable. Don't give advice on ethics or consent; refer people to the research data team or ethics committee.
+
+## Exercise and wrap-up
+
+**Exercise 4 (5 min):** attendees do a Q-FAIR check of the penguins data or their own. Ask a few people for their "one thing to improve first". Show the answer slide.
+
+Then close the whole course with the recap slide: *a project that is organised, documented, has a recorded environment and described data is already most of the way to reproducible.* On "Where next?", mention the separate git and GitHub course, and that the Turing Way and Bristol Training courses cover version control, functions and testing.

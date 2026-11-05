@@ -8,7 +8,7 @@
 
 <meta name="author" content="Jean Golding Institute">
 
-<title>Reproducible Reseach</title>
+<title>Reproducible Research</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -48,9 +48,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9813aef3d329c8bfdef88dfcf22e1cb3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-9813aef3d329c8bfdef88dfcf22e1cb3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-9813aef3d329c8bfdef88dfcf22e1cb3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d59d288c37aec90f53216c8a216448d2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d59d288c37aec90f53216c8a216448d2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d59d288c37aec90f53216c8a216448d2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -94,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
     <img src="./assets/UoB_RGB_24.png" alt="University of Bristol" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Reproducible Reseach</span>
+    <span class="navbar-title">Reproducible Research</span>
     </a>
   </div>
         <div class="quarto-navbar-tools tools-end">
@@ -113,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Reproducible Reseach</h1>
+<h1 class="title">Reproducible Research</h1>
 </div>
 
 
@@ -140,24 +140,63 @@ ul.task-list li input[type="checkbox"] {
 <div class="column" style="width:64%;">
 <section id="about-this-course" class="level2">
 <h2 class="anchored" data-anchor-id="about-this-course">About this course</h2>
-<p>Welcome to this course! Replace this paragraph with a short description of what the course covers and who it is for.</p>
+<p>A reproducible project can be re-run, understood and shared by other people. It is also easier for you to return to months later.</p>
+<p>This course introduces the practical habits that make this possible. It covers project structure, documentation, Quarto reports, virtual environments and sharing data.</p>
+<p>The course takes about two hours. It is taught mainly through live demos and hands-on exercises, and notes are provided for reference.</p>
 </section>
 <section id="prerequisites" class="level2">
 <h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
 <ul>
-<li>Experience using an IDE for coding</li>
-<li>Familiar with working in the terminal / CLI</li>
+<li>Some experience of working with data</li>
+<li>If you code: you have an IDE of your choice and can run simple terminal / CLI commands</li>
 </ul>
 <p>Please follow our <a href="https://bristol-training.github.io/data-science-project-setup/">installation instructions</a> before the course.</p>
 </section>
 <section id="learning-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
-<p>By the end of this course, you will:</p>
-<ul>
-<li>Setup project folders and data storage following best practices.</li>
-<li>Use R or Python environments for reproducibility.</li>
-<li>Build reproducible reports in Quarto.</li>
-</ul>
+<p>By the end of this course, you will be able to:</p>
+<ol type="1">
+<li>Organise a project into raw data, processed data, code and outputs, and explain why raw data is never edited.</li>
+<li>Write a README and a data dictionary that help others understand and use your project.</li>
+<li>Explain why Quarto helps reproducibility, and build a report that updates when the data changes.</li>
+<li>Explain why environments matter, and record the software a project needs so it can be re-run on another computer.</li>
+<li>Check a dataset against the Q-FAIR principles, and know where to find out more about sharing data.</li>
+</ol>
+</section>
+<section id="course-outline" class="level2">
+<h2 class="anchored" data-anchor-id="course-outline">Course outline</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Section</th>
+<th>Topic</th>
+<th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Project structures</td>
+<td>30 min</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Documentation &amp; Quarto</td>
+<td>45 min</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Virtual environments</td>
+<td>30 min</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Sharing data: Q-FAIR</td>
+<td>15 min</td>
+</tr>
+</tbody>
+</table>
+<p>Sections 1 to 3 each have slides, live demos and a hands-on exercise. Section 4 is a shorter overview, with a short exercise.</p>
 </section>
 </div><div class="column" style="width:4%;">
 
@@ -165,8 +204,8 @@ ul.task-list li input[type="checkbox"] {
 <div class="course-sidebar">
 <section id="course-materials" class="level3">
 <h3 class="anchored" data-anchor-id="course-materials">Course materials</h3>
-<p><a href="./notes.html" class="btn btn-primary btn-lg" target="_blank">Notes</a></p>
 <p><a href="./slides.html" class="btn btn-primary btn-lg" target="_blank">Slides</a></p>
+<p><a href="./notes.html" class="btn btn-primary btn-lg" target="_blank">Notes</a></p>
 </section>
 <section id="more" class="level3">
 <h3 class="anchored" data-anchor-id="more">More</h3>
