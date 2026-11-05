@@ -52,8 +52,7 @@ format:
     # wrap long lines instead of scrolling sideways
     code-overflow: wrap
     highlight-style: github
-    transition: fade
-    transition-speed: fast
+    transition: none
     fig-width: 8
     fig-height: 4.5
     fig-align: center
