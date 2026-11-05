@@ -21,7 +21,7 @@ A reproducible project can be re-run, understood and shared by other people. It 
 
 This course introduces the practical habits that make this possible. It covers project structure, documentation, Quarto reports, virtual environments and sharing data.
 
-The course takes about two hours. Each topic has a short demo and a hands-on activity: we do a part together, you try something on your own, and then we look at the answer. **You do not need to write or run any code.** The notes are written so you can also work through the course on your own.
+The course takes about two hours. Each topic has a hands-on activity (and sometimes a short demo): we do a part together, you try something on your own, and then we look at the answer. **You do not need to write or run any code.** The notes are written so you can also work through the course on your own.
 
 ## Prerequisites
 
@@ -43,12 +43,12 @@ By the end of this course, you will be able to:
 
 | Section | Topic | Time |
 |---|---|---|
-| 1 | Project structures | 30 min |
+| 1 | Project structures | 25 min |
 | 2 | Documentation & Quarto | 45 min |
 | 3 | Virtual environments | 30 min |
 | 4 | Your first step | 15 min |
 
-Every section has slides and an activity for you, and sections 1 to 3 also have a short demo from the instructor. If there is time, there is also an optional extra on sharing your data (Q-FAIR), which is covered in full in the notes.
+Every section has slides and an activity for you, and sections 2 and 3 also have a short demo from the instructor. If there is time, there is also an optional extra on sharing your data (Q-FAIR), which is covered in full in the notes.
 
 ::::
 

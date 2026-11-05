@@ -18,6 +18,7 @@ Body measurements of 333 penguins on three islands. **Status:** complete.
 - `data/processed/` the cleaned data, and `penguins_clean_dictionary.csv`, which explains each column
 - `code/` the scripts
 - `report.qmd` the report, which makes HTML, PDF and Word versions
+- `_quarto.yml` settings for the report (it puts the results in `outputs/`)
 - `outputs/` made by `run_all.R`. Safe to delete
 
 ## Data

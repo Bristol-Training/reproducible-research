@@ -21,22 +21,16 @@ Works for R, Python and spreadsheet users. Demo in Positron, but everything can 
 
 ## How today works
 
-:::: {.columns}
-::: {.column width="50%"}
 ::: {.big}
 Do it together.<br>Then try it yourself.
 :::
-:::
-::: {.column width="50%"}
+
 ::: {.small}
-- Each topic is one short activity: **we do a part together, you try something on your own, then I show the answer**
+- Each topic is **one short activity**: we do a part together, you try something on your own, then I show the answer
 - You **don't need to run any code**: the only thing we run is **Render**
 - Everything you need is in the **example folder**
-- The **notes** are for reference afterwards, and you can work through them alone
-- Stuck? Type in the chat
+- Stuck? **Type in the chat**
 :::
-:::
-::::
 
 ## The journey
 
@@ -68,11 +62,11 @@ Pull it together into a checklist for your own project
 :::
 
 ::: {.muted .center}
-About 2 hours: 30 + 45 + 30 + 15 minutes
+About 2 hours: 25 + 45 + 30 + 15 minutes
 :::
 
 ::: notes
-Click through the four cards one at a time. Every topic follows the same pattern: slides, then a short activity (together, your turn, answer). Nobody needs to run any code.
+Click through the four cards one at a time. Every topic follows the same pattern: slides, then a short activity (together, your turn, answer). Nobody needs to run any code. Sections 2 and 3 also have a short demo from you.
 :::
 
 ## By the end, you will be able to
@@ -132,102 +126,76 @@ Selfish reasons first: this mostly helps you. Mention the three problems with a 
 Spreadsheet users: same idea. Raw file untouched, a working copy, one named sheet per step, and a README describing each step.
 :::
 
-## Live demo: rebuild everything {.demo-slide}
-
-[Live demo]{.demo-tag} [I do · 4 min]{.demo-meta}
-
-::: {.medium}
-1. Here is a tidy project
-2. Delete the cleaned data and the report
-3. Run one script: everything comes back from the raw data
-:::
-
-::: notes
-STOP HERE and switch to the demo. Open a copy of `tidy-project`. Show the folders, then delete `data/processed/penguins_clean.csv` and the `outputs` folder. Run `code/run_all.R` (in RStudio or Positron, or `Rscript code/run_all.R`). The cleaned data and the report come back. Message: the raw data plus the code is everything, so protect those two. If it fails, say so, show the finished project, and move on: do not debug live.
-:::
-
-## Rescue the messy project: look at it {.demo-slide}
+## Look at the messy project {.demo-slide}
 
 [Together]{.demo-tag} [4 min]{.demo-meta}
 
-:::: {.columns}
-::: {.column width="52%"}
 ```
 messy-project/
-├── Copy of data.csv
-├── analysis.R
-├── analysis2 (copy).R
-├── analysis_OLD.R
-├── clean.R
-├── data.csv
-├── data_FINAL_USE_THIS.csv
-├── data_final.csv
-├── data_final_v2.csv
-├── notes.txt
-├── plot1.png
-├── plot_new.png
-├── report_draft.docx
-├── results.xlsx
-├── results_v3.xlsx
-└── untitled.R
+Copy of data.csv          notes.txt
+analysis.R                plot1.png
+analysis2 (copy).R        plot_new.png
+analysis_OLD.R            report_draft.docx
+clean.R                   results.xlsx
+data.csv                  results_v3.xlsx
+data_FINAL_USE_THIS.csv   untitled.R
+data_final.csv
+data_final_v2.csv
 ```
-:::
-::: {.column width="48%"}
-::: {.medium}
-Can you work out...
 
-1. Which file is the **raw data**?
-2. What do I **run first**?
-3. Which figure came from which analysis?
+::: {.cards}
+::: {.card}
+**1**
+
+Which file is the **raw data**?
+:::
+::: {.card}
+**2**
+
+What do I **run first**?
+:::
+::: {.card}
+**3**
+
+Which figure came from which analysis?
 :::
 :::
-::::
 
 ::: notes
 Together, 4 min. Put up the file list and ask the three questions. Ask people to type their answers in the chat, and let everyone feel the problem: it is nobody's fault, this happens naturally. Open `notes.txt` and one of the scripts from the example folder if you like (absolute paths, packages with no versions). Then move to the next slide.
 :::
 
-## Rescue the messy project: sort it {.demo-slide}
+## Sort the messy project {.demo-slide}
 
 [Your turn]{.your-turn-tag} [6 min]{.demo-meta}
 
-:::: {.columns}
-::: {.column width="52%"}
-::: {.small}
 On your own, put **every file** under one heading:
 
-| Raw data | Cleaned data | Code | Results | Documents |
-|---|---|---|---|---|
-| | | | | |
-
-Then decide:
-
-- Which file would you **never edit**?
-- Which files would you **delete**?
-
-Open `messy-project/` in the example folder if it helps.
+::: {.flow}
+[Raw data]{.step .light} [Cleaned data]{.step .light} [Code]{.step .light} [Results]{.step .light} [Documents]{.step .light}
 :::
-:::
-::: {.column width="48%"}
+
 ```
-Copy of data.csv        plot1.png
-analysis.R              plot_new.png
-analysis2 (copy).R      report_draft.docx
-analysis_OLD.R          results.xlsx
-clean.R                 results_v3.xlsx
-data.csv                untitled.R
-data_FINAL_USE_THIS.csv notes.txt
+Copy of data.csv          notes.txt
+analysis.R                plot1.png
+analysis2 (copy).R        plot_new.png
+analysis_OLD.R            report_draft.docx
+clean.R                   results.xlsx
+data.csv                  results_v3.xlsx
+data_FINAL_USE_THIS.csv   untitled.R
 data_final.csv
 data_final_v2.csv
 ```
+
+::: {.small}
+Then decide: which file would you **never edit**, and which would you **delete**?
 :::
-::::
 
 ::: notes
 Your turn, 6 min, on their own, on paper or in a document. No code. The course is online, so there is no pair work: ask people to post one surprising file or decision in the chat at the end. There is no single right answer: they are deciding what each file is for.
 :::
 
-## Rescue the messy project: the answer {.demo-slide}
+## What goes where {.demo-slide}
 
 [Answer]{.answer-tag} [4 min]{.demo-meta}
 
@@ -248,37 +216,25 @@ Your turn, 6 min, on their own, on paper or in a document. No code. The course i
 Answer, part one. Go through the table row by row. Ask who disagreed, and why. The key point is the first row and the "cleaned data" row: three versions of the same thing, with no way to tell which is right.
 :::
 
-## Rescue the messy project: the tidy version {.demo-slide}
+## The tidy version {.demo-slide}
 
 [Answer]{.answer-tag} [2 min]{.demo-meta}
 
-:::: {.columns}
-::: {.column width="55%"}
 ```
 tidy-project/
-├── README.md
-├── report.qmd
+├── README.md                          how to run it
+├── report.qmd                         the report
+├── _quarto.yml                        report settings
 ├── data/
-│   ├── raw/penguins.csv
+│   ├── raw/penguins.csv               never edited
 │   └── processed/
-│       ├── penguins_clean.csv
-│       └── penguins_clean_dictionary.csv
+│       ├── penguins_clean.csv         made by the code
+│       └── penguins_clean_dictionary.csv   explains each column
 ├── code/
-│   ├── 01_clean_data.R
-│   └── run_all.R
-└── outputs/
+│   ├── 01_clean_data.R                numbered, in order
+│   └── run_all.R                      rebuilds everything
+└── outputs/                           made by the code: safe to delete
 ```
-:::
-::: {.column width="45%"}
-::: {.small}
-- **Raw data** is kept apart, and never edited
-- **One** cleaned version, made by the code
-- Scripts are **numbered**, in order
-- **Outputs** can be deleted and re-made
-- A **README** says how to run it
-:::
-:::
-::::
 
 ::: notes
 Answer, part two. This is the project you rebuilt in the demo. Point out that it is the same data, just organised. The README and the data dictionary come next.
@@ -328,8 +284,6 @@ Show a real README. Point out it is just a text file written in Markdown. The ne
 
 [Together]{.demo-tag} [2 min]{.demo-meta}
 
-:::: {.columns}
-::: {.column width="50%"}
 `messy-project/notes.txt` is the **only documentation**:
 
 ```
@@ -338,34 +292,22 @@ run clean.R first?? i think
 then analysis2 (copy).R
 NOT analysis.R (that one is old)
 
-data_final_v2 has the weird rows
-removed BUT i fixed a few values
-by hand
+data_final_v2 has the weird rows removed
+BUT i fixed a few values by hand
 
-figure 2 in the paper is
-plot_new.png (i think)
+figure 2 in the paper is plot_new.png (i think)
 ask Sam about the Gentoo ones
 ```
-:::
-::: {.column width="50%"}
-And this is the data:
 
-```
-species,island,bill_len,bill_dep,
-flipper_len,body_mass,sex,year
-Adelie,Torgersen,39.1,18.7,181,3750,male,2007
-```
 ::: {.medium}
 You have inherited this project. What **can't** you work out?
 :::
-:::
-::::
 
 ::: notes
-Together, 2 min. Read the notes out loud with a straight face. Ask what bill_dep means, and whether body_mass is in grams or kilograms.
+Together, 2 min. Read the notes out loud with a straight face. The data has columns called bill_dep and body_mass: ask what bill_dep means, and whether body_mass is in grams or kilograms.
 :::
 
-## Be the new colleague: your turn {.demo-slide}
+## Be the new colleague {.demo-slide}
 
 [Your turn]{.your-turn-tag} [4 min]{.demo-meta}
 
@@ -386,7 +328,7 @@ Think about:
 Your turn, 4 min, on their own. Then ask people to type their three things in the chat, and read a few out.
 :::
 
-## Be the new colleague: the answer {.demo-slide}
+## The README {.demo-slide}
 
 [Answer]{.answer-tag} [2 min]{.demo-meta}
 
@@ -414,21 +356,16 @@ Body measurements of 333 penguins on three islands. **Status:** complete.
 Answer, part one: the README from `tidy-project`. It answers all three questions: how to run it, what software, what is where. The next slide shows the data dictionary, which answers the column question.
 :::
 
-## Be the new colleague: the data dictionary {.demo-slide}
+## The data dictionary {.demo-slide}
 
 [Answer]{.answer-tag} [2 min]{.demo-meta}
 
 | column | type | description | units / values |
 |---|---|---|---|
 | `species` | text | Penguin species | Adelie, Chinstrap, Gentoo |
-| `island` | text | Where it was observed | Biscoe, Dream, Torgersen |
 | `bill_len` | number | Bill length | mm |
 | `body_mass` | number | Body mass | grams |
 | `sex` | text | Sex of the penguin | female, male; blank if not recorded |
-
-::: {.good}
-✔ One row per column. Keep it next to the data, and mention it in your README
-:::
 
 ::: notes
 Answer, part two. The dictionary has one row per column: what it is, its type and its units. Copying the column names is the easy part. The descriptions are the value, and only the person who knows the data can write them.
@@ -436,28 +373,16 @@ Answer, part two. The dictionary has one row per column: what it is, its type an
 
 ## What is Quarto?
 
-:::: {.columns}
-::: {.column width="55%"}
 ::: {.small}
-- Write **text and code in one file** (`report.qmd`)
+- Write **text and code in one file**
 - **Render** it into a report: HTML, PDF or Word
-- The code runs when you render, so the **results come from the code**
-- Works with **R, Python** and more, in the IDE you already use
+- The results **come from the code**
 - Free and open source: [quarto.org](https://quarto.org)
 :::
-:::
-::: {.column width="45%"}
+
 ::: {.flow}
-[report.qmd]{.step}
+[report.qmd]{.step} [→ render →]{.arrow} [report.html]{.step}
 :::
-::: {.flow}
-[↓ render]{.arrow}
-:::
-::: {.flow}
-[report.html]{.step}
-:::
-:::
-::::
 
 ::: notes
 Quarto is the tool this whole course is built with: the slides, the notes and the website are all Quarto. It is free, and works with R, Python and Julia.
@@ -515,8 +440,6 @@ The key idea is that the report *is* the analysis. A reader, or you in six month
 
 ## Weaving text and analysis together
 
-:::: {.columns}
-::: {.column width="55%"}
 ````markdown
 title: "Penguin report"
 format: html
@@ -529,19 +452,38 @@ clean <- read.csv("data/processed/penguins_clean.csv")
 
 There are `{{r}} nrow(clean)` penguins in the data.
 ````
-:::
-::: {.column width="45%"}
-::: {.small}
-1. **Header:** the title and the output format
-2. **Text:** ordinary Markdown, with headings and lists
-3. **Code chunk:** the code runs when you render, and its output appears underneath
-4. **Inline code:** a result inside a sentence
-:::
-:::
-::::
 
 ::: notes
-In a real file the header sits between two lines of three dashes. Point at each part in turn. Inline code is the clever bit: the number in the sentence is calculated every time the report is rendered.
+In a real file the header sits between two lines of three dashes. Next slide: the four parts.
+:::
+
+## The four parts of a Quarto file
+
+::: {.cards .grid2}
+::: {.card}
+**1 · Header**
+
+The title and the output format
+:::
+::: {.card}
+**2 · Text**
+
+Ordinary Markdown, with headings and lists
+:::
+::: {.card}
+**3 · Code chunk**
+
+The code runs when you render, and its output appears underneath
+:::
+::: {.card}
+**4 · Inline code**
+
+A result inside a sentence, recalculated every time
+:::
+:::
+
+::: notes
+Point at each part on the previous slide. Inline code is the clever bit: the number in the sentence is calculated every time the report is rendered.
 :::
 
 ## If the data changes, the report updates
@@ -578,37 +520,23 @@ STOP HERE and switch to the demo. In a copy of `tidy-project`, open `report.qmd`
 
 [Together]{.demo-tag} [6 min]{.demo-meta}
 
-:::: {.columns}
-::: {.column width="45%"}
-```
-format:
-  html: default
-  typst: default
-  docx: default
-```
-:::
-::: {.column width="55%"}
 ::: {.flow}
-[report.qmd]{.step}
+[report.qmd]{.step} [→]{.arrow} [HTML]{.step .light} [PDF]{.step .light} [Word]{.step .light}
 :::
-::: {.flow}
-[↓ render]{.arrow}
+
+::: {.medium}
+One file. Three formats.
 :::
-::: {.flow}
-[HTML]{.step} [PDF]{.step} [Word]{.step}
-:::
-:::
-::::
 
 ::: {.small}
-One file, three formats. The PDF is made with **Typst**, so you don't need LaTeX.
+The PDF is made with **Typst**, so you don't need LaTeX.
 :::
 
 ::: notes
-Together, 6 min. Open `one-document/report.qmd`. Show the header, the text, the table and the figure, all in one file. Render it to HTML, then change the format and render to PDF (Typst) and Word. Show all three side by side. If you have time, add `revealjs` for slides. Message: write once, publish many ways. If Render fails, open the files in `one-document/finished/`.
+Together, 6 min. Open `one-document/report.qmd`. Show the header (it lists html, typst and docx), the text, the table and the figure, all in one file. Render it to HTML, then change the format and render to PDF (Typst) and Word. Show all three side by side. If you have time, add `revealjs` for slides. Message: write once, publish many ways. If Render fails, open the files in `one-document/finished/`.
 :::
 
-## One document, many formats: your turn {.demo-slide}
+## One document, many formats {.demo-slide}
 
 [Your turn]{.your-turn-tag} [7 min]{.demo-meta}
 
@@ -627,7 +555,7 @@ Press **Render** (choose the format), or run `quarto render report.qmd` to make 
 Your turn, 7 min. They need only Quarto, not R or Python. Watch the chat for questions. Common slips: Render only makes the first format, so use the format menu or the terminal command; or they open the original in finished/. If Render fails for someone, let them look at `finished/`.
 :::
 
-## One document, many formats: the answer {.demo-slide}
+## What else can Quarto make? {.demo-slide}
 
 [Answer]{.answer-tag} [3 min]{.demo-meta}
 
@@ -821,23 +749,15 @@ STOP HERE and switch to the demo. R: in a project that uses renv, delete `renv/l
 
 [Together]{.demo-tag} [2 min]{.demo-meta}
 
-:::: {.columns}
-::: {.column width="50%"}
 ::: {.medium}
-A colleague emails you their project.
+A colleague emails you their project: *"It runs fine on my laptop!"*
 
-*"It runs fine on my laptop!"*
-:::
-:::
-::: {.column width="50%"}
 You open it on **your** laptop:
+:::
 
 ```
-Error: there is no package
-called 'ggplot2'
+Error: there is no package called 'ggplot2'
 ```
-:::
-::::
 
 ::: {.medium}
 What would you need to know to make it run?
@@ -847,7 +767,7 @@ What would you need to know to make it run?
 Together, 2 min. Set the scene, then move to the next slide.
 :::
 
-## The new laptop test: your turn {.demo-slide}
+## The new laptop test {.demo-slide}
 
 [Your turn]{.your-turn-tag} [6 min]{.demo-meta}
 
@@ -863,7 +783,7 @@ Write down as many things as you can. There is no wrong answer.
 Your turn, 6 min, on their own. No code. Resist giving hints: let them find the list. At the end, ask people to type their list in the chat, and read out a few.
 :::
 
-## The new laptop test: the answer {.demo-slide}
+## The new laptop test {.demo-slide}
 
 [Answer]{.answer-tag} [3 min]{.demo-meta}
 
@@ -920,35 +840,47 @@ Together, 3 min. This is the whole course on one slide. Every step is a habit, a
 
 [Your turn]{.your-turn-tag} [6 min]{.demo-meta}
 
-::: {.cards .grid2}
+::: {.small}
+**Tick** what you do. **Circle one** to start. Post it in the chat.
+:::
+
+::: {.cards .grid2 .checklist}
 ::: {.card}
 **Structure**
+
 ☐ Raw data never edited
-☐ Separate folders for data, code and results
+
+☐ Separate folders
+
 ☐ Clear file names
 :::
 ::: {.card}
 **Documentation**
+
 ☐ A README
+
 ☐ A data dictionary
-☐ A report made from the code
+
+☐ A report made from code
 :::
 ::: {.card}
 **Environments**
-☐ Software and versions written down
+
+☐ Software versions written down
+
 ☐ Packages recorded in a file
+
 ☐ A colleague could run it
 :::
 ::: {.card}
 **Sharing**
+
 ☐ Data in an open format (CSV)
+
 ☐ A licence
+
 ☐ Somewhere to deposit it
 :::
-:::
-
-::: {.small}
-**Tick** what your own project already does. **Circle one** thing to start with this week. Post your one thing in the chat. (Checklist to print: `take-home/`)
 :::
 
 ::: notes
@@ -1104,7 +1036,7 @@ A CSV on the department shared drive, with a README. No licence, and you need to
 For each one, mark every letter of **Q-FAIR** with a ✔ or an ✘.
 :::
 
-## Q-FAIR detective: the answer {.demo-slide}
+## Q-FAIR detective {.demo-slide}
 
 [Answer]{.answer-tag} [2 min]{.demo-meta}
 

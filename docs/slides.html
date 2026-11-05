@@ -101,7 +101,7 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-523b2a079681261f7bf7a3d451dc7a8c.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-b3d74907037a6daf42b95e854bf47414.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -232,22 +232,17 @@ Jean Golding Institute
 </section>
 <section id="how-today-works" class="slide level2">
 <h2>How today works</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
 <div class="big">
 <p>Do it together.<br>Then try it yourself.</p>
 </div>
-</div><div class="column" style="width:50%;">
 <div class="small">
 <ul>
-<li>Each topic is one short activity: <strong>we do a part together, you try something on your own, then I show the answer</strong></li>
+<li>Each topic is <strong>one short activity</strong>: we do a part together, you try something on your own, then I show the answer</li>
 <li>You <strong>don’t need to run any code</strong>: the only thing we run is <strong>Render</strong></li>
 <li>Everything you need is in the <strong>example folder</strong></li>
-<li>The <strong>notes</strong> are for reference afterwards, and you can work through them alone</li>
-<li>Stuck? Type in the chat</li>
+<li>Stuck? <strong>Type in the chat</strong></li>
 </ul>
 </div>
-</div></div>
 </section>
 <section id="the-journey" class="slide level2">
 <h2>The journey</h2>
@@ -266,10 +261,10 @@ Jean Golding Institute
 </div>
 </div>
 <div class="muted center">
-<p>About 2 hours: 30 + 45 + 30 + 15 minutes</p>
+<p>About 2 hours: 25 + 45 + 30 + 15 minutes</p>
 </div>
 <aside class="notes">
-<p>Click through the four cards one at a time. Every topic follows the same pattern: slides, then a short activity (together, your turn, answer). Nobody needs to run any code.</p>
+<p>Click through the four cards one at a time. Every topic follows the same pattern: slides, then a short activity (together, your turn, answer). Nobody needs to run any code. Sections 2 and 3 also have a short demo from you.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -366,62 +361,33 @@ Jean Golding Institute
           display:block!important;
       }</style></aside>
 </section>
-<section id="live-demo-rebuild-everything" class="slide level2 demo-slide">
-<h2>Live demo: rebuild everything</h2>
-<p><span class="demo-tag">Live demo</span> <span class="demo-meta">I do · 4 min</span></p>
-<div class="medium">
-<ol type="1">
-<li>Here is a tidy project</li>
-<li>Delete the cleaned data and the report</li>
-<li>Run one script: everything comes back from the raw data</li>
-</ol>
-</div>
-<aside class="notes">
-<p>STOP HERE and switch to the demo. Open a copy of <code>tidy-project</code>. Show the folders, then delete <code>data/processed/penguins_clean.csv</code> and the <code>outputs</code> folder. Run <code>code/run_all.R</code> (in RStudio or Positron, or <code>Rscript code/run_all.R</code>). The cleaned data and the report come back. Message: the raw data plus the code is everything, so protect those two. If it fails, say so, show the finished project, and move on: do not debug live.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="rescue-the-messy-project-look-at-it" class="slide level2 demo-slide">
-<h2>Rescue the messy project: look at it</h2>
+<section id="look-at-the-messy-project" class="slide level2 demo-slide">
+<h2>Look at the messy project</h2>
 <p><span class="demo-tag">Together</span> <span class="demo-meta">4 min</span></p>
-<div class="columns">
-<div class="column" style="width:52%;">
 <pre><code>messy-project/
-├── Copy of data.csv
-├── analysis.R
-├── analysis2 (copy).R
-├── analysis_OLD.R
-├── clean.R
-├── data.csv
-├── data_FINAL_USE_THIS.csv
-├── data_final.csv
-├── data_final_v2.csv
-├── notes.txt
-├── plot1.png
-├── plot_new.png
-├── report_draft.docx
-├── results.xlsx
-├── results_v3.xlsx
-└── untitled.R</code></pre>
-</div><div class="column" style="width:48%;">
-<div class="medium">
-<p>Can you work out…</p>
-<ol type="1">
-<li>Which file is the <strong>raw data</strong>?</li>
-<li>What do I <strong>run first</strong>?</li>
-<li>Which figure came from which analysis?</li>
-</ol>
+Copy of data.csv          notes.txt
+analysis.R                plot1.png
+analysis2 (copy).R        plot_new.png
+analysis_OLD.R            report_draft.docx
+clean.R                   results.xlsx
+data.csv                  results_v3.xlsx
+data_FINAL_USE_THIS.csv   untitled.R
+data_final.csv
+data_final_v2.csv</code></pre>
+<div class="cards">
+<div class="card">
+<p><strong>1</strong></p>
+<p>Which file is the <strong>raw data</strong>?</p>
 </div>
-</div></div>
+<div class="card">
+<p><strong>2</strong></p>
+<p>What do I <strong>run first</strong>?</p>
+</div>
+<div class="card">
+<p><strong>3</strong></p>
+<p>Which figure came from which analysis?</p>
+</div>
+</div>
 <aside class="notes">
 <p>Together, 4 min. Put up the file list and ask the three questions. Ask people to type their answers in the chat, and let everyone feel the problem: it is nobody’s fault, this happens naturally. Open <code>notes.txt</code> and one of the scripts from the example folder if you like (absolute paths, packages with no versions). Then move to the next slide.</p>
 <style type="text/css">
@@ -436,51 +402,25 @@ Jean Golding Institute
           display:block!important;
       }</style></aside>
 </section>
-<section id="rescue-the-messy-project-sort-it" class="slide level2 demo-slide">
-<h2>Rescue the messy project: sort it</h2>
+<section id="sort-the-messy-project" class="slide level2 demo-slide">
+<h2>Sort the messy project</h2>
 <p><span class="your-turn-tag">Your turn</span> <span class="demo-meta">6 min</span></p>
-<div class="columns">
-<div class="column" style="width:52%;">
-<div class="small">
 <p>On your own, put <strong>every file</strong> under one heading:</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Raw data</th>
-<th>Cleaned data</th>
-<th>Code</th>
-<th>Results</th>
-<th>Documents</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>Then decide:</p>
-<ul>
-<li>Which file would you <strong>never edit</strong>?</li>
-<li>Which files would you <strong>delete</strong>?</li>
-</ul>
-<p>Open <code>messy-project/</code> in the example folder if it helps.</p>
+<div class="flow">
+<p><span class="step light">Raw data</span> <span class="step light">Cleaned data</span> <span class="step light">Code</span> <span class="step light">Results</span> <span class="step light">Documents</span></p>
 </div>
-</div><div class="column" style="width:48%;">
-<pre><code>Copy of data.csv        plot1.png
-analysis.R              plot_new.png
-analysis2 (copy).R      report_draft.docx
-analysis_OLD.R          results.xlsx
-clean.R                 results_v3.xlsx
-data.csv                untitled.R
-data_FINAL_USE_THIS.csv notes.txt
+<pre><code>Copy of data.csv          notes.txt
+analysis.R                plot1.png
+analysis2 (copy).R        plot_new.png
+analysis_OLD.R            report_draft.docx
+clean.R                   results.xlsx
+data.csv                  results_v3.xlsx
+data_FINAL_USE_THIS.csv   untitled.R
 data_final.csv
 data_final_v2.csv</code></pre>
-</div></div>
+<div class="small">
+<p>Then decide: which file would you <strong>never edit</strong>, and which would you <strong>delete</strong>?</p>
+</div>
 <aside class="notes">
 <p>Your turn, 6 min, on their own, on paper or in a document. No code. The course is online, so there is no pair work: ask people to post one surprising file or decision in the chat at the end. There is no single right answer: they are deciding what each file is for.</p>
 <style type="text/css">
@@ -495,8 +435,8 @@ data_final_v2.csv</code></pre>
           display:block!important;
       }</style></aside>
 </section>
-<section id="rescue-the-messy-project-the-answer" class="slide level2 demo-slide">
-<h2>Rescue the messy project: the answer</h2>
+<section id="what-goes-where" class="slide level2 demo-slide">
+<h2>What goes where</h2>
 <p><span class="answer-tag">Answer</span> <span class="demo-meta">4 min</span></p>
 <div class="doc-table">
 <table class="caption-top">
@@ -560,34 +500,22 @@ data_final_v2.csv</code></pre>
           display:block!important;
       }</style></aside>
 </section>
-<section id="rescue-the-messy-project-the-tidy-version" class="slide level2 demo-slide">
-<h2>Rescue the messy project: the tidy version</h2>
+<section id="the-tidy-version" class="slide level2 demo-slide">
+<h2>The tidy version</h2>
 <p><span class="answer-tag">Answer</span> <span class="demo-meta">2 min</span></p>
-<div class="columns">
-<div class="column" style="width:55%;">
 <pre><code>tidy-project/
-├── README.md
-├── report.qmd
+├── README.md                          how to run it
+├── report.qmd                         the report
+├── _quarto.yml                        report settings
 ├── data/
-│   ├── raw/penguins.csv
+│   ├── raw/penguins.csv               never edited
 │   └── processed/
-│       ├── penguins_clean.csv
-│       └── penguins_clean_dictionary.csv
+│       ├── penguins_clean.csv         made by the code
+│       └── penguins_clean_dictionary.csv   explains each column
 ├── code/
-│   ├── 01_clean_data.R
-│   └── run_all.R
-└── outputs/</code></pre>
-</div><div class="column" style="width:45%;">
-<div class="small">
-<ul>
-<li><strong>Raw data</strong> is kept apart, and never edited</li>
-<li><strong>One</strong> cleaned version, made by the code</li>
-<li>Scripts are <strong>numbered</strong>, in order</li>
-<li><strong>Outputs</strong> can be deleted and re-made</li>
-<li>A <strong>README</strong> says how to run it</li>
-</ul>
-</div>
-</div></div>
+│   ├── 01_clean_data.R                numbered, in order
+│   └── run_all.R                      rebuilds everything
+└── outputs/                           made by the code: safe to delete</code></pre>
 <aside class="notes">
 <p>Answer, part two. This is the project you rebuilt in the demo. Point out that it is the same data, just organised. The README and the data dictionary come next.</p>
 <style type="text/css">
@@ -704,32 +632,22 @@ data_final_v2.csv</code></pre>
 <section id="be-the-new-colleague" class="slide level2 demo-slide">
 <h2>Be the new colleague</h2>
 <p><span class="demo-tag">Together</span> <span class="demo-meta">2 min</span></p>
-<div class="columns">
-<div class="column" style="width:50%;">
 <p><code>messy-project/notes.txt</code> is the <strong>only documentation</strong>:</p>
 <pre><code>run clean.R first?? i think
 
 then analysis2 (copy).R
 NOT analysis.R (that one is old)
 
-data_final_v2 has the weird rows
-removed BUT i fixed a few values
-by hand
+data_final_v2 has the weird rows removed
+BUT i fixed a few values by hand
 
-figure 2 in the paper is
-plot_new.png (i think)
+figure 2 in the paper is plot_new.png (i think)
 ask Sam about the Gentoo ones</code></pre>
-</div><div class="column" style="width:50%;">
-<p>And this is the data:</p>
-<pre><code>species,island,bill_len,bill_dep,
-flipper_len,body_mass,sex,year
-Adelie,Torgersen,39.1,18.7,181,3750,male,2007</code></pre>
 <div class="medium">
 <p>You have inherited this project. What <strong>can’t</strong> you work out?</p>
 </div>
-</div></div>
 <aside class="notes">
-<p>Together, 2 min. Read the notes out loud with a straight face. Ask what bill_dep means, and whether body_mass is in grams or kilograms.</p>
+<p>Together, 2 min. Read the notes out loud with a straight face. The data has columns called bill_dep and body_mass: ask what bill_dep means, and whether body_mass is in grams or kilograms.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -742,8 +660,8 @@ Adelie,Torgersen,39.1,18.7,181,3750,male,2007</code></pre>
           display:block!important;
       }</style></aside>
 </section>
-<section id="be-the-new-colleague-your-turn" class="slide level2 demo-slide">
-<h2>Be the new colleague: your turn</h2>
+<section id="be-the-new-colleague-1" class="slide level2 demo-slide">
+<h2>Be the new colleague</h2>
 <p><span class="your-turn-tag">Your turn</span> <span class="demo-meta">4 min</span></p>
 <div class="medium">
 <p>Write down <strong>three things</strong> you can’t work out.</p>
@@ -771,26 +689,26 @@ Adelie,Torgersen,39.1,18.7,181,3750,male,2007</code></pre>
           display:block!important;
       }</style></aside>
 </section>
-<section id="be-the-new-colleague-the-answer" class="slide level2 demo-slide">
-<h2>Be the new colleague: the answer</h2>
+<section id="the-readme" class="slide level2 demo-slide">
+<h2>The README</h2>
 <p><span class="answer-tag">Answer</span> <span class="demo-meta">2 min</span></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu"># Penguin body mass analysis</span></span>
-<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a>Body measurements of 333 penguins on three islands. **Status:** complete.</span>
-<span id="cb6-4"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">## Quickstart</span></span>
-<span id="cb6-6"><a aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Open this folder in RStudio or Positron</span>
-<span id="cb6-7"><a aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Run <span class="in">`code/run_all.R`</span></span>
-<span id="cb6-8"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-9"><a aria-hidden="true" tabindex="-1"></a><span class="fu">## Setup</span></span>
-<span id="cb6-10"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>R 4.3 or later</span>
-<span id="cb6-11"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Quarto 1.4 or later</span>
-<span id="cb6-12"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-13"><a aria-hidden="true" tabindex="-1"></a><span class="fu">## Contents</span></span>
-<span id="cb6-14"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`data/raw/`</span> the original data (never edited)</span>
-<span id="cb6-15"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`data/processed/`</span> cleaned data, and a data dictionary</span>
-<span id="cb6-16"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`code/`</span> the scripts</span>
-<span id="cb6-17"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`report.qmd`</span> the report</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu"># Penguin body mass analysis</span></span>
+<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a aria-hidden="true" tabindex="-1"></a>Body measurements of 333 penguins on three islands. **Status:** complete.</span>
+<span id="cb5-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">## Quickstart</span></span>
+<span id="cb5-6"><a aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Open this folder in RStudio or Positron</span>
+<span id="cb5-7"><a aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Run <span class="in">`code/run_all.R`</span></span>
+<span id="cb5-8"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a aria-hidden="true" tabindex="-1"></a><span class="fu">## Setup</span></span>
+<span id="cb5-10"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>R 4.3 or later</span>
+<span id="cb5-11"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Quarto 1.4 or later</span>
+<span id="cb5-12"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a aria-hidden="true" tabindex="-1"></a><span class="fu">## Contents</span></span>
+<span id="cb5-14"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`data/raw/`</span> the original data (never edited)</span>
+<span id="cb5-15"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`data/processed/`</span> cleaned data, and a data dictionary</span>
+<span id="cb5-16"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`code/`</span> the scripts</span>
+<span id="cb5-17"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`report.qmd`</span> the report</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <aside class="notes">
 <p>Answer, part one: the README from <code>tidy-project</code>. It answers all three questions: how to run it, what software, what is where. The next slide shows the data dictionary, which answers the column question.</p>
 <style type="text/css">
@@ -805,8 +723,8 @@ Adelie,Torgersen,39.1,18.7,181,3750,male,2007</code></pre>
           display:block!important;
       }</style></aside>
 </section>
-<section id="be-the-new-colleague-the-data-dictionary" class="slide level2 demo-slide">
-<h2>Be the new colleague: the data dictionary</h2>
+<section id="the-data-dictionary" class="slide level2 demo-slide">
+<h2>The data dictionary</h2>
 <p><span class="answer-tag">Answer</span> <span class="demo-meta">2 min</span></p>
 <table class="caption-top">
 <colgroup>
@@ -831,24 +749,18 @@ Adelie,Torgersen,39.1,18.7,181,3750,male,2007</code></pre>
 <td>Adelie, Chinstrap, Gentoo</td>
 </tr>
 <tr class="even">
-<td><code>island</code></td>
-<td>text</td>
-<td>Where it was observed</td>
-<td>Biscoe, Dream, Torgersen</td>
-</tr>
-<tr class="odd">
 <td><code>bill_len</code></td>
 <td>number</td>
 <td>Bill length</td>
 <td>mm</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>body_mass</code></td>
 <td>number</td>
 <td>Body mass</td>
 <td>grams</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>sex</code></td>
 <td>text</td>
 <td>Sex of the penguin</td>
@@ -856,9 +768,6 @@ Adelie,Torgersen,39.1,18.7,181,3750,male,2007</code></pre>
 </tr>
 </tbody>
 </table>
-<div class="good">
-<p>✔ One row per column. Keep it next to the data, and mention it in your README</p>
-</div>
 <aside class="notes">
 <p>Answer, part two. The dictionary has one row per column: what it is, its type and its units. Copying the column names is the easy part. The descriptions are the value, and only the person who knows the data can write them.</p>
 <style type="text/css">
@@ -875,28 +784,17 @@ Adelie,Torgersen,39.1,18.7,181,3750,male,2007</code></pre>
 </section>
 <section id="what-is-quarto" class="slide level2">
 <h2>What is Quarto?</h2>
-<div class="columns">
-<div class="column" style="width:55%;">
 <div class="small">
 <ul>
-<li>Write <strong>text and code in one file</strong> (<code>report.qmd</code>)</li>
+<li>Write <strong>text and code in one file</strong></li>
 <li><strong>Render</strong> it into a report: HTML, PDF or Word</li>
-<li>The code runs when you render, so the <strong>results come from the code</strong></li>
-<li>Works with <strong>R, Python</strong> and more, in the IDE you already use</li>
+<li>The results <strong>come from the code</strong></li>
 <li>Free and open source: <a href="https://quarto.org">quarto.org</a></li>
 </ul>
 </div>
-</div><div class="column" style="width:45%;">
 <div class="flow">
-<p><span class="step">report.qmd</span></p>
+<p><span class="step">report.qmd</span> <span class="arrow">→ render →</span> <span class="step">report.html</span></p>
 </div>
-<div class="flow">
-<p><span class="arrow">↓ render</span></p>
-</div>
-<div class="flow">
-<p><span class="step">report.html</span></p>
-</div>
-</div></div>
 <aside class="notes">
 <p>Quarto is the tool this whole course is built with: the slides, the notes and the website are all Quarto. It is free, and works with R, Python and Julia.</p>
 <style type="text/css">
@@ -968,30 +866,52 @@ Adelie,Torgersen,39.1,18.7,181,3750,male,2007</code></pre>
 </section>
 <section id="weaving-text-and-analysis-together" class="slide level2">
 <h2>Weaving text and analysis together</h2>
-<div class="columns">
-<div class="column" style="width:55%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Penguin report"</span></span>
-<span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
-<span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
-<span id="cb7-5"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-6"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb7-7"><a aria-hidden="true" tabindex="-1"></a>clean <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/processed/penguins_clean.csv"</span>)</span>
-<span id="cb7-8"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb7-9"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-10"><a aria-hidden="true" tabindex="-1"></a>There are <span class="in">`{r} nrow(clean)`</span> penguins in the data.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column" style="width:45%;">
-<div class="small">
-<ol type="1">
-<li><strong>Header:</strong> the title and the output format</li>
-<li><strong>Text:</strong> ordinary Markdown, with headings and lists</li>
-<li><strong>Code chunk:</strong> the code runs when you render, and its output appears underneath</li>
-<li><strong>Inline code:</strong> a result inside a sentence</li>
-</ol>
-</div>
-</div></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Penguin report"</span></span>
+<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
+<span id="cb6-5"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb6-7"><a aria-hidden="true" tabindex="-1"></a>clean <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/processed/penguins_clean.csv"</span>)</span>
+<span id="cb6-8"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-9"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a aria-hidden="true" tabindex="-1"></a>There are <span class="in">`{r} nrow(clean)`</span> penguins in the data.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <aside class="notes">
-<p>In a real file the header sits between two lines of three dashes. Point at each part in turn. Inline code is the clever bit: the number in the sentence is calculated every time the report is rendered.</p>
+<p>In a real file the header sits between two lines of three dashes. Next slide: the four parts.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-four-parts-of-a-quarto-file" class="slide level2">
+<h2>The four parts of a Quarto file</h2>
+<div class="cards grid2">
+<div class="card">
+<p><strong>1 · Header</strong></p>
+<p>The title and the output format</p>
+</div>
+<div class="card">
+<p><strong>2 · Text</strong></p>
+<p>Ordinary Markdown, with headings and lists</p>
+</div>
+<div class="card">
+<p><strong>3 · Code chunk</strong></p>
+<p>The code runs when you render, and its output appears underneath</p>
+</div>
+<div class="card">
+<p><strong>4 · Inline code</strong></p>
+<p>A result inside a sentence, recalculated every time</p>
+</div>
+</div>
+<aside class="notes">
+<p>Point at each part on the previous slide. Inline code is the clever bit: the number in the sentence is calculated every time the report is rendered.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1047,28 +967,17 @@ Adelie,Torgersen,39.1,18.7,181,3750,male,2007</code></pre>
 <section id="one-document-many-formats" class="slide level2 demo-slide">
 <h2>One document, many formats</h2>
 <p><span class="demo-tag">Together</span> <span class="demo-meta">6 min</span></p>
-<div class="columns">
-<div class="column" style="width:45%;">
-<pre><code>format:
-  html: default
-  typst: default
-  docx: default</code></pre>
-</div><div class="column" style="width:55%;">
 <div class="flow">
-<p><span class="step">report.qmd</span></p>
+<p><span class="step">report.qmd</span> <span class="arrow">→</span> <span class="step light">HTML</span> <span class="step light">PDF</span> <span class="step light">Word</span></p>
 </div>
-<div class="flow">
-<p><span class="arrow">↓ render</span></p>
+<div class="medium">
+<p>One file. Three formats.</p>
 </div>
-<div class="flow">
-<p><span class="step">HTML</span> <span class="step">PDF</span> <span class="step">Word</span></p>
-</div>
-</div></div>
 <div class="small">
-<p>One file, three formats. The PDF is made with <strong>Typst</strong>, so you don’t need LaTeX.</p>
+<p>The PDF is made with <strong>Typst</strong>, so you don’t need LaTeX.</p>
 </div>
 <aside class="notes">
-<p>Together, 6 min. Open <code>one-document/report.qmd</code>. Show the header, the text, the table and the figure, all in one file. Render it to HTML, then change the format and render to PDF (Typst) and Word. Show all three side by side. If you have time, add <code>revealjs</code> for slides. Message: write once, publish many ways. If Render fails, open the files in <code>one-document/finished/</code>.</p>
+<p>Together, 6 min. Open <code>one-document/report.qmd</code>. Show the header (it lists html, typst and docx), the text, the table and the figure, all in one file. Render it to HTML, then change the format and render to PDF (Typst) and Word. Show all three side by side. If you have time, add <code>revealjs</code> for slides. Message: write once, publish many ways. If Render fails, open the files in <code>one-document/finished/</code>.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1081,8 +990,8 @@ Adelie,Torgersen,39.1,18.7,181,3750,male,2007</code></pre>
           display:block!important;
       }</style></aside>
 </section>
-<section id="one-document-many-formats-your-turn" class="slide level2 demo-slide">
-<h2>One document, many formats: your turn</h2>
+<section id="one-document-many-formats-1" class="slide level2 demo-slide">
+<h2>One document, many formats</h2>
 <p><span class="your-turn-tag">Your turn</span> <span class="demo-meta">7 min</span></p>
 <div class="medium">
 <ol type="1">
@@ -1109,8 +1018,8 @@ Adelie,Torgersen,39.1,18.7,181,3750,male,2007</code></pre>
           display:block!important;
       }</style></aside>
 </section>
-<section id="one-document-many-formats-the-answer" class="slide level2 demo-slide">
-<h2>One document, many formats: the answer</h2>
+<section id="what-else-can-quarto-make" class="slide level2 demo-slide">
+<h2>What else can Quarto make?</h2>
 <p><span class="answer-tag">Answer</span> <span class="demo-meta">3 min</span></p>
 <div class="cards grid2">
 <div class="card">
@@ -1369,17 +1278,11 @@ Adelie,Torgersen,39.1,18.7,181,3750,male,2007</code></pre>
 <section id="the-new-laptop-test" class="slide level2 demo-slide">
 <h2>The new laptop test</h2>
 <p><span class="demo-tag">Together</span> <span class="demo-meta">2 min</span></p>
-<div class="columns">
-<div class="column" style="width:50%;">
 <div class="medium">
-<p>A colleague emails you their project.</p>
-<p><em>“It runs fine on my laptop!”</em></p>
-</div>
-</div><div class="column" style="width:50%;">
+<p>A colleague emails you their project: <em>“It runs fine on my laptop!”</em></p>
 <p>You open it on <strong>your</strong> laptop:</p>
-<pre><code>Error: there is no package
-called 'ggplot2'</code></pre>
-</div></div>
+</div>
+<pre><code>Error: there is no package called 'ggplot2'</code></pre>
 <div class="medium">
 <p>What would you need to know to make it run?</p>
 </div>
@@ -1397,8 +1300,8 @@ called 'ggplot2'</code></pre>
           display:block!important;
       }</style></aside>
 </section>
-<section id="the-new-laptop-test-your-turn" class="slide level2 demo-slide">
-<h2>The new laptop test: your turn</h2>
+<section id="the-new-laptop-test-1" class="slide level2 demo-slide">
+<h2>The new laptop test</h2>
 <p><span class="your-turn-tag">Your turn</span> <span class="demo-meta">6 min</span></p>
 <div class="medium">
 <p>On your own, list <strong>everything you would need to know</strong> to run this project on a new computer.</p>
@@ -1420,8 +1323,8 @@ called 'ggplot2'</code></pre>
           display:block!important;
       }</style></aside>
 </section>
-<section id="the-new-laptop-test-the-answer" class="slide level2 demo-slide">
-<h2>The new laptop test: the answer</h2>
+<section id="the-new-laptop-test-2" class="slide level2 demo-slide">
+<h2>The new laptop test</h2>
 <p><span class="answer-tag">Answer</span> <span class="demo-meta">3 min</span></p>
 <div class="doc-table">
 <table class="caption-top">
@@ -1521,22 +1424,34 @@ called 'ggplot2'</code></pre>
 <section id="your-checklist" class="slide level2 demo-slide">
 <h2>Your checklist</h2>
 <p><span class="your-turn-tag">Your turn</span> <span class="demo-meta">6 min</span></p>
-<div class="cards grid2">
-<div class="card">
-<p><strong>Structure</strong> ☐ Raw data never edited ☐ Separate folders for data, code and results ☐ Clear file names</p>
-</div>
-<div class="card">
-<p><strong>Documentation</strong> ☐ A README ☐ A data dictionary ☐ A report made from the code</p>
-</div>
-<div class="card">
-<p><strong>Environments</strong> ☐ Software and versions written down ☐ Packages recorded in a file ☐ A colleague could run it</p>
-</div>
-<div class="card">
-<p><strong>Sharing</strong> ☐ Data in an open format (CSV) ☐ A licence ☐ Somewhere to deposit it</p>
-</div>
-</div>
 <div class="small">
-<p><strong>Tick</strong> what your own project already does. <strong>Circle one</strong> thing to start with this week. Post your one thing in the chat. (Checklist to print: <code>take-home/</code>)</p>
+<p><strong>Tick</strong> what you do. <strong>Circle one</strong> to start. Post it in the chat.</p>
+</div>
+<div class="cards grid2 checklist">
+<div class="card">
+<p><strong>Structure</strong></p>
+<p>☐ Raw data never edited</p>
+<p>☐ Separate folders</p>
+<p>☐ Clear file names</p>
+</div>
+<div class="card">
+<p><strong>Documentation</strong></p>
+<p>☐ A README</p>
+<p>☐ A data dictionary</p>
+<p>☐ A report made from code</p>
+</div>
+<div class="card">
+<p><strong>Environments</strong></p>
+<p>☐ Software versions written down</p>
+<p>☐ Packages recorded in a file</p>
+<p>☐ A colleague could run it</p>
+</div>
+<div class="card">
+<p><strong>Sharing</strong></p>
+<p>☐ Data in an open format (CSV)</p>
+<p>☐ A licence</p>
+<p>☐ Somewhere to deposit it</p>
+</div>
 </div>
 <aside class="notes">
 <p>Your turn, 6 min. They tick the checklist for a project of their own (or the messy one if they have none). Then circle ONE thing, and post it in the chat. The printable checklist is in <code>take-home/</code> (PDF and Word).</p>
@@ -1803,8 +1718,8 @@ called 'ggplot2'</code></pre>
 <p>For each one, mark every letter of <strong>Q-FAIR</strong> with a ✔ or an ✘.</p>
 </div>
 </section>
-<section id="q-fair-detective-the-answer" class="slide level2 demo-slide">
-<h2>Q-FAIR detective: the answer</h2>
+<section id="q-fair-detective-1" class="slide level2 demo-slide">
+<h2>Q-FAIR detective</h2>
 <p><span class="answer-tag">Answer</span> <span class="demo-meta">2 min</span></p>
 <div class="doc-table">
 <table class="caption-top">

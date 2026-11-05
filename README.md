@@ -6,14 +6,14 @@ A reproducible project can be re-run, understood and shared by other people. It 
 
 This course introduces the practical habits that make this possible. It covers project structure, documentation, Quarto reports, virtual environments and sharing data.
 
-The course takes about two hours. Each topic has a short demo and a hands-on activity (together, your turn, then the answer), and attendees run no code. The notes are written so they can also be used for self-study.
+The course takes about two hours. Each topic has a hands-on activity (together, your turn, then the answer), and sections 2 and 3 have a short demo, and attendees run no code. The notes are written so they can also be used for self-study.
 
 ## What is in this repository
 
 | File or folder | What it is |
 |---|---|
 | `index.qmd` | The course home page, with the learning objectives, outline and download buttons |
-| `slides.qmd` | The slides: three watch-only demos and one activity per topic (together, your turn, answer), with the steps in the speaker notes (press S), plus optional Q-FAIR slides at the end |
+| `slides.qmd` | The slides: two watch-only demos and one activity per topic (together, your turn, answer), with the steps in the speaker notes (press S), plus optional Q-FAIR slides at the end |
 | `notes.qmd` | The notes. Reference for attendees, and written so they can be used for self-study, with a "Try it yourself" activity and answer for each section |
 | `instructor.qmd` | A quick-glance guide for the instructor: timings, key messages, things not to forget and checkpoints |
 | `example-project/` | The folder attendees download: `messy-project/` (bad structure and names), `tidy-project/` (the best practices), `one-document/` (one report, many formats) and `take-home/` (a checklist) |

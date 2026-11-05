@@ -5,11 +5,11 @@ format: html
 
 # At a glance {.unnumbered}
 
-**How it runs:** slides, then a short **watch-only demo** (the "wow"), then one **activity**: *Together* (we do a part), *Your turn* (they do it on their own), *Answer* (you show it). Attendees never run code: the only thing they run is **Render**. The steps for each demo and activity are in the **speaker notes** of its slide (press **S** in the deck).
+**How it runs:** slides, then (in sections 2 and 3) a short **watch-only demo** (the "wow"), then one **activity**: *Together* (we do a part), *Your turn* (they do it on their own), *Answer* (you show it). Attendees never run code: the only thing they run is **Render**. The steps for each demo and activity are in the **speaker notes** of its slide (press **S** in the deck).
 
 | # | Section | Min | Objective | Demo (you) | Activity |
 |---|---|---|---|---|---|
-| 1 | Project structures | 30 | 1 | Delete the cleaned data and report, rebuild from raw | Rescue the messy project |
+| 1 | Project structures | 25 | 1 | none | Rescue the messy project |
 | 2 | Documentation & Quarto | 45 | 2, 3 | Change the data, the report updates | Be the new colleague. One document, many formats |
 | 3 | Virtual environments | 30 | 4 | Delete the environment, rebuild it | The new laptop test |
 | 4 | Your first step | 15 | 5 | none | Your checklist |
@@ -26,7 +26,7 @@ format: html
 ## Before you start {.unnumbered}
 
 - Download and unzip the **example folder**. Copy `tidy-project/` somewhere you can change it.
-- You need **R and Quarto 1.4+** on your own machine for the demos. Run `code/run_all.R` once to check it works.
+- You need **R and Quarto 1.4+** on your own machine for the section 2 demo. Run `code/run_all.R` once to check it works.
 - Press Render on `one-document/report.qmd`: attendees will do this. Attendees need **Quarto only**, not R or Python.
 - For the environment demo, prepare a small project with an environment (`renv` for R, or `uv` for Python) that you can delete and restore.
 - Check the links on the slides and notes.
@@ -39,9 +39,9 @@ format: html
 - Wording works for everyone in the university. Spreadsheet users do the same activities.
 - If running late, skip the **optional** slides first, then shorten a *Your turn*, not a section.
 
-# 1. Project structures (30 min)
+# 1. Project structures (25 min)
 
-**Checkpoints:** by 6 min the demo; by 10 *Together*; by 14 *Your turn*; by 20 *Answer*; finish at 30 (the spare time is for discussion).
+**Checkpoints:** by 5 min *Together*; by 9 *Your turn*; by 15 *Answer*; finish at 25.
 
 **Key messages**
 
@@ -52,7 +52,6 @@ format: html
 
 **Don't forget**
 
-- At the demo, say "watch what happens when I delete everything".
 - In *Together*, let people feel the problem before you explain it.
 - At the *Answer*, ask who disagreed, and why. There is more than one reasonable layout.
 

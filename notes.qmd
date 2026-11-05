@@ -146,6 +146,7 @@ Now open `tidy-project/`. It holds the same project, organised:
 tidy-project/
 ├── README.md
 ├── report.qmd
+├── _quarto.yml
 ├── data/
 │   ├── raw/penguins.csv
 │   └── processed/
@@ -252,6 +253,7 @@ Body measurements of 333 penguins on three islands. **Status:** complete.
 - `data/processed/` the cleaned data, and a data dictionary explaining each column
 - `code/` the scripts
 - `report.qmd` the report, which makes HTML, PDF and Word versions
+- `_quarto.yml` settings for the report (it puts the results in `outputs/`)
 - `outputs/` made by `run_all.R`. Safe to delete
 ````
 

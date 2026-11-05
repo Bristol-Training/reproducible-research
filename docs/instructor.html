@@ -48,9 +48,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c1c880788820849d33141aa8c41a742a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-c1c880788820849d33141aa8c41a742a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-c1c880788820849d33141aa8c41a742a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-117065e251d75c4e6be1502418511c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-117065e251d75c4e6be1502418511c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-117065e251d75c4e6be1502418511c8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -117,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#before-you-start" id="toc-before-you-start" class="nav-link" data-scroll-target="#before-you-start">Before you start</a></li>
   <li><a href="#ground-rules" id="toc-ground-rules" class="nav-link" data-scroll-target="#ground-rules">Ground rules</a></li>
   </ul></li>
-  <li><a href="#project-structures-30-min" id="toc-project-structures-30-min" class="nav-link" data-scroll-target="#project-structures-30-min"><span class="header-section-number">1</span> 1. Project structures (30 min)</a></li>
+  <li><a href="#project-structures-25-min" id="toc-project-structures-25-min" class="nav-link" data-scroll-target="#project-structures-25-min"><span class="header-section-number">1</span> 1. Project structures (25 min)</a></li>
   <li><a href="#documentation-quarto-45-min" id="toc-documentation-quarto-45-min" class="nav-link" data-scroll-target="#documentation-quarto-45-min"><span class="header-section-number">2</span> 2. Documentation &amp; Quarto (45 min)</a></li>
   <li><a href="#virtual-environments-30-min" id="toc-virtual-environments-30-min" class="nav-link" data-scroll-target="#virtual-environments-30-min"><span class="header-section-number">3</span> 3. Virtual environments (30 min)</a></li>
   <li><a href="#your-first-step-15-min" id="toc-your-first-step-15-min" class="nav-link" data-scroll-target="#your-first-step-15-min"><span class="header-section-number">4</span> 4. Your first step (15 min)</a></li>
@@ -154,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="at-a-glance" class="level1 unnumbered">
 <h1 class="unnumbered">At a glance</h1>
-<p><strong>How it runs:</strong> slides, then a short <strong>watch-only demo</strong> (the “wow”), then one <strong>activity</strong>: <em>Together</em> (we do a part), <em>Your turn</em> (they do it on their own), <em>Answer</em> (you show it). Attendees never run code: the only thing they run is <strong>Render</strong>. The steps for each demo and activity are in the <strong>speaker notes</strong> of its slide (press <strong>S</strong> in the deck).</p>
+<p><strong>How it runs:</strong> slides, then (in sections 2 and 3) a short <strong>watch-only demo</strong> (the “wow”), then one <strong>activity</strong>: <em>Together</em> (we do a part), <em>Your turn</em> (they do it on their own), <em>Answer</em> (you show it). Attendees never run code: the only thing they run is <strong>Render</strong>. The steps for each demo and activity are in the <strong>speaker notes</strong> of its slide (press <strong>S</strong> in the deck).</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 16%">
@@ -178,9 +178,9 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>1</td>
 <td>Project structures</td>
-<td>30</td>
+<td>25</td>
 <td>1</td>
-<td>Delete the cleaned data and report, rebuild from raw</td>
+<td>none</td>
 <td>Rescue the messy project</td>
 </tr>
 <tr class="even">
@@ -229,7 +229,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="unnumbered anchored" data-anchor-id="before-you-start">Before you start</h2>
 <ul>
 <li>Download and unzip the <strong>example folder</strong>. Copy <code>tidy-project/</code> somewhere you can change it.</li>
-<li>You need <strong>R and Quarto 1.4+</strong> on your own machine for the demos. Run <code>code/run_all.R</code> once to check it works.</li>
+<li>You need <strong>R and Quarto 1.4+</strong> on your own machine for the section 2 demo. Run <code>code/run_all.R</code> once to check it works.</li>
 <li>Press Render on <code>one-document/report.qmd</code>: attendees will do this. Attendees need <strong>Quarto only</strong>, not R or Python.</li>
 <li>For the environment demo, prepare a small project with an environment (<code>renv</code> for R, or <code>uv</code> for Python) that you can delete and restore.</li>
 <li>Check the links on the slides and notes.</li>
@@ -246,9 +246,9 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="project-structures-30-min" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> 1. Project structures (30 min)</h1>
-<p><strong>Checkpoints:</strong> by 6 min the demo; by 10 <em>Together</em>; by 14 <em>Your turn</em>; by 20 <em>Answer</em>; finish at 30 (the spare time is for discussion).</p>
+<section id="project-structures-25-min" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> 1. Project structures (25 min)</h1>
+<p><strong>Checkpoints:</strong> by 5 min <em>Together</em>; by 9 <em>Your turn</em>; by 15 <em>Answer</em>; finish at 25.</p>
 <p><strong>Key messages</strong></p>
 <ul>
 <li>Raw data is never edited. Everything after it can be re-made, so protect the raw data and the code.</li>
@@ -258,7 +258,6 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><strong>Don’t forget</strong></p>
 <ul>
-<li>At the demo, say “watch what happens when I delete everything”.</li>
 <li>In <em>Together</em>, let people feel the problem before you explain it.</li>
 <li>At the <em>Answer</em>, ask who disagreed, and why. There is more than one reasonable layout.</li>
 </ul>

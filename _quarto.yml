@@ -49,6 +49,8 @@ format:
     # keep slide changes out of the browser history, so Back leaves the slides
     history: false
     code-line-numbers: false
+    # wrap long lines instead of scrolling sideways
+    code-overflow: wrap
     highlight-style: github
     transition: fade
     transition-speed: fast
