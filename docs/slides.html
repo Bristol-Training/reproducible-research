@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.10.18">
 
-  <meta name="author" content="Jean Golding Institute">
+  <meta name="author" content="Dr Josh Tyler - Jean Golding Institute">
   <title>Reproducible Research</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -101,7 +101,7 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-b3d74907037a6daf42b95e854bf47414.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-7a785ea7016a548e706446cafda3d5c2.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -205,16 +205,16 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Jean Golding Institute
+Dr Josh Tyler - Jean Golding Institute
 </div>
 </div>
 </div>
 
 </section>
-<section id="todays-mission" class="slide level2 center">
-<h2>Today’s mission</h2>
+<section id="todays-mission" class="slide level2 big center">
+<h2>Today’s mission:</h2>
 <div class="big center">
-<p>Make your research<br>easier to re-run,<br>understand and share.</p>
+<p>Make your research easier to re-run, understand and share.</p>
 </div>
 <aside class="notes">
 <p>Works for R, Python and spreadsheet users. Demo in Positron, but everything can be done in any IDE or the terminal. The notes are a reference for afterwards; the slides and demos carry the session.</p>
@@ -231,9 +231,9 @@ Jean Golding Institute
       }</style></aside>
 </section>
 <section id="how-today-works" class="slide level2">
-<h2>How today works</h2>
-<div class="big">
-<p>Do it together.<br>Then try it yourself.</p>
+<h2>How today works:</h2>
+<div class="medium">
+<p>Do it together. Then try it yourself.</p>
 </div>
 <div class="small">
 <ul>
@@ -245,7 +245,7 @@ Jean Golding Institute
 </div>
 </section>
 <section id="the-journey" class="slide level2">
-<h2>The journey</h2>
+<h2>The Journey</h2>
 <div class="cards journey">
 <div class="card fragment">
 <p><strong>1 · Structure</strong> <em>Where does everything go?</em> Raw data, processed data, code and outputs, and never editing the raw data <span class="hands-on">Hands-on: rescue a messy project</span></p>
@@ -257,11 +257,8 @@ Jean Golding Institute
 <p><strong>3 · Environments</strong> <em>Will it run on another computer?</em> Why environments matter, and how a lock file lets you send a project that works <span class="hands-on">Hands-on: the new laptop test</span></p>
 </div>
 <div class="card fragment">
-<p><strong>4 · Your first step</strong> <em>What will you do on Monday?</em> Pull it together into a checklist for your own project <span class="hands-on">Hands-on: your checklist</span></p>
+<p><strong>4 · Your first step</strong> <em>What will you do next?</em> Pull it together into a checklist for your own project <span class="hands-on">Hands-on: your checklist</span></p>
 </div>
-</div>
-<div class="muted center">
-<p>About 2 hours: 25 + 45 + 30 + 15 minutes</p>
 </div>
 <aside class="notes">
 <p>Click through the four cards one at a time. Every topic follows the same pattern: slides, then a short activity (together, your turn, answer). Nobody needs to run any code. Sections 2 and 3 also have a short demo from you.</p>
@@ -310,16 +307,16 @@ Jean Golding Institute
 <section id="why-bother" class="slide level2">
 <h2>Why bother?</h2>
 <div class="cards grid2">
-<div class="card">
+<div class="card fragment">
 <p><strong>Future you</strong> Code written as if others will use it is easier to return to after a holiday, or in six months’ time</p>
 </div>
-<div class="card">
+<div class="card fragment">
 <p><strong>Speed</strong> A project set up as a pipeline can be re-run quickly when the data changes or a reviewer asks for something new</p>
 </div>
-<div class="card">
+<div class="card fragment">
 <p><strong>Confidence</strong> You understand how the pieces fit together, and where things might go wrong</p>
 </div>
-<div class="card">
+<div class="card fragment">
 <p><strong>Sharing and careers</strong> Journals and funders increasingly expect shared code and data, and tidy work is easy to trust</p>
 </div>
 </div>
@@ -337,8 +334,8 @@ Jean Golding Institute
           display:block!important;
       }</style></aside>
 </section>
-<section id="think-pipeline" class="slide level2">
-<h2>Think pipeline</h2>
+<section id="think-about-pipelines" class="slide level2">
+<h2>Think about pipelines</h2>
 <div class="flow">
 <p><span class="step">Raw data</span> <span class="arrow">→</span> <span class="step">Clean</span> <span class="arrow">→</span> <span class="step">Analyse</span> <span class="arrow">→</span> <span class="step">Results</span></p>
 </div>
@@ -364,16 +361,16 @@ Jean Golding Institute
 <section id="look-at-the-messy-project" class="slide level2 demo-slide">
 <h2>Look at the messy project</h2>
 <p><span class="demo-tag">Together</span> <span class="demo-meta">4 min</span></p>
-<pre><code>messy-project/
-Copy of data.csv          notes.txt
-analysis.R                plot1.png
-analysis2 (copy).R        plot_new.png
-analysis_OLD.R            report_draft.docx
-clean.R                   results.xlsx
-data.csv                  results_v3.xlsx
-data_FINAL_USE_THIS.csv   untitled.R
-data_final.csv
-data_final_v2.csv</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a>messy-project/</span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a>Copy of data.csv          notes.txt</span>
+<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a>analysis.R                plot1.png</span>
+<span id="cb1-4"><a aria-hidden="true" tabindex="-1"></a>analysis2 (copy).R        plot_new.png</span>
+<span id="cb1-5"><a aria-hidden="true" tabindex="-1"></a>analysis_OLD.R            report_draft.docx</span>
+<span id="cb1-6"><a aria-hidden="true" tabindex="-1"></a>clean.R                   results.xlsx</span>
+<span id="cb1-7"><a aria-hidden="true" tabindex="-1"></a>data.csv                  results_v3.xlsx</span>
+<span id="cb1-8"><a aria-hidden="true" tabindex="-1"></a>data_FINAL_USE_THIS.csv   untitled.R</span>
+<span id="cb1-9"><a aria-hidden="true" tabindex="-1"></a>data_final.csv</span>
+<span id="cb1-10"><a aria-hidden="true" tabindex="-1"></a>data_final_v2.csv</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cards">
 <div class="card">
 <p><strong>1</strong></p>
@@ -587,8 +584,9 @@ data_final_v2.csv</code></pre>
 </tbody>
 </table>
 </div>
+<p><br></p>
 <div class="muted center">
-<p>Write for the person who will read it</p>
+<p>Write for the person who will read it, which includes yourself!</p>
 </div>
 <aside class="notes">
 <p>Go through the four in turn, and ask who they are writing for. Comments are for people reading the code, the README is for people running it, the data dictionary is for people using the data, and external documentation is for people who may never see the code. The rest of this section covers the README, the data dictionary and reports written in Quarto.</p>
@@ -615,6 +613,19 @@ data_final_v2.csv</code></pre>
 <div class="good">
 <p>✔ No code? A README is still the best way to document your project</p>
 </div>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Using AI</strong></p>
+</div>
+<div class="callout-content">
+<p>Be careful getting an LLM to create your README. While it can save time, you may inadvertently upload all your data and results by giving access to your folders! Instead, draft one yourself and then use a chatbot to help refine it!</p>
+</div>
+</div>
+</div>
 <aside class="notes">
 <p>Show a real README. Point out it is just a text file written in Markdown. The next activity is about what makes one useful.</p>
 <style type="text/css">
@@ -633,16 +644,16 @@ data_final_v2.csv</code></pre>
 <h2>Be the new colleague</h2>
 <p><span class="demo-tag">Together</span> <span class="demo-meta">2 min</span></p>
 <p><code>messy-project/notes.txt</code> is the <strong>only documentation</strong>:</p>
-<pre><code>run clean.R first?? i think
-
-then analysis2 (copy).R
-NOT analysis.R (that one is old)
-
-data_final_v2 has the weird rows removed
-BUT i fixed a few values by hand
-
-figure 2 in the paper is plot_new.png (i think)
-ask Sam about the Gentoo ones</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a>run clean.R first?? i think</span>
+<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a aria-hidden="true" tabindex="-1"></a>then analysis2 (copy).R</span>
+<span id="cb4-4"><a aria-hidden="true" tabindex="-1"></a>NOT analysis.R (that one is old)</span>
+<span id="cb4-5"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a aria-hidden="true" tabindex="-1"></a>data_final_v2 has the weird rows removed</span>
+<span id="cb4-7"><a aria-hidden="true" tabindex="-1"></a>BUT i fixed a few values by hand</span>
+<span id="cb4-8"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a aria-hidden="true" tabindex="-1"></a>figure 2 in the paper is plot_new.png (i think)</span>
+<span id="cb4-10"><a aria-hidden="true" tabindex="-1"></a>ask Sam about the Gentoo ones</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="medium">
 <p>You have inherited this project. What <strong>can’t</strong> you work out?</p>
 </div>
@@ -793,7 +804,7 @@ ask Sam about the Gentoo ones</code></pre>
 </ul>
 </div>
 <div class="flow">
-<p><span class="step">report.qmd</span> <span class="arrow">→ render →</span> <span class="step">report.html</span></p>
+<p><span class="step fragment">report.qmd</span> <span class="arrow fragment">→</span> <span class="step light fragment">HTML</span> <span class="step light fragment">PDF</span> <span class="step light fragment">Word</span></p>
 </div>
 <aside class="notes">
 <p>Quarto is the tool this whole course is built with: the slides, the notes and the website are all Quarto. It is free, and works with R, Python and Julia.</p>
@@ -866,16 +877,19 @@ ask Sam about the Gentoo ones</code></pre>
 </section>
 <section id="weaving-text-and-analysis-together" class="slide level2">
 <h2>Weaving text and analysis together</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Penguin report"</span></span>
-<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
-<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
-<span id="cb6-5"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-6"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb6-7"><a aria-hidden="true" tabindex="-1"></a>clean <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/processed/penguins_clean.csv"</span>)</span>
-<span id="cb6-8"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb6-9"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-10"><a aria-hidden="true" tabindex="-1"></a>There are <span class="in">`{r} nrow(clean)`</span> penguins in the data.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Penguin report"</span></span>
+<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb6-4"><a aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Josh Tyler</span></span>
+<span id="cb6-5"><a aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb6-6"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
+<span id="cb6-8"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb6-10"><a aria-hidden="true" tabindex="-1"></a>clean <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/processed/penguins_clean.csv"</span>)</span>
+<span id="cb6-11"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-12"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a aria-hidden="true" tabindex="-1"></a>There are <span class="in">`{r} nrow(clean)`</span> penguins in the data.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <aside class="notes">
 <p>In a real file the header sits between two lines of three dashes. Next slide: the four parts.</p>
 <style type="text/css">
@@ -927,13 +941,14 @@ ask Sam about the Gentoo ones</code></pre>
 <section id="if-the-data-changes-the-report-updates" class="slide level2">
 <h2>If the data changes, the report updates</h2>
 <div class="flow">
-<p><span class="step">New data</span> <span class="arrow">→</span> <span class="step">Re-run the cleaning</span> <span class="arrow">→</span> <span class="step">Render</span> <span class="arrow">→</span> <span class="step">Updated report</span></p>
+<p><span class="step">New data</span> <span class="arrow">→</span> <span class="step">Re-run the code &amp; Render</span> <span class="arrow">→</span> <span class="step">Updated report</span></p>
 </div>
 <div class="small">
 <ul>
 <li>Every number, table and figure is recalculated</li>
 <li>Sentences with inline code update too</li>
 <li>There is nothing to copy and paste</li>
+<li>Dynamic referencing to figures, tables &amp; equations</li>
 </ul>
 </div>
 <div class="good">
@@ -942,7 +957,7 @@ ask Sam about the Gentoo ones</code></pre>
 </section>
 <section id="live-demo-change-the-data" class="slide level2 demo-slide">
 <h2>Live demo: change the data</h2>
-<p><span class="demo-tag">Live demo</span> <span class="demo-meta">I do · 4 min</span></p>
+<p><span class="demo-tag">Live demo</span> <span class="demo-meta">4 min</span></p>
 <div class="medium">
 <ol type="1">
 <li>Open the report, which is made from the data</li>
@@ -1142,7 +1157,7 @@ ask Sam about the Gentoo ones</code></pre>
 </section>
 <section id="how-do-environments-work" class="slide level2">
 <h2>How do environments work?</h2>
-<div class="flow">
+<div class="flow small">
 <p><span class="step">Lock file</span> <span class="arrow">→</span> <span class="step">Create the environment</span> <span class="arrow">→</span> <span class="step">Packages installed</span></p>
 </div>
 <div class="small">
@@ -1156,7 +1171,7 @@ ask Sam about the Gentoo ones</code></pre>
 </section>
 <section id="the-tools" class="slide level2">
 <h2>The tools</h2>
-<div class="doc-table">
+<div class="doc-table big">
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -1205,8 +1220,8 @@ ask Sam about the Gentoo ones</code></pre>
 </section>
 <section id="send-your-project-to-someone-and-it-works" class="slide level2">
 <h2>Send your project to someone, and it works</h2>
-<div class="flow">
-<p><span class="step">Your project + lock file</span> <span class="arrow">→</span> <span class="step">Colleague rebuilds the environment</span> <span class="arrow">→</span> <span class="step">Same packages, same results</span></p>
+<div class="flow small">
+<p><span class="step">Your project +<br>lock file</span> <span class="arrow">→</span> <span class="step">Colleague rebuilds<br>the environment</span> <span class="arrow">→</span> <span class="step">Same packages,<br>same results</span></p>
 </div>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -1242,7 +1257,7 @@ ask Sam about the Gentoo ones</code></pre>
 </ul>
 </div>
 <div class="muted">
-<p>Good enough for almost every project. Perfect is not the goal</p>
+<p>Good enough for almost every project. Perfect is not the goal!</p>
 </div>
 </section>
 <section id="no-code-record-it-anyway" class="slide level2">
@@ -1253,7 +1268,7 @@ ask Sam about the Gentoo ones</code></pre>
 </section>
 <section id="live-demo-delete-it-then-rebuild-it" class="slide level2 demo-slide">
 <h2>Live demo: delete it, then rebuild it</h2>
-<p><span class="demo-tag">Live demo</span> <span class="demo-meta">I do · 5 min</span></p>
+<p><span class="demo-tag">Live demo</span> <span class="demo-meta">5 min</span></p>
 <div class="medium">
 <ol type="1">
 <li>Here is a project’s environment</li>
@@ -1396,7 +1411,7 @@ ask Sam about the Gentoo ones</code></pre>
 <h2>From messy to shareable</h2>
 <p><span class="demo-tag">Together</span> <span class="demo-meta">3 min</span></p>
 <div class="flow">
-<p><span class="step light">Messy</span> <span class="arrow">→</span> <span class="step">Tidy</span> <span class="arrow">→</span> <span class="step">Documented</span> <span class="arrow">→</span> <span class="step">Reported</span> <span class="arrow">→</span> <span class="step">Recorded</span> <span class="arrow">→</span> <span class="step">Shareable</span></p>
+<p><span class="step light">Messy</span> <span class="arrow">→</span> <span class="step">Tidy</span> <span class="arrow">→</span> <span class="step">Documented</span> <br> <span class="arrow">→</span> <span class="step">Reported</span> <span class="arrow">→</span> <span class="step">Recorded</span> <span class="arrow">→</span> <span class="step">Shareable</span></p>
 </div>
 <div class="small">
 <ul>
@@ -1470,7 +1485,8 @@ ask Sam about the Gentoo ones</code></pre>
 <section id="quick-wins" class="slide level2 demo-slide">
 <h2>Quick wins</h2>
 <p><span class="answer-tag">Answer</span> <span class="demo-meta">3 min</span></p>
-<div class="doc-table">
+<p><br></p>
+<div class="doc-table medium">
 <table class="caption-top">
 <colgroup>
 <col style="width: 33%">

@@ -9,20 +9,20 @@ execute:
   message: false
 ---
 
-## Today's mission {.center}
+## Today's mission: {.big .center}
 
 ::: {.big .center}
-Make your research<br>easier to re-run,<br>understand and share.
+Make your research easier to re-run, understand and share.
 :::
 
 ::: notes
 Works for R, Python and spreadsheet users. Demo in Positron, but everything can be done in any IDE or the terminal. The notes are a reference for afterwards; the slides and demos carry the session.
 :::
 
-## How today works
+## How today works:
 
-::: {.big}
-Do it together.<br>Then try it yourself.
+::: {.medium}
+Do it together. Then try it yourself.
 :::
 
 ::: {.small}
@@ -32,7 +32,7 @@ Do it together.<br>Then try it yourself.
 - Stuck? **Type in the chat**
 :::
 
-## The journey
+## The Journey
 
 ::: {.cards .journey}
 ::: {.card .fragment}
@@ -55,14 +55,10 @@ Why environments matter, and how a lock file lets you send a project that works
 :::
 ::: {.card .fragment}
 **4 · Your first step**
-*What will you do on Monday?*
+*What will you do next?*
 Pull it together into a checklist for your own project
 [Hands-on: your checklist]{.hands-on}
 :::
-:::
-
-::: {.muted .center}
-About 2 hours: 25 + 45 + 30 + 15 minutes
 :::
 
 ::: notes
@@ -90,19 +86,19 @@ These are the five things people should be able to do by the end. 1 is the first
 ## Why bother?
 
 ::: {.cards .grid2}
-::: {.card}
+::: {.card .fragment}
 **Future you**
 Code written as if others will use it is easier to return to after a holiday, or in six months' time
 :::
-::: {.card}
+::: {.card .fragment}
 **Speed**
 A project set up as a pipeline can be re-run quickly when the data changes or a reviewer asks for something new
 :::
-::: {.card}
+::: {.card .fragment}
 **Confidence**
 You understand how the pieces fit together, and where things might go wrong
 :::
-::: {.card}
+::: {.card .fragment}
 **Sharing and careers**
 Journals and funders increasingly expect shared code and data, and tidy work is easy to trust
 :::
@@ -112,7 +108,7 @@ Journals and funders increasingly expect shared code and data, and tidy work is 
 Selfish reasons first: this mostly helps you. Mention the three problems with a messy project: hard to maintain, hard to run somewhere else, hard to understand.
 :::
 
-## Think pipeline
+## Think about pipelines
 
 ::: {.flow}
 [Raw data]{.step} [→]{.arrow} [Clean]{.step} [→]{.arrow} [Analyse]{.step} [→]{.arrow} [Results]{.step}
@@ -130,7 +126,7 @@ Spreadsheet users: same idea. Raw file untouched, a working copy, one named shee
 
 [Together]{.demo-tag} [4 min]{.demo-meta}
 
-```
+```{.md}
 messy-project/
 Copy of data.csv          notes.txt
 analysis.R                plot1.png
@@ -257,8 +253,10 @@ Answer, part two. This is the project you rebuilt in the demo. Point out that it
 
 :::
 
+<br>
+
 ::: {.muted .center}
-Write for the person who will read it
+Write for the person who will read it, which includes yourself!
 :::
 
 ::: notes
@@ -276,6 +274,11 @@ Go through the four in turn, and ask who they are writing for. Comments are for 
 ✔ No code? A README is still the best way to document your project
 :::
 
+::: {.callout-note}
+## Using AI
+Be careful getting an LLM to create your README. While it can save time, you may inadvertently upload all your data and results by giving access to your folders! Instead, draft one yourself and then use a chatbot to help refine it!
+:::
+
 ::: notes
 Show a real README. Point out it is just a text file written in Markdown. The next activity is about what makes one useful.
 :::
@@ -286,7 +289,7 @@ Show a real README. Point out it is just a text file written in Markdown. The ne
 
 `messy-project/notes.txt` is the **only documentation**:
 
-```
+```{.md}
 run clean.R first?? i think
 
 then analysis2 (copy).R
@@ -381,7 +384,7 @@ Answer, part two. The dictionary has one row per column: what it is, its type an
 :::
 
 ::: {.flow}
-[report.qmd]{.step} [→ render →]{.arrow} [report.html]{.step}
+[report.qmd]{.step .fragment} [→]{.arrow .fragment} [HTML]{.step .light .fragment} [PDF]{.step .light .fragment} [Word]{.step .light .fragment}
 :::
 
 ::: notes
@@ -441,8 +444,11 @@ The key idea is that the report *is* the analysis. A reader, or you in six month
 ## Weaving text and analysis together
 
 ````markdown
+---
 title: "Penguin report"
 format: html
+author: Josh Tyler
+---
 
 ## Data
 
@@ -489,13 +495,14 @@ Point at each part on the previous slide. Inline code is the clever bit: the num
 ## If the data changes, the report updates
 
 ::: {.flow}
-[New data]{.step} [→]{.arrow} [Re-run the cleaning]{.step} [→]{.arrow} [Render]{.step} [→]{.arrow} [Updated report]{.step}
+[New data]{.step} [→]{.arrow} [Re-run the code & Render]{.step} [→]{.arrow} [Updated report]{.step}
 :::
 
 ::: {.small}
 - Every number, table and figure is recalculated
 - Sentences with inline code update too
 - There is nothing to copy and paste
+- Dynamic referencing to figures, tables & equations
 :::
 
 ::: {.good}
@@ -504,7 +511,7 @@ Point at each part on the previous slide. Inline code is the clever bit: the num
 
 ## Live demo: change the data {.demo-slide}
 
-[Live demo]{.demo-tag} [I do · 4 min]{.demo-meta}
+[Live demo]{.demo-tag} [4 min]{.demo-meta}
 
 ::: {.medium}
 1. Open the report, which is made from the data
@@ -662,7 +669,7 @@ An environment is a project's own folder of installed packages. Projects can no 
 
 ## How do environments work?
 
-::: {.flow}
+::: {.flow .small}
 [Lock file]{.step} [→]{.arrow} [Create the environment]{.step} [→]{.arrow} [Packages installed]{.step}
 :::
 
@@ -675,7 +682,7 @@ An environment is a project's own folder of installed packages. Projects can no 
 
 ## The tools
 
-::: {.doc-table}
+::: {.doc-table .big}
 
 | | Python | R |
 |---|---|---|
@@ -692,8 +699,8 @@ Other tools do the same job: venv, conda and pixi for Python, and conda or pixi 
 
 ## Send your project to someone, and it works
 
-::: {.flow}
-[Your project + lock file]{.step} [→]{.arrow} [Colleague rebuilds the environment]{.step} [→]{.arrow} [Same packages, same results]{.step}
+::: {.flow .small}
+[Your project +<br>lock file]{.step} [→]{.arrow} [Colleague rebuilds<br>the environment]{.step} [→]{.arrow} [Same packages,<br>same results]{.step}
 :::
 
 :::: {.columns}
@@ -722,7 +729,7 @@ This is the payoff. The lock file travels with the project, by email, zip or git
 :::
 
 ::: {.muted}
-Good enough for almost every project. Perfect is not the goal
+Good enough for almost every project. Perfect is not the goal!
 :::
 
 ## No code? Record it anyway
@@ -733,7 +740,7 @@ Good enough for almost every project. Perfect is not the goal
 
 ## Live demo: delete it, then rebuild it {.demo-slide}
 
-[Live demo]{.demo-tag} [I do · 5 min]{.demo-meta}
+[Live demo]{.demo-tag} [5 min]{.demo-meta}
 
 ::: {.medium}
 1. Here is a project's environment
@@ -821,7 +828,7 @@ Answer. Compare their lists with the table. Almost everything on it can be writt
 [Together]{.demo-tag} [3 min]{.demo-meta}
 
 ::: {.flow}
-[Messy]{.step .light} [→]{.arrow} [Tidy]{.step} [→]{.arrow} [Documented]{.step} [→]{.arrow} [Reported]{.step} [→]{.arrow} [Recorded]{.step} [→]{.arrow} [Shareable]{.step}
+[Messy]{.step .light} [→]{.arrow} [Tidy]{.step} [→]{.arrow} [Documented]{.step} <br> [→]{.arrow} [Reported]{.step} [→]{.arrow} [Recorded]{.step} [→]{.arrow} [Shareable]{.step}
 :::
 
 ::: {.small}
@@ -891,7 +898,9 @@ Your turn, 6 min. They tick the checklist for a project of their own (or the mes
 
 [Answer]{.answer-tag} [3 min]{.demo-meta}
 
-::: {.doc-table}
+<br>
+
+::: {.doc-table .medium}
 
 | Quick win | Time | Why it helps |
 |---|---|---|

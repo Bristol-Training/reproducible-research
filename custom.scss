@@ -176,7 +176,17 @@ details.how-to-read[open] > summary { margin-bottom: 0.75em; }
 .reveal .cards.journey .card .hands-on { display: block; margin-top: 0.4em; padding-top: 0.3em; border-top: 1px solid var(--jgi-red); }
 
 .reveal .flow { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.3em; margin: 0.6em 0; }
-.reveal .flow .step { background: var(--jgi-red); color: #fff; border-radius: 0.3em; padding: 0.3em 0.6em; font-size: 0.75em; font-family: monospace; }
+.reveal .flow .step {
+  display: inline-block;          /* ensures the box forms one unified container */
+  text-align: center;             /* centers text over the two lines */
+  line-height: 1.25;              /* keeps the two lines close together */
+  background: var(--jgi-red);
+  color: #fff;
+  border-radius: 0.3em;
+  padding: 0.3em 0.6em;
+  font-size: 0.75em;
+  font-family: monospace;
+}
 .reveal .flow .step.light { background: var(--jgi-pale); color: var(--jgi-red); border: 2px solid var(--jgi-red); }
 .reveal .flow .arrow { color: var(--jgi-red); font-size: 1.2em; font-weight: 700; }
 /* room between rows if a flow wraps */
