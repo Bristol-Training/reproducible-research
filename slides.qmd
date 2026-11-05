@@ -29,8 +29,8 @@ We show.<br>You try.
 :::
 ::: {.column width="50%"}
 ::: {.small}
-- Watch the **demos** (the red **Live demo** slides), then try it in **your own project**, in your language and IDE
-- Using Excel? Look for the "Excel / no code" tip on the slides
+- **Follow along** on your own copy of the example folder: I do a step, then you do it
+- Not working? Use the ready-made file in `finished/` and carry on
 - Each **exercise is on the slides**: no need to look anywhere else
 - The **notes** are for reference afterwards, with more detail and the answers
 - Errors are normal. Read them out loud!
@@ -69,11 +69,11 @@ The Q-FAIR principles, open formats, licences and where to deposit data
 :::
 
 ::: {.muted .center}
-About 2 hours: 30 + 45 + 30 + 15 minutes
+About 2 hours: 30 + 45 + 30 + 15 minutes. Follow along with the example folder
 :::
 
 ::: notes
-Click through the four cards one at a time. Sections 1 to 3 follow the same pattern: slides, a live demo, then an exercise. Section 4 is shorter, with no demo: it signposts where to find out more about sharing data.
+Click through the four cards one at a time. Sections 1 to 3 follow the same pattern: slides, short "I do, you do" steps, then an exercise. Section 4 is shorter: it signposts where to find out more about sharing data.
 :::
 
 ## By the end, you will be able to
@@ -87,7 +87,7 @@ Click through the four cards one at a time. Sections 1 to 3 follow the same patt
 :::
 
 ::: notes
-These are the five things people should be able to do by the end. Each one matches a section and an exercise: 1 is Exercise 1, 2 and 3 are Exercise 2, 4 is Exercise 3 and 5 is Exercise 4. We will come back to this list at the end.
+These are the five things people should be able to do by the end. Each one matches a section: 1 is cycles 1 and 2 and Exercise 1, 2 is cycles 3 and 4, 3 is cycles 5 and 6 and Exercise 2, 4 is the environment demo and Exercise 3, and 5 is Exercise 4. We will come back to this list at the end.
 :::
 
 # [01]{.section-number} Project Structures {.section-divider background-color="var(--jgi-red)"}
@@ -149,7 +149,6 @@ my_project/
 │   ├── raw/
 │   └── processed/
 ├── code/
-│   ├── 00_get_data.R
 │   └── 01_clean_data.R
 ├── report.qmd
 └── outputs/
@@ -173,18 +172,36 @@ my_project/
 Excel users: same idea. Raw file untouched, a working copy, one named sheet per step, and a README describing each step.
 :::
 
-## Live demo 1: A clean project {.demo-slide}
+## Cycle 1: Set up the project {.demo-slide}
 
-[Live demo]{.demo-tag} [About 10 min · Positron]{.demo-meta}
+[Live demo]{.demo-tag} [I do · 3 min]{.demo-meta}
+
+[Your turn]{.your-turn-tag} [You do · 4 min]{.demo-meta}
 
 ::: {.medium}
-1. Set up the folders
-2. Raw data in, clean data out
-3. Run it again: the raw file never changes
+1. Make a project folder with `data/raw`, `data/processed`, `code` and `outputs`
+2. Move each file from the example folder into the right place
+3. Check: can you say what each folder is for?
 :::
 
 ::: notes
-STOP HERE and switch to the demo. Full script and timings are in the instructor notes (Project Structures).
+I do (3 min): make the folders (Positron's project template, or `mkdir -p data/raw data/processed code outputs`), then move `penguins.csv` into data/raw, `01_clean_data.R` into code, and leave `report.qmd` and `README_template.md` at the top level. You do (4 min): the same on their own machine. Point out that raw data goes in raw and is never edited. If stuck: the `finished/` folder shows the tidy result. No code? Same idea with a folder for the original spreadsheet.
+:::
+
+## Cycle 2: Clean data out {.demo-slide}
+
+[Live demo]{.demo-tag} [I do · 3 min]{.demo-meta}
+
+[Your turn]{.your-turn-tag} [You do · 3 min]{.demo-meta}
+
+::: {.medium}
+1. Open `01_clean_data.R`: what does it do?
+2. Run it, or copy the clean file from `finished/`
+3. Check: is the raw file unchanged?
+:::
+
+::: notes
+I do (3 min): read the script aloud (read the raw file, drop incomplete rows, write to processed), run it, then show data/raw is unchanged and data/processed has a new file (333 rows). Run it twice to show it gives the same result. You do (3 min). Do not debug code live: if it fails or there is no R, copy `finished/data/processed/penguins_clean.csv` into data/processed and carry on. Spreadsheet users: open penguins.csv, delete the rows with blanks, Save As penguins_clean.csv in processed; the original is untouched.
 :::
 
 ## Exercise 1: tidy this project ✍️
@@ -200,7 +217,7 @@ STOP HERE and switch to the demo. Full script and timings are in the instructor 
 :::
 
 ::: {.muted}
-About 10 minutes. The answer is on the next slide, and in the notes.
+About 8 minutes. The answer is on the next slide, and in the notes.
 :::
 :::
 ::: {.column width="45%"}
@@ -294,10 +311,11 @@ Body measurements of penguins on three islands. **Status:** ongoing.
 
 ## Quickstart
 1. Put the raw data in `data/raw/`
-2. Run `code/01_clean_data`, then render `report.qmd`
+2. Run `code/01_clean_data.R`
+3. Render `report.qmd`
 
 ## Setup
-- Requires R 4.5 or later
+- Requires R and Quarto
 
 ## Contents
 - `data/raw/` original data (read-only)
@@ -305,6 +323,22 @@ Body measurements of penguins on three islands. **Status:** ongoing.
 - `code/` analysis scripts
 - `outputs/` figures and tables
 ````
+
+## Cycle 3: Write a README {.demo-slide}
+
+[Live demo]{.demo-tag} [I do · 2 min]{.demo-meta}
+
+[Your turn]{.your-turn-tag} [You do · 3 min]{.demo-meta}
+
+::: {.medium}
+1. Rename `README_template.md` to `README.md`
+2. Change the placeholder text to describe the project
+3. Check: could someone run it from this?
+:::
+
+::: notes
+I do (2 min): rename the template and change the title, status and contents so they are true for the project. Walk through the quickstart: what to run, in what order. You do (3 min). Fallback: `finished/README.md`. Keep it short, and say that a README that is wrong is worse than none.
+:::
 
 ## Document your data: a data dictionary
 
@@ -324,18 +358,20 @@ Body measurements of penguins on three islands. **Status:** ongoing.
 A dataset doesn't explain itself: what does bill_len mean, and is body_mass in grams or kilograms? Only the person who knows the data can write the descriptions. Prompt: what would a colleague need to ask me next year?
 :::
 
-## Live demo 2: README and data dictionary {.demo-slide}
+## Cycle 4: Describe your data {.demo-slide}
 
-[Live demo]{.demo-tag} [About 6 min · Positron]{.demo-meta}
+[Live demo]{.demo-tag} [I do · 2 min]{.demo-meta}
+
+[Your turn]{.your-turn-tag} [You do · 3 min]{.demo-meta}
 
 ::: {.medium}
-1. Start the README from a template
-2. Start a data dictionary from the column names
-3. Fill in some descriptions
+1. Open the clean data and look at the column names
+2. Make a table, one row per column (a spreadsheet or CSV)
+3. Write what each column means and its units, and save it next to the data
 :::
 
 ::: notes
-STOP HERE and switch to the demo. Same project as demo 1. Script in the instructor notes (Documentation & Quarto).
+I do (2 min): open the clean CSV, copy the column names into a new sheet with columns for type, description and units / values, and fill in two or three rows (for example, what bill_dep is). There is nothing clever here, which is the point. You do (3 min). Fallback: `finished/data/processed/penguins_clean_dictionary.csv`. Mention the dictionary in the README's Contents.
 :::
 
 ## What is Quarto?
@@ -496,49 +532,59 @@ quarto render report.qmd
 
 Or press **Render** in your IDE. The result, `report.html`, appears next to `report.qmd`.
 
-## Live demo 3: A Quarto report {.demo-slide}
+## Cycle 5: Render a report {.demo-slide}
 
-[Live demo]{.demo-tag} [About 12 min · Positron]{.demo-meta}
+[Live demo]{.demo-tag} [I do · 3 min]{.demo-meta}
+
+[Your turn]{.your-turn-tag} [You do · 4 min]{.demo-meta}
 
 ::: {.medium}
-1. Open the report and walk through it
-2. Render it
-3. Change the data, re-run, re-render
+1. Open `report.qmd`: find the header, text, a code chunk and an inline number
+2. Press **Render**
+3. Find the numbers, table and plot in the report
 :::
 
 ::: notes
-STOP HERE and switch to the demo. Same project again. Script in the instructor notes (Documentation & Quarto).
+I do (3 min): walk through report.qmd (the header, a chunk that reads the clean CSV and keeps one species, a sentence with inline numbers, a table, a plot), then press Render, and also show `quarto render report.qmd`. You do (4 min). If Render fails (Quarto or R not set up), show it on your screen and let them follow; to give everyone a fallback, render `finished/report.qmd` once before the course and save `report.html` next to it.
 :::
 
-## Exercise 2: document it ✍️
+## Cycle 6: Change something, re-render {.demo-slide}
+
+[Live demo]{.demo-tag} [I do · 2 min]{.demo-meta}
+
+[Your turn]{.your-turn-tag} [You do · 3 min]{.demo-meta}
+
+::: {.medium}
+1. Change the species in the filter (for example, to `"Adelie"`)
+2. Render again
+3. What changed? What stayed the same?
+:::
+
+::: notes
+I do (2 min): change the species in the filter, render, and compare. Optional: uncomment the "later years" line in 01_clean_data.R, re-run it and render, so the number of penguins changes too. The message: change the data or the code, not the report. You do (3 min).
+:::
+
+## Exercise 2: predict, then check ✍️
 
 ::: {.your-turn}
 ::: {.small}
-1. Write a `README.md` for **one of your own projects** (or the clean example from Exercise 1). Include a summary and status, a quickstart and setup.
-   Then write a **data dictionary** for a dataset, with one row per column.
-2. *R / Python:* create `report.qmd` that reads a clean CSV and shows **a number in a sentence** and **a table or plot**. Render it.
-3. Change something the report depends on (e.g. a filter) and render again. Did it update?
-
-*Excel users:* do step 1, and add a line to your README for each sheet saying what it does.
+1. Pick a change: a different species, a different column to average, or the "later years" line in the cleaning script
+2. Write down what you expect to change in the report
+3. Make the change, render, and compare with your prediction
 :::
 :::
 
 ::: {.muted}
-About 8 minutes. Use the template slide if you get stuck.
+About 5 minutes. Got your own project? Write its README and data dictionary too.
 :::
 
 ## Exercise 2: what good looks like
 
 ::: {.small}
-A README answers three questions in the first minute:
-
-- What is this project, and is it finished?
-- If I just want to run it, what do I do first?
-- What do I need installed?
-
-A data dictionary has a plain-English description, units and missing-value codes for every column.
-
-For the report: the rendered HTML shows your text **and** the results, and the results change when you change the filter or the data.
+- You could say **what would change** before you rendered, and why
+- Only the results changed: **no copying and pasting** was needed
+- A README answers three questions in the first minute: what is this project and is it finished? What do I do first? What do I need installed?
+- A data dictionary has a plain-English description, units and missing-value codes for every column
 :::
 
 ## Learn more about Quarto
@@ -692,16 +738,16 @@ Good enough for almost every project. Perfect is not the goal
 
 ## Live demo 4: An environment {.demo-slide}
 
-[Live demo]{.demo-tag} [About 10 min · Terminal and console]{.demo-meta}
+[Live demo]{.demo-tag} [I do · 8 min · Terminal and console]{.demo-meta}
 
 ::: {.medium}
-1. Create the environment
+1. Create the environment, and add a package
 2. Look at the lock file
-3. Delete it, then restore it, as a colleague would
+3. Delete the environment, then restore it, as a colleague would
 :::
 
 ::: notes
-STOP HERE and switch to the demo. Do R in the demo project, and Python in a scratch folder. Script in the instructor notes (Virtual Environments).
+STOP HERE and switch to the demo. Do R in the example project, and Python in a scratch folder: (R) `renv::init()`, install a package, `renv::snapshot()`, open `renv.lock`, delete `renv/library`, `renv::restore()`; (Python) `uv init`, `uv add pandas`, open `pyproject.toml` and `uv.lock`, delete `.venv`, `uv sync`. When you delete and restore, say "this is what your colleague does when you send them the project". Note that renv records package versions but not the version of R itself. This is a demo only: attendees try it in the exercise, if their tools are set up. If your audience is only R or only Python, do just that tool.
 :::
 
 ## IDE vs CLI
@@ -729,38 +775,24 @@ Spend about two minutes here. Show where your IDE creates a project with an envi
 
 ## Exercise 3: make it disposable ✍️
 
-::: {.your-turn}
-::: {.panel-tabset}
+::: {.doc-table}
 
-### Python
+| Step | Python | R |
+|---|---|---|
+| **1 Create** the environment | `uv init` | `renv::init()` |
+| **2 Add** a package | `uv add pandas` | `install.packages("ggplot2")`, then `renv::snapshot()` |
+| **3 Look** at the lock file | `uv.lock` | `renv.lock` |
+| **4 Delete** the environment | delete `.venv` | delete `renv/library` |
+| **5 Restore** it | `uv sync` | `renv::restore()` |
+
+:::
 
 ::: {.small}
-1. `uv init` a new project, then `uv add` a package
-2. Open `pyproject.toml` and `uv.lock`. What is in them?
-3. Delete the `.venv` folder, then run `uv sync`. What happens?
-:::
-
-### R
-
-::: {.small}
-1. In a project folder, run `renv::init()`
-2. Install a package, then run `renv::snapshot()`
-3. Open `renv.lock`. What is in it?
-4. Delete `renv/library`, then run `renv::restore()`. What happens?
-:::
-
-### Excel / no code
-
-::: {.small}
-1. Find your program's version (Excel: *File > Account > About Excel*)
-2. Add a "Setup" section to your README: program, version and any add-ins
-:::
-
-:::
+*No code?* Write your program and its version in your README. *Extra:* zip the project without the environment folder, and swap with a neighbour to rebuild it.
 :::
 
 ::: {.muted}
-About 7 minutes. Answers on the next slide, and in the notes.
+About 7 minutes, if your tools are set up. Answers on the next slide, and in the notes.
 :::
 
 ## Exercise 3: what you should see

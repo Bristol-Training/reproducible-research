@@ -83,9 +83,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d59d288c37aec90f53216c8a216448d2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-d59d288c37aec90f53216c8a216448d2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-d59d288c37aec90f53216c8a216448d2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-93a3846f93e9c422518df85fe5ac8419.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-93a3846f93e9c422518df85fe5ac8419.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-93a3846f93e9c422518df85fe5ac8419.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -311,7 +311,10 @@ How to read this document
 </details>
 <section id="workspace-setup" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="workspace-setup">Workspace setup</h2>
-<p><strong>Please follow our <a href="https://bristol-training.github.io/data-science-project-setup/">installation instructions</a></strong> before the course. You will also need <a href="https://quarto.org">Quarto</a>, and either <a href="https://docs.astral.sh/uv/">uv</a> (Python) or the <code>renv</code> package (R). If you use Excel, you don’t need to install anything extra.</p>
+<p><strong>Please follow our <a href="https://bristol-training.github.io/data-science-project-setup/">installation instructions</a></strong> before the course. You will also need the following.</p>
+<p><strong>Quarto.</strong> We use <a href="https://quarto.org">Quarto</a> to build reports. RStudio and Positron include it, so if you use either you probably don’t need to install anything. To check, open a <code>.qmd</code> file and look for the <strong>Render</strong> button. Otherwise, <a href="https://quarto.org/docs/get-started/">install Quarto</a> for your operating system (VS Code users also need the Quarto extension). Use version 1.4 or later: <code>quarto --version</code> in a terminal shows which you have.</p>
+<p><strong>The example folder.</strong> <a href="example-project.zip" download="example-project.zip">Download the example folder</a> and unzip it. It has the data and files we use as we go. If something doesn’t work, the <code>finished/</code> folder inside it has the ready-made result.</p>
+<p><strong>For Section 3.</strong> Python users need <a href="https://docs.astral.sh/uv/">uv</a>, and R users need the <code>renv</code> package. If you use Excel, you don’t need to install anything extra.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -387,7 +390,6 @@ Note
 │   ├── raw/          &lt;- original data, never edited
 │   └── processed/    &lt;- cleaned data made by your code
 ├── code/
-│   ├── 00_get_data.R
 │   └── 01_clean_data.R
 ├── report.qmd
 └── outputs/
@@ -596,18 +598,19 @@ Note
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Quickstart</span></span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Put the raw data in <span class="in">`data/raw/`</span>.</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Run <span class="in">`code/01_clean_data`</span>, then render <span class="in">`report.qmd`</span>.</span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## Setup</span></span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>Requires R 4.5 or later (see "Virtual Environments").</span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## Contents</span></span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`data/raw/`</span> original data (read-only)</span>
-<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`data/processed/`</span> cleaned data, and its data dictionary</span>
-<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`code/`</span> analysis scripts</span>
-<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`outputs/`</span> figures and tables</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Run <span class="in">`code/01_clean_data.R`</span>.</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Render <span class="in">`report.qmd`</span>.</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Setup</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>Requires R and Quarto (see "Virtual Environments").</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Contents</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`data/raw/`</span> original data (read-only)</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`data/processed/`</span> cleaned data, and its data dictionary</span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`code/`</span> analysis scripts</span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`outputs/`</span> figures and tables</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>You can use a README in any project, whether or not you write code. For a spreadsheet project it is the place to record what each sheet does and how the data was collected.</p>
 </section>
 <section id="data-dictionary" class="level2" data-number="2.3">
@@ -872,11 +875,13 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>Predict, then check.</p>
 <ol type="1">
-<li>Write a <code>README.md</code> for one of your own projects, or the clean example above, including a summary, a quickstart and setup. Then write a data dictionary for a dataset, with one row per column.</li>
-<li>If you use R or Python, create a <code>report.qmd</code> that reads a CSV file and shows a number in a sentence and a table or plot. Render it.</li>
-<li>Change something the report depends on (for example, a filter) and render again. Did it update?</li>
+<li>Pick a change: a different species, a different column to average, or the “later years” line in the cleaning script.</li>
+<li>Write down what you expect to change in the report.</li>
+<li>Make the change, render, and compare with your prediction.</li>
 </ol>
+<p>If you have a project of your own, write its README and data dictionary too.</p>
 </div>
 </div>
 <div id="answer2" class="callout callout-style-default callout-caution no-icon callout-titled" title="Answer (click to open)">
@@ -891,14 +896,12 @@ Note
 </div>
 <div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>A good README answers these questions in the first minute of reading:</p>
 <ul>
-<li>What is this project and is it finished?</li>
-<li>If I just want to run it, what do I do first?</li>
-<li>What do I need installed?</li>
+<li>You could say <strong>what would change</strong> before you rendered, and why.</li>
+<li>Only the results changed: <strong>no copying and pasting</strong> was needed.</li>
+<li>A good README answers three questions in the first minute: What is this project and is it finished? If I just want to run it, what do I do first? What do I need installed?</li>
+<li>A data dictionary has a plain-English description, units and missing-value codes for every column.</li>
 </ul>
-<p>A data dictionary has a plain-English description, units and missing-value codes for every column.</p>
-<p>For the report, check that the rendered HTML file shows both your text and the results. Then change something the report depends on, such as a filter, and render again: the number in the report should change.</p>
 </div>
 </div>
 </div>
@@ -1136,34 +1139,50 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Choose the tab for your language.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">Excel / no code</a></li></ul>
-<div class="tab-content">
-<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
-<ol type="1">
-<li>Create a new project with <code>uv init</code>.</li>
-<li>Add a package with <code>uv add</code>.</li>
-<li>Look at <code>pyproject.toml</code> and <code>uv.lock</code>. What do they contain?</li>
-<li>Delete the <code>.venv</code> folder, then run <code>uv sync</code>. What happens?</li>
-</ol>
-</div>
-<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
-<ol type="1">
-<li>Open a project folder and run <code>renv::init()</code>.</li>
-<li>Install a package and run <code>renv::snapshot()</code>.</li>
-<li>Look at <code>renv.lock</code>. What does it contain?</li>
-<li>Delete the <code>renv/library</code> folder, then run <code>renv::restore()</code>. What happens?</li>
-</ol>
-</div>
-<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
-<ol type="1">
-<li>Open a spreadsheet you use regularly and find its program version (in Excel: <em>File &gt; Account &gt; About Excel</em>).</li>
-<li>Add a “Setup” section to your README noting the program, version and any add-ins.</li>
-</ol>
-</div>
-</div>
-</div>
+<p>Follow the steps for your language. Do this if your tools are set up.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Python</th>
+<th>R</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1 Create the environment</td>
+<td><code>uv init</code></td>
+<td><code>renv::init()</code></td>
+</tr>
+<tr class="even">
+<td>2 Add a package</td>
+<td><code>uv add pandas</code></td>
+<td><code>install.packages("ggplot2")</code>, then <code>renv::snapshot()</code></td>
+</tr>
+<tr class="odd">
+<td>3 Look at the lock file</td>
+<td><code>uv.lock</code></td>
+<td><code>renv.lock</code></td>
+</tr>
+<tr class="even">
+<td>4 Delete the environment</td>
+<td>delete <code>.venv</code></td>
+<td>delete <code>renv/library</code></td>
+</tr>
+<tr class="odd">
+<td>5 Restore it</td>
+<td><code>uv sync</code></td>
+<td><code>renv::restore()</code></td>
+</tr>
+</tbody>
+</table>
+<p>No code? Write your program and its version in your README.</p>
+<p>Extra: zip the project without the environment folder, and swap with a neighbour to rebuild it.</p>
 </div>
 </div>
 <div id="answer3" class="callout callout-style-default callout-caution no-icon callout-titled" title="Answer (click to open)">

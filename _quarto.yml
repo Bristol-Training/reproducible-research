@@ -9,6 +9,8 @@ project:
     - notes.qmd
     - slides.qmd
     - instructor.qmd
+  resources:
+    - example-project.zip
 
 author: "Jean Golding Institute"
 

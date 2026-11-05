@@ -6,14 +6,15 @@ A reproducible project can be re-run, understood and shared by other people. It 
 
 This course introduces the practical habits that make this possible. It covers project structure, documentation, Quarto reports, virtual environments and sharing data.
 
-The course takes about two hours. It is taught mainly through live demos and hands-on exercises, and notes are provided for reference.
+The course takes about two hours. You follow along with short live demos on your own copy of an example folder, and then try each idea yourself. Notes are provided for reference.
 
 | File | What it is |
 |---|---|
 | `slides.qmd` | The slides, with five live demos and four exercises |
 | `notes.qmd` | Reference notes for attendees, with tabs for different ways of working |
 | `instructor.qmd` | Instructor notes: timings, demo scripts and pitfalls |
-| `resources/` | Data and scripts for the live demos (not published; see `resources/README.md`) |
+| `example-project/` | The example folder that attendees download, with a ready-made `finished/` copy |
+| `example-project.zip` | The same folder as a zip, linked from the home page. Rebuild it with `python3 build_example_zip.py` after any change |
 
 ## Building the course locally
 
@@ -44,7 +45,7 @@ Corrections and suggestions are welcome.
 3. Edit the `.qmd` files and check the result with `quarto preview`.
 4. Commit and push your branch, then open a pull request on GitHub describing what you changed and why.
 
-Only commit the `.qmd` files (and any new images in `assets/` or files in `resources/`), not the `docs/` folder. The maintainer re-renders the website after merging.
+Only commit the `.qmd` files (and any new images in `assets/`, and the files in `example-project/` with the rebuilt `example-project.zip`), not the `docs/` folder. The maintainer re-renders the website after merging.
 
 ## Credits
 

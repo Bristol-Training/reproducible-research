@@ -3,14 +3,18 @@
 Body measurements of penguins on three islands. **Status:** ongoing.
 
 ## Quickstart
+
 1. Put the raw data in `data/raw/`
-2. Run `code/01_clean_data`, then render `report.qmd`
+2. Run `code/01_clean_data.R`
+3. Render `report.qmd`
 
 ## Setup
-- Requires R 4.5 or later
+
+Requires R and Quarto
 
 ## Contents
+
 - `data/raw/` original data (read-only)
-- `data/processed/` cleaned data, and its data dictionary
+- `data/processed/` cleaned data, and its data dictionary (`penguins_clean_dictionary.csv`)
 - `code/` analysis scripts
-- `outputs/` figures and tables
+- `report.qmd` the report

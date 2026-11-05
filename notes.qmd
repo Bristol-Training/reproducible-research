@@ -68,7 +68,13 @@ These are important concepts and technical notes.
 
 ## Workspace setup {.unnumbered}
 
-**Please follow our [installation instructions](https://bristol-training.github.io/data-science-project-setup/)** before the course. You will also need [Quarto](https://quarto.org), and either [uv](https://docs.astral.sh/uv/) (Python) or the `renv` package (R). If you use Excel, you don't need to install anything extra.
+**Please follow our [installation instructions](https://bristol-training.github.io/data-science-project-setup/)** before the course. You will also need the following.
+
+**Quarto.** We use [Quarto](https://quarto.org) to build reports. RStudio and Positron include it, so if you use either you probably don't need to install anything. To check, open a `.qmd` file and look for the **Render** button. Otherwise, [install Quarto](https://quarto.org/docs/get-started/) for your operating system (VS Code users also need the Quarto extension). Use version 1.4 or later: `quarto --version` in a terminal shows which you have.
+
+**The example folder.** [Download the example folder](example-project.zip){download="example-project.zip"} and unzip it. It has the data and files we use as we go. If something doesn't work, the `finished/` folder inside it has the ready-made result.
+
+**For Section 3.** Python users need [uv](https://docs.astral.sh/uv/), and R users need the `renv` package. If you use Excel, you don't need to install anything extra.
 
 ::: {.callout-note}
 This course is for people who use **R**, **Python** or **spreadsheets such as Excel**. The ideas are the same for everyone, and the slides flag where Excel users do something different. Where the steps differ, you will see tabs: click the one that matches how you work. Commands for the terminal are shown as code, and you can run them in the terminal built in to your IDE or in a separate terminal window.
@@ -129,7 +135,6 @@ my_project/
 │   ├── raw/          <- original data, never edited
 │   └── processed/    <- cleaned data made by your code
 ├── code/
-│   ├── 00_get_data.R
 │   └── 01_clean_data.R
 ├── report.qmd
 └── outputs/
@@ -264,11 +269,12 @@ Body measurements of penguins on three islands. **Status:** ongoing.
 ## Quickstart
 
 1. Put the raw data in `data/raw/`.
-2. Run `code/01_clean_data`, then render `report.qmd`.
+2. Run `code/01_clean_data.R`.
+3. Render `report.qmd`.
 
 ## Setup
 
-Requires R 4.5 or later (see "Virtual Environments").
+Requires R and Quarto (see "Virtual Environments").
 
 ## Contents
 
@@ -450,21 +456,20 @@ The result, `report.html`, appears next to `report.qmd`.
 ## Exercise {.unnumbered}
 
 ::: {#exercise2 .callout-note icon=false title='Exercise'}
-1. Write a `README.md` for one of your own projects, or the clean example above, including a summary, a quickstart and setup. Then write a data dictionary for a dataset, with one row per column.
-2. If you use R or Python, create a `report.qmd` that reads a CSV file and shows a number in a sentence and a table or plot. Render it.
-3. Change something the report depends on (for example, a filter) and render again. Did it update?
+Predict, then check.
+
+1. Pick a change: a different species, a different column to average, or the "later years" line in the cleaning script.
+2. Write down what you expect to change in the report.
+3. Make the change, render, and compare with your prediction.
+
+If you have a project of your own, write its README and data dictionary too.
 :::
 
 ::: {#answer2 .callout-caution icon=false title='Answer (click to open)' collapse="true"}
-A good README answers these questions in the first minute of reading:
-
-- What is this project and is it finished?
-- If I just want to run it, what do I do first?
-- What do I need installed?
-
-A data dictionary has a plain-English description, units and missing-value codes for every column.
-
-For the report, check that the rendered HTML file shows both your text and the results. Then change something the report depends on, such as a filter, and render again: the number in the report should change.
+- You could say **what would change** before you rendered, and why.
+- Only the results changed: **no copying and pasting** was needed.
+- A good README answers three questions in the first minute: What is this project and is it finished? If I just want to run it, what do I do first? What do I need installed?
+- A data dictionary has a plain-English description, units and missing-value codes for every column.
 :::
 
 ::: {#keypoints2 .callout-tip icon=false title='Key points'}
@@ -613,30 +618,19 @@ Use whichever you find faster day to day. What matters is that the environment i
 ## Exercise {.unnumbered}
 
 ::: {#exercise3 .callout-note icon=false title='Exercise'}
-Choose the tab for your language.
+Follow the steps for your language. Do this if your tools are set up.
 
-::: {.panel-tabset}
+| Step | Python | R |
+|---|---|---|
+| 1 Create the environment | `uv init` | `renv::init()` |
+| 2 Add a package | `uv add pandas` | `install.packages("ggplot2")`, then `renv::snapshot()` |
+| 3 Look at the lock file | `uv.lock` | `renv.lock` |
+| 4 Delete the environment | delete `.venv` | delete `renv/library` |
+| 5 Restore it | `uv sync` | `renv::restore()` |
 
-### Python
+No code? Write your program and its version in your README.
 
-1. Create a new project with `uv init`.
-2. Add a package with `uv add`.
-3. Look at `pyproject.toml` and `uv.lock`. What do they contain?
-4. Delete the `.venv` folder, then run `uv sync`. What happens?
-
-### R
-
-1. Open a project folder and run `renv::init()`.
-2. Install a package and run `renv::snapshot()`.
-3. Look at `renv.lock`. What does it contain?
-4. Delete the `renv/library` folder, then run `renv::restore()`. What happens?
-
-### Excel / no code
-
-1. Open a spreadsheet you use regularly and find its program version (in Excel: *File > Account > About Excel*).
-2. Add a "Setup" section to your README noting the program, version and any add-ins.
-
-:::
+Extra: zip the project without the environment folder, and swap with a neighbour to rebuild it.
 :::
 
 ::: {#answer3 .callout-caution icon=false title='Answer (click to open)' collapse="true"}

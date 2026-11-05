@@ -15,11 +15,12 @@ A reproducible project can be re-run, understood and shared by other people. It 
 
 This course introduces the practical habits that make this possible. It covers project structure, documentation, Quarto reports, virtual environments and sharing data.
 
-The course takes about two hours. It is taught mainly through live demos and hands-on exercises, and notes are provided for reference.
+The course takes about two hours. You follow along with short live demos on your own copy of an example folder, and then try each idea yourself. Notes are provided for reference.
 
 ## Prerequisites
 
 - Some experience of working with data
+- Quarto, for the report exercises. RStudio and Positron include it. Otherwise [install it](https://quarto.org/docs/get-started/) (version 1.4 or later)
 - If you code: you have an IDE of your choice and can run simple terminal / CLI commands
 
 Please follow our [installation instructions](https://bristol-training.github.io/data-science-project-setup/) before the course.
@@ -43,7 +44,7 @@ By the end of this course, you will be able to:
 | 3 | Virtual environments | 30 min |
 | 4 | Sharing data: Q-FAIR | 15 min |
 
-Sections 1 to 3 each have slides, live demos and a hands-on exercise. Section 4 is a shorter overview, with a short exercise.
+Sections 1 to 3 combine slides, short "I do, you do" steps and an exercise. Section 4 is a shorter overview, with a short exercise.
 
 ::::
 
@@ -57,6 +58,8 @@ Sections 1 to 3 each have slides, live demos and a hands-on exercise. Section 4 
 [Slides](slides.qmd){.btn .btn-primary .btn-lg target="_blank"}
 
 [Notes](notes.qmd){.btn .btn-primary .btn-lg target="_blank"}
+
+[Example folder](example-project.zip){.btn .btn-primary .btn-lg download="example-project.zip"}
 
 ### More
 
