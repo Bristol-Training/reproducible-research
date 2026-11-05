@@ -8,17 +8,31 @@ This course introduces the practical habits that make this possible. It covers p
 
 The course takes about two hours. You follow along with short live demos on your own copy of an example folder, and then try each idea yourself. Notes are provided for reference.
 
-| File | What it is |
+## What is in this repository
+
+| File or folder | What it is |
 |---|---|
-| `slides.qmd` | The slides, with five live demos and four exercises |
+| `index.qmd` | The course home page, with the learning objectives, outline and download buttons |
+| `slides.qmd` | The slides. Six "I do, you do" cycles, one instructor demo and four exercises, with the steps for each in the speaker notes (press S) |
 | `notes.qmd` | Reference notes for attendees, with tabs for different ways of working |
-| `instructor.qmd` | Instructor notes: timings, demo scripts and pitfalls |
-| `example-project/` | The example folder that attendees download, with a ready-made `finished/` copy |
-| `example-project.zip` | The same folder as a zip, linked from the home page. Rebuild it with `python3 build_example_zip.py` after any change |
+| `instructor.qmd` | A quick-glance guide for the instructor: timings, key messages, things not to forget and checkpoints |
+| `example-project/` | The example folder that attendees download and follow along with. `finished/` inside it holds the ready-made result, in case a step doesn't work |
+| `example-project.zip` | The same folder as a zip, linked from the home page. Rebuild it with `python3 build_example_zip.py` after any change to `example-project/` |
+| `_quarto.yml`, `custom.scss`, `_brand.yml` | Site settings, styles and branding |
+| `assets/` | Images |
+| `docs/` | The rendered website (generated, so don't edit it) |
+
+## Teaching the course
+
+Read `instructor.qmd` first. Before teaching:
+
+1. Download and unzip the example folder, and rehearse each cycle once.
+2. Render `example-project/finished/report.qmd`, and save the resulting `report.html` next to it. This is the fallback for anyone whose Render fails. Then rebuild the zip.
+3. Check that Quarto 1.4 or later is installed (RStudio and Positron include it).
 
 ## Building the course locally
 
-You need [Quarto](https://quarto.org/docs/get-started/) and the software from the course's setup instructions, plus `knitr` and `rmarkdown` for R code or `jupyter` for Python code.
+You need [Quarto](https://quarto.org/docs/get-started/) (version 1.4 or later; RStudio and Positron include it) and the software from the course's setup instructions, plus `knitr` and `rmarkdown` for R code or `jupyter` for Python code.
 
 Then:
 
