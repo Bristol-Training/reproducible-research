@@ -5,115 +5,117 @@ format: html
 
 # At a glance {.unnumbered}
 
-**How it runs:** slides, then short "I do, you do" steps (cycles) on the example folder, then an exercise. The steps for each cycle and demo are in the **speaker notes** of its slide (press **S** in the deck).
+**How it runs:** slides, then a short **watch-only demo** (the "wow"), then one **activity**: *Together* (we do a part), *Your turn* (they do it on their own), *Answer* (you show it). Attendees never run code: the only thing they run is **Render**. The steps for each demo and activity are in the **speaker notes** of its slide (press **S** in the deck).
 
-| # | Section | Min | Objective | Cycles and exercise |
-|---|---|---|---|---|
-| 1 | Project structures | 30 | 1 | Cycles 1-2, Exercise 1 |
-| 2 | Documentation & Quarto | 45 | 2, 3 | Cycles 3-6, Exercise 2 |
-| 3 | Virtual environments | 30 | 4 | Demo 4, Exercise 3 |
-| 4 | Sharing data: Q-FAIR | 15 | 5 | Exercise 4 |
+| # | Section | Min | Objective | Demo (you) | Activity |
+|---|---|---|---|---|---|
+| 1 | Project structures | 30 | 1 | Delete the cleaned data and report, rebuild from raw | Rescue the messy project |
+| 2 | Documentation & Quarto | 45 | 2, 3 | Change the data, the report updates | Be the new colleague. One document, many formats |
+| 3 | Virtual environments | 30 | 4 | Delete the environment, rebuild it | The new laptop test |
+| 4 | Your first step | 15 | 5 | none | Your checklist |
+| (+) | Optional: Q-FAIR | +5 | 5 | none | Q-FAIR detective |
 
 **By the end, attendees can:**
 
 1. Organise a project into raw data, processed data, code and outputs, and explain why raw data is never edited.
-2. Write a README and a data dictionary that help others understand and use their project.
-3. Explain why Quarto helps reproducibility, and build a report that updates when the data changes.
-4. Explain why environments matter, and record the software a project needs so it can be re-run on another computer.
-5. Check a dataset against the Q-FAIR principles, and know where to find out more about sharing data.
+2. Describe what a good README and data dictionary contain, and why they matter.
+3. Explain why Quarto helps reproducibility, and make HTML, PDF and Word versions of a report from one document.
+4. Explain why environments matter, and say what someone needs in order to re-run your project on another computer.
+5. Choose one practice to start using on your own project, and know where to find out more.
 
 ## Before you start {.unnumbered}
 
-- Download and unzip the **example folder**, and rehearse each cycle once.
-- Check **Quarto** (1.4 or later; RStudio and Positron include it) and press Render on `report.qmd`.
-- Render `finished/report.qmd` once and save `report.html` next to it, as a fallback for anyone whose Render fails. Then run `python3 build_example_zip.py`.
-- Ask attendees which they use (R, Python or spreadsheets), and remind them about Quarto and `uv` / `renv`.
-- Check the name of the institutional data repository (*data.bris*) and the links.
+- Download and unzip the **example folder**. Copy `tidy-project/` somewhere you can change it.
+- You need **R and Quarto 1.4+** on your own machine for the demos. Run `code/run_all.R` once to check it works.
+- Press Render on `one-document/report.qmd`: attendees will do this. Attendees need **Quarto only**, not R or Python.
+- For the environment demo, prepare a small project with an environment (`renv` for R, or `uv` for Python) that you can delete and restore.
+- Check the links on the slides and notes.
 
 ## Ground rules {.unnumbered}
 
-- **This is not a coding course.** Never debug code live. If something fails, use the ready-made file in `finished/` and carry on.
-- You demo in R and Positron. Python and spreadsheet users follow the same steps with their own tools; the notes show Python versions.
-- Say less, show more. If running late, skip a "you do", not a section.
+- **Nobody runs code except Render.** Never debug live. If a demo fails, say so, show the finished version, and move on.
+- Demos are watch-only. The activities are on paper or in a document.
+- The course is **online**: no pair work. Every *Your turn* is done on your own, and people share answers by typing in the chat. Read a few out.
+- Wording works for everyone in the university. Spreadsheet users do the same activities.
+- If running late, skip the **optional** slides first, then shorten a *Your turn*, not a section.
 
 # 1. Project structures (30 min)
 
-**Checkpoints:** by 7 min cycle 1; by 14 cycle 2; by 20 Exercise 1; finish at 30.
+**Checkpoints:** by 6 min the demo; by 10 *Together*; by 14 *Your turn*; by 20 *Answer*; finish at 30 (the spare time is for discussion).
 
 **Key messages**
 
-- Raw data is never edited: everything else can be re-made from it.
-- Raw / processed / code / outputs, and the pipeline idea.
+- Raw data is never edited. Everything after it can be re-made, so protect the raw data and the code.
+- Raw / processed / code / outputs, in a pipeline.
 - Messy projects happen naturally. Nobody is being criticised.
 - Spreadsheets: same rule. Keep the original, work on a copy.
 
 **Don't forget**
 
-- Ask who has a messy project like the one on the slide.
-- Say out loud: "if it doesn't work, use `finished/`".
-- Relative paths, not `C:/Users/me/...`.
+- At the demo, say "watch what happens when I delete everything".
+- In *Together*, let people feel the problem before you explain it.
+- At the *Answer*, ask who disagreed, and why. There is more than one reasonable layout.
 
-**If running late:** run the cleaning script as a demo only. **Watch out for:** "it is quicker to fix the typo in the raw file".
+**If running late:** shorten *Together*. **Watch out for:** "it is quicker to fix the typo in the raw file".
 
 # 2. Documentation & Quarto (45 min)
 
-**Checkpoints:** by 6 min cycle 3; by 12 cycle 4; by 17 Quarto slides; by 27 cycle 5; by 34 cycle 6; by 39 Exercise 2; finish at 45.
+**Checkpoints:** by 3 min *Be the new colleague* (Together); by 13 Quarto slides; by 21 demo; by 25 *One document*, Together; by 31 *Your turn*; by 38 *Answer*; finish at 45.
 
 **Key messages**
 
 - Four kinds of documentation. Write for the person who will read it.
-- README: summary, quickstart, setup, contents. A README that is wrong is worse than none.
-- Data dictionary: copying the column names is easy. The descriptions are the value.
+- A README answers: what is it, how do I run it, what do I need. A README that is wrong is worse than none.
+- A data dictionary: copying the column names is easy. The descriptions are the value.
 - Quarto: the report *is* the analysis. No copy and paste. Data changes, so render again.
-- This deck, the notes and the course website are all Quarto.
+- One document can make many formats, and this deck, the notes and the website are all Quarto.
 
 **Don't forget**
 
+- Read the messy `notes.txt` out loud with a straight face.
 - Open the Quarto part with "who has copied a number into Word and then found the data had changed?"
-- Point at each part of a `.qmd`: header, text, code chunk, inline code.
-- Ask "what would a colleague need to ask me next year?" for the dictionary.
+- At the demo: change the data, and let them watch every number change.
+- In *One document*, make sure each person renders **all three** formats (the format menu, or `quarto render report.qmd`).
 - Show the "Learn more about Quarto" slide at the end.
 
-**If running late:** drop cycle 6 and do it as part of Exercise 2. **Watch out for:** Render failing (Quarto or R not set up). Show it on your screen and use `finished/report.html`. Inline code needs Quarto 1.4 or later. Spreadsheet users: the README and the idea matter, Quarto is optional.
+**If running late:** skip the "old way vs the Quarto way" slide. **Watch out for:** Render failing (Quarto not set up) or only making one format. Send them to `one-document/finished/`. Inline code needs Quarto 1.4 or later.
 
 # 3. Virtual environments (30 min)
 
-**Checkpoints:** by 10 min the demo; by 18 IDE vs CLI; by 20 Exercise 3; finish at 30.
+**Checkpoints:** by 10 min the demo; by 15 *Together*; by 17 *Your turn*; by 23 *Answer*; finish at 30.
 
 **Key messages**
 
 - "It worked last year": packages change, and one computer has one shared set.
 - An environment is a project's own packages. The lock file is the recipe, and the environment is disposable.
-- Send your project to someone: send the code, README and lock file, not the environment. They rebuild it with one command.
+- Send your project to someone: the code, README and lock file, not the environment. They rebuild it with one command.
 - What it doesn't cover: the R or Python version, the operating system, the data.
 - Spreadsheets: write the program and its version in the README.
 
 **Don't forget**
 
-- Spend the time on the *why*. The demo is the easy bit.
-- When you delete and restore: "this is what your colleague does".
+- Spend the time on the *why*. The demo is only for the wow.
+- At the demo, say "this is what your colleague does when you send them the project".
 - `renv` records package versions, not the version of R. Say so.
-- IDE vs CLI: the file matters, not how you made it. Say "yours will have something similar".
-- The exercise is for people whose tools are set up. Everyone else does the no-code version.
+- In *Your turn*, give no hints. Let them find the list.
 
-**If running late:** demo only R, or only Python. **Watch out for:** `uv` not on the PATH (restart the terminal), locked-down laptops (pair people up), and mixing up the environment (delete it) with the lock file (keep it).
+**If running late:** drop the "tools" slide. **Watch out for:** the demo going wrong (`uv` or `renv` not set up). If it does, show the lock file and describe it.
 
-# 4. Sharing data: Q-FAIR (15 min)
+# 4. Your first step (15 min)
 
-**Checkpoints:** by 4 min the four things; by 9 Exercise 4; recap at 14; finish at 15.
+**Checkpoints:** by 3 min the checklist; by 9 *Quick wins*; by 12 the recap; finish at 15.
 
 **Key messages**
 
-- Q-FAIR: Data **Q**uality, **F**indable, **A**ccessible, **I**nteroperable, **R**eusable.
-- Why it matters: funders and journals, others can build on and check your work, future you, citations.
-- Four things to do: open formats (CSV), a data dictionary, a licence, deposit it (DOI).
-- Can't share the data? Share the README and data dictionary, and explain how to ask for access.
+- The whole course is one journey: messy, tidy, documented, reported, recorded, shareable.
+- Each habit is small. Pick **one** and do it this week.
+- Start with a quick win: a README takes 15 minutes.
 
 **Don't forget**
 
-- Link Q, F and A back to earlier sections.
-- This is a signpost, not a tutorial: no demo, and the links do the work.
-- Don't give ethics or consent advice. Refer people to the research data team.
-- Finish on the recap slide and tick off the five objectives. Mention the separate git and GitHub course.
+- Ask people to **circle one** thing, and post it in the chat.
+- Point out the printable checklist in `take-home/` (PDF and Word).
+- Go back to the five objectives and tick them off.
+- Mention the separate git and GitHub course.
 
-**Watch out for:** Excel saving the wrong CSV type. Use CSV UTF-8, one sheet per file, and remember formulas become values.
+**If time:** the **optional** slides after *Thank you* cover Q-FAIR (the principles, why it matters, four things to do) and a Q-FAIR detective activity. **Watch out for:** nothing, except people leaving with a long to-do list. One thing is enough.

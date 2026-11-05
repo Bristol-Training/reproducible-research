@@ -8,17 +8,17 @@ execute:
 
 # Introduction {.unnumbered}
 
-Welcome to this course! These notes are a **reference**: the main way through the course is the slides and live demos, and every exercise is on the slides too. Use the notes afterwards to revisit the detail, copy commands and check the answers.
+Welcome to this course! These notes go with the slides. You can use them afterwards to revisit the detail, and you can also **work through them on your own**: each section ends with a "Try it yourself" activity, with instructions and an answer you can open.
 
-The course introduces practical habits that make your research easier to re-run, understand and share, whether you work in R, Python or spreadsheets.
+The course introduces practical habits that make your research easier to re-run, understand and share. You do not need to write any code.
 
 By the end of this course you will be able to:
 
 1. Organise a project into raw data, processed data, code and outputs, and explain why raw data is never edited.
-2. Write a README and a data dictionary that help others understand and use your project.
-3. Explain why Quarto helps reproducibility, and build a report that updates when the data changes.
-4. Explain why environments matter, and record the software a project needs so it can be re-run on another computer.
-5. Check a dataset against the Q-FAIR principles, and know where to find out more about sharing data.
+2. Describe what a good README and data dictionary contain, and why they matter.
+3. Explain why Quarto helps reproducibility, and make HTML, PDF and Word versions of a report from one document.
+4. Explain why environments matter, and say what someone needs in order to re-run your project on another computer.
+5. Choose one practice to start using on your own project, and know where to find out more (including sharing data with Q-FAIR).
 
 <details class="how-to-read">
 <summary>How to read this document</summary>
@@ -48,7 +48,7 @@ Commands to run in a terminal look like this:
 Rscript script.R
 ```
 
-At the end of each section there is an exercise, which is also shown on the slides. Here, exercises are shown in blue boxes, followed by a yellow box that contains the answer. Try each exercise yourself before looking at the answer.
+In each section there is a "Try it yourself" activity, which is also on the slides. Activities are shown in blue boxes, followed by a yellow box that contains the answer. Try each one yourself before looking at the answer.
 
 ::: {#exampleN .callout-note icon=false title='Exercise'}
 This is an exercise. Click the box below to see the answer.
@@ -68,17 +68,20 @@ These are important concepts and technical notes.
 
 ## Workspace setup {.unnumbered}
 
-**Please follow our [installation instructions](https://bristol-training.github.io/data-science-project-setup/)** before the course. You will also need the following.
+You do not need to write or run any code in this course. You need two things.
 
-**Quarto.** We use [Quarto](https://quarto.org) to build reports. RStudio and Positron include it, so if you use either you probably don't need to install anything. To check, open a `.qmd` file and look for the **Render** button. Otherwise, [install Quarto](https://quarto.org/docs/get-started/) for your operating system (VS Code users also need the Quarto extension). Use version 1.4 or later: `quarto --version` in a terminal shows which you have.
+**Quarto.** We use [Quarto](https://quarto.org) to build documents. RStudio and Positron include it, so if you use either you probably don't need to install anything. To check, open a `.qmd` file and look for the **Render** button. Otherwise, [install Quarto](https://quarto.org/docs/get-started/) for your operating system (VS Code users also need the Quarto extension). Use version 1.4 or later: `quarto --version` in a terminal shows which you have.
 
-**The example folder.** [Download the example folder](example-project.zip){download="example-project.zip"} and unzip it. It has the data and files we use as we go. If something doesn't work, the `finished/` folder inside it has the ready-made result.
+**The example folder.** [Download the example folder](example-project.zip){download="example-project.zip"} and unzip it. It has four folders:
 
-**For Section 3.** Python users need [uv](https://docs.astral.sh/uv/), and R users need the `renv` package. If you use Excel, you don't need to install anything extra.
+| Folder | What it is |
+|---|---|
+| `messy-project/` | A project with a bad structure and bad names |
+| `tidy-project/` | The same project with all the good habits |
+| `one-document/` | A short report to turn into HTML, PDF and Word |
+| `take-home/` | A one-page checklist for your own project |
 
-::: {.callout-note}
-This course is for people who use **R**, **Python** or **spreadsheets such as Excel**. The ideas are the same for everyone, and the slides flag where Excel users do something different. Where the steps differ, you will see tabs: click the one that matches how you work. Commands for the terminal are shown as code, and you can run them in the terminal built in to your IDE or in a separate terminal window.
-:::
+If you want to try the environment commands in Section 3 on a project of your own, you will also need [uv](https://docs.astral.sh/uv/) (Python) or the `renv` package (R). That is optional.
 
 # Project Structures
 
@@ -103,133 +106,100 @@ Making a project more reproducible helps you first and others second:
 How much structure a project needs is a judgement call. A small one-off analysis may not need all of this. Aim for what is useful, not what is perfect.
 :::
 
-## A Messy Example
+## A messy project
+
+Open `messy-project/` in the example folder. It looks like this:
 
 ```
-my_project/
+messy-project/
+├── Copy of data.csv
+├── analysis.R
+├── analysis2 (copy).R
+├── analysis_OLD.R
+├── clean.R
 ├── data.csv
+├── data_FINAL_USE_THIS.csv
 ├── data_final.csv
 ├── data_final_v2.csv
-├── explore.ipynb
-├── clean_data.py
-├── analysis.py
-├── analysis_OLD.py
-├── fig1.png
-└── results.xlsx
+├── notes.txt
+├── plot1.png
+├── plot_new.png
+├── report_draft.docx
+├── results.xlsx
+├── results_v3.xlsx
+└── untitled.R
 ```
 
 Questions to ask of this layout:
 
-- Which `data` file is the original?
-- Which script should be run first?
-- Which figure came from which version of the analysis?
+- Which file is the **raw data**?
+- What do I **run first**?
+- Which figure came from which analysis?
 
 This happens naturally. You start by exploring a dataset in a notebook, a script or an Excel sheet. The analysis grows, then a second analysis is added, and it becomes hard to see how you got from the raw data to the results.
 
-## A Clean Example
+## A tidy project
+
+Now open `tidy-project/`. It holds the same project, organised:
 
 ```
-my_project/
+tidy-project/
 ├── README.md
-├── data/
-│   ├── raw/          <- original data, never edited
-│   └── processed/    <- cleaned data made by your code
-├── code/
-│   └── 01_clean_data.R
 ├── report.qmd
+├── data/
+│   ├── raw/penguins.csv
+│   └── processed/
+│       ├── penguins_clean.csv
+│       └── penguins_clean_dictionary.csv
+├── code/
+│   ├── 01_clean_data.R
+│   └── run_all.R
 └── outputs/
-    ├── figures/
-    └── tables/
 ```
 
 The key ideas are:
 
 1. **A README** at the top of the project says what it is and how to use it (see the next section).
 2. **Raw data is read-only.** Never overwrite your original data file. Save the cleaned version somewhere else.
-3. **Code is a pipeline.** Each step reads the output of the previous step: `raw data -> clean -> analysis -> outputs`. Numbering the files shows the order to run them in.
-4. **Outputs can be thrown away.** Anything in `outputs/` and `data/processed/` should be re-creatable by running the code.
+3. **Code is a pipeline.** Each step reads the output of the previous step: `raw data -> clean -> analyse -> results`. Numbering the files shows the order to run them in.
+4. **Results can be thrown away.** Anything in `outputs/` and `data/processed/` can be re-made by running the code. `code/run_all.R` does exactly that: delete them, run it, and they come back.
 
-::: {.panel-tabset}
-
-### R
-
-```{.r filename="code/01_clean_data.R"}
-raw <- read.csv("data/raw/penguins.csv")
-
-# drop any rows with missing values
-clean <- na.omit(raw)
-
-write.csv(clean, "data/processed/penguins_clean.csv", row.names = FALSE)
-```
-
-### Python
-
-```{.python filename="code/01_clean_data.py"}
-import pandas as pd
-
-raw = pd.read_csv("data/raw/penguins.csv")
-
-# drop any rows with missing values
-clean = raw.dropna()
-
-clean.to_csv("data/processed/penguins_clean.csv", index=False)
-```
-
-### Excel / no code
-
-The same structure works for spreadsheets:
+**Spreadsheets.** The same structure works for spreadsheets:
 
 - Keep the original file in a `data/raw` folder and **never edit it**. Open it, then use *Save As* to put a working copy in `data/processed`.
 - Use one sheet per step, in order, and name them (`1_raw`, `2_cleaned`, `3_results`) rather than leaving `Sheet1`.
-- Write down in the README what you did to the data at each step, in enough detail that someone else could repeat it. Avoid manual changes you can't describe.
+- Write down in the README what you did to the data at each step, in enough detail that someone else could repeat it.
 - Put formulas in cells rather than pasting values, so the calculation is visible.
 
+::: {.callout-tip icon=false title="You don't need everything"}
+How much structure a project needs is a judgement call. A small one-off analysis may not need all of this. Aim for what is useful, not what is perfect.
 :::
 
-::: {.callout-tip icon=false title="Tip: where to start a new project"}
-Some IDEs can create a new project with a sensible set of folders for you. Positron, RStudio and VS Code can all start a new project from a menu, and Python tools such as `uv init` create the starting files from the terminal. Use whatever is quickest, then add the `data/` and `outputs/` folders.
-:::
+## Try it yourself {.unnumbered}
 
-## Exercise {.unnumbered}
+::: {#exercise1 .callout-note icon=false title='Try it yourself: rescue the messy project'}
+Open `messy-project/` in the example folder (you do not need to run anything).
 
-::: {#exercise1 .callout-note icon=false title='Exercise'}
-Below is the file list for a messy project.
-
-```
-final.xlsx    final_v2.xlsx    notes.txt    plot.png    clean.R    model.R    penguins_raw.csv    penguins_edited.csv
-```
-
-1. Sketch a clean folder layout for these files.
-2. Which file would you mark as read-only, and why?
-3. In what order would you run the scripts?
+1. Try to answer: which file is the raw data? What do I run first? Which figure came from which analysis?
+2. Put every file under one heading: **raw data**, **cleaned data**, **code**, **results**, **documents**.
+3. Decide which file you would **never edit**, and which files you would **delete**.
 :::
 
 ::: {#answer1 .callout-caution icon=false title='Answer (click to open)' collapse="true"}
-One possible layout:
+| | Files | What to do |
+|---|---|---|
+| **Raw data** | `data.csv` | Never edit it |
+| **Cleaned data** | `data_final.csv`, `data_final_v2.csv`, `data_FINAL_USE_THIS.csv` | Three versions of one thing, with no way to tell which is right. Make it from the raw data with code |
+| **Code** | `clean.R`, `analysis.R`, `analysis2 (copy).R`, `analysis_OLD.R`, `untitled.R` | One script per step, numbered. Delete the copies |
+| **Results** | `plot1.png`, `plot_new.png`, `results.xlsx`, `results_v3.xlsx` | The code can re-make these |
+| **Documents** | `notes.txt`, `report_draft.docx` | Become the README and the report |
+| **Delete** | `Copy of data.csv` | A duplicate |
 
-```
-project/
-├── README.md              <- includes the notes from notes.txt
-├── data/
-│   ├── raw/penguins_raw.csv
-│   └── processed/penguins_edited.csv
-├── code/
-│   ├── 01_clean.R
-│   └── 02_model.R
-└── outputs/
-    ├── plot.png
-    └── final.xlsx
-```
-
-1. See the layout above.
-2. `penguins_raw.csv` is the original data and should be read-only, as everything else can be remade from it. `penguins_edited.csv` should be the output of `clean.R` rather than something edited by hand.
-3. `clean.R` first, then `model.R`, because the model needs the cleaned data.
-
-Also, `final.xlsx` and `final_v2.xlsx` should be one file, with the history left to version control or the README. Delete or archive the old one.
+Compare your answer with `tidy-project/`. To see the "everything can be re-made" idea for yourself, look at `tidy-project/code/run_all.R`: it deletes the cleaned data and the report, then makes them again from the raw data.
 :::
 
 ::: {#keypoints1 .callout-tip icon=false title='Key points'}
-- Separate raw data, processed data, code and outputs.
+- Separate raw data, cleaned data, code and results.
 - Never overwrite the raw data.
 - Think of the analysis as a pipeline that can be re-run from start to finish.
 - This applies equally to scripts, notebooks and spreadsheets.
@@ -259,29 +229,30 @@ A README is a plain text file in the top folder of the project. It is the first 
 - **Setup:** what needs to be installed before running the code.
 - **Contents:** a description of what each folder holds.
 
-A README is written in *Markdown*, which is a simple way of marking up text:
+Here is the README from `tidy-project/`. It is written in *Markdown*, which is a simple way of marking up text:
 
 ````markdown
-# Penguins analysis
+# Penguin body mass analysis
 
-Body measurements of penguins on three islands. **Status:** ongoing.
+Body measurements of 333 penguins on three islands. **Status:** complete.
 
 ## Quickstart
 
-1. Put the raw data in `data/raw/`.
-2. Run `code/01_clean_data.R`.
-3. Render `report.qmd`.
+1. Open this folder in RStudio or Positron (or a terminal).
+2. Run `code/run_all.R`. It cleans the data and builds the report in `outputs/`.
 
 ## Setup
 
-Requires R and Quarto (see "Virtual Environments").
+- R 4.3 or later (no extra packages needed)
+- Quarto 1.4 or later (to make the report)
 
 ## Contents
 
-- `data/raw/` original data (read-only)
-- `data/processed/` cleaned data, and its data dictionary
-- `code/` analysis scripts
-- `outputs/` figures and tables
+- `data/raw/` the original data (never edited)
+- `data/processed/` the cleaned data, and a data dictionary explaining each column
+- `code/` the scripts
+- `report.qmd` the report, which makes HTML, PDF and Word versions
+- `outputs/` made by `run_all.R`. Safe to delete
 ````
 
 You can use a README in any project, whether or not you write code. For a spreadsheet project it is the place to record what each sheet does and how the data was collected.
@@ -429,6 +400,29 @@ new data  ->  re-run the cleaning script  ->  render the report  ->  updated rep
 
 Every number, table and figure is recalculated, and sentences with inline code update too. There is nothing to copy and paste. This is the main reason to use Quarto for reproducible research: change the data (or the code), not the report.
 
+## One document, many formats
+
+One of the best things about Quarto is that **one source file can make several kinds of document**. You list the formats you want in the header:
+
+```
+format:
+  html: default
+  typst: default
+  docx: default
+```
+
+- `html` makes a web page.
+- `typst` makes a **PDF**. [Typst](https://typst.app) comes with Quarto, so you don't need to install LaTeX.
+- `docx` makes a **Word** document.
+
+When you render, Quarto makes all three from the same text, code and figures. Change the title, a sentence or the data once, and every format changes.
+
+To render, press the **Render** button in your IDE (use the format menu to choose which one), or run this in a terminal to make every format at once:
+
+```{.bash filename="Terminal/Command Prompt"}
+quarto render report.qmd
+```
+
 ## Rendering
 
 Render the report from the terminal, or with the *Render* button in your IDE:
@@ -453,29 +447,42 @@ The result, `report.html`, appears next to `report.qmd`.
 - [Output formats](https://quarto.org/docs/output-formats/all-formats.html), [websites](https://quarto.org/docs/websites/) and [presentations](https://quarto.org/docs/presentations/).
 - [The Quarto gallery](https://quarto.org/docs/gallery/): examples to copy from.
 
-## Exercise {.unnumbered}
+## Try it yourself {.unnumbered}
 
-::: {#exercise2 .callout-note icon=false title='Exercise'}
-Predict, then check.
+::: {#exercise2 .callout-note icon=false title='Try it yourself: be the new colleague'}
+You have inherited the messy project. Open `messy-project/notes.txt`: it is the only documentation. Look at the first rows of `messy-project/data.csv` too.
 
-1. Pick a change: a different species, a different column to average, or the "later years" line in the cleaning script.
-2. Write down what you expect to change in the report.
-3. Make the change, render, and compare with your prediction.
-
-If you have a project of your own, write its README and data dictionary too.
+1. Write down **three things you can't work out**. Think about how to run it, which software it needs, what the columns mean, and which file is the real data.
+2. Open `tidy-project/README.md` and `tidy-project/data/processed/penguins_clean_dictionary.csv`. Which of your three things do they answer?
 :::
 
 ::: {#answer2 .callout-caution icon=false title='Answer (click to open)' collapse="true"}
-- You could say **what would change** before you rendered, and why.
-- Only the results changed: **no copying and pasting** was needed.
-- A good README answers three questions in the first minute: What is this project and is it finished? If I just want to run it, what do I do first? What do I need installed?
-- A data dictionary has a plain-English description, units and missing-value codes for every column.
+Typical things you can't work out from the messy project: how to run it and in what order (the notes say "i think"); which software and versions it needs; what `bill_dep` means and whether `body_mass` is in grams or kilograms; which data file is the real one; which figure is which.
+
+The README answers how to run it, what software it needs and what is where. The data dictionary answers what each column means, with its type and units. A good README answers three questions in the first minute: What is this project and is it finished? If I just want to run it, what do I do first? What do I need installed?
+:::
+
+::: {#exercise2b .callout-note icon=false title='Try it yourself: one document, many formats'}
+You need Quarto, but not R or Python.
+
+1. Open `one-document/report.qmd`.
+2. Change the **title**, the **author** and **one sentence**.
+3. Render it as **HTML**, then **PDF**, then **Word**: press Render and choose each format, or run `quarto render report.qmd` to make all three.
+4. Open all three. Did your changes appear in each?
+
+If Render doesn't work, open the ready-made files in `one-document/finished/`.
+:::
+
+::: {#answer2b .callout-caution icon=false title='Answer (click to open)' collapse="true"}
+Your changes appeared in every format, because there is only **one source**. That is the point: you never copy and paste between a web page, a PDF and a Word file.
+
+If only one format appeared, Render was set to a single format. Use the format menu, or the `quarto render report.qmd` command, to make all three.
 :::
 
 ::: {#keypoints2 .callout-tip icon=false title='Key points'}
 - Document at several levels: comments, the README, a data dictionary and external write-ups.
 - Every project should have a README, and every dataset a data dictionary.
-- Quarto turns code and text into a report that can be re-created at any time.
+- Quarto turns text and code into a report that can be re-created at any time, in several formats.
 - If the data changes, render again and the whole report updates.
 :::
 
@@ -547,6 +554,10 @@ That is good enough for almost every project. Perfect is not the goal.
 
 There are no packages to install, but the software version can still matter: formulas and functions differ between Excel versions, and add-ins vary. Write the program and its version in your README (for example *Excel for Microsoft 365, version 2410*), along with any add-ins used. The next person then knows what you used, which is the same idea.
 
+## Optional: trying it yourself
+
+You do not need to run any commands in this course. If you want to try environments on a project of your own, here are the commands for Python (`uv`) and R (`renv`).
+
 ## uv (Python)
 
 [uv](https://docs.astral.sh/uv/) creates the environment and records the packages for you.
@@ -589,25 +600,6 @@ renv::restore()
 
 to install the same versions. renv does not change the version of R itself. To manage that, use a tool such as `rig`, and record the R version in your README.
 
-## IDE Vs CLI
-
-Everything above can be done either by typing commands in a terminal (the **CLI**) or through the menus of your IDE. They do the same thing.
-
-| Task | CLI | In an IDE |
-|---|---|---|
-| New Python project with environment | `uv init` | e.g. Positron: *New Folder from Template* then choose a Python project with a new environment |
-| Install a package | `uv add pandas` or `install.packages()` | Package panel, if your IDE has one |
-| Re-create an environment | `uv sync` or `renv::restore()` | Often prompted for when you open the project |
-| Render a report | `quarto render report.qmd` | The *Render* button |
-
-We recommend learning the CLI commands, because:
-
-- they are the same whatever IDE you use, and in instructions you read online;
-- they work on a remote server or HPC, where there may be no IDE;
-- they are easy to copy into a README so others can follow them.
-
-Use whichever you find faster day to day. What matters is that the environment is **recorded in a file** that is stored with your project.
-
 ## Learn more about environments
 
 - [uv](https://docs.astral.sh/uv/): Python projects and environments.
@@ -615,41 +607,110 @@ Use whichever you find faster day to day. What matters is that the environment i
 - [Effective Python environment management](https://realpython.com/effective-python-environment/): `venv` and `conda`.
 - [Managing dependencies with uv and pixi](https://jatonline.github.io/managing-dependencies-using-uv-and-pixi/).
 
-## Exercise {.unnumbered}
+## Try it yourself {.unnumbered}
 
-::: {#exercise3 .callout-note icon=false title='Exercise'}
-Follow the steps for your language. Do this if your tools are set up.
+::: {#exercise3 .callout-note icon=false title='Try it yourself: the new laptop test'}
+A colleague emails you their project: *"It runs fine on my laptop!"* You open it on your own laptop, and it says there is no package called `ggplot2`.
 
-| Step | Python | R |
-|---|---|---|
-| 1 Create the environment | `uv init` | `renv::init()` |
-| 2 Add a package | `uv add pandas` | `install.packages("ggplot2")`, then `renv::snapshot()` |
-| 3 Look at the lock file | `uv.lock` | `renv.lock` |
-| 4 Delete the environment | delete `.venv` | delete `renv/library` |
-| 5 Restore it | `uv sync` | `renv::restore()` |
-
-No code? Write your program and its version in your README.
-
-Extra: zip the project without the environment folder, and swap with a neighbour to rebuild it.
+On your own, **list everything you would need to know** to run this project on a new computer. Write down as many things as you can.
 :::
 
 ::: {#answer3 .callout-caution icon=false title='Answer (click to open)' collapse="true"}
-- The `pyproject.toml` / `renv.lock` file lists your packages. The lock file also records exact versions.
-- After deleting the environment folder and running `uv sync` or `renv::restore()`, the packages are installed again. This is the point of a **disposable** environment: the folder and its lock file are all you need to share.
-- For the spreadsheet, the README note is the equivalent. It will not install anything, but it tells the next person what you used.
+| You need to know | Where it should be written down |
+|---|---|
+| Which **software**, and which version | The README (Setup) |
+| Which **packages**, and which versions | A lock file |
+| Where the **data** is | The README, and a `data/raw` folder |
+| **What to run**, and in what order | The README (Quickstart), or one script |
+| Where the **results** come from | The code, not copy and paste |
+
+Almost all of this can be written down once, in a README. A lock file records the packages for you. Look at `tidy-project/README.md`: it answers most of these.
 :::
 
 ::: {#keypoints3 .callout-tip icon=false title='Key points'}
 - Use a separate environment for every project.
 - Record it in a lock file and keep that file with your code.
-- An environment should be disposable and easy to recreate.
+- An environment is disposable and easy to recreate.
 - Send the lock file, not the environment: your colleague can rebuild it with one command.
-- The CLI and IDE do the same thing: use what suits you.
+- Write down the version of R or Python, and the operating system, in your README.
 :::
 
-# Sharing Data: Q-FAIR
+# Your First Step
+
+*What will you do differently on Monday?*
+
+## From messy to shareable
+
+This whole course is one journey:
+
+```
+Messy  ->  Tidy  ->  Documented  ->  Reported  ->  Recorded  ->  Shareable
+```
+
+- **Tidy:** raw data kept apart and never edited.
+- **Documented:** a README and a data dictionary.
+- **Reported:** one document, made from the data and code.
+- **Recorded:** the software and versions written down.
+- **Shareable:** a project a colleague can run on a new computer.
+
+Each step is a habit, and you can start with any of them.
+
+## Your checklist
+
+Tick what your own project already does. There is a one-page version to print or edit in `take-home/` (PDF and Word).
+
+| | |
+|---|---|
+| **Structure** | ☐ My raw data is never edited<br>☐ Raw data, cleaned data, code and results are kept in separate places<br>☐ My files have clear names<br>☐ I could re-make my results from the raw data |
+| **Documentation** | ☐ There is a README<br>☐ My columns are explained in a data dictionary<br>☐ My report is made from the data and code |
+| **Environments** | ☐ I have written down which software and versions I used<br>☐ My packages are recorded in a file<br>☐ A colleague could run my project on a new computer |
+| **Sharing** | ☐ My data is in an open format such as CSV<br>☐ I know where I would share it, and under which licence<br>☐ Someone else could find, understand and reuse it |
+
+## Quick wins
+
+Some steps give a lot of benefit for very little effort:
+
+| Quick win | Time | Why it helps |
+|---|---|---|
+| Stop editing the raw data | 0 min | Everything can be re-made |
+| Clear folders and file names | 15 min | You can find things |
+| Write a README | 15 min | Others, and future you, can run it |
+| Write down your software versions | 5 min | It runs on another computer |
+| Describe your columns | 20 min | Your data makes sense to others |
+
+## Try it yourself {.unnumbered}
+
+::: {#exercise4 .callout-note icon=false title='Try it yourself: your first step'}
+1. Tick the checklist for a project of your own (or for `messy-project/` if you don't have one).
+2. **Circle one** thing to start with this week.
+3. Write it down, or tell someone, so you do it.
+:::
+
+::: {#answer4 .callout-caution icon=false title='Answer (click to open)' collapse="true"}
+There is no single right answer, but a good first step is small and quick. If you can't decide, start with the first thing in the quick wins table that you haven't done yet. A README is a very good first step: it takes 15 minutes, and it helps everyone, including future you.
+:::
+
+## Where next?
+
+- [The Turing Way](https://book.the-turing-way.org/): a community guide to reproducible research, covering all of these topics in depth.
+- [Bristol Training courses](https://bristol-training.github.io/): including Intermediate R, Intermediate Python and Best Practices in Software Engineering.
+- **Version control** with git lets you go back to a version that worked, develop new features in branches, and collaborate. We cover it in a separate git and GitHub course.
+- **Functions and testing** make analysis code easier to read and trust. See the courses above.
+- **Sharing your data:** the next section covers Q-FAIR in full.
+
+Getting the balance right is hard: do what you can. You learn by doing, so try to put one or two of these ideas into your next project.
+
+::: {#keypoints4 .callout-tip icon=false title='Key points'}
+- Each habit is small, and you can start with any of them.
+- A project that is tidy, documented, reported and recorded is already most of the way to reproducible.
+- Pick one thing, and do it this week.
+:::
+
+# Optional: Sharing Your Data (Q-FAIR)
 
 *How do I know my data is good enough to share, and how do I share it?*
+
+This section is optional in the live course, but it is written in full so you can work through it on your own.
 
 ## Q-FAIR data principles
 
@@ -660,8 +721,8 @@ The [FAIR principles](https://www.go-fair.org/fair-principles/) are a well-known
 | **Q** | Data **Q**uality | Data is accurate, complete and documented. You know where it came from and what was done to it. | Raw data is never overwritten; the pipeline records every change. |
 | **F** | **F**indable | People, and computers, can find it. It has a clear name and description. | Clear folder layout and a README. |
 | **A** | **A**ccessible | It is clear how to get the data, and under what conditions. | README setup and access notes. |
-| **I** | **I**nteroperable | It uses open, standard formats that other tools can read. | See "Four things to do". |
-| **R** | **R**eusable | Others can understand and re-use it, with a clear licence. | See "Four things to do". |
+| **I** | **I**nteroperable | It uses open, standard formats that other tools can read. | CSV, not a locked format. |
+| **R** | **R**eusable | Others can understand and re-use it, with a clear licence. | A README and a data dictionary. |
 
 ## Why it matters
 
@@ -669,6 +730,18 @@ The [FAIR principles](https://www.go-fair.org/fair-principles/) are a well-known
 - **Others can build on your work**, and check it.
 - **Future you** can find and understand your own data.
 - Your work **gets cited**.
+
+## A worked example
+
+Here is how the two example projects score against each letter:
+
+| | Question | `tidy-project/` | `messy-project/` |
+|---|---|---|---|
+| **Q** | Can you trust it, and do you know what was done to it? | ✔ The raw data is untouched and the code records every change | ✘ Three cleaned versions, and some values were fixed by hand |
+| **F** | Can people find it? | ✔ Clear names and a README | ✘ `data_FINAL_USE_THIS.csv` |
+| **A** | Is it clear how to get it? | ✔ The README says where everything is | ✘ "Ask Sam" |
+| **I** | Is it in an open format? | ✔ CSV | ✘ Results in `.xlsx` |
+| **R** | Can others understand and reuse it? | ✔ A data dictionary (it still needs a licence) | ✘ Columns not explained, no licence |
 
 ## Four things to do
 
@@ -682,32 +755,27 @@ The [FAIR principles](https://www.go-fair.org/fair-principles/) are a well-known
 
 **Sensitive data.** Some data can't be shared openly, for example because it contains personal information. You can usually still share the **metadata** (the README and data dictionary) and explain how others can apply for access. Check with your research data team or ethics committee before depositing anything involving people.
 
-## Where next?
+## Try it yourself {.unnumbered}
 
-- [The FAIR principles](https://www.go-fair.org/fair-principles/) and [The Turing Way guide to research data management](https://book.the-turing-way.org/reproducible-research/rdm): community guides to sharing data, in depth.
-- [Bristol Training courses](https://bristol-training.github.io/): including Intermediate R, Intermediate Python and Best Practices in Software Engineering.
-- **Version control** with git lets you go back to a version that worked, develop new features in branches, and collaborate. Use it for every project. We cover it in a separate git and GitHub course.
-- **Functions and testing** make analysis code easier to read and trust. See the Bristol and Turing Way courses above.
+::: {#exercise5 .callout-note icon=false title='Try it yourself: Q-FAIR detective'}
+For each of these three datasets, mark every letter of **Q-FAIR** with a ✔ or an ✘.
 
-Getting the balance right is hard: do what you can. You learn by doing, so try to put one or two of these ideas into your next project.
-
-## Exercise {.unnumbered}
-
-::: {#exercise4 .callout-note icon=false title='Exercise'}
-Pick a dataset: the penguins data from the demos, or one of your own. For each letter of **Q-FAIR**, write down one thing the data already does well and one thing you could improve.
+- **A.** A spreadsheet called `final_data_v7.xlsx` on my laptop. Email me if you want it. I would have to remember what some of the columns mean.
+- **B.** A CSV in a repository, with a DOI, a README, a data dictionary and a CC BY licence.
+- **C.** A CSV on the department shared drive, with a README. No licence, and you need to ask the group's admin for access.
 :::
 
-::: {#answer4 .callout-caution icon=false title='Answer (click to open)' collapse="true"}
-There is no single right answer. Typical improvements are:
+::: {#answer5 .callout-caution icon=false title='Answer (click to open)' collapse="true"}
+| | Q | F | A | I | R |
+|---|---|---|---|---|---|
+| **A** The spreadsheet | ✘ | ✘ | ✘ | ✘ | ✘ |
+| **B** The repository CSV | ✔ | ✔ | ✔ | ✔ | ✔ |
+| **C** The shared-drive CSV | ✔ | ✘ | partly | ✔ | ✘ |
 
-- **Q:** keep raw data read-only and describe each cleaning step.
-- **F:** add a README and give files descriptive names.
-- **A:** say where the data is stored and who can use it, or how to request access if it is restricted.
-- **I:** save data as CSV rather than a proprietary format.
-- **R:** add a data dictionary and a licence.
+**C** is documented (Q) and in an open format (I), but it is hard to find (F), you need permission to get it (A), and it has no licence (R).
 :::
 
-::: {#keypoints4 .callout-tip icon=false title='Key points'}
+::: {#keypoints5 .callout-tip icon=false title='Key points'}
 - Q-FAIR: data **Q**uality, **F**indable, **A**ccessible, **I**nteroperable, **R**eusable.
 - Share data in open formats such as CSV, with a data dictionary and a licence.
 - Deposit it in a repository that gives it a DOI.

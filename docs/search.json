@@ -4,35 +4,35 @@
     "href": "instructor.html",
     "title": "Instructor notes",
     "section": "",
-    "text": "How it runs: slides, then short “I do, you do” steps (cycles) on the example folder, then an exercise. The steps for each cycle and demo are in the speaker notes of its slide (press S in the deck).\n\n\n\n#\nSection\nMin\nObjective\nCycles and exercise\n\n\n\n\n1\nProject structures\n30\n1\nCycles 1-2, Exercise 1\n\n\n2\nDocumentation & Quarto\n45\n2, 3\nCycles 3-6, Exercise 2\n\n\n3\nVirtual environments\n30\n4\nDemo 4, Exercise 3\n\n\n4\nSharing data: Q-FAIR\n15\n5\nExercise 4\n\n\n\nBy the end, attendees can:\n\nOrganise a project into raw data, processed data, code and outputs, and explain why raw data is never edited.\nWrite a README and a data dictionary that help others understand and use their project.\nExplain why Quarto helps reproducibility, and build a report that updates when the data changes.\nExplain why environments matter, and record the software a project needs so it can be re-run on another computer.\nCheck a dataset against the Q-FAIR principles, and know where to find out more about sharing data.\n\n\n\n\nDownload and unzip the example folder, and rehearse each cycle once.\nCheck Quarto (1.4 or later; RStudio and Positron include it) and press Render on report.qmd.\nRender finished/report.qmd once and save report.html next to it, as a fallback for anyone whose Render fails. Then run python3 build_example_zip.py.\nAsk attendees which they use (R, Python or spreadsheets), and remind them about Quarto and uv / renv.\nCheck the name of the institutional data repository (data.bris) and the links.\n\n\n\n\n\nThis is not a coding course. Never debug code live. If something fails, use the ready-made file in finished/ and carry on.\nYou demo in R and Positron. Python and spreadsheet users follow the same steps with their own tools; the notes show Python versions.\nSay less, show more. If running late, skip a “you do”, not a section."
+    "text": "How it runs: slides, then a short watch-only demo (the “wow”), then one activity: Together (we do a part), Your turn (they do it on their own), Answer (you show it). Attendees never run code: the only thing they run is Render. The steps for each demo and activity are in the speaker notes of its slide (press S in the deck).\n\n\n\n\n\n\n\n\n\n\n\n#\nSection\nMin\nObjective\nDemo (you)\nActivity\n\n\n\n\n1\nProject structures\n30\n1\nDelete the cleaned data and report, rebuild from raw\nRescue the messy project\n\n\n2\nDocumentation & Quarto\n45\n2, 3\nChange the data, the report updates\nBe the new colleague. One document, many formats\n\n\n3\nVirtual environments\n30\n4\nDelete the environment, rebuild it\nThe new laptop test\n\n\n4\nYour first step\n15\n5\nnone\nYour checklist\n\n\n(+)\nOptional: Q-FAIR\n+5\n5\nnone\nQ-FAIR detective\n\n\n\nBy the end, attendees can:\n\nOrganise a project into raw data, processed data, code and outputs, and explain why raw data is never edited.\nDescribe what a good README and data dictionary contain, and why they matter.\nExplain why Quarto helps reproducibility, and make HTML, PDF and Word versions of a report from one document.\nExplain why environments matter, and say what someone needs in order to re-run your project on another computer.\nChoose one practice to start using on your own project, and know where to find out more.\n\n\n\n\nDownload and unzip the example folder. Copy tidy-project/ somewhere you can change it.\nYou need R and Quarto 1.4+ on your own machine for the demos. Run code/run_all.R once to check it works.\nPress Render on one-document/report.qmd: attendees will do this. Attendees need Quarto only, not R or Python.\nFor the environment demo, prepare a small project with an environment (renv for R, or uv for Python) that you can delete and restore.\nCheck the links on the slides and notes.\n\n\n\n\n\nNobody runs code except Render. Never debug live. If a demo fails, say so, show the finished version, and move on.\nDemos are watch-only. The activities are on paper or in a document.\nThe course is online: no pair work. Every Your turn is done on your own, and people share answers by typing in the chat. Read a few out.\nWording works for everyone in the university. Spreadsheet users do the same activities.\nIf running late, skip the optional slides first, then shorten a Your turn, not a section."
   },
   {
     "objectID": "instructor.html#before-you-start",
     "href": "instructor.html#before-you-start",
     "title": "Instructor notes",
     "section": "",
-    "text": "Download and unzip the example folder, and rehearse each cycle once.\nCheck Quarto (1.4 or later; RStudio and Positron include it) and press Render on report.qmd.\nRender finished/report.qmd once and save report.html next to it, as a fallback for anyone whose Render fails. Then run python3 build_example_zip.py.\nAsk attendees which they use (R, Python or spreadsheets), and remind them about Quarto and uv / renv.\nCheck the name of the institutional data repository (data.bris) and the links."
+    "text": "Download and unzip the example folder. Copy tidy-project/ somewhere you can change it.\nYou need R and Quarto 1.4+ on your own machine for the demos. Run code/run_all.R once to check it works.\nPress Render on one-document/report.qmd: attendees will do this. Attendees need Quarto only, not R or Python.\nFor the environment demo, prepare a small project with an environment (renv for R, or uv for Python) that you can delete and restore.\nCheck the links on the slides and notes."
   },
   {
     "objectID": "instructor.html#ground-rules",
     "href": "instructor.html#ground-rules",
     "title": "Instructor notes",
     "section": "",
-    "text": "This is not a coding course. Never debug code live. If something fails, use the ready-made file in finished/ and carry on.\nYou demo in R and Positron. Python and spreadsheet users follow the same steps with their own tools; the notes show Python versions.\nSay less, show more. If running late, skip a “you do”, not a section."
+    "text": "Nobody runs code except Render. Never debug live. If a demo fails, say so, show the finished version, and move on.\nDemos are watch-only. The activities are on paper or in a document.\nThe course is online: no pair work. Every Your turn is done on your own, and people share answers by typing in the chat. Read a few out.\nWording works for everyone in the university. Spreadsheet users do the same activities.\nIf running late, skip the optional slides first, then shorten a Your turn, not a section."
   },
   {
     "objectID": "notes.html",
     "href": "notes.html",
     "title": "Course notes",
     "section": "",
-    "text": "Welcome to this course! These notes are a reference: the main way through the course is the slides and live demos, and every exercise is on the slides too. Use the notes afterwards to revisit the detail, copy commands and check the answers.\nThe course introduces practical habits that make your research easier to re-run, understand and share, whether you work in R, Python or spreadsheets.\nBy the end of this course you will be able to:\n\nOrganise a project into raw data, processed data, code and outputs, and explain why raw data is never edited.\nWrite a README and a data dictionary that help others understand and use your project.\nExplain why Quarto helps reproducibility, and build a report that updates when the data changes.\nExplain why environments matter, and record the software a project needs so it can be re-run on another computer.\nCheck a dataset against the Q-FAIR principles, and know where to find out more about sharing data.\n\n\n\nHow to read this document\n\nSmall snippets of code are shown in a grey box like this:\ncat(\"Hello!\")\nWhen the code is run, its output is shown below it, marked with a vertical red line:\n\ncat(\"Hello!\")\n\nHello!\n\n\nLarger pieces of code are shown as scripts with a filename:\n\n\nscript.R\n\nname &lt;- \"Jean Golding\"\ncat(\"Hello,\", name, \"!\")\n\nCommands to run in a terminal look like this:\n\n\nTerminal/Command Prompt\n\nRscript script.R\n\nAt the end of each section there is an exercise, which is also shown on the slides. Here, exercises are shown in blue boxes, followed by a yellow box that contains the answer. Try each exercise yourself before looking at the answer.\n\n\n\n\n\n\nNoteExercise\n\n\n\nThis is an exercise. Click the box below to see the answer.\n\n\n\n\n\n\n\n\nCautionAnswer (click to open)\n\n\n\n\n\nThis is the answer.\n\n\n\nImportant points are highlighted in green boxes like this one:\n\n\n\n\n\n\nTipKey points\n\n\n\nThese are important concepts and technical notes.\n\n\n\n\n\nPlease follow our installation instructions before the course. You will also need the following.\nQuarto. We use Quarto to build reports. RStudio and Positron include it, so if you use either you probably don’t need to install anything. To check, open a .qmd file and look for the Render button. Otherwise, install Quarto for your operating system (VS Code users also need the Quarto extension). Use version 1.4 or later: quarto --version in a terminal shows which you have.\nThe example folder. Download the example folder and unzip it. It has the data and files we use as we go. If something doesn’t work, the finished/ folder inside it has the ready-made result.\nFor Section 3. Python users need uv, and R users need the renv package. If you use Excel, you don’t need to install anything extra.\n\n\n\n\n\n\nNote\n\n\n\nThis course is for people who use R, Python or spreadsheets such as Excel. The ideas are the same for everyone, and the slides flag where Excel users do something different. Where the steps differ, you will see tabs: click the one that matches how you work. Commands for the terminal are shown as code, and you can run them in the terminal built in to your IDE or in a separate terminal window."
+    "text": "Welcome to this course! These notes go with the slides. You can use them afterwards to revisit the detail, and you can also work through them on your own: each section ends with a “Try it yourself” activity, with instructions and an answer you can open.\nThe course introduces practical habits that make your research easier to re-run, understand and share. You do not need to write any code.\nBy the end of this course you will be able to:\n\nOrganise a project into raw data, processed data, code and outputs, and explain why raw data is never edited.\nDescribe what a good README and data dictionary contain, and why they matter.\nExplain why Quarto helps reproducibility, and make HTML, PDF and Word versions of a report from one document.\nExplain why environments matter, and say what someone needs in order to re-run your project on another computer.\nChoose one practice to start using on your own project, and know where to find out more (including sharing data with Q-FAIR).\n\n\n\nHow to read this document\n\nSmall snippets of code are shown in a grey box like this:\ncat(\"Hello!\")\nWhen the code is run, its output is shown below it, marked with a vertical red line:\n\ncat(\"Hello!\")\n\nHello!\n\n\nLarger pieces of code are shown as scripts with a filename:\n\n\nscript.R\n\nname &lt;- \"Jean Golding\"\ncat(\"Hello,\", name, \"!\")\n\nCommands to run in a terminal look like this:\n\n\nTerminal/Command Prompt\n\nRscript script.R\n\nIn each section there is a “Try it yourself” activity, which is also on the slides. Activities are shown in blue boxes, followed by a yellow box that contains the answer. Try each one yourself before looking at the answer.\n\n\n\n\n\n\nNoteExercise\n\n\n\nThis is an exercise. Click the box below to see the answer.\n\n\n\n\n\n\n\n\nCautionAnswer (click to open)\n\n\n\n\n\nThis is the answer.\n\n\n\nImportant points are highlighted in green boxes like this one:\n\n\n\n\n\n\nTipKey points\n\n\n\nThese are important concepts and technical notes.\n\n\n\n\n\nYou do not need to write or run any code in this course. You need two things.\nQuarto. We use Quarto to build documents. RStudio and Positron include it, so if you use either you probably don’t need to install anything. To check, open a .qmd file and look for the Render button. Otherwise, install Quarto for your operating system (VS Code users also need the Quarto extension). Use version 1.4 or later: quarto --version in a terminal shows which you have.\nThe example folder. Download the example folder and unzip it. It has four folders:\n\n\n\nFolder\nWhat it is\n\n\n\n\nmessy-project/\nA project with a bad structure and bad names\n\n\ntidy-project/\nThe same project with all the good habits\n\n\none-document/\nA short report to turn into HTML, PDF and Word\n\n\ntake-home/\nA one-page checklist for your own project\n\n\n\nIf you want to try the environment commands in Section 3 on a project of your own, you will also need uv (Python) or the renv package (R). That is optional."
   },
   {
     "objectID": "notes.html#workspace-setup",
     "href": "notes.html#workspace-setup",
     "title": "Course notes",
     "section": "",
-    "text": "Please follow our installation instructions before the course. You will also need the following.\nQuarto. We use Quarto to build reports. RStudio and Positron include it, so if you use either you probably don’t need to install anything. To check, open a .qmd file and look for the Render button. Otherwise, install Quarto for your operating system (VS Code users also need the Quarto extension). Use version 1.4 or later: quarto --version in a terminal shows which you have.\nThe example folder. Download the example folder and unzip it. It has the data and files we use as we go. If something doesn’t work, the finished/ folder inside it has the ready-made result.\nFor Section 3. Python users need uv, and R users need the renv package. If you use Excel, you don’t need to install anything extra.\n\n\n\n\n\n\nNote\n\n\n\nThis course is for people who use R, Python or spreadsheets such as Excel. The ideas are the same for everyone, and the slides flag where Excel users do something different. Where the steps differ, you will see tabs: click the one that matches how you work. Commands for the terminal are shown as code, and you can run them in the terminal built in to your IDE or in a separate terminal window."
+    "text": "You do not need to write or run any code in this course. You need two things.\nQuarto. We use Quarto to build documents. RStudio and Positron include it, so if you use either you probably don’t need to install anything. To check, open a .qmd file and look for the Render button. Otherwise, install Quarto for your operating system (VS Code users also need the Quarto extension). Use version 1.4 or later: quarto --version in a terminal shows which you have.\nThe example folder. Download the example folder and unzip it. It has four folders:\n\n\n\nFolder\nWhat it is\n\n\n\n\nmessy-project/\nA project with a bad structure and bad names\n\n\ntidy-project/\nThe same project with all the good habits\n\n\none-document/\nA short report to turn into HTML, PDF and Word\n\n\ntake-home/\nA one-page checklist for your own project\n\n\n\nIf you want to try the environment commands in Section 3 on a project of your own, you will also need uv (Python) or the renv package (R). That is optional."
   },
   {
     "objectID": "notes.html#why-bother",
@@ -42,25 +42,25 @@
     "text": "1.1 Why bother?\nA project that has grown organically tends to look like a folder full of files called data.csv, data_final.csv, analysis2.R and analysis_NEW.py. This causes three problems:\n\nHard to maintain: one change near the start breaks everything downstream.\nHard to run somewhere else: a new laptop, an HPC cluster or a colleague’s machine, and the code breaks.\nHard to understand: after a holiday you can’t remember which file to run first.\n\nMaking a project more reproducible helps you first and others second:\n\nSaving your future self: write code as if someone else will use it, because in six months that someone is you.\nSpeed: a project set up as a pipeline can be re-run quickly when the data or a reviewer’s comment changes.\nConfidence: you understand how the work fits together, and where it might fail.\nPublication and jobs: sharing code and data is an increasingly common requirement, and tidy work is easy to trust.\n\n\n\n\n\n\n\nTipYou don’t need everything\n\n\n\nHow much structure a project needs is a judgement call. A small one-off analysis may not need all of this. Aim for what is useful, not what is perfect."
   },
   {
-    "objectID": "notes.html#a-messy-example",
-    "href": "notes.html#a-messy-example",
+    "objectID": "notes.html#a-messy-project",
+    "href": "notes.html#a-messy-project",
     "title": "Course notes",
-    "section": "1.2 A Messy Example",
-    "text": "1.2 A Messy Example\nmy_project/\n├── data.csv\n├── data_final.csv\n├── data_final_v2.csv\n├── explore.ipynb\n├── clean_data.py\n├── analysis.py\n├── analysis_OLD.py\n├── fig1.png\n└── results.xlsx\nQuestions to ask of this layout:\n\nWhich data file is the original?\nWhich script should be run first?\nWhich figure came from which version of the analysis?\n\nThis happens naturally. You start by exploring a dataset in a notebook, a script or an Excel sheet. The analysis grows, then a second analysis is added, and it becomes hard to see how you got from the raw data to the results."
+    "section": "1.2 A messy project",
+    "text": "1.2 A messy project\nOpen messy-project/ in the example folder. It looks like this:\nmessy-project/\n├── Copy of data.csv\n├── analysis.R\n├── analysis2 (copy).R\n├── analysis_OLD.R\n├── clean.R\n├── data.csv\n├── data_FINAL_USE_THIS.csv\n├── data_final.csv\n├── data_final_v2.csv\n├── notes.txt\n├── plot1.png\n├── plot_new.png\n├── report_draft.docx\n├── results.xlsx\n├── results_v3.xlsx\n└── untitled.R\nQuestions to ask of this layout:\n\nWhich file is the raw data?\nWhat do I run first?\nWhich figure came from which analysis?\n\nThis happens naturally. You start by exploring a dataset in a notebook, a script or an Excel sheet. The analysis grows, then a second analysis is added, and it becomes hard to see how you got from the raw data to the results."
   },
   {
-    "objectID": "notes.html#a-clean-example",
-    "href": "notes.html#a-clean-example",
+    "objectID": "notes.html#a-tidy-project",
+    "href": "notes.html#a-tidy-project",
     "title": "Course notes",
-    "section": "1.3 A Clean Example",
-    "text": "1.3 A Clean Example\nmy_project/\n├── README.md\n├── data/\n│   ├── raw/          &lt;- original data, never edited\n│   └── processed/    &lt;- cleaned data made by your code\n├── code/\n│   └── 01_clean_data.R\n├── report.qmd\n└── outputs/\n    ├── figures/\n    └── tables/\nThe key ideas are:\n\nA README at the top of the project says what it is and how to use it (see the next section).\nRaw data is read-only. Never overwrite your original data file. Save the cleaned version somewhere else.\nCode is a pipeline. Each step reads the output of the previous step: raw data -&gt; clean -&gt; analysis -&gt; outputs. Numbering the files shows the order to run them in.\nOutputs can be thrown away. Anything in outputs/ and data/processed/ should be re-creatable by running the code.\n\n\nRPythonExcel / no code\n\n\n\n\ncode/01_clean_data.R\n\nraw &lt;- read.csv(\"data/raw/penguins.csv\")\n\n# drop any rows with missing values\nclean &lt;- na.omit(raw)\n\nwrite.csv(clean, \"data/processed/penguins_clean.csv\", row.names = FALSE)\n\n\n\n\n\ncode/01_clean_data.py\n\nimport pandas as pd\n\nraw = pd.read_csv(\"data/raw/penguins.csv\")\n\n# drop any rows with missing values\nclean = raw.dropna()\n\nclean.to_csv(\"data/processed/penguins_clean.csv\", index=False)\n\n\n\nThe same structure works for spreadsheets:\n\nKeep the original file in a data/raw folder and never edit it. Open it, then use Save As to put a working copy in data/processed.\nUse one sheet per step, in order, and name them (1_raw, 2_cleaned, 3_results) rather than leaving Sheet1.\nWrite down in the README what you did to the data at each step, in enough detail that someone else could repeat it. Avoid manual changes you can’t describe.\nPut formulas in cells rather than pasting values, so the calculation is visible.\n\n\n\n\n\n\n\n\n\n\nTipTip: where to start a new project\n\n\n\nSome IDEs can create a new project with a sensible set of folders for you. Positron, RStudio and VS Code can all start a new project from a menu, and Python tools such as uv init create the starting files from the terminal. Use whatever is quickest, then add the data/ and outputs/ folders."
+    "section": "1.3 A tidy project",
+    "text": "1.3 A tidy project\nNow open tidy-project/. It holds the same project, organised:\ntidy-project/\n├── README.md\n├── report.qmd\n├── data/\n│   ├── raw/penguins.csv\n│   └── processed/\n│       ├── penguins_clean.csv\n│       └── penguins_clean_dictionary.csv\n├── code/\n│   ├── 01_clean_data.R\n│   └── run_all.R\n└── outputs/\nThe key ideas are:\n\nA README at the top of the project says what it is and how to use it (see the next section).\nRaw data is read-only. Never overwrite your original data file. Save the cleaned version somewhere else.\nCode is a pipeline. Each step reads the output of the previous step: raw data -&gt; clean -&gt; analyse -&gt; results. Numbering the files shows the order to run them in.\nResults can be thrown away. Anything in outputs/ and data/processed/ can be re-made by running the code. code/run_all.R does exactly that: delete them, run it, and they come back.\n\nSpreadsheets. The same structure works for spreadsheets:\n\nKeep the original file in a data/raw folder and never edit it. Open it, then use Save As to put a working copy in data/processed.\nUse one sheet per step, in order, and name them (1_raw, 2_cleaned, 3_results) rather than leaving Sheet1.\nWrite down in the README what you did to the data at each step, in enough detail that someone else could repeat it.\nPut formulas in cells rather than pasting values, so the calculation is visible.\n\n\n\n\n\n\n\nTipYou don’t need everything\n\n\n\nHow much structure a project needs is a judgement call. A small one-off analysis may not need all of this. Aim for what is useful, not what is perfect."
   },
   {
-    "objectID": "notes.html#exercise",
-    "href": "notes.html#exercise",
+    "objectID": "notes.html#try-it-yourself",
+    "href": "notes.html#try-it-yourself",
     "title": "Course notes",
-    "section": "Exercise",
-    "text": "Exercise\n\n\n\n\n\n\nNoteExercise\n\n\n\nBelow is the file list for a messy project.\nfinal.xlsx    final_v2.xlsx    notes.txt    plot.png    clean.R    model.R    penguins_raw.csv    penguins_edited.csv\n\nSketch a clean folder layout for these files.\nWhich file would you mark as read-only, and why?\nIn what order would you run the scripts?\n\n\n\n\n\n\n\n\n\nCautionAnswer (click to open)\n\n\n\n\n\nOne possible layout:\nproject/\n├── README.md              &lt;- includes the notes from notes.txt\n├── data/\n│   ├── raw/penguins_raw.csv\n│   └── processed/penguins_edited.csv\n├── code/\n│   ├── 01_clean.R\n│   └── 02_model.R\n└── outputs/\n    ├── plot.png\n    └── final.xlsx\n\nSee the layout above.\npenguins_raw.csv is the original data and should be read-only, as everything else can be remade from it. penguins_edited.csv should be the output of clean.R rather than something edited by hand.\nclean.R first, then model.R, because the model needs the cleaned data.\n\nAlso, final.xlsx and final_v2.xlsx should be one file, with the history left to version control or the README. Delete or archive the old one.\n\n\n\n\n\n\n\n\n\nTipKey points\n\n\n\n\nSeparate raw data, processed data, code and outputs.\nNever overwrite the raw data.\nThink of the analysis as a pipeline that can be re-run from start to finish.\nThis applies equally to scripts, notebooks and spreadsheets."
+    "section": "Try it yourself",
+    "text": "Try it yourself\n\n\n\n\n\n\nNoteTry it yourself: rescue the messy project\n\n\n\nOpen messy-project/ in the example folder (you do not need to run anything).\n\nTry to answer: which file is the raw data? What do I run first? Which figure came from which analysis?\nPut every file under one heading: raw data, cleaned data, code, results, documents.\nDecide which file you would never edit, and which files you would delete.\n\n\n\n\n\n\n\n\n\nCautionAnswer (click to open)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFiles\nWhat to do\n\n\n\n\nRaw data\ndata.csv\nNever edit it\n\n\nCleaned data\ndata_final.csv, data_final_v2.csv, data_FINAL_USE_THIS.csv\nThree versions of one thing, with no way to tell which is right. Make it from the raw data with code\n\n\nCode\nclean.R, analysis.R, analysis2 (copy).R, analysis_OLD.R, untitled.R\nOne script per step, numbered. Delete the copies\n\n\nResults\nplot1.png, plot_new.png, results.xlsx, results_v3.xlsx\nThe code can re-make these\n\n\nDocuments\nnotes.txt, report_draft.docx\nBecome the README and the report\n\n\nDelete\nCopy of data.csv\nA duplicate\n\n\n\nCompare your answer with tidy-project/. To see the “everything can be re-made” idea for yourself, look at tidy-project/code/run_all.R: it deletes the cleaned data and the report, then makes them again from the raw data.\n\n\n\n\n\n\n\n\n\nTipKey points\n\n\n\n\nSeparate raw data, cleaned data, code and results.\nNever overwrite the raw data.\nThink of the analysis as a pipeline that can be re-run from start to finish.\nThis applies equally to scripts, notebooks and spreadsheets."
   },
   {
     "objectID": "notes.html#types-of-documentation",
@@ -74,7 +74,7 @@
     "href": "notes.html#readme.md",
     "title": "Course notes",
     "section": "2.2 README.md",
-    "text": "2.2 README.md\nA README is a plain text file in the top folder of the project. It is the first thing someone reads, and it helps you in six months’ time as much as it helps anyone else. It should contain:\n\nSummary: what the project is for, and its status (for example ongoing or complete).\nQuickstart: the most important files, and in what order to run them.\nSetup: what needs to be installed before running the code.\nContents: a description of what each folder holds.\n\nA README is written in Markdown, which is a simple way of marking up text:\n# Penguins analysis\n\nBody measurements of penguins on three islands. **Status:** ongoing.\n\n## Quickstart\n\n1. Put the raw data in `data/raw/`.\n2. Run `code/01_clean_data.R`.\n3. Render `report.qmd`.\n\n## Setup\n\nRequires R and Quarto (see \"Virtual Environments\").\n\n## Contents\n\n- `data/raw/` original data (read-only)\n- `data/processed/` cleaned data, and its data dictionary\n- `code/` analysis scripts\n- `outputs/` figures and tables\nYou can use a README in any project, whether or not you write code. For a spreadsheet project it is the place to record what each sheet does and how the data was collected."
+    "text": "2.2 README.md\nA README is a plain text file in the top folder of the project. It is the first thing someone reads, and it helps you in six months’ time as much as it helps anyone else. It should contain:\n\nSummary: what the project is for, and its status (for example ongoing or complete).\nQuickstart: the most important files, and in what order to run them.\nSetup: what needs to be installed before running the code.\nContents: a description of what each folder holds.\n\nHere is the README from tidy-project/. It is written in Markdown, which is a simple way of marking up text:\n# Penguin body mass analysis\n\nBody measurements of 333 penguins on three islands. **Status:** complete.\n\n## Quickstart\n\n1. Open this folder in RStudio or Positron (or a terminal).\n2. Run `code/run_all.R`. It cleans the data and builds the report in `outputs/`.\n\n## Setup\n\n- R 4.3 or later (no extra packages needed)\n- Quarto 1.4 or later (to make the report)\n\n## Contents\n\n- `data/raw/` the original data (never edited)\n- `data/processed/` the cleaned data, and a data dictionary explaining each column\n- `code/` the scripts\n- `report.qmd` the report, which makes HTML, PDF and Word versions\n- `outputs/` made by `run_all.R`. Safe to delete\nYou can use a README in any project, whether or not you write code. For a spreadsheet project it is the place to record what each sheet does and how the data was collected."
   },
   {
     "objectID": "notes.html#data-dictionary",
@@ -112,32 +112,39 @@
     "text": "2.7 When the data changes\nBecause the numbers in the report come from code, a change in the data flows through to the report:\nnew data  -&gt;  re-run the cleaning script  -&gt;  render the report  -&gt;  updated report\nEvery number, table and figure is recalculated, and sentences with inline code update too. There is nothing to copy and paste. This is the main reason to use Quarto for reproducible research: change the data (or the code), not the report."
   },
   {
+    "objectID": "notes.html#one-document-many-formats",
+    "href": "notes.html#one-document-many-formats",
+    "title": "Course notes",
+    "section": "2.8 One document, many formats",
+    "text": "2.8 One document, many formats\nOne of the best things about Quarto is that one source file can make several kinds of document. You list the formats you want in the header:\nformat:\n  html: default\n  typst: default\n  docx: default\n\nhtml makes a web page.\ntypst makes a PDF. Typst comes with Quarto, so you don’t need to install LaTeX.\ndocx makes a Word document.\n\nWhen you render, Quarto makes all three from the same text, code and figures. Change the title, a sentence or the data once, and every format changes.\nTo render, press the Render button in your IDE (use the format menu to choose which one), or run this in a terminal to make every format at once:\n\n\nTerminal/Command Prompt\n\nquarto render report.qmd"
+  },
+  {
     "objectID": "notes.html#rendering",
     "href": "notes.html#rendering",
     "title": "Course notes",
-    "section": "2.8 Rendering",
-    "text": "2.8 Rendering\nRender the report from the terminal, or with the Render button in your IDE:\n\n\nTerminal/Command Prompt\n\nquarto render report.qmd\n\nThe result, report.html, appears next to report.qmd."
+    "section": "2.9 Rendering",
+    "text": "2.9 Rendering\nRender the report from the terminal, or with the Render button in your IDE:\n\n\nTerminal/Command Prompt\n\nquarto render report.qmd\n\nThe result, report.html, appears next to report.qmd."
   },
   {
     "objectID": "notes.html#what-else-can-quarto-do",
     "href": "notes.html#what-else-can-quarto-do",
     "title": "Course notes",
-    "section": "2.9 What else can Quarto do?",
-    "text": "2.9 What else can Quarto do?\n\nReports in HTML, PDF and Word, with tables, figures and references.\nSlides: the slides for this course are a Quarto presentation.\nWebsites: this course website is built with Quarto.\nPapers and books: journal articles, theses and books, with citations and cross-references."
+    "section": "2.10 What else can Quarto do?",
+    "text": "2.10 What else can Quarto do?\n\nReports in HTML, PDF and Word, with tables, figures and references.\nSlides: the slides for this course are a Quarto presentation.\nWebsites: this course website is built with Quarto.\nPapers and books: journal articles, theses and books, with citations and cross-references."
   },
   {
     "objectID": "notes.html#learn-more-about-quarto",
     "href": "notes.html#learn-more-about-quarto",
     "title": "Course notes",
-    "section": "2.10 Learn more about Quarto",
-    "text": "2.10 Learn more about Quarto\n\nGet started and the guide.\nUsing code: R, Python and inline code.\nOutput formats, websites and presentations.\nThe Quarto gallery: examples to copy from."
+    "section": "2.11 Learn more about Quarto",
+    "text": "2.11 Learn more about Quarto\n\nGet started and the guide.\nUsing code: R, Python and inline code.\nOutput formats, websites and presentations.\nThe Quarto gallery: examples to copy from."
   },
   {
-    "objectID": "notes.html#exercise-1",
-    "href": "notes.html#exercise-1",
+    "objectID": "notes.html#try-it-yourself-1",
+    "href": "notes.html#try-it-yourself-1",
     "title": "Course notes",
-    "section": "Exercise",
-    "text": "Exercise\n\n\n\n\n\n\nNoteExercise\n\n\n\nPredict, then check.\n\nPick a change: a different species, a different column to average, or the “later years” line in the cleaning script.\nWrite down what you expect to change in the report.\nMake the change, render, and compare with your prediction.\n\nIf you have a project of your own, write its README and data dictionary too.\n\n\n\n\n\n\n\n\nCautionAnswer (click to open)\n\n\n\n\n\n\nYou could say what would change before you rendered, and why.\nOnly the results changed: no copying and pasting was needed.\nA good README answers three questions in the first minute: What is this project and is it finished? If I just want to run it, what do I do first? What do I need installed?\nA data dictionary has a plain-English description, units and missing-value codes for every column.\n\n\n\n\n\n\n\n\n\n\nTipKey points\n\n\n\n\nDocument at several levels: comments, the README, a data dictionary and external write-ups.\nEvery project should have a README, and every dataset a data dictionary.\nQuarto turns code and text into a report that can be re-created at any time.\nIf the data changes, render again and the whole report updates."
+    "section": "Try it yourself",
+    "text": "Try it yourself\n\n\n\n\n\n\nNoteTry it yourself: be the new colleague\n\n\n\nYou have inherited the messy project. Open messy-project/notes.txt: it is the only documentation. Look at the first rows of messy-project/data.csv too.\n\nWrite down three things you can’t work out. Think about how to run it, which software it needs, what the columns mean, and which file is the real data.\nOpen tidy-project/README.md and tidy-project/data/processed/penguins_clean_dictionary.csv. Which of your three things do they answer?\n\n\n\n\n\n\n\n\n\nCautionAnswer (click to open)\n\n\n\n\n\nTypical things you can’t work out from the messy project: how to run it and in what order (the notes say “i think”); which software and versions it needs; what bill_dep means and whether body_mass is in grams or kilograms; which data file is the real one; which figure is which.\nThe README answers how to run it, what software it needs and what is where. The data dictionary answers what each column means, with its type and units. A good README answers three questions in the first minute: What is this project and is it finished? If I just want to run it, what do I do first? What do I need installed?\n\n\n\n\n\n\n\n\n\nNoteTry it yourself: one document, many formats\n\n\n\nYou need Quarto, but not R or Python.\n\nOpen one-document/report.qmd.\nChange the title, the author and one sentence.\nRender it as HTML, then PDF, then Word: press Render and choose each format, or run quarto render report.qmd to make all three.\nOpen all three. Did your changes appear in each?\n\nIf Render doesn’t work, open the ready-made files in one-document/finished/.\n\n\n\n\n\n\n\n\nCautionAnswer (click to open)\n\n\n\n\n\nYour changes appeared in every format, because there is only one source. That is the point: you never copy and paste between a web page, a PDF and a Word file.\nIf only one format appeared, Render was set to a single format. Use the format menu, or the quarto render report.qmd command, to make all three.\n\n\n\n\n\n\n\n\n\nTipKey points\n\n\n\n\nDocument at several levels: comments, the README, a data dictionary and external write-ups.\nEvery project should have a README, and every dataset a data dictionary.\nQuarto turns text and code into a report that can be re-created at any time, in several formats.\nIf the data changes, render again and the whole report updates."
   },
   {
     "objectID": "notes.html#why-do-we-need-environments",
@@ -175,25 +182,25 @@
     "text": "3.5 What if I use Excel?\nThere are no packages to install, but the software version can still matter: formulas and functions differ between Excel versions, and add-ins vary. Write the program and its version in your README (for example Excel for Microsoft 365, version 2410), along with any add-ins used. The next person then knows what you used, which is the same idea."
   },
   {
+    "objectID": "notes.html#optional-trying-it-yourself",
+    "href": "notes.html#optional-trying-it-yourself",
+    "title": "Course notes",
+    "section": "3.6 Optional: trying it yourself",
+    "text": "3.6 Optional: trying it yourself\nYou do not need to run any commands in this course. If you want to try environments on a project of your own, here are the commands for Python (uv) and R (renv)."
+  },
+  {
     "objectID": "notes.html#uv-python",
     "href": "notes.html#uv-python",
     "title": "Course notes",
-    "section": "3.6 uv (Python)",
-    "text": "3.6 uv (Python)\nuv creates the environment and records the packages for you.\n\n\nTerminal/Command Prompt\n\nuv init my_project          # create a new project\ncd my_project\nuv add pandas matplotlib    # install packages and record them\nuv run python code/01_clean_data.py   # run a script inside the environment\n\nThis creates two files that you keep with your code:\n\npyproject.toml lists the packages you asked for.\nuv.lock records the exact versions installed.\n\nSomeone with your project folder can recreate the environment with:\n\n\nTerminal/Command Prompt\n\nuv sync"
+    "section": "3.7 uv (Python)",
+    "text": "3.7 uv (Python)\nuv creates the environment and records the packages for you.\n\n\nTerminal/Command Prompt\n\nuv init my_project          # create a new project\ncd my_project\nuv add pandas matplotlib    # install packages and record them\nuv run python code/01_clean_data.py   # run a script inside the environment\n\nThis creates two files that you keep with your code:\n\npyproject.toml lists the packages you asked for.\nuv.lock records the exact versions installed.\n\nSomeone with your project folder can recreate the environment with:\n\n\nTerminal/Command Prompt\n\nuv sync"
   },
   {
     "objectID": "notes.html#renv-r",
     "href": "notes.html#renv-r",
     "title": "Course notes",
-    "section": "3.7 renv (R)",
-    "text": "3.7 renv (R)\nrenv does the same job for R packages. Run these in the R console:\ninstall.packages(\"renv\")   # once, on your computer\n\nrenv::init()               # start using renv in this project\ninstall.packages(\"ggplot2\")\nrenv::snapshot()           # record the packages used in renv.lock\nThe renv.lock file records the packages and versions. Someone who opens your project can run:\nrenv::restore()\nto install the same versions. renv does not change the version of R itself. To manage that, use a tool such as rig, and record the R version in your README."
-  },
-  {
-    "objectID": "notes.html#ide-vs-cli",
-    "href": "notes.html#ide-vs-cli",
-    "title": "Course notes",
-    "section": "3.8 IDE Vs CLI",
-    "text": "3.8 IDE Vs CLI\nEverything above can be done either by typing commands in a terminal (the CLI) or through the menus of your IDE. They do the same thing.\n\n\n\n\n\n\n\n\nTask\nCLI\nIn an IDE\n\n\n\n\nNew Python project with environment\nuv init\ne.g. Positron: New Folder from Template then choose a Python project with a new environment\n\n\nInstall a package\nuv add pandas or install.packages()\nPackage panel, if your IDE has one\n\n\nRe-create an environment\nuv sync or renv::restore()\nOften prompted for when you open the project\n\n\nRender a report\nquarto render report.qmd\nThe Render button\n\n\n\nWe recommend learning the CLI commands, because:\n\nthey are the same whatever IDE you use, and in instructions you read online;\nthey work on a remote server or HPC, where there may be no IDE;\nthey are easy to copy into a README so others can follow them.\n\nUse whichever you find faster day to day. What matters is that the environment is recorded in a file that is stored with your project."
+    "section": "3.8 renv (R)",
+    "text": "3.8 renv (R)\nrenv does the same job for R packages. Run these in the R console:\ninstall.packages(\"renv\")   # once, on your computer\n\nrenv::init()               # start using renv in this project\ninstall.packages(\"ggplot2\")\nrenv::snapshot()           # record the packages used in renv.lock\nThe renv.lock file records the packages and versions. Someone who opens your project can run:\nrenv::restore()\nto install the same versions. renv does not change the version of R itself. To manage that, use a tool such as rig, and record the R version in your README."
   },
   {
     "objectID": "notes.html#learn-more-about-environments",
@@ -203,81 +210,116 @@
     "text": "3.9 Learn more about environments\n\nuv: Python projects and environments.\nrenv: R environments.\nEffective Python environment management: venv and conda.\nManaging dependencies with uv and pixi."
   },
   {
-    "objectID": "notes.html#exercise-2",
-    "href": "notes.html#exercise-2",
+    "objectID": "notes.html#try-it-yourself-2",
+    "href": "notes.html#try-it-yourself-2",
     "title": "Course notes",
-    "section": "Exercise",
-    "text": "Exercise\n\n\n\n\n\n\nNoteExercise\n\n\n\nFollow the steps for your language. Do this if your tools are set up.\n\n\n\n\n\n\n\n\nStep\nPython\nR\n\n\n\n\n1 Create the environment\nuv init\nrenv::init()\n\n\n2 Add a package\nuv add pandas\ninstall.packages(\"ggplot2\"), then renv::snapshot()\n\n\n3 Look at the lock file\nuv.lock\nrenv.lock\n\n\n4 Delete the environment\ndelete .venv\ndelete renv/library\n\n\n5 Restore it\nuv sync\nrenv::restore()\n\n\n\nNo code? Write your program and its version in your README.\nExtra: zip the project without the environment folder, and swap with a neighbour to rebuild it.\n\n\n\n\n\n\n\n\nCautionAnswer (click to open)\n\n\n\n\n\n\nThe pyproject.toml / renv.lock file lists your packages. The lock file also records exact versions.\nAfter deleting the environment folder and running uv sync or renv::restore(), the packages are installed again. This is the point of a disposable environment: the folder and its lock file are all you need to share.\nFor the spreadsheet, the README note is the equivalent. It will not install anything, but it tells the next person what you used.\n\n\n\n\n\n\n\n\n\n\nTipKey points\n\n\n\n\nUse a separate environment for every project.\nRecord it in a lock file and keep that file with your code.\nAn environment should be disposable and easy to recreate.\nSend the lock file, not the environment: your colleague can rebuild it with one command.\nThe CLI and IDE do the same thing: use what suits you."
+    "section": "Try it yourself",
+    "text": "Try it yourself\n\n\n\n\n\n\nNoteTry it yourself: the new laptop test\n\n\n\nA colleague emails you their project: “It runs fine on my laptop!” You open it on your own laptop, and it says there is no package called ggplot2.\nOn your own, list everything you would need to know to run this project on a new computer. Write down as many things as you can.\n\n\n\n\n\n\n\n\nCautionAnswer (click to open)\n\n\n\n\n\n\n\n\n\n\n\n\nYou need to know\nWhere it should be written down\n\n\n\n\nWhich software, and which version\nThe README (Setup)\n\n\nWhich packages, and which versions\nA lock file\n\n\nWhere the data is\nThe README, and a data/raw folder\n\n\nWhat to run, and in what order\nThe README (Quickstart), or one script\n\n\nWhere the results come from\nThe code, not copy and paste\n\n\n\nAlmost all of this can be written down once, in a README. A lock file records the packages for you. Look at tidy-project/README.md: it answers most of these.\n\n\n\n\n\n\n\n\n\nTipKey points\n\n\n\n\nUse a separate environment for every project.\nRecord it in a lock file and keep that file with your code.\nAn environment is disposable and easy to recreate.\nSend the lock file, not the environment: your colleague can rebuild it with one command.\nWrite down the version of R or Python, and the operating system, in your README."
   },
   {
-    "objectID": "notes.html#q-fair-data-principles",
-    "href": "notes.html#q-fair-data-principles",
+    "objectID": "notes.html#from-messy-to-shareable",
+    "href": "notes.html#from-messy-to-shareable",
     "title": "Course notes",
-    "section": "4.1 Q-FAIR data principles",
-    "text": "4.1 Q-FAIR data principles\nThe FAIR principles are a well-known checklist for sharing data. Q-FAIR adds Quality at the start:\n\n\n\n\n\n\n\n\n\nLetter\nPrinciple\nWhat it means in practice\nWhere we met it\n\n\n\n\nQ\nData Quality\nData is accurate, complete and documented. You know where it came from and what was done to it.\nRaw data is never overwritten; the pipeline records every change.\n\n\nF\nFindable\nPeople, and computers, can find it. It has a clear name and description.\nClear folder layout and a README.\n\n\nA\nAccessible\nIt is clear how to get the data, and under what conditions.\nREADME setup and access notes.\n\n\nI\nInteroperable\nIt uses open, standard formats that other tools can read.\nSee “Four things to do”.\n\n\nR\nReusable\nOthers can understand and re-use it, with a clear licence.\nSee “Four things to do”."
+    "section": "4.1 From messy to shareable",
+    "text": "4.1 From messy to shareable\nThis whole course is one journey:\nMessy  -&gt;  Tidy  -&gt;  Documented  -&gt;  Reported  -&gt;  Recorded  -&gt;  Shareable\n\nTidy: raw data kept apart and never edited.\nDocumented: a README and a data dictionary.\nReported: one document, made from the data and code.\nRecorded: the software and versions written down.\nShareable: a project a colleague can run on a new computer.\n\nEach step is a habit, and you can start with any of them."
   },
   {
-    "objectID": "notes.html#why-it-matters",
-    "href": "notes.html#why-it-matters",
+    "objectID": "notes.html#your-checklist",
+    "href": "notes.html#your-checklist",
     "title": "Course notes",
-    "section": "4.2 Why it matters",
-    "text": "4.2 Why it matters\n\nFunders and journals increasingly expect data to be shared.\nOthers can build on your work, and check it.\nFuture you can find and understand your own data.\nYour work gets cited."
+    "section": "4.2 Your checklist",
+    "text": "4.2 Your checklist\nTick what your own project already does. There is a one-page version to print or edit in take-home/ (PDF and Word).\n\n\n\n\n\n\n\nStructure\n☐ My raw data is never edited☐ Raw data, cleaned data, code and results are kept in separate places☐ My files have clear names☐ I could re-make my results from the raw data\n\n\nDocumentation\n☐ There is a README☐ My columns are explained in a data dictionary☐ My report is made from the data and code\n\n\nEnvironments\n☐ I have written down which software and versions I used☐ My packages are recorded in a file☐ A colleague could run my project on a new computer\n\n\nSharing\n☐ My data is in an open format such as CSV☐ I know where I would share it, and under which licence☐ Someone else could find, understand and reuse it"
   },
   {
-    "objectID": "notes.html#four-things-to-do",
-    "href": "notes.html#four-things-to-do",
+    "objectID": "notes.html#quick-wins",
+    "href": "notes.html#quick-wins",
     "title": "Course notes",
-    "section": "4.3 Four things to do",
-    "text": "4.3 Four things to do\n1. Use open file formats. Share data as CSV (comma-separated values), which is plain text that every tool can read, rather than a format that needs one program. In Excel, use File &gt; Save As and choose CSV UTF-8. A CSV holds one sheet only, and keeps values, not formulas.\n2. Describe your data. Write a data dictionary, with one row per column, as in the Documentation section, and keep it next to the data.\n3. Add a licence. Without one, others don’t know whether they can reuse your work. Common choices are CC BY 4.0 for data and text, and MIT for code. The Creative Commons chooser and choosealicense.com can help. Your funder or institution may have requirements, so check first.\n4. Deposit it. Put the data in a repository that gives it a permanent home and a DOI (a persistent identifier you can cite), such as Zenodo, your institution’s data repository (at Bristol this is data.bris), or one specific to your field.\nSensitive data. Some data can’t be shared openly, for example because it contains personal information. You can usually still share the metadata (the README and data dictionary) and explain how others can apply for access. Check with your research data team or ethics committee before depositing anything involving people."
+    "section": "4.3 Quick wins",
+    "text": "4.3 Quick wins\nSome steps give a lot of benefit for very little effort:\n\n\n\n\n\n\n\n\nQuick win\nTime\nWhy it helps\n\n\n\n\nStop editing the raw data\n0 min\nEverything can be re-made\n\n\nClear folders and file names\n15 min\nYou can find things\n\n\nWrite a README\n15 min\nOthers, and future you, can run it\n\n\nWrite down your software versions\n5 min\nIt runs on another computer\n\n\nDescribe your columns\n20 min\nYour data makes sense to others"
+  },
+  {
+    "objectID": "notes.html#try-it-yourself-3",
+    "href": "notes.html#try-it-yourself-3",
+    "title": "Course notes",
+    "section": "Try it yourself",
+    "text": "Try it yourself\n\n\n\n\n\n\nNoteTry it yourself: your first step\n\n\n\n\nTick the checklist for a project of your own (or for messy-project/ if you don’t have one).\nCircle one thing to start with this week.\nWrite it down, or tell someone, so you do it.\n\n\n\n\n\n\n\n\n\nCautionAnswer (click to open)\n\n\n\n\n\nThere is no single right answer, but a good first step is small and quick. If you can’t decide, start with the first thing in the quick wins table that you haven’t done yet. A README is a very good first step: it takes 15 minutes, and it helps everyone, including future you."
   },
   {
     "objectID": "notes.html#where-next",
     "href": "notes.html#where-next",
     "title": "Course notes",
     "section": "4.4 Where next?",
-    "text": "4.4 Where next?\n\nThe FAIR principles and The Turing Way guide to research data management: community guides to sharing data, in depth.\nBristol Training courses: including Intermediate R, Intermediate Python and Best Practices in Software Engineering.\nVersion control with git lets you go back to a version that worked, develop new features in branches, and collaborate. Use it for every project. We cover it in a separate git and GitHub course.\nFunctions and testing make analysis code easier to read and trust. See the Bristol and Turing Way courses above.\n\nGetting the balance right is hard: do what you can. You learn by doing, so try to put one or two of these ideas into your next project."
+    "text": "4.4 Where next?\n\nThe Turing Way: a community guide to reproducible research, covering all of these topics in depth.\nBristol Training courses: including Intermediate R, Intermediate Python and Best Practices in Software Engineering.\nVersion control with git lets you go back to a version that worked, develop new features in branches, and collaborate. We cover it in a separate git and GitHub course.\nFunctions and testing make analysis code easier to read and trust. See the courses above.\nSharing your data: the next section covers Q-FAIR in full.\n\nGetting the balance right is hard: do what you can. You learn by doing, so try to put one or two of these ideas into your next project.\n\n\n\n\n\n\nTipKey points\n\n\n\n\nEach habit is small, and you can start with any of them.\nA project that is tidy, documented, reported and recorded is already most of the way to reproducible.\nPick one thing, and do it this week."
   },
   {
-    "objectID": "notes.html#exercise-3",
-    "href": "notes.html#exercise-3",
+    "objectID": "notes.html#q-fair-data-principles",
+    "href": "notes.html#q-fair-data-principles",
     "title": "Course notes",
-    "section": "Exercise",
-    "text": "Exercise\n\n\n\n\n\n\nNoteExercise\n\n\n\nPick a dataset: the penguins data from the demos, or one of your own. For each letter of Q-FAIR, write down one thing the data already does well and one thing you could improve.\n\n\n\n\n\n\n\n\nCautionAnswer (click to open)\n\n\n\n\n\nThere is no single right answer. Typical improvements are:\n\nQ: keep raw data read-only and describe each cleaning step.\nF: add a README and give files descriptive names.\nA: say where the data is stored and who can use it, or how to request access if it is restricted.\nI: save data as CSV rather than a proprietary format.\nR: add a data dictionary and a licence.\n\n\n\n\n\n\n\n\n\n\nTipKey points\n\n\n\n\nQ-FAIR: data Quality, Findable, Accessible, Interoperable, Reusable.\nShare data in open formats such as CSV, with a data dictionary and a licence.\nDeposit it in a repository that gives it a DOI.\nIf data can’t be shared, share the metadata and explain how to ask for access."
+    "section": "5.1 Q-FAIR data principles",
+    "text": "5.1 Q-FAIR data principles\nThe FAIR principles are a well-known checklist for sharing data. Q-FAIR adds Quality at the start:\n\n\n\n\n\n\n\n\n\nLetter\nPrinciple\nWhat it means in practice\nWhere we met it\n\n\n\n\nQ\nData Quality\nData is accurate, complete and documented. You know where it came from and what was done to it.\nRaw data is never overwritten; the pipeline records every change.\n\n\nF\nFindable\nPeople, and computers, can find it. It has a clear name and description.\nClear folder layout and a README.\n\n\nA\nAccessible\nIt is clear how to get the data, and under what conditions.\nREADME setup and access notes.\n\n\nI\nInteroperable\nIt uses open, standard formats that other tools can read.\nCSV, not a locked format.\n\n\nR\nReusable\nOthers can understand and re-use it, with a clear licence.\nA README and a data dictionary."
+  },
+  {
+    "objectID": "notes.html#why-it-matters",
+    "href": "notes.html#why-it-matters",
+    "title": "Course notes",
+    "section": "5.2 Why it matters",
+    "text": "5.2 Why it matters\n\nFunders and journals increasingly expect data to be shared.\nOthers can build on your work, and check it.\nFuture you can find and understand your own data.\nYour work gets cited."
+  },
+  {
+    "objectID": "notes.html#a-worked-example",
+    "href": "notes.html#a-worked-example",
+    "title": "Course notes",
+    "section": "5.3 A worked example",
+    "text": "5.3 A worked example\nHere is how the two example projects score against each letter:\n\n\n\n\n\n\n\n\n\n\nQuestion\ntidy-project/\nmessy-project/\n\n\n\n\nQ\nCan you trust it, and do you know what was done to it?\n✔ The raw data is untouched and the code records every change\n✘ Three cleaned versions, and some values were fixed by hand\n\n\nF\nCan people find it?\n✔ Clear names and a README\n✘ data_FINAL_USE_THIS.csv\n\n\nA\nIs it clear how to get it?\n✔ The README says where everything is\n✘ “Ask Sam”\n\n\nI\nIs it in an open format?\n✔ CSV\n✘ Results in .xlsx\n\n\nR\nCan others understand and reuse it?\n✔ A data dictionary (it still needs a licence)\n✘ Columns not explained, no licence"
+  },
+  {
+    "objectID": "notes.html#four-things-to-do",
+    "href": "notes.html#four-things-to-do",
+    "title": "Course notes",
+    "section": "5.4 Four things to do",
+    "text": "5.4 Four things to do\n1. Use open file formats. Share data as CSV (comma-separated values), which is plain text that every tool can read, rather than a format that needs one program. In Excel, use File &gt; Save As and choose CSV UTF-8. A CSV holds one sheet only, and keeps values, not formulas.\n2. Describe your data. Write a data dictionary, with one row per column, as in the Documentation section, and keep it next to the data.\n3. Add a licence. Without one, others don’t know whether they can reuse your work. Common choices are CC BY 4.0 for data and text, and MIT for code. The Creative Commons chooser and choosealicense.com can help. Your funder or institution may have requirements, so check first.\n4. Deposit it. Put the data in a repository that gives it a permanent home and a DOI (a persistent identifier you can cite), such as Zenodo, your institution’s data repository (at Bristol this is data.bris), or one specific to your field.\nSensitive data. Some data can’t be shared openly, for example because it contains personal information. You can usually still share the metadata (the README and data dictionary) and explain how others can apply for access. Check with your research data team or ethics committee before depositing anything involving people."
+  },
+  {
+    "objectID": "notes.html#try-it-yourself-4",
+    "href": "notes.html#try-it-yourself-4",
+    "title": "Course notes",
+    "section": "Try it yourself",
+    "text": "Try it yourself\n\n\n\n\n\n\nNoteTry it yourself: Q-FAIR detective\n\n\n\nFor each of these three datasets, mark every letter of Q-FAIR with a ✔ or an ✘.\n\nA. A spreadsheet called final_data_v7.xlsx on my laptop. Email me if you want it. I would have to remember what some of the columns mean.\nB. A CSV in a repository, with a DOI, a README, a data dictionary and a CC BY licence.\nC. A CSV on the department shared drive, with a README. No licence, and you need to ask the group’s admin for access.\n\n\n\n\n\n\n\n\n\nCautionAnswer (click to open)\n\n\n\n\n\n\n\n\n\nQ\nF\nA\nI\nR\n\n\n\n\nA The spreadsheet\n✘\n✘\n✘\n✘\n✘\n\n\nB The repository CSV\n✔\n✔\n✔\n✔\n✔\n\n\nC The shared-drive CSV\n✔\n✘\npartly\n✔\n✘\n\n\n\nC is documented (Q) and in an open format (I), but it is hard to find (F), you need permission to get it (A), and it has no licence (R).\n\n\n\n\n\n\n\n\n\nTipKey points\n\n\n\n\nQ-FAIR: data Quality, Findable, Accessible, Interoperable, Reusable.\nShare data in open formats such as CSV, with a data dictionary and a licence.\nDeposit it in a repository that gives it a DOI.\nIf data can’t be shared, share the metadata and explain how to ask for access."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Reproducible Research",
     "section": "",
-    "text": "A reproducible project can be re-run, understood and shared by other people. It is also easier for you to return to months later.\nThis course introduces the practical habits that make this possible. It covers project structure, documentation, Quarto reports, virtual environments and sharing data.\nThe course takes about two hours. You follow along with short live demos on your own copy of an example folder, and then try each idea yourself. Notes are provided for reference.\n\n\n\n\nSome experience of working with data\nQuarto, for the report exercises. RStudio and Positron include it. Otherwise install it (version 1.4 or later)\nIf you code: you have an IDE of your choice and can run simple terminal / CLI commands\n\nPlease follow our installation instructions before the course.\n\n\n\nBy the end of this course, you will be able to:\n\nOrganise a project into raw data, processed data, code and outputs, and explain why raw data is never edited.\nWrite a README and a data dictionary that help others understand and use your project.\nExplain why Quarto helps reproducibility, and build a report that updates when the data changes.\nExplain why environments matter, and record the software a project needs so it can be re-run on another computer.\nCheck a dataset against the Q-FAIR principles, and know where to find out more about sharing data.\n\n\n\n\n\n\n\nSection\nTopic\nTime\n\n\n\n\n1\nProject structures\n30 min\n\n\n2\nDocumentation & Quarto\n45 min\n\n\n3\nVirtual environments\n30 min\n\n\n4\nSharing data: Q-FAIR\n15 min\n\n\n\nSections 1 to 3 combine slides, short “I do, you do” steps and an exercise. Section 4 is a shorter overview, with a short exercise.\n\n\n\n\n\n\n\nSlides\nNotes\nExample folder\n\n\n\n\nInstructor notes\nRelated courses"
+    "text": "A reproducible project can be re-run, understood and shared by other people. It is also easier for you to return to months later.\nThis course introduces the practical habits that make this possible. It covers project structure, documentation, Quarto reports, virtual environments and sharing data.\nThe course takes about two hours. Each topic has a short demo and a hands-on activity: we do a part together, you try something on your own, and then we look at the answer. You do not need to write or run any code. The notes are written so you can also work through the course on your own.\n\n\n\n\nSome experience of working with data\nQuarto, for the activity where you turn one document into several formats. RStudio and Positron include it. Otherwise install it (version 1.4 or later)\nThe example folder (use the button on this page)\n\n\n\n\nBy the end of this course, you will be able to:\n\nOrganise a project into raw data, processed data, code and outputs, and explain why raw data is never edited.\nDescribe what a good README and data dictionary contain, and why they matter.\nExplain why Quarto helps reproducibility, and make HTML, PDF and Word versions of a report from one document.\nExplain why environments matter, and say what someone needs in order to re-run your project on another computer.\nChoose one practice to start using on your own project, and know where to find out more.\n\n\n\n\n\n\n\nSection\nTopic\nTime\n\n\n\n\n1\nProject structures\n30 min\n\n\n2\nDocumentation & Quarto\n45 min\n\n\n3\nVirtual environments\n30 min\n\n\n4\nYour first step\n15 min\n\n\n\nEvery section has slides and an activity for you, and sections 1 to 3 also have a short demo from the instructor. If there is time, there is also an optional extra on sharing your data (Q-FAIR), which is covered in full in the notes.\n\n\n\n\n\n\n\nSlides\nNotes\nExample folder\n\n\n\n\nInstructor notes\nRelated courses"
   },
   {
     "objectID": "index.html#about-this-course",
     "href": "index.html#about-this-course",
     "title": "Reproducible Research",
     "section": "",
-    "text": "A reproducible project can be re-run, understood and shared by other people. It is also easier for you to return to months later.\nThis course introduces the practical habits that make this possible. It covers project structure, documentation, Quarto reports, virtual environments and sharing data.\nThe course takes about two hours. You follow along with short live demos on your own copy of an example folder, and then try each idea yourself. Notes are provided for reference."
+    "text": "A reproducible project can be re-run, understood and shared by other people. It is also easier for you to return to months later.\nThis course introduces the practical habits that make this possible. It covers project structure, documentation, Quarto reports, virtual environments and sharing data.\nThe course takes about two hours. Each topic has a short demo and a hands-on activity: we do a part together, you try something on your own, and then we look at the answer. You do not need to write or run any code. The notes are written so you can also work through the course on your own."
   },
   {
     "objectID": "index.html#prerequisites",
     "href": "index.html#prerequisites",
     "title": "Reproducible Research",
     "section": "",
-    "text": "Some experience of working with data\nQuarto, for the report exercises. RStudio and Positron include it. Otherwise install it (version 1.4 or later)\nIf you code: you have an IDE of your choice and can run simple terminal / CLI commands\n\nPlease follow our installation instructions before the course."
+    "text": "Some experience of working with data\nQuarto, for the activity where you turn one document into several formats. RStudio and Positron include it. Otherwise install it (version 1.4 or later)\nThe example folder (use the button on this page)"
   },
   {
     "objectID": "index.html#learning-objectives",
     "href": "index.html#learning-objectives",
     "title": "Reproducible Research",
     "section": "",
-    "text": "By the end of this course, you will be able to:\n\nOrganise a project into raw data, processed data, code and outputs, and explain why raw data is never edited.\nWrite a README and a data dictionary that help others understand and use your project.\nExplain why Quarto helps reproducibility, and build a report that updates when the data changes.\nExplain why environments matter, and record the software a project needs so it can be re-run on another computer.\nCheck a dataset against the Q-FAIR principles, and know where to find out more about sharing data."
+    "text": "By the end of this course, you will be able to:\n\nOrganise a project into raw data, processed data, code and outputs, and explain why raw data is never edited.\nDescribe what a good README and data dictionary contain, and why they matter.\nExplain why Quarto helps reproducibility, and make HTML, PDF and Word versions of a report from one document.\nExplain why environments matter, and say what someone needs in order to re-run your project on another computer.\nChoose one practice to start using on your own project, and know where to find out more."
   },
   {
     "objectID": "index.html#course-outline",
     "href": "index.html#course-outline",
     "title": "Reproducible Research",
     "section": "",
-    "text": "Section\nTopic\nTime\n\n\n\n\n1\nProject structures\n30 min\n\n\n2\nDocumentation & Quarto\n45 min\n\n\n3\nVirtual environments\n30 min\n\n\n4\nSharing data: Q-FAIR\n15 min\n\n\n\nSections 1 to 3 combine slides, short “I do, you do” steps and an exercise. Section 4 is a shorter overview, with a short exercise."
+    "text": "Section\nTopic\nTime\n\n\n\n\n1\nProject structures\n30 min\n\n\n2\nDocumentation & Quarto\n45 min\n\n\n3\nVirtual environments\n30 min\n\n\n4\nYour first step\n15 min\n\n\n\nEvery section has slides and an activity for you, and sections 1 to 3 also have a short demo from the instructor. If there is time, there is also an optional extra on sharing your data (Q-FAIR), which is covered in full in the notes."
   },
   {
     "objectID": "slides.html#todays-mission",
@@ -291,21 +333,21 @@
     "href": "slides.html#how-today-works",
     "title": "Reproducible Research",
     "section": "How today works",
-    "text": "How today works\n\n\n\nWe show.You try.\n\n\n\n\nFollow along on your own copy of the example folder: I do a step, then you do it\nNot working? Use the ready-made file in finished/ and carry on\nEach exercise is on the slides: no need to look anywhere else\nThe notes are for reference afterwards, with more detail and the answers\nErrors are normal. Read them out loud!\nStuck? Raise your hand"
+    "text": "How today works\n\n\n\nDo it together.Then try it yourself.\n\n\n\n\nEach topic is one short activity: we do a part together, you try something on your own, then I show the answer\nYou don’t need to run any code: the only thing we run is Render\nEverything you need is in the example folder\nThe notes are for reference afterwards, and you can work through them alone\nStuck? Type in the chat"
   },
   {
     "objectID": "slides.html#the-journey",
     "href": "slides.html#the-journey",
     "title": "Reproducible Research",
     "section": "The journey",
-    "text": "The journey\n\n\n1 · Structure Where does everything go? Raw data, processed data, code and outputs, and never editing the raw data Hands-on: tidy a messy project\n\n\n2 · Documentation How do I explain it, and report on it? A README, a data dictionary, and Quarto reports that update when the data changes Hands-on: README, data dictionary, report\n\n\n3 · Environments Will it run on another computer? Why environments matter, and how a lock file lets you send a project that works Hands-on: create and restore an environment\n\n\n4 · Sharing data Is it ready to share? The Q-FAIR principles, open formats, licences and where to deposit data Hands-on: a Q-FAIR check\n\n\n\nAbout 2 hours: 30 + 45 + 30 + 15 minutes. Follow along with the example folder\n\n\nClick through the four cards one at a time. Sections 1 to 3 follow the same pattern: slides, short “I do, you do” steps, then an exercise. Section 4 is shorter: it signposts where to find out more about sharing data."
+    "text": "The journey\n\n\n1 · Structure Where does everything go? Raw data, processed data, code and outputs, and never editing the raw data Hands-on: rescue a messy project\n\n\n2 · Documentation How do I explain it, and report on it? A README, a data dictionary, and Quarto: one document, many formats Hands-on: be the new colleague, render a document\n\n\n3 · Environments Will it run on another computer? Why environments matter, and how a lock file lets you send a project that works Hands-on: the new laptop test\n\n\n4 · Your first step What will you do on Monday? Pull it together into a checklist for your own project Hands-on: your checklist\n\n\n\nAbout 2 hours: 30 + 45 + 30 + 15 minutes\n\n\nClick through the four cards one at a time. Every topic follows the same pattern: slides, then a short activity (together, your turn, answer). Nobody needs to run any code."
   },
   {
     "objectID": "slides.html#by-the-end-you-will-be-able-to",
     "href": "slides.html#by-the-end-you-will-be-able-to",
     "title": "Reproducible Research",
     "section": "By the end, you will be able to",
-    "text": "By the end, you will be able to\n\n\nOrganise a project into raw data, processed data, code and outputs, and explain why raw data is never edited\nWrite a README and a data dictionary that help others understand and use your project\nExplain why Quarto helps reproducibility, and build a report that updates when the data changes\nExplain why environments matter, and record the software a project needs so it can be re-run on another computer\nCheck a dataset against the Q-FAIR principles, and know where to find out more about sharing data\n\n\n\nThese are the five things people should be able to do by the end. Each one matches a section: 1 is cycles 1 and 2 and Exercise 1, 2 is cycles 3 and 4, 3 is cycles 5 and 6 and Exercise 2, 4 is the environment demo and Exercise 3, and 5 is Exercise 4. We will come back to this list at the end."
+    "text": "By the end, you will be able to\n\n\nOrganise a project into raw data, processed data, code and outputs, and explain why raw data is never edited\nDescribe what a good README and data dictionary contain, and why they matter\nExplain why Quarto helps reproducibility, and make HTML, PDF and Word versions of a report from one document\nExplain why environments matter, and say what someone needs in order to re-run your project on another computer\nChoose one practice to start using on your own project, and know where to find out more\n\n\n\nThese are the five things people should be able to do by the end. 1 is the first activity, 2 is “be the new colleague”, 3 is “one document, many formats”, 4 is “the new laptop test” and 5 is “your first step”. We come back to this list at the end."
   },
   {
     "objectID": "slides.html#why-bother",
@@ -315,53 +357,46 @@
     "text": "Why bother?\n\n\nFuture you Code written as if others will use it is easier to return to after a holiday, or in six months’ time\n\n\nSpeed A project set up as a pipeline can be re-run quickly when the data changes or a reviewer asks for something new\n\n\nConfidence You understand how the pieces fit together, and where things might go wrong\n\n\nSharing and careers Journals and funders increasingly expect shared code and data, and tidy work is easy to trust\n\n\n\nSelfish reasons first: this mostly helps you. Mention the three problems with a messy project: hard to maintain, hard to run somewhere else, hard to understand."
   },
   {
-    "objectID": "slides.html#a-messy-project",
-    "href": "slides.html#a-messy-project",
-    "title": "Reproducible Research",
-    "section": "A messy project",
-    "text": "A messy project\nmy_project/\n├── data.csv\n├── data_final.csv\n├── data_final_v2.csv\n├── explore.ipynb\n├── clean_data.py\n├── analysis_OLD.py\n└── results.xlsx\n\n✘ Which file is the original? What do I run first?\n\n\nAsk the room: who has a project that looks like this? Hard to maintain, hard to run elsewhere, hard to understand."
-  },
-  {
-    "objectID": "slides.html#a-clean-project",
-    "href": "slides.html#a-clean-project",
-    "title": "Reproducible Research",
-    "section": "A clean project",
-    "text": "A clean project\nmy_project/\n├── README.md\n├── data/\n│   ├── raw/\n│   └── processed/\n├── code/\n│   └── 01_clean_data.R\n├── report.qmd\n└── outputs/\n\n✔ Raw data is never edited"
-  },
-  {
     "objectID": "slides.html#think-pipeline",
     "href": "slides.html#think-pipeline",
     "title": "Reproducible Research",
     "section": "Think pipeline",
-    "text": "Think pipeline\n\nRaw data → Clean → Analyse → Outputs\n\n\nNever overwrite the raw data\nSave useful intermediate outputs\nAnything in outputs/ can be re-created by running the code\n\n\nExcel users: same idea. Raw file untouched, a working copy, one named sheet per step, and a README describing each step."
+    "text": "Think pipeline\n\nRaw data → Clean → Analyse → Results\n\n\nNever overwrite the raw data\nEverything after it can be re-made by running the code\nSo the raw data and the code are what you must protect\n\n\nSpreadsheet users: same idea. Raw file untouched, a working copy, one named sheet per step, and a README describing each step."
   },
   {
-    "objectID": "slides.html#cycle-1-set-up-the-project",
-    "href": "slides.html#cycle-1-set-up-the-project",
+    "objectID": "slides.html#live-demo-rebuild-everything",
+    "href": "slides.html#live-demo-rebuild-everything",
     "title": "Reproducible Research",
-    "section": "Cycle 1: Set up the project",
-    "text": "Cycle 1: Set up the project\nLive demo I do · 3 min\nYour turn You do · 4 min\n\n\nMake a project folder with data/raw, data/processed, code and outputs\nMove each file from the example folder into the right place\nCheck: can you say what each folder is for?\n\n\n\nI do (3 min): make the folders (Positron’s project template, or mkdir -p data/raw data/processed code outputs), then move penguins.csv into data/raw, 01_clean_data.R into code, and leave report.qmd and README_template.md at the top level. You do (4 min): the same on their own machine. Point out that raw data goes in raw and is never edited. If stuck: the finished/ folder shows the tidy result. No code? Same idea with a folder for the original spreadsheet."
+    "section": "Live demo: rebuild everything",
+    "text": "Live demo: rebuild everything\nLive demo I do · 4 min\n\n\nHere is a tidy project\nDelete the cleaned data and the report\nRun one script: everything comes back from the raw data\n\n\n\nSTOP HERE and switch to the demo. Open a copy of tidy-project. Show the folders, then delete data/processed/penguins_clean.csv and the outputs folder. Run code/run_all.R (in RStudio or Positron, or Rscript code/run_all.R). The cleaned data and the report come back. Message: the raw data plus the code is everything, so protect those two. If it fails, say so, show the finished project, and move on: do not debug live."
   },
   {
-    "objectID": "slides.html#cycle-2-clean-data-out",
-    "href": "slides.html#cycle-2-clean-data-out",
+    "objectID": "slides.html#rescue-the-messy-project-look-at-it",
+    "href": "slides.html#rescue-the-messy-project-look-at-it",
     "title": "Reproducible Research",
-    "section": "Cycle 2: Clean data out",
-    "text": "Cycle 2: Clean data out\nLive demo I do · 3 min\nYour turn You do · 3 min\n\n\nOpen 01_clean_data.R: what does it do?\nRun it, or copy the clean file from finished/\nCheck: is the raw file unchanged?\n\n\n\nI do (3 min): read the script aloud (read the raw file, drop incomplete rows, write to processed), run it, then show data/raw is unchanged and data/processed has a new file (333 rows). Run it twice to show it gives the same result. You do (3 min). Do not debug code live: if it fails or there is no R, copy finished/data/processed/penguins_clean.csv into data/processed and carry on. Spreadsheet users: open penguins.csv, delete the rows with blanks, Save As penguins_clean.csv in processed; the original is untouched."
+    "section": "Rescue the messy project: look at it",
+    "text": "Rescue the messy project: look at it\nTogether 4 min\n\n\nmessy-project/\n├── Copy of data.csv\n├── analysis.R\n├── analysis2 (copy).R\n├── analysis_OLD.R\n├── clean.R\n├── data.csv\n├── data_FINAL_USE_THIS.csv\n├── data_final.csv\n├── data_final_v2.csv\n├── notes.txt\n├── plot1.png\n├── plot_new.png\n├── report_draft.docx\n├── results.xlsx\n├── results_v3.xlsx\n└── untitled.R\n\n\nCan you work out…\n\nWhich file is the raw data?\nWhat do I run first?\nWhich figure came from which analysis?\n\n\n\n\nTogether, 4 min. Put up the file list and ask the three questions. Ask people to type their answers in the chat, and let everyone feel the problem: it is nobody’s fault, this happens naturally. Open notes.txt and one of the scripts from the example folder if you like (absolute paths, packages with no versions). Then move to the next slide."
   },
   {
-    "objectID": "slides.html#exercise-1-tidy-this-project",
-    "href": "slides.html#exercise-1-tidy-this-project",
+    "objectID": "slides.html#rescue-the-messy-project-sort-it",
+    "href": "slides.html#rescue-the-messy-project-sort-it",
     "title": "Reproducible Research",
-    "section": "Exercise 1: tidy this project ✍️",
-    "text": "Exercise 1: tidy this project ✍️\n\n\n\n\n\nSketch a clean folder layout for these files\nWhich file should be read-only, and why?\nIn what order do the scripts run?\n\n\n\n\nAbout 8 minutes. The answer is on the next slide, and in the notes.\n\n\nfinal.xlsx\nfinal_v2.xlsx\nnotes.txt\nplot.png\nclean.R\nmodel.R\npenguins_raw.csv\npenguins_edited.csv"
+    "section": "Rescue the messy project: sort it",
+    "text": "Rescue the messy project: sort it\nYour turn 6 min\n\n\n\nOn your own, put every file under one heading:\n\n\n\nRaw data\nCleaned data\nCode\nResults\nDocuments\n\n\n\n\n\n\n\n\n\n\n\n\nThen decide:\n\nWhich file would you never edit?\nWhich files would you delete?\n\nOpen messy-project/ in the example folder if it helps.\n\n\nCopy of data.csv        plot1.png\nanalysis.R              plot_new.png\nanalysis2 (copy).R      report_draft.docx\nanalysis_OLD.R          results.xlsx\nclean.R                 results_v3.xlsx\ndata.csv                untitled.R\ndata_FINAL_USE_THIS.csv notes.txt\ndata_final.csv\ndata_final_v2.csv\n\n\nYour turn, 6 min, on their own, on paper or in a document. No code. The course is online, so there is no pair work: ask people to post one surprising file or decision in the chat at the end. There is no single right answer: they are deciding what each file is for."
   },
   {
-    "objectID": "slides.html#exercise-1-one-possible-answer",
-    "href": "slides.html#exercise-1-one-possible-answer",
+    "objectID": "slides.html#rescue-the-messy-project-the-answer",
+    "href": "slides.html#rescue-the-messy-project-the-answer",
     "title": "Reproducible Research",
-    "section": "Exercise 1: one possible answer",
-    "text": "Exercise 1: one possible answer\n\n\nproject/\n├── README.md        &lt;- notes.txt\n├── data/\n│   ├── raw/penguins_raw.csv\n│   └── processed/penguins_edited.csv\n├── code/\n│   ├── 01_clean.R\n│   └── 02_model.R\n└── outputs/\n    ├── plot.png\n    └── final.xlsx\n\n\n\npenguins_raw.csv is read-only: everything else can be re-made from it\npenguins_edited.csv should be the output of clean.R, not edited by hand\nRun clean.R, then model.R\nfinal.xlsx and final_v2.xlsx should be one file"
+    "section": "Rescue the messy project: the answer",
+    "text": "Rescue the messy project: the answer\nAnswer 4 min\n\n\n\n\n\n\n\n\n\n\nFiles\nWhat to do\n\n\n\n\nRaw data\ndata.csv\nNever edit it\n\n\nCleaned data\ndata_final.csv, data_final_v2.csv, data_FINAL_USE_THIS.csv\nThree versions of one thing: make it from the raw data with code\n\n\nCode\nclean.R, analysis.R, analysis2 (copy).R, analysis_OLD.R, untitled.R\nOne script per step, numbered. Delete the copies\n\n\nResults\nplot1.png, plot_new.png, results.xlsx, results_v3.xlsx\nThe code can re-make these\n\n\nDocuments\nnotes.txt, report_draft.docx\nBecome the README and the report\n\n\nDelete\nCopy of data.csv\nA duplicate\n\n\n\n\n\nAnswer, part one. Go through the table row by row. Ask who disagreed, and why. The key point is the first row and the “cleaned data” row: three versions of the same thing, with no way to tell which is right."
+  },
+  {
+    "objectID": "slides.html#rescue-the-messy-project-the-tidy-version",
+    "href": "slides.html#rescue-the-messy-project-the-tidy-version",
+    "title": "Reproducible Research",
+    "section": "Rescue the messy project: the tidy version",
+    "text": "Rescue the messy project: the tidy version\nAnswer 2 min\n\n\ntidy-project/\n├── README.md\n├── report.qmd\n├── data/\n│   ├── raw/penguins.csv\n│   └── processed/\n│       ├── penguins_clean.csv\n│       └── penguins_clean_dictionary.csv\n├── code/\n│   ├── 01_clean_data.R\n│   └── run_all.R\n└── outputs/\n\n\n\nRaw data is kept apart, and never edited\nOne cleaned version, made by the code\nScripts are numbered, in order\nOutputs can be deleted and re-made\nA README says how to run it\n\n\n\n\nAnswer, part two. This is the project you rebuilt in the demo. Point out that it is the same data, just organised. The README and the data dictionary come next."
   },
   {
     "objectID": "slides.html#four-kinds-of-documentation",
@@ -375,35 +410,35 @@
     "href": "slides.html#what-goes-in-a-readme",
     "title": "Reproducible Research",
     "section": "What goes in a README?",
-    "text": "What goes in a README?\n\nSummary and status\nQuickstart: which files, in what order\nSetup: what to install first\nContents: what each folder holds\n\n\n✔ No code? A README is still the best way to document your project\n\n\nShow a real README from a project in Positron. Point out it is just a text file written in Markdown. The demo comes next."
+    "text": "What goes in a README?\n\nSummary and status\nQuickstart: which files, in what order\nSetup: what to install first\nContents: what each folder holds\n\n\n✔ No code? A README is still the best way to document your project\n\n\nShow a real README. Point out it is just a text file written in Markdown. The next activity is about what makes one useful."
   },
   {
-    "objectID": "slides.html#a-readme-template",
-    "href": "slides.html#a-readme-template",
+    "objectID": "slides.html#be-the-new-colleague",
+    "href": "slides.html#be-the-new-colleague",
     "title": "Reproducible Research",
-    "section": "A README template",
-    "text": "A README template\n# Penguins analysis\n\nBody measurements of penguins on three islands. **Status:** ongoing.\n\n## Quickstart\n1. Put the raw data in `data/raw/`\n2. Run `code/01_clean_data.R`\n3. Render `report.qmd`\n\n## Setup\n- Requires R and Quarto\n\n## Contents\n- `data/raw/` original data (read-only)\n- `data/processed/` cleaned data, and its data dictionary\n- `code/` analysis scripts\n- `outputs/` figures and tables"
+    "section": "Be the new colleague",
+    "text": "Be the new colleague\nTogether 2 min\n\n\nmessy-project/notes.txt is the only documentation:\nrun clean.R first?? i think\n\nthen analysis2 (copy).R\nNOT analysis.R (that one is old)\n\ndata_final_v2 has the weird rows\nremoved BUT i fixed a few values\nby hand\n\nfigure 2 in the paper is\nplot_new.png (i think)\nask Sam about the Gentoo ones\n\nAnd this is the data:\nspecies,island,bill_len,bill_dep,\nflipper_len,body_mass,sex,year\nAdelie,Torgersen,39.1,18.7,181,3750,male,2007\n\nYou have inherited this project. What can’t you work out?\n\n\n\nTogether, 2 min. Read the notes out loud with a straight face. Ask what bill_dep means, and whether body_mass is in grams or kilograms."
   },
   {
-    "objectID": "slides.html#cycle-3-write-a-readme",
-    "href": "slides.html#cycle-3-write-a-readme",
+    "objectID": "slides.html#be-the-new-colleague-your-turn",
+    "href": "slides.html#be-the-new-colleague-your-turn",
     "title": "Reproducible Research",
-    "section": "Cycle 3: Write a README",
-    "text": "Cycle 3: Write a README\nLive demo I do · 2 min\nYour turn You do · 3 min\n\n\nRename README_template.md to README.md\nChange the placeholder text to describe the project\nCheck: could someone run it from this?\n\n\n\nI do (2 min): rename the template and change the title, status and contents so they are true for the project. Walk through the quickstart: what to run, in what order. You do (3 min). Fallback: finished/README.md. Keep it short, and say that a README that is wrong is worse than none."
+    "section": "Be the new colleague: your turn",
+    "text": "Be the new colleague: your turn\nYour turn 4 min\n\nWrite down three things you can’t work out.\n\n\nThink about:\n\nHow do I run it, and in what order?\nWhat software do I need?\nWhat do the columns mean?\nWhich file is the real data?\n\n\n\nYour turn, 4 min, on their own. Then ask people to type their three things in the chat, and read a few out."
   },
   {
-    "objectID": "slides.html#document-your-data-a-data-dictionary",
-    "href": "slides.html#document-your-data-a-data-dictionary",
+    "objectID": "slides.html#be-the-new-colleague-the-answer",
+    "href": "slides.html#be-the-new-colleague-the-answer",
     "title": "Reproducible Research",
-    "section": "Document your data: a data dictionary",
-    "text": "Document your data: a data dictionary\n\n\n\n\n\n\n\n\n\ncolumn\ntype\ndescription\nunits / values\n\n\n\n\nspecies\ntext\nPenguin species\nAdelie, Chinstrap, Gentoo\n\n\nisland\ntext\nWhere it was observed\nBiscoe, Dream, Torgersen\n\n\nbill_len\nnumber\nBill length\nmm\n\n\nbody_mass\nnumber\nBody mass\ngrams\n\n\nsex\ntext\nSex of the penguin\nfemale, male; blank if not recorded\n\n\n\n\n✔ One row per column. Keep it next to the data, and mention it in your README\n\n\nA dataset doesn’t explain itself: what does bill_len mean, and is body_mass in grams or kilograms? Only the person who knows the data can write the descriptions. Prompt: what would a colleague need to ask me next year?"
+    "section": "Be the new colleague: the answer",
+    "text": "Be the new colleague: the answer\nAnswer 2 min\n# Penguin body mass analysis\n\nBody measurements of 333 penguins on three islands. **Status:** complete.\n\n## Quickstart\n1. Open this folder in RStudio or Positron\n2. Run `code/run_all.R`\n\n## Setup\n- R 4.3 or later\n- Quarto 1.4 or later\n\n## Contents\n- `data/raw/` the original data (never edited)\n- `data/processed/` cleaned data, and a data dictionary\n- `code/` the scripts\n- `report.qmd` the report\n\nAnswer, part one: the README from tidy-project. It answers all three questions: how to run it, what software, what is where. The next slide shows the data dictionary, which answers the column question."
   },
   {
-    "objectID": "slides.html#cycle-4-describe-your-data",
-    "href": "slides.html#cycle-4-describe-your-data",
+    "objectID": "slides.html#be-the-new-colleague-the-data-dictionary",
+    "href": "slides.html#be-the-new-colleague-the-data-dictionary",
     "title": "Reproducible Research",
-    "section": "Cycle 4: Describe your data",
-    "text": "Cycle 4: Describe your data\nLive demo I do · 2 min\nYour turn You do · 3 min\n\n\nOpen the clean data and look at the column names\nMake a table, one row per column (a spreadsheet or CSV)\nWrite what each column means and its units, and save it next to the data\n\n\n\nI do (2 min): open the clean CSV, copy the column names into a new sheet with columns for type, description and units / values, and fill in two or three rows (for example, what bill_dep is). There is nothing clever here, which is the point. You do (3 min). Fallback: finished/data/processed/penguins_clean_dictionary.csv. Mention the dictionary in the README’s Contents."
+    "section": "Be the new colleague: the data dictionary",
+    "text": "Be the new colleague: the data dictionary\nAnswer 2 min\n\n\n\n\n\n\n\n\n\ncolumn\ntype\ndescription\nunits / values\n\n\n\n\nspecies\ntext\nPenguin species\nAdelie, Chinstrap, Gentoo\n\n\nisland\ntext\nWhere it was observed\nBiscoe, Dream, Torgersen\n\n\nbill_len\nnumber\nBill length\nmm\n\n\nbody_mass\nnumber\nBody mass\ngrams\n\n\nsex\ntext\nSex of the penguin\nfemale, male; blank if not recorded\n\n\n\n\n✔ One row per column. Keep it next to the data, and mention it in your README\n\n\nAnswer, part two. The dictionary has one row per column: what it is, its type and its units. Copying the column names is the easy part. The descriptions are the value, and only the person who knows the data can write them."
   },
   {
     "objectID": "slides.html#what-is-quarto",
@@ -431,7 +466,7 @@
     "href": "slides.html#weaving-text-and-analysis-together",
     "title": "Reproducible Research",
     "section": "Weaving text and analysis together",
-    "text": "Weaving text and analysis together\n\n\n\n---\ntitle: \"Penguin report\"\nformat: html\n---\n\n## Data\n\n```{r}\nclean &lt;- read.csv(\"data/processed/penguins_clean.csv\")\n```\n\nThere are `{r} nrow(clean)` penguins in the data.\n\n\n\nHeader: the title and the output format\nText: ordinary Markdown, with headings and lists\nCode chunk: the code runs when you render, and its output appears underneath\nInline code: a result inside a sentence\n\n\n\n\nThe header is written between two lines of three dashes in a real file. Point at each part in turn. Inline code is the clever bit: the number in the sentence is calculated every time the report is rendered."
+    "text": "Weaving text and analysis together\n\n\ntitle: \"Penguin report\"\nformat: html\n\n## Data\n\n```{r}\nclean &lt;- read.csv(\"data/processed/penguins_clean.csv\")\n```\n\nThere are `{r} nrow(clean)` penguins in the data.\n\n\n\nHeader: the title and the output format\nText: ordinary Markdown, with headings and lists\nCode chunk: the code runs when you render, and its output appears underneath\nInline code: a result inside a sentence\n\n\n\n\nIn a real file the header sits between two lines of three dashes. Point at each part in turn. Inline code is the clever bit: the number in the sentence is calculated every time the report is rendered."
   },
   {
     "objectID": "slides.html#if-the-data-changes-the-report-updates",
@@ -441,46 +476,32 @@
     "text": "If the data changes, the report updates\n\nNew data → Re-run the cleaning → Render → Updated report\n\n\n\nEvery number, table and figure is recalculated\nSentences with inline code update too\nThere is nothing to copy and paste\n\n\n\n✔ Change the data (or the code), not the report"
   },
   {
-    "objectID": "slides.html#quarto-can-do-much-more",
-    "href": "slides.html#quarto-can-do-much-more",
+    "objectID": "slides.html#live-demo-change-the-data",
+    "href": "slides.html#live-demo-change-the-data",
     "title": "Reproducible Research",
-    "section": "Quarto can do much more",
-    "text": "Quarto can do much more\n\n\nReports HTML, PDF and Word documents, with tables, figures and references\n\n\nSlides This deck is a Quarto presentation\n\n\nWebsites This course website is built with Quarto\n\n\nPapers and books Journal articles, theses and books, with citations and cross-references"
+    "section": "Live demo: change the data",
+    "text": "Live demo: change the data\nLive demo I do · 4 min\n\n\nOpen the report, which is made from the data\nChange the data\nRender: every number changes\n\n\n\nSTOP HERE and switch to the demo. In a copy of tidy-project, open report.qmd. In code/01_clean_data.R, uncomment the line that keeps only 2008 and later, then run code/run_all.R (or re-run the script and render). Open the new report: the number of penguins and the results have changed, and nobody copied or pasted anything. Message: change the data or the code, not the report. If it fails, say so and move on."
   },
   {
-    "objectID": "slides.html#rendering",
-    "href": "slides.html#rendering",
+    "objectID": "slides.html#one-document-many-formats",
+    "href": "slides.html#one-document-many-formats",
     "title": "Reproducible Research",
-    "section": "Rendering",
-    "text": "Rendering\nquarto render report.qmd\nOr press Render in your IDE. The result, report.html, appears next to report.qmd."
+    "section": "One document, many formats",
+    "text": "One document, many formats\nTogether 6 min\n\n\nformat:\n  html: default\n  typst: default\n  docx: default\n\n\nreport.qmd\n\n\n↓ render\n\n\nHTML PDF Word\n\n\n\nOne file, three formats. The PDF is made with Typst, so you don’t need LaTeX.\n\n\nTogether, 6 min. Open one-document/report.qmd. Show the header, the text, the table and the figure, all in one file. Render it to HTML, then change the format and render to PDF (Typst) and Word. Show all three side by side. If you have time, add revealjs for slides. Message: write once, publish many ways. If Render fails, open the files in one-document/finished/."
   },
   {
-    "objectID": "slides.html#cycle-5-render-a-report",
-    "href": "slides.html#cycle-5-render-a-report",
+    "objectID": "slides.html#one-document-many-formats-your-turn",
+    "href": "slides.html#one-document-many-formats-your-turn",
     "title": "Reproducible Research",
-    "section": "Cycle 5: Render a report",
-    "text": "Cycle 5: Render a report\nLive demo I do · 3 min\nYour turn You do · 4 min\n\n\nOpen report.qmd: find the header, text, a code chunk and an inline number\nPress Render\nFind the numbers, table and plot in the report\n\n\n\nI do (3 min): walk through report.qmd (the header, a chunk that reads the clean CSV and keeps one species, a sentence with inline numbers, a table, a plot), then press Render, and also show quarto render report.qmd. You do (4 min). If Render fails (Quarto or R not set up), show it on your screen and let them follow; to give everyone a fallback, render finished/report.qmd once before the course and save report.html next to it."
+    "section": "One document, many formats: your turn",
+    "text": "One document, many formats: your turn\nYour turn 7 min\n\n\nOpen one-document/report.qmd\nChange the title, the author and one sentence\nRender it as HTML, then PDF, then Word\nOpen all three: did your changes appear in each?\n\n\n\nPress Render (choose the format), or run quarto render report.qmd to make all three. Not working? Open the files in finished/.\n\n\nYour turn, 7 min. They need only Quarto, not R or Python. Watch the chat for questions. Common slips: Render only makes the first format, so use the format menu or the terminal command; or they open the original in finished/. If Render fails for someone, let them look at finished/."
   },
   {
-    "objectID": "slides.html#cycle-6-change-something-re-render",
-    "href": "slides.html#cycle-6-change-something-re-render",
+    "objectID": "slides.html#one-document-many-formats-the-answer",
+    "href": "slides.html#one-document-many-formats-the-answer",
     "title": "Reproducible Research",
-    "section": "Cycle 6: Change something, re-render",
-    "text": "Cycle 6: Change something, re-render\nLive demo I do · 2 min\nYour turn You do · 3 min\n\n\nChange the species in the filter (for example, to \"Adelie\")\nRender again\nWhat changed? What stayed the same?\n\n\n\nI do (2 min): change the species in the filter, render, and compare. Optional: uncomment the “later years” line in 01_clean_data.R, re-run it and render, so the number of penguins changes too. The message: change the data or the code, not the report. You do (3 min)."
-  },
-  {
-    "objectID": "slides.html#exercise-2-predict-then-check",
-    "href": "slides.html#exercise-2-predict-then-check",
-    "title": "Reproducible Research",
-    "section": "Exercise 2: predict, then check ✍️",
-    "text": "Exercise 2: predict, then check ✍️\n\n\n\nPick a change: a different species, a different column to average, or the “later years” line in the cleaning script\nWrite down what you expect to change in the report\nMake the change, render, and compare with your prediction\n\n\n\n\nAbout 5 minutes. Got your own project? Write its README and data dictionary too."
-  },
-  {
-    "objectID": "slides.html#exercise-2-what-good-looks-like",
-    "href": "slides.html#exercise-2-what-good-looks-like",
-    "title": "Reproducible Research",
-    "section": "Exercise 2: what good looks like",
-    "text": "Exercise 2: what good looks like\n\n\nYou could say what would change before you rendered, and why\nOnly the results changed: no copying and pasting was needed\nA README answers three questions in the first minute: what is this project and is it finished? What do I do first? What do I need installed?\nA data dictionary has a plain-English description, units and missing-value codes for every column"
+    "section": "One document, many formats: the answer",
+    "text": "One document, many formats: the answer\nAnswer 3 min\n\n\nReports HTML, PDF and Word documents, with tables, figures and references\n\n\nSlides This deck is a Quarto presentation\n\n\nWebsites This course website is built with Quarto\n\n\nPapers and books Journal articles, theses and books, with citations and cross-references\n\n\n\nAnswer. Your changes showed up in every format, because there is only one source. And Quarto does far more than reports: this deck, the notes and the site are all Quarto."
   },
   {
     "objectID": "slides.html#learn-more-about-quarto",
@@ -546,32 +567,32 @@
     "text": "No code? Record it anyway\n\n✔ Write the program, its version and any add-ins in your README: the next person then knows what you used"
   },
   {
-    "objectID": "slides.html#live-demo-4-an-environment",
-    "href": "slides.html#live-demo-4-an-environment",
+    "objectID": "slides.html#live-demo-delete-it-then-rebuild-it",
+    "href": "slides.html#live-demo-delete-it-then-rebuild-it",
     "title": "Reproducible Research",
-    "section": "Live demo 4: An environment",
-    "text": "Live demo 4: An environment\nLive demo I do · 8 min · Terminal and console\n\n\nCreate the environment, and add a package\nLook at the lock file\nDelete the environment, then restore it, as a colleague would\n\n\n\nSTOP HERE and switch to the demo. Do R in the example project, and Python in a scratch folder: (R) renv::init(), install a package, renv::snapshot(), open renv.lock, delete renv/library, renv::restore(); (Python) uv init, uv add pandas, open pyproject.toml and uv.lock, delete .venv, uv sync. When you delete and restore, say “this is what your colleague does when you send them the project”. Note that renv records package versions but not the version of R itself. This is a demo only: attendees try it in the exercise, if their tools are set up. If your audience is only R or only Python, do just that tool."
+    "section": "Live demo: delete it, then rebuild it",
+    "text": "Live demo: delete it, then rebuild it\nLive demo I do · 5 min\n\n\nHere is a project’s environment\nDelete it\nRebuild it from the lock file: one command\n\n\n\nSTOP HERE and switch to the demo. R: in a project that uses renv, delete renv/library and run renv::restore(). Python: in a project that uses uv, delete .venv and run uv sync. Say: “this is what your colleague does when you send them the project”. Note that renv records package versions but not the version of R itself. If you have no environment ready, show the lock file and describe it instead. If it fails, say so and move on: this is a watch-only demo."
   },
   {
-    "objectID": "slides.html#ide-vs-cli",
-    "href": "slides.html#ide-vs-cli",
+    "objectID": "slides.html#the-new-laptop-test",
+    "href": "slides.html#the-new-laptop-test",
     "title": "Reproducible Research",
-    "section": "IDE vs CLI",
-    "text": "IDE vs CLI\n\n\nIn your IDE\n\nCreate a project from a template\nButtons and panels\nDifferent in every IDE\n\n\nOn the command line\n\nuv init, uv add, renv::init()\nSame everywhere, including HPC\nEasy to copy into a README\n\n\n\nSpend about two minutes here. Show where your IDE creates a project with an environment (in Positron: New Folder from Template), then say that theirs will have something similar. Stress that the file is what matters, not how you made it."
+    "section": "The new laptop test",
+    "text": "The new laptop test\nTogether 2 min\n\n\n\nA colleague emails you their project.\n“It runs fine on my laptop!”\n\n\nYou open it on your laptop:\nError: there is no package\ncalled 'ggplot2'\n\n\nWhat would you need to know to make it run?\n\n\nTogether, 2 min. Set the scene, then move to the next slide."
   },
   {
-    "objectID": "slides.html#exercise-3-make-it-disposable",
-    "href": "slides.html#exercise-3-make-it-disposable",
+    "objectID": "slides.html#the-new-laptop-test-your-turn",
+    "href": "slides.html#the-new-laptop-test-your-turn",
     "title": "Reproducible Research",
-    "section": "Exercise 3: make it disposable ✍️",
-    "text": "Exercise 3: make it disposable ✍️\n\n\n\n\n\n\n\n\n\nStep\nPython\nR\n\n\n\n\n1 Create the environment\nuv init\nrenv::init()\n\n\n2 Add a package\nuv add pandas\ninstall.packages(\"ggplot2\"), then renv::snapshot()\n\n\n3 Look at the lock file\nuv.lock\nrenv.lock\n\n\n4 Delete the environment\ndelete .venv\ndelete renv/library\n\n\n5 Restore it\nuv sync\nrenv::restore()\n\n\n\n\n\nNo code? Write your program and its version in your README. Extra: zip the project without the environment folder, and swap with a neighbour to rebuild it.\n\n\nAbout 7 minutes, if your tools are set up. Answers on the next slide, and in the notes."
+    "section": "The new laptop test: your turn",
+    "text": "The new laptop test: your turn\nYour turn 6 min\n\nOn your own, list everything you would need to know to run this project on a new computer.\n\n\nWrite down as many things as you can. There is no wrong answer.\n\n\nYour turn, 6 min, on their own. No code. Resist giving hints: let them find the list. At the end, ask people to type their list in the chat, and read out a few."
   },
   {
-    "objectID": "slides.html#exercise-3-what-you-should-see",
-    "href": "slides.html#exercise-3-what-you-should-see",
+    "objectID": "slides.html#the-new-laptop-test-the-answer",
+    "href": "slides.html#the-new-laptop-test-the-answer",
     "title": "Reproducible Research",
-    "section": "Exercise 3: what you should see",
-    "text": "Exercise 3: what you should see\n\n\npyproject.toml / renv.lock list your packages. The lock file also records exact versions\nAfter deleting the environment folder, uv sync / renv::restore() installs everything again: that is what “disposable” means\nThe README note does the same job for spreadsheets: it tells the next person what you used\nThis is what a colleague does when you send them your project: one command to get the same packages"
+    "section": "The new laptop test: the answer",
+    "text": "The new laptop test: the answer\nAnswer 3 min\n\n\n\n\n\n\n\n\nYou need to know\nWhere it should be written down\n\n\n\n\nWhich software, and which version\nThe README (Setup)\n\n\nWhich packages, and which versions\nA lock file\n\n\nWhere the data is\nThe README, and a data/raw folder\n\n\nWhat to run, and in what order\nThe README (Quickstart), or one script\n\n\nWhere the results come from\nThe code, not copy and paste\n\n\n\n\n\nAnswer. Compare their lists with the table. Almost everything on it can be written down once in a README, and a lock file does the packages automatically. This is exactly what tidy-project/README.md does."
   },
   {
     "objectID": "slides.html#learn-more-about-environments",
@@ -579,6 +600,48 @@
     "title": "Reproducible Research",
     "section": "Learn more about environments",
     "text": "Learn more about environments\n\n\nuv: Python projects and environments\nrenv: R environments\nEffective Python environment management: venv and conda\nManaging dependencies with uv and pixi"
+  },
+  {
+    "objectID": "slides.html#from-messy-to-shareable",
+    "href": "slides.html#from-messy-to-shareable",
+    "title": "Reproducible Research",
+    "section": "From messy to shareable",
+    "text": "From messy to shareable\nTogether 3 min\n\nMessy → Tidy → Documented → Reported → Recorded → Shareable\n\n\n\nTidy: raw data kept apart and never edited\nDocumented: a README and a data dictionary\nReported: one document, made from the data and code\nRecorded: the software and versions written down\nShareable: a project a colleague can run on a new computer\n\n\n\nTogether, 3 min. This is the whole course on one slide. Every step is a habit, and you can start with any of them."
+  },
+  {
+    "objectID": "slides.html#your-checklist",
+    "href": "slides.html#your-checklist",
+    "title": "Reproducible Research",
+    "section": "Your checklist",
+    "text": "Your checklist\nYour turn 6 min\n\n\nStructure ☐ Raw data never edited ☐ Separate folders for data, code and results ☐ Clear file names\n\n\nDocumentation ☐ A README ☐ A data dictionary ☐ A report made from the code\n\n\nEnvironments ☐ Software and versions written down ☐ Packages recorded in a file ☐ A colleague could run it\n\n\nSharing ☐ Data in an open format (CSV) ☐ A licence ☐ Somewhere to deposit it\n\n\n\nTick what your own project already does. Circle one thing to start with this week. Post your one thing in the chat. (Checklist to print: take-home/)\n\n\nYour turn, 6 min. They tick the checklist for a project of their own (or the messy one if they have none). Then circle ONE thing, and post it in the chat. The printable checklist is in take-home/ (PDF and Word)."
+  },
+  {
+    "objectID": "slides.html#quick-wins",
+    "href": "slides.html#quick-wins",
+    "title": "Reproducible Research",
+    "section": "Quick wins",
+    "text": "Quick wins\nAnswer 3 min\n\n\n\n\n\n\n\n\n\nQuick win\nTime\nWhy it helps\n\n\n\n\nStop editing the raw data\n0 min\nEverything can be re-made\n\n\nClear folders and file names\n15 min\nYou can find things\n\n\nWrite a README\n15 min\nOthers, and future you, can run it\n\n\nWrite down your software versions\n5 min\nIt runs on another computer\n\n\nDescribe your columns\n20 min\nYour data makes sense to others\n\n\n\n\n\nAnswer, 3 min. The biggest wins for the least effort are at the top. Encourage everyone to start with the first thing they circled, or the one at the top of this list."
+  },
+  {
+    "objectID": "slides.html#what-you-can-now-do",
+    "href": "slides.html#what-you-can-now-do",
+    "title": "Reproducible Research",
+    "section": "What you can now do",
+    "text": "What you can now do\n\n\n✔ Organise a project, and never edit the raw data\n✔ Describe what a good README and data dictionary contain\n✔ Make HTML, PDF and Word versions of a report from one document\n✔ Say what someone needs to re-run your project on another computer\n✔ Choose one practice to start using this week\n\n\n\nA project that does all of this is already most of the way to reproducible\n\n\nGo back to the objectives slide and tick them off."
+  },
+  {
+    "objectID": "slides.html#where-next",
+    "href": "slides.html#where-next",
+    "title": "Reproducible Research",
+    "section": "Where next?",
+    "text": "Where next?\n\nThe Turing Way\nBristol Training courses\nVersion control: see our git and GitHub course\nSharing data (Q-FAIR): the next few slides, and the notes"
+  },
+  {
+    "objectID": "slides.html#thank-you",
+    "href": "slides.html#thank-you",
+    "title": "Reproducible Research",
+    "section": "Thank you",
+    "text": "Thank you\n\nQuestions?"
   },
   {
     "objectID": "slides.html#q-fair-data-principles",
@@ -602,38 +665,17 @@
     "text": "Four things to do\n\n\n\n\n\nWhat to do\nLearn more\n\n\n\n\nOpen formats\nShare data as CSV, not a format that needs one program\nTuring Way: research data management\n\n\nDescribe it\nWrite a data dictionary: what each column means, its units and missing values\nSee section 2\n\n\nAdd a licence\nData: CC BY 4.0. Code: MIT\nCreative Commons chooser, choosealicense.com\n\n\nDeposit it\nA repository that gives a DOI, such as Zenodo or your institution’s\nZenodo\n\n\n\n\n\nCan’t share the data? Share the README and data dictionary, and explain how to ask for access\n\n\nOpen formats: in Excel use File &gt; Save As &gt; CSV UTF-8, one sheet per file, and note that formulas become values. A data dictionary has one row per column, as in section 2. Check funder and institution requirements for licences. Refer ethics and consent questions to the research data team."
   },
   {
-    "objectID": "slides.html#exercise-4-a-q-fair-check",
-    "href": "slides.html#exercise-4-a-q-fair-check",
+    "objectID": "slides.html#q-fair-detective",
+    "href": "slides.html#q-fair-detective",
     "title": "Reproducible Research",
-    "section": "Exercise 4: a Q-FAIR check ✍️",
-    "text": "Exercise 4: a Q-FAIR check ✍️\n\n\nPick a dataset: the penguins data from the demos, or one of your own.\nFor each letter of Q-FAIR, write down:\n\none thing the data already does well\none thing you could improve\n\n\n\n\nAbout 5 minutes. Example answer on the next slide."
+    "section": "Q-FAIR detective",
+    "text": "Q-FAIR detective\nYour turn 4 min\n\n\nA A spreadsheet called final_data_v7.xlsx on my laptop. Email me if you want it. I would have to remember what some of the columns mean.\n\n\nB A CSV in a repository, with a DOI, a README, a data dictionary and a CC BY licence.\n\n\nC A CSV on the department shared drive, with a README. No licence, and you need to ask the group’s admin for access.\n\n\n\nFor each one, mark every letter of Q-FAIR with a ✔ or an ✘."
   },
   {
-    "objectID": "slides.html#exercise-4-what-good-looks-like",
-    "href": "slides.html#exercise-4-what-good-looks-like",
+    "objectID": "slides.html#q-fair-detective-the-answer",
+    "href": "slides.html#q-fair-detective-the-answer",
     "title": "Reproducible Research",
-    "section": "Exercise 4: what good looks like",
-    "text": "Exercise 4: what good looks like\n\n\nQ: keep raw data read-only; describe each cleaning step\nF: add a README; descriptive file names\nA: say where it is stored and who can use it\nI: save as CSV\nR: add a data dictionary and a licence"
-  },
-  {
-    "objectID": "slides.html#what-you-can-now-do",
-    "href": "slides.html#what-you-can-now-do",
-    "title": "Reproducible Research",
-    "section": "What you can now do",
-    "text": "What you can now do\n\n\n✔ Organise a project, and never edit the raw data\n✔ Write a README and a data dictionary\n✔ Build a Quarto report that updates when the data changes\n✔ Record the software a project needs, so it can be re-run anywhere\n✔ Check data against Q-FAIR, and know where to find out more\n\n\n\nA project that does all of this is already most of the way to reproducible\n\n\nGo back to the objectives slide and tick them off."
-  },
-  {
-    "objectID": "slides.html#where-next",
-    "href": "slides.html#where-next",
-    "title": "Reproducible Research",
-    "section": "Where next?",
-    "text": "Where next?\n\nThe Turing Way\nBristol Training courses\nVersion control: see our git and GitHub course\nFunctions and testing: Bristol and Turing Way courses"
-  },
-  {
-    "objectID": "slides.html#thank-you",
-    "href": "slides.html#thank-you",
-    "title": "Reproducible Research",
-    "section": "Thank you",
-    "text": "Thank you\n\nQuestions?"
+    "section": "Q-FAIR detective: the answer",
+    "text": "Q-FAIR detective: the answer\nAnswer 2 min\n\n\n\n\n\nQ\nF\nA\nI\nR\n\n\n\n\nA The spreadsheet\n✘\n✘\n✘\n✘\n✘\n\n\nB The repository CSV\n✔\n✔\n✔\n✔\n✔\n\n\nC The shared-drive CSV\n✔\n✘\npartly\n✔\n✘\n\n\n\n\n\nC is documented (Q) and in an open format (I), but hard to find (F), needs permission (A), and has no licence (R)."
   }
 ]

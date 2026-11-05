@@ -48,9 +48,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-93a3846f93e9c422518df85fe5ac8419.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-93a3846f93e9c422518df85fe5ac8419.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-93a3846f93e9c422518df85fe5ac8419.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c1c880788820849d33141aa8c41a742a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-c1c880788820849d33141aa8c41a742a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c1c880788820849d33141aa8c41a742a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -120,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#project-structures-30-min" id="toc-project-structures-30-min" class="nav-link" data-scroll-target="#project-structures-30-min"><span class="header-section-number">1</span> 1. Project structures (30 min)</a></li>
   <li><a href="#documentation-quarto-45-min" id="toc-documentation-quarto-45-min" class="nav-link" data-scroll-target="#documentation-quarto-45-min"><span class="header-section-number">2</span> 2. Documentation &amp; Quarto (45 min)</a></li>
   <li><a href="#virtual-environments-30-min" id="toc-virtual-environments-30-min" class="nav-link" data-scroll-target="#virtual-environments-30-min"><span class="header-section-number">3</span> 3. Virtual environments (30 min)</a></li>
-  <li><a href="#sharing-data-q-fair-15-min" id="toc-sharing-data-q-fair-15-min" class="nav-link" data-scroll-target="#sharing-data-q-fair-15-min"><span class="header-section-number">4</span> 4. Sharing data: Q-FAIR (15 min)</a></li>
+  <li><a href="#your-first-step-15-min" id="toc-your-first-step-15-min" class="nav-link" data-scroll-target="#your-first-step-15-min"><span class="header-section-number">4</span> 4. Your first step (15 min)</a></li>
   </ul>
 </nav>
     </div>
@@ -154,15 +154,24 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="at-a-glance" class="level1 unnumbered">
 <h1 class="unnumbered">At a glance</h1>
-<p><strong>How it runs:</strong> slides, then short “I do, you do” steps (cycles) on the example folder, then an exercise. The steps for each cycle and demo are in the <strong>speaker notes</strong> of its slide (press <strong>S</strong> in the deck).</p>
+<p><strong>How it runs:</strong> slides, then a short <strong>watch-only demo</strong> (the “wow”), then one <strong>activity</strong>: <em>Together</em> (we do a part), <em>Your turn</em> (they do it on their own), <em>Answer</em> (you show it). Attendees never run code: the only thing they run is <strong>Render</strong>. The steps for each demo and activity are in the <strong>speaker notes</strong> of its slide (press <strong>S</strong> in the deck).</p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>#</th>
 <th>Section</th>
 <th>Min</th>
 <th>Objective</th>
-<th>Cycles and exercise</th>
+<th>Demo (you)</th>
+<th>Activity</th>
 </tr>
 </thead>
 <tbody>
@@ -171,135 +180,148 @@ ul.task-list li input[type="checkbox"] {
 <td>Project structures</td>
 <td>30</td>
 <td>1</td>
-<td>Cycles 1-2, Exercise 1</td>
+<td>Delete the cleaned data and report, rebuild from raw</td>
+<td>Rescue the messy project</td>
 </tr>
 <tr class="even">
 <td>2</td>
 <td>Documentation &amp; Quarto</td>
 <td>45</td>
 <td>2, 3</td>
-<td>Cycles 3-6, Exercise 2</td>
+<td>Change the data, the report updates</td>
+<td>Be the new colleague. One document, many formats</td>
 </tr>
 <tr class="odd">
 <td>3</td>
 <td>Virtual environments</td>
 <td>30</td>
 <td>4</td>
-<td>Demo 4, Exercise 3</td>
+<td>Delete the environment, rebuild it</td>
+<td>The new laptop test</td>
 </tr>
 <tr class="even">
 <td>4</td>
-<td>Sharing data: Q-FAIR</td>
+<td>Your first step</td>
 <td>15</td>
 <td>5</td>
-<td>Exercise 4</td>
+<td>none</td>
+<td>Your checklist</td>
+</tr>
+<tr class="odd">
+<td>(+)</td>
+<td>Optional: Q-FAIR</td>
+<td>+5</td>
+<td>5</td>
+<td>none</td>
+<td>Q-FAIR detective</td>
 </tr>
 </tbody>
 </table>
 <p><strong>By the end, attendees can:</strong></p>
 <ol type="1">
 <li>Organise a project into raw data, processed data, code and outputs, and explain why raw data is never edited.</li>
-<li>Write a README and a data dictionary that help others understand and use their project.</li>
-<li>Explain why Quarto helps reproducibility, and build a report that updates when the data changes.</li>
-<li>Explain why environments matter, and record the software a project needs so it can be re-run on another computer.</li>
-<li>Check a dataset against the Q-FAIR principles, and know where to find out more about sharing data.</li>
+<li>Describe what a good README and data dictionary contain, and why they matter.</li>
+<li>Explain why Quarto helps reproducibility, and make HTML, PDF and Word versions of a report from one document.</li>
+<li>Explain why environments matter, and say what someone needs in order to re-run your project on another computer.</li>
+<li>Choose one practice to start using on your own project, and know where to find out more.</li>
 </ol>
 <section id="before-you-start" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="before-you-start">Before you start</h2>
 <ul>
-<li>Download and unzip the <strong>example folder</strong>, and rehearse each cycle once.</li>
-<li>Check <strong>Quarto</strong> (1.4 or later; RStudio and Positron include it) and press Render on <code>report.qmd</code>.</li>
-<li>Render <code>finished/report.qmd</code> once and save <code>report.html</code> next to it, as a fallback for anyone whose Render fails. Then run <code>python3 build_example_zip.py</code>.</li>
-<li>Ask attendees which they use (R, Python or spreadsheets), and remind them about Quarto and <code>uv</code> / <code>renv</code>.</li>
-<li>Check the name of the institutional data repository (<em>data.bris</em>) and the links.</li>
+<li>Download and unzip the <strong>example folder</strong>. Copy <code>tidy-project/</code> somewhere you can change it.</li>
+<li>You need <strong>R and Quarto 1.4+</strong> on your own machine for the demos. Run <code>code/run_all.R</code> once to check it works.</li>
+<li>Press Render on <code>one-document/report.qmd</code>: attendees will do this. Attendees need <strong>Quarto only</strong>, not R or Python.</li>
+<li>For the environment demo, prepare a small project with an environment (<code>renv</code> for R, or <code>uv</code> for Python) that you can delete and restore.</li>
+<li>Check the links on the slides and notes.</li>
 </ul>
 </section>
 <section id="ground-rules" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="ground-rules">Ground rules</h2>
 <ul>
-<li><strong>This is not a coding course.</strong> Never debug code live. If something fails, use the ready-made file in <code>finished/</code> and carry on.</li>
-<li>You demo in R and Positron. Python and spreadsheet users follow the same steps with their own tools; the notes show Python versions.</li>
-<li>Say less, show more. If running late, skip a “you do”, not a section.</li>
+<li><strong>Nobody runs code except Render.</strong> Never debug live. If a demo fails, say so, show the finished version, and move on.</li>
+<li>Demos are watch-only. The activities are on paper or in a document.</li>
+<li>The course is <strong>online</strong>: no pair work. Every <em>Your turn</em> is done on your own, and people share answers by typing in the chat. Read a few out.</li>
+<li>Wording works for everyone in the university. Spreadsheet users do the same activities.</li>
+<li>If running late, skip the <strong>optional</strong> slides first, then shorten a <em>Your turn</em>, not a section.</li>
 </ul>
 </section>
 </section>
 <section id="project-structures-30-min" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> 1. Project structures (30 min)</h1>
-<p><strong>Checkpoints:</strong> by 7 min cycle 1; by 14 cycle 2; by 20 Exercise 1; finish at 30.</p>
+<p><strong>Checkpoints:</strong> by 6 min the demo; by 10 <em>Together</em>; by 14 <em>Your turn</em>; by 20 <em>Answer</em>; finish at 30 (the spare time is for discussion).</p>
 <p><strong>Key messages</strong></p>
 <ul>
-<li>Raw data is never edited: everything else can be re-made from it.</li>
-<li>Raw / processed / code / outputs, and the pipeline idea.</li>
+<li>Raw data is never edited. Everything after it can be re-made, so protect the raw data and the code.</li>
+<li>Raw / processed / code / outputs, in a pipeline.</li>
 <li>Messy projects happen naturally. Nobody is being criticised.</li>
 <li>Spreadsheets: same rule. Keep the original, work on a copy.</li>
 </ul>
 <p><strong>Don’t forget</strong></p>
 <ul>
-<li>Ask who has a messy project like the one on the slide.</li>
-<li>Say out loud: “if it doesn’t work, use <code>finished/</code>”.</li>
-<li>Relative paths, not <code>C:/Users/me/...</code>.</li>
+<li>At the demo, say “watch what happens when I delete everything”.</li>
+<li>In <em>Together</em>, let people feel the problem before you explain it.</li>
+<li>At the <em>Answer</em>, ask who disagreed, and why. There is more than one reasonable layout.</li>
 </ul>
-<p><strong>If running late:</strong> run the cleaning script as a demo only. <strong>Watch out for:</strong> “it is quicker to fix the typo in the raw file”.</p>
+<p><strong>If running late:</strong> shorten <em>Together</em>. <strong>Watch out for:</strong> “it is quicker to fix the typo in the raw file”.</p>
 </section>
 <section id="documentation-quarto-45-min" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> 2. Documentation &amp; Quarto (45 min)</h1>
-<p><strong>Checkpoints:</strong> by 6 min cycle 3; by 12 cycle 4; by 17 Quarto slides; by 27 cycle 5; by 34 cycle 6; by 39 Exercise 2; finish at 45.</p>
+<p><strong>Checkpoints:</strong> by 3 min <em>Be the new colleague</em> (Together); by 13 Quarto slides; by 21 demo; by 25 <em>One document</em>, Together; by 31 <em>Your turn</em>; by 38 <em>Answer</em>; finish at 45.</p>
 <p><strong>Key messages</strong></p>
 <ul>
 <li>Four kinds of documentation. Write for the person who will read it.</li>
-<li>README: summary, quickstart, setup, contents. A README that is wrong is worse than none.</li>
-<li>Data dictionary: copying the column names is easy. The descriptions are the value.</li>
+<li>A README answers: what is it, how do I run it, what do I need. A README that is wrong is worse than none.</li>
+<li>A data dictionary: copying the column names is easy. The descriptions are the value.</li>
 <li>Quarto: the report <em>is</em> the analysis. No copy and paste. Data changes, so render again.</li>
-<li>This deck, the notes and the course website are all Quarto.</li>
+<li>One document can make many formats, and this deck, the notes and the website are all Quarto.</li>
 </ul>
 <p><strong>Don’t forget</strong></p>
 <ul>
+<li>Read the messy <code>notes.txt</code> out loud with a straight face.</li>
 <li>Open the Quarto part with “who has copied a number into Word and then found the data had changed?”</li>
-<li>Point at each part of a <code>.qmd</code>: header, text, code chunk, inline code.</li>
-<li>Ask “what would a colleague need to ask me next year?” for the dictionary.</li>
+<li>At the demo: change the data, and let them watch every number change.</li>
+<li>In <em>One document</em>, make sure each person renders <strong>all three</strong> formats (the format menu, or <code>quarto render report.qmd</code>).</li>
 <li>Show the “Learn more about Quarto” slide at the end.</li>
 </ul>
-<p><strong>If running late:</strong> drop cycle 6 and do it as part of Exercise 2. <strong>Watch out for:</strong> Render failing (Quarto or R not set up). Show it on your screen and use <code>finished/report.html</code>. Inline code needs Quarto 1.4 or later. Spreadsheet users: the README and the idea matter, Quarto is optional.</p>
+<p><strong>If running late:</strong> skip the “old way vs the Quarto way” slide. <strong>Watch out for:</strong> Render failing (Quarto not set up) or only making one format. Send them to <code>one-document/finished/</code>. Inline code needs Quarto 1.4 or later.</p>
 </section>
 <section id="virtual-environments-30-min" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> 3. Virtual environments (30 min)</h1>
-<p><strong>Checkpoints:</strong> by 10 min the demo; by 18 IDE vs CLI; by 20 Exercise 3; finish at 30.</p>
+<p><strong>Checkpoints:</strong> by 10 min the demo; by 15 <em>Together</em>; by 17 <em>Your turn</em>; by 23 <em>Answer</em>; finish at 30.</p>
 <p><strong>Key messages</strong></p>
 <ul>
 <li>“It worked last year”: packages change, and one computer has one shared set.</li>
 <li>An environment is a project’s own packages. The lock file is the recipe, and the environment is disposable.</li>
-<li>Send your project to someone: send the code, README and lock file, not the environment. They rebuild it with one command.</li>
+<li>Send your project to someone: the code, README and lock file, not the environment. They rebuild it with one command.</li>
 <li>What it doesn’t cover: the R or Python version, the operating system, the data.</li>
 <li>Spreadsheets: write the program and its version in the README.</li>
 </ul>
 <p><strong>Don’t forget</strong></p>
 <ul>
-<li>Spend the time on the <em>why</em>. The demo is the easy bit.</li>
-<li>When you delete and restore: “this is what your colleague does”.</li>
+<li>Spend the time on the <em>why</em>. The demo is only for the wow.</li>
+<li>At the demo, say “this is what your colleague does when you send them the project”.</li>
 <li><code>renv</code> records package versions, not the version of R. Say so.</li>
-<li>IDE vs CLI: the file matters, not how you made it. Say “yours will have something similar”.</li>
-<li>The exercise is for people whose tools are set up. Everyone else does the no-code version.</li>
+<li>In <em>Your turn</em>, give no hints. Let them find the list.</li>
 </ul>
-<p><strong>If running late:</strong> demo only R, or only Python. <strong>Watch out for:</strong> <code>uv</code> not on the PATH (restart the terminal), locked-down laptops (pair people up), and mixing up the environment (delete it) with the lock file (keep it).</p>
+<p><strong>If running late:</strong> drop the “tools” slide. <strong>Watch out for:</strong> the demo going wrong (<code>uv</code> or <code>renv</code> not set up). If it does, show the lock file and describe it.</p>
 </section>
-<section id="sharing-data-q-fair-15-min" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> 4. Sharing data: Q-FAIR (15 min)</h1>
-<p><strong>Checkpoints:</strong> by 4 min the four things; by 9 Exercise 4; recap at 14; finish at 15.</p>
+<section id="your-first-step-15-min" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 4. Your first step (15 min)</h1>
+<p><strong>Checkpoints:</strong> by 3 min the checklist; by 9 <em>Quick wins</em>; by 12 the recap; finish at 15.</p>
 <p><strong>Key messages</strong></p>
 <ul>
-<li>Q-FAIR: Data <strong>Q</strong>uality, <strong>F</strong>indable, <strong>A</strong>ccessible, <strong>I</strong>nteroperable, <strong>R</strong>eusable.</li>
-<li>Why it matters: funders and journals, others can build on and check your work, future you, citations.</li>
-<li>Four things to do: open formats (CSV), a data dictionary, a licence, deposit it (DOI).</li>
-<li>Can’t share the data? Share the README and data dictionary, and explain how to ask for access.</li>
+<li>The whole course is one journey: messy, tidy, documented, reported, recorded, shareable.</li>
+<li>Each habit is small. Pick <strong>one</strong> and do it this week.</li>
+<li>Start with a quick win: a README takes 15 minutes.</li>
 </ul>
 <p><strong>Don’t forget</strong></p>
 <ul>
-<li>Link Q, F and A back to earlier sections.</li>
-<li>This is a signpost, not a tutorial: no demo, and the links do the work.</li>
-<li>Don’t give ethics or consent advice. Refer people to the research data team.</li>
-<li>Finish on the recap slide and tick off the five objectives. Mention the separate git and GitHub course.</li>
+<li>Ask people to <strong>circle one</strong> thing, and post it in the chat.</li>
+<li>Point out the printable checklist in <code>take-home/</code> (PDF and Word).</li>
+<li>Go back to the five objectives and tick them off.</li>
+<li>Mention the separate git and GitHub course.</li>
 </ul>
-<p><strong>Watch out for:</strong> Excel saving the wrong CSV type. Use CSV UTF-8, one sheet per file, and remember formulas become values.</p>
+<p><strong>If time:</strong> the <strong>optional</strong> slides after <em>Thank you</em> cover Q-FAIR (the principles, why it matters, four things to do) and a Q-FAIR detective activity. <strong>Watch out for:</strong> nothing, except people leaving with a long to-do list. One thing is enough.</p>
 
 
 </section>

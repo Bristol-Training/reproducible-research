@@ -1,0 +1,48 @@
+---
+title: "Your reproducibility checklist"
+format:
+  html:
+    embed-resources: true
+  typst: default
+  docx: default
+---
+
+Tick what your project already does. Then pick **one** thing to start with this week.
+
+## 1. Structure
+
+☐ My raw data is never edited
+
+☐ Raw data, cleaned data, code and results are kept in separate places
+
+☐ My files have clear names (no `final_v2` or `copy of`)
+
+☐ I could re-make my results from the raw data
+
+## 2. Documentation
+
+☐ There is a README that says what the project is and how to run it
+
+☐ My columns are explained in a data dictionary
+
+☐ My report is made from the data and code, so nothing is copied and pasted
+
+## 3. Environments
+
+☐ I have written down which software and versions I used
+
+☐ My packages are recorded in a file
+
+☐ A colleague could run my project on a new computer
+
+## 4. Sharing
+
+☐ My data is saved in an open format such as CSV
+
+☐ I know where I would share my data, and under which licence
+
+☐ Someone else could find, understand and reuse it
+
+## My first step this week
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_

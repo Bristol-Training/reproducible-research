@@ -4,7 +4,7 @@ format:
   html:
     grid:
       sidebar-width: 100px
-      body-width: 1100px
+      body-width: 1200px
       margin-width: 100px
       gutter-width: 1.5rem
 toc: false
@@ -13,7 +13,7 @@ number-sections: false
 
 ::::: {.columns}
 
-:::: {.column width="64%"}
+:::: {.column width="78%"}
 
 ## About this course
 
@@ -21,25 +21,23 @@ A reproducible project can be re-run, understood and shared by other people. It 
 
 This course introduces the practical habits that make this possible. It covers project structure, documentation, Quarto reports, virtual environments and sharing data.
 
-The course takes about two hours. You follow along with short live demos on your own copy of an example folder, and then try each idea yourself. Notes are provided for reference.
+The course takes about two hours. Each topic has a short demo and a hands-on activity: we do a part together, you try something on your own, and then we look at the answer. **You do not need to write or run any code.** The notes are written so you can also work through the course on your own.
 
 ## Prerequisites
 
 - Some experience of working with data
-- Quarto, for the report exercises. RStudio and Positron include it. Otherwise [install it](https://quarto.org/docs/get-started/) (version 1.4 or later)
-- If you code: you have an IDE of your choice and can run simple terminal / CLI commands
-
-Please follow our [installation instructions](https://bristol-training.github.io/data-science-project-setup/) before the course.
+- Quarto, for the activity where you turn one document into several formats. RStudio and Positron include it. Otherwise [install it](https://quarto.org/docs/get-started/) (version 1.4 or later)
+- The example folder (use the button on this page)
 
 ## Learning objectives
 
 By the end of this course, you will be able to:
 
 1. Organise a project into raw data, processed data, code and outputs, and explain why raw data is never edited.
-2. Write a README and a data dictionary that help others understand and use your project.
-3. Explain why Quarto helps reproducibility, and build a report that updates when the data changes.
-4. Explain why environments matter, and record the software a project needs so it can be re-run on another computer.
-5. Check a dataset against the Q-FAIR principles, and know where to find out more about sharing data.
+2. Describe what a good README and data dictionary contain, and why they matter.
+3. Explain why Quarto helps reproducibility, and make HTML, PDF and Word versions of a report from one document.
+4. Explain why environments matter, and say what someone needs in order to re-run your project on another computer.
+5. Choose one practice to start using on your own project, and know where to find out more.
 
 ## Course outline
 
@@ -48,16 +46,16 @@ By the end of this course, you will be able to:
 | 1 | Project structures | 30 min |
 | 2 | Documentation & Quarto | 45 min |
 | 3 | Virtual environments | 30 min |
-| 4 | Sharing data: Q-FAIR | 15 min |
+| 4 | Your first step | 15 min |
 
-Sections 1 to 3 combine slides, short "I do, you do" steps and an exercise. Section 4 is a shorter overview, with a short exercise.
+Every section has slides and an activity for you, and sections 1 to 3 also have a short demo from the instructor. If there is time, there is also an optional extra on sharing your data (Q-FAIR), which is covered in full in the notes.
 
 ::::
 
-:::: {.column width="4%"}
+:::: {.column width="2%"}
 ::::
 
-:::: {.column width="32%"}
+:::: {.column width="20%"}
 ::: {.course-sidebar}
 ### Course materials
 

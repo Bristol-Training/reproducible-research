@@ -1,6 +1,11 @@
 ---
-title: "Penguin report"
-format: html
+title: "Penguin body mass"
+author: "Your name here"
+format:
+  html:
+    embed-resources: true
+  typst: default
+  docx: default
 ---
 
 ## Data

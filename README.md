@@ -6,17 +6,17 @@ A reproducible project can be re-run, understood and shared by other people. It 
 
 This course introduces the practical habits that make this possible. It covers project structure, documentation, Quarto reports, virtual environments and sharing data.
 
-The course takes about two hours. You follow along with short live demos on your own copy of an example folder, and then try each idea yourself. Notes are provided for reference.
+The course takes about two hours. Each topic has a short demo and a hands-on activity (together, your turn, then the answer), and attendees run no code. The notes are written so they can also be used for self-study.
 
 ## What is in this repository
 
 | File or folder | What it is |
 |---|---|
 | `index.qmd` | The course home page, with the learning objectives, outline and download buttons |
-| `slides.qmd` | The slides. Six "I do, you do" cycles, one instructor demo and four exercises, with the steps for each in the speaker notes (press S) |
-| `notes.qmd` | Reference notes for attendees, with tabs for different ways of working |
+| `slides.qmd` | The slides: three watch-only demos and one activity per topic (together, your turn, answer), with the steps in the speaker notes (press S), plus optional Q-FAIR slides at the end |
+| `notes.qmd` | The notes. Reference for attendees, and written so they can be used for self-study, with a "Try it yourself" activity and answer for each section |
 | `instructor.qmd` | A quick-glance guide for the instructor: timings, key messages, things not to forget and checkpoints |
-| `example-project/` | The example folder that attendees download and follow along with. `finished/` inside it holds the ready-made result, in case a step doesn't work |
+| `example-project/` | The folder attendees download: `messy-project/` (bad structure and names), `tidy-project/` (the best practices), `one-document/` (one report, many formats) and `take-home/` (a checklist) |
 | `example-project.zip` | The same folder as a zip, linked from the home page. Rebuild it with `python3 build_example_zip.py` after any change to `example-project/` |
 | `_quarto.yml`, `custom.scss`, `_brand.yml` | Site settings, styles and branding |
 | `assets/` | Images |
@@ -26,9 +26,10 @@ The course takes about two hours. You follow along with short live demos on your
 
 Read `instructor.qmd` first. Before teaching:
 
-1. Download and unzip the example folder, and rehearse each cycle once.
-2. Render `example-project/finished/report.qmd`, and save the resulting `report.html` next to it. This is the fallback for anyone whose Render fails. Then rebuild the zip.
-3. Check that Quarto 1.4 or later is installed (RStudio and Positron include it).
+1. Download and unzip the example folder, and copy `tidy-project/` somewhere you can change it.
+2. Check that **R** and **Quarto 1.4 or later** are installed on your machine (RStudio and Positron include Quarto), and run `tidy-project/code/run_all.R` once to check the demos work. Attendees need only Quarto, not R.
+3. Prepare a small project with an environment (`renv` or `uv`) for the Section 3 demo.
+4. Press Render on `one-document/report.qmd`.
 
 ## Building the course locally
 

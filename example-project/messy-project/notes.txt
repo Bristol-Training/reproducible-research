@@ -1,0 +1,9 @@
+run clean.R first?? i think
+
+then analysis2 (copy).R  NOT analysis.R (that one is old)
+
+data_final_v2 has the weird rows removed BUT i fixed a few values by hand
+remember to delete the weird rows first!!
+
+figure 2 in the paper is plot_new.png (i think)
+ask Sam about the Gentoo ones

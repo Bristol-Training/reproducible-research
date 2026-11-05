@@ -6,8 +6,8 @@ raw <- read.csv("data/raw/penguins.csv")
 # drop any rows with missing values
 clean <- na.omit(raw)
 
-# Optional (cycle 6): uncomment the next line to keep only the later years, then
-# re-run this script and render the report again. The numbers will change.
+# Demo: uncomment the next line to keep only the later years, then run
+# code/run_all.R again. The numbers in the report will change.
 # clean <- clean[clean$year >= 2008, ]
 
 write.csv(clean, "data/processed/penguins_clean.csv", row.names = FALSE)
