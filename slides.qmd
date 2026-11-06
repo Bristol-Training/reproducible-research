@@ -940,7 +940,7 @@ Go back to the objectives slide and tick them off.
 - [Bristol Training courses](https://bristol-training.github.io/)
 - Version control: see our git and GitHub course
 - Sharing data (Q-FAIR): the next few slides, and the notes
-- Try it all yourself: the final exercise in the notes builds a whole project, with an environment and a report
+- Try it all yourself: the capstone exercise (linked from the course home page) builds a whole project, with an environment and a report
 
 ## Thank you {.center}
 

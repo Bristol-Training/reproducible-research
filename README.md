@@ -15,6 +15,7 @@ The course takes about two hours. Each topic has a hands-on activity (together, 
 | `index.qmd` | The course home page, with the learning objectives, outline and download buttons |
 | `slides.qmd` | The slides: two watch-only demos and one activity per topic (together, your turn, answer), with the steps in the speaker notes (press S), plus optional Q-FAIR slides at the end |
 | `notes.qmd` | The notes. Reference for attendees, and written so they can be used for self-study, with a "Try it yourself" activity and answer for each section |
+| `capstone.qmd` | The capstone exercise (*Putting it all together*): an optional exercise for after the course, building a project from scratch with an environment and a report with code, in R or Python |
 | `instructor.qmd` | A quick-glance guide for the instructor: timings, key messages, things not to forget and checkpoints |
 | `example-project/` | The folder attendees download: `messy-project/` (bad structure and names), `tidy-project/` (the best practices), `one-document/` (one report, many formats), `python-project/` (for the uv demo) and `take-home/` (a checklist) |
 | `build_example_zip.py` | Zips `example-project/` into `example-project.zip`, the download linked from the home page. The zip is built automatically, so it isn't committed |

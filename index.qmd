@@ -48,7 +48,7 @@ By the end of this course, you will be able to:
 | 3 | Virtual environments | 30 min |
 | 4 | Your first step | 15 min |
 
-Every section has slides and an activity for you, and sections 2 and 3 also have a short demo from the instructor. If there is time, there is also an optional extra on sharing your data (Q-FAIR), which is covered in full in the notes. After the course, the notes end with an optional exercise that puts it all together: you build a project from scratch, give it an environment and write a report with code, in R or Python.
+Every section has slides and an activity for you, and sections 2 and 3 also have a short demo from the instructor. If there is time, there is also an optional extra on sharing your data (Q-FAIR), which is covered in full in the notes. After the course, there is an optional [capstone exercise](capstone.qmd){target="_blank"} that puts it all together: you build a project from scratch, give it an environment and write a report with code, in R or Python.
 
 ::::
 
@@ -62,6 +62,8 @@ Every section has slides and an activity for you, and sections 2 and 3 also have
 [Slides](slides.qmd){.btn .btn-primary .btn-lg target="_blank"}
 
 [Notes](notes.qmd){.btn .btn-primary .btn-lg target="_blank"}
+
+[Capstone exercise](capstone.qmd){.btn .btn-primary .btn-lg target="_blank"}
 
 [Example folder](example-project.zip){.btn .btn-primary .btn-lg download="example-project.zip"}
 

@@ -124,6 +124,6 @@ format: html
 - Point out the printable checklist in `take-home/` (PDF and Word).
 - Go back to the five objectives and tick them off.
 - Mention the separate git and GitHub course.
-- Point people to the **final exercise** in the notes (*Putting it all together*), to try after the course: a tidy project, an environment (R or Python) and a report with code, from scratch.
+- Point people to the **capstone exercise** (*Putting it all together*, linked from the home page), to try after the course: a tidy project, an environment (R or Python) and a report with code, from scratch.
 
 **If time:** the **optional** slides after *Thank you* cover Q-FAIR (the principles, why it matters, four things to do) and a Q-FAIR detective activity. **Watch out for:** nothing, except people leaving with a long to-do list. One thing is enough.

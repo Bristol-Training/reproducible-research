@@ -7,6 +7,7 @@ project:
   render:
     - index.qmd
     - notes.qmd
+    - capstone.qmd
     - slides.qmd
     - instructor.qmd
   resources:
@@ -30,7 +31,7 @@ website:
         aria-label: GitHub repository
   page-footer: "[Jean Golding Institute](https://www.bristol.ac.uk/golding/) © CC-BY 4.0"
 
-# Website pages (index, notes, instructor)
+# Website pages (index, notes, capstone, instructor)
 format:
   html:
     theme: [cosmo, custom.scss]
