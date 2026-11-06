@@ -13,8 +13,10 @@
 
 /.luarc.json
 
-# Built by the GitHub Action (.github/workflows/publish.yml), so not committed
+# Built by the GitHub Action (.github/workflows/publish.yml), so not committed.
+# _freeze/ holds frozen code results; the Action keeps its own copy in its cache.
 /docs/
 /_site/
 /site_libs/
 /example-project.zip
+/_freeze/

@@ -1,5 +1,10 @@
 # Render the course website and publish it to the gh-pages branch.
-# Runs on every push to main, and can be started by hand from the Actions tab.
+# Runs on every push to main, and can be started by hand from the Actions tab
+# (Actions > Publish website > Run workflow).
+#
+# Code chunks are frozen (`freeze: auto` in _quarto.yml): the results are kept
+# in this Action's cache, and a page's code only re-runs when that page changes.
+# R and Python are installed only when a page that changed needs them.
 name: Publish website
 
 on:
@@ -29,21 +34,41 @@ jobs:
       - name: Build example-project.zip
         run: python3 build_example_zip.py
 
+      - name: Work out which languages the pages use
+        id: deps
+        run: python3 .github/scripts/detect_deps.py
+
+      # Frozen code results from earlier runs. An exact match means no page
+      # has changed, so nothing needs to run.
+      - name: Restore frozen code results
+        id: freeze
+        uses: actions/cache@v4
+        with:
+          path: _freeze
+          key: freeze-${{ hashFiles('*.qmd', '_quarto.yml', 'requirements.txt') }}
+          restore-keys: freeze-
+
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      # notes.qmd runs one small R chunk, so R and knitr are needed to render
       - name: Set up R
+        if: steps.deps.outputs.r == 'true' && steps.freeze.outputs.cache-hit != 'true'
         uses: r-lib/actions/setup-r@v2
         with:
           use-public-rspm: true
 
       - name: Install R packages
+        if: steps.deps.outputs.r == 'true' && steps.freeze.outputs.cache-hit != 'true'
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          packages: |
-            any::knitr
-            any::rmarkdown
+          packages: ${{ steps.deps.outputs.r_packages }}
+
+      - name: Install Python packages
+        if: steps.deps.outputs.python == 'true' && steps.freeze.outputs.cache-hit != 'true'
+        run: |
+          python3 -m pip install ${{ steps.deps.outputs.py_packages }}
+          # optional: anything the automatic check misses, or pinned versions
+          if [ -f requirements.txt ]; then python3 -m pip install -r requirements.txt; fi
 
       - name: Render and publish to gh-pages
         uses: quarto-dev/quarto-actions/publish@v2
