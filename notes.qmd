@@ -113,6 +113,7 @@ Making a project more reproducible helps you first and others second:
 - **Speed:** a project set up as a pipeline can be re-run quickly when the data or a reviewer's comment changes.
 - **Confidence:** you understand how the work fits together, and where it might fail.
 - **Publication and jobs:** sharing code and data is an increasingly common requirement, and tidy work is easy to trust.
+- **Data Management Plans:** all data can be found and correctly stored, accoring to different restrictions.
 
 ## A messy project
 

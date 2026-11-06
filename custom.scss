@@ -6,6 +6,9 @@ $pale: #e5e6e5;
 
 /*-- scss:rules --*/
 // ---- Website pages ----
+// Navbar logo: Quarto's default caps it at 48px, too small to read the text
+.navbar .navbar-logo { max-height: 64px; }
+
 .callout.callout-style-default .callout-body { font-size: 1rem; }
 
 .cell-output {
@@ -219,7 +222,7 @@ details.how-to-read[open] > summary { margin-bottom: 0.75em; }
 
 // ---- Slides (revealjs) ----
 .reveal { --jgi-red: #a6192e; --jgi-pale: #e5e6e5; }
-.reveal .slide-logo { max-height: 2.4rem !important; }
+.reveal .slide-logo { max-height: 4.5rem !important; }
 .reveal .footer { font-size: 0.45em; }
 .reveal table { font-size: 0.7em; }
 .reveal .callout.callout-style-default .callout-body { font-size: 0.8em; }

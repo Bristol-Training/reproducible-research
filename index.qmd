@@ -56,7 +56,7 @@ The course contains examples for both Python and R, with opportunities to includ
 By the end of this course, you will be able to:
 
 1. Organise a project into raw data, processed data, code and outputs, and explain why raw data is never edited.
-2. Describe what a good README and data dictionary contain, and why they matter.
+2. Describe what a good README and data dictionary contain, and why they matter, particularly for Data Management Plans.
 3. Explain why Quarto helps reproducibility, and make HTML, PDF and Word versions of a report from one document.
 4. Explain why environments matter, and say what someone needs in order to re-run your project on another computer.
 5. Apply these practices to your own coding projects, using the R and Python examples as a starting point.
