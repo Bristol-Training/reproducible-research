@@ -98,9 +98,21 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Reproducible Research</span>
     </a>
   </div>
-        <div class="quarto-navbar-tools tools-end">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/Bristol-Training/reproducible-research"> <i class="bi bi-github" role="img" aria-label="GitHub repository">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
 </div>
-          <div id="quarto-search" class="" title="Search"></div>
+            <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -197,7 +209,7 @@ ul.task-list li input[type="checkbox"] {
 <td>Virtual environments</td>
 <td>30</td>
 <td>4</td>
-<td>Delete the environment, rebuild it</td>
+<td>Set up an environment, delete it, rebuild it</td>
 <td>The new laptop test</td>
 </tr>
 <tr class="even">
@@ -232,7 +244,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Download and unzip the <strong>example folder</strong>. Copy <code>tidy-project/</code> somewhere you can change it.</li>
 <li>You need <strong>R and Quarto 1.4+</strong> on your own machine for the section 2 demo. Run <code>code/run_all.R</code> once to check it works.</li>
 <li>Press Render on <code>one-document/report.qmd</code>: attendees will do this. Attendees need <strong>Quarto only</strong>, not R or Python.</li>
-<li>For the environment demo, prepare a small project with an environment (<code>renv</code> for R, or <code>uv</code> for Python) that you can delete and restore.</li>
+<li>For the environment demo, install <a href="https://docs.astral.sh/uv/">uv</a> and run through the steps in <code>python-project/README.md</code> once, in a copy of the folder (the first run downloads the packages). Or prepare a small R project that uses <code>renv</code>.</li>
 <li>Check the links on the slides and notes.</li>
 </ul>
 </section>
@@ -249,6 +261,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="project-structures-25-min" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> 1. Project structures (25 min)</h1>
+<p><strong>Demo:</strong> none. <strong>Activity:</strong> <em>Rescue the messy project</em>: look at <code>messy-project/</code> together, then on their own they sort every file into raw data, processed data, code or outputs, and you show <code>tidy-project/</code> as the answer.</p>
 <p><strong>Checkpoints:</strong> by 5 min <em>Together</em>; by 9 <em>Your turn</em>; by 15 <em>Answer</em>; finish at 25.</p>
 <p><strong>Key messages</strong></p>
 <ul>
@@ -266,6 +279,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="documentation-quarto-45-min" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> 2. Documentation &amp; Quarto (45 min)</h1>
+<p><strong>Demo:</strong> <em>Change the data</em>: in a copy of <code>tidy-project/</code>, uncomment the 2008 line in <code>code/01_clean_data.R</code>, run <code>code/run_all.R</code>, and every number in the report changes. <strong>Activities:</strong> <em>Be the new colleague</em> (from <code>messy-project/notes.txt</code>, write down three things they can’t work out; the answer is the README and data dictionary) and <em>One document, many formats</em> (render <code>one-document/report.qmd</code> to HTML, PDF and Word).</p>
 <p><strong>Checkpoints:</strong> by 3 min <em>Be the new colleague</em> (Together); by 13 Quarto slides; by 21 demo; by 25 <em>One document</em>, Together; by 31 <em>Your turn</em>; by 38 <em>Answer</em>; finish at 45.</p>
 <p><strong>Key messages</strong></p>
 <ul>
@@ -287,6 +301,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="virtual-environments-30-min" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> 3. Virtual environments (30 min)</h1>
+<p><strong>Demo:</strong> <em>Delete it, then rebuild it</em>: in a copy of <code>python-project/</code>, set up an environment with <code>uv init --no-package</code> and <code>uv add pandas matplotlib</code>, delete <code>.venv</code>, and rebuild it with <code>uv sync</code> (steps in its README). <strong>Activity:</strong> <em>The new laptop test</em>: a colleague’s project fails on a new laptop, and they list everything they would need to know to run it; the answer is the README and a lock file.</p>
 <p><strong>Checkpoints:</strong> by 10 min the demo; by 15 <em>Together</em>; by 17 <em>Your turn</em>; by 23 <em>Answer</em>; finish at 30.</p>
 <p><strong>Key messages</strong></p>
 <ul>
@@ -303,10 +318,11 @@ ul.task-list li input[type="checkbox"] {
 <li><code>renv</code> records package versions, not the version of R. Say so.</li>
 <li>In <em>Your turn</em>, give no hints. Let them find the list.</li>
 </ul>
-<p><strong>If running late:</strong> drop the “tools” slide. <strong>Watch out for:</strong> the demo going wrong (<code>uv</code> or <code>renv</code> not set up). If it does, show the lock file and describe it.</p>
+<p><strong>If running late:</strong> drop the “tools” slide. <strong>Watch out for:</strong> the demo going wrong (<code>uv</code> or <code>renv</code> not set up). If it does, show the lock file in <code>python-project/finished/</code> and describe it.</p>
 </section>
 <section id="your-first-step-15-min" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> 4. Your first step (15 min)</h1>
+<p><strong>Demo:</strong> none. <strong>Activity:</strong> <em>Your checklist</em>: they tick the checklist for a project of their own (or the messy one), circle <strong>one</strong> thing to start with, and post it in the chat. Optional extra: <em>Q-FAIR detective</em>.</p>
 <p><strong>Checkpoints:</strong> by 3 min the checklist; by 9 <em>Quick wins</em>; by 12 the recap; finish at 15.</p>
 <p><strong>Key messages</strong></p>
 <ul>
@@ -320,6 +336,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Point out the printable checklist in <code>take-home/</code> (PDF and Word).</li>
 <li>Go back to the five objectives and tick them off.</li>
 <li>Mention the separate git and GitHub course.</li>
+<li>Point people to the <strong>final exercise</strong> in the notes (<em>Putting it all together</em>), to try after the course: a tidy project, an environment (R or Python) and a report with code, from scratch.</li>
 </ul>
 <p><strong>If time:</strong> the <strong>optional</strong> slides after <em>Thank you</em> cover Q-FAIR (the principles, why it matters, four things to do) and a Q-FAIR detective activity. <strong>Watch out for:</strong> nothing, except people leaving with a long to-do list. One thing is enough.</p>
 

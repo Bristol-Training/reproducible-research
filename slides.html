@@ -1205,7 +1205,7 @@ data_final_v2.csv</code></pre>
 </table>
 </div>
 <aside class="notes">
-<p>Other tools do the same job: venv, conda and pixi for Python, and conda or pixi for R. The idea is the same whichever you use: a file that records what the project needs.</p>
+<p>Other tools do the same job: conda and pixi (which can install Python, R and other software in one environment), and Python’s built-in venv. The idea is the same whichever you use: a file that records what the project needs. Point out that the notes (section 3.2) have a fuller table with conda and pixi in it.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1277,7 +1277,7 @@ data_final_v2.csv</code></pre>
 </ol>
 </div>
 <aside class="notes">
-<p>STOP HERE and switch to the demo. R: in a project that uses renv, delete <code>renv/library</code> and run <code>renv::restore()</code>. Python: in a project that uses uv, delete <code>.venv</code> and run <code>uv sync</code>. Say: “this is what your colleague does when you send them the project”. Note that renv records package versions but not the version of R itself. If you have no environment ready, show the lock file and describe it instead. If it fails, say so and move on: this is a watch-only demo.</p>
+<p>STOP HERE and switch to the demo. R: in a project that uses renv, delete <code>renv/library</code> and run <code>renv::restore()</code>. Python: in a copy of <code>python-project</code> from the example folder, run <code>uv init --no-package</code>, then <code>uv add pandas matplotlib</code>, then <code>uv run code/analysis.py</code>. Delete <code>.venv</code> and run <code>uv sync</code> to rebuild it (the steps are in its README). Say: “this is what your colleague does when you send them the project”. Note that renv records package versions but not the version of R itself. If you have no environment ready, show the lock file in <code>python-project/finished/</code> and describe it instead. If it fails, say so and move on: this is a watch-only demo.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1578,6 +1578,7 @@ data_final_v2.csv</code></pre>
 <li><a href="https://bristol-training.github.io/">Bristol Training courses</a></li>
 <li>Version control: see our git and GitHub course</li>
 <li>Sharing data (Q-FAIR): the next few slides, and the notes</li>
+<li>Try it all yourself: the final exercise in the notes builds a whole project, with an environment and a report</li>
 </ul>
 </section>
 <section id="thank-you" class="slide level2 center">
