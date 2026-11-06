@@ -6,9 +6,15 @@
 .RData
 .Rproj.user/
 
-# Quarto build leftovers
-/.quarto/
+# Quarto build leftovers (any folder, including inside example-project/)
+.quarto/
 *_files/
 **/*.quarto_ipynb
 
 /.luarc.json
+
+# Built by the GitHub Action (.github/workflows/publish.yml), so not committed
+/docs/
+/_site/
+/site_libs/
+/example-project.zip

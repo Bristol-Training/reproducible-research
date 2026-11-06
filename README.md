@@ -17,10 +17,10 @@ The course takes about two hours. Each topic has a hands-on activity (together, 
 | `notes.qmd` | The notes. Reference for attendees, and written so they can be used for self-study, with a "Try it yourself" activity and answer for each section |
 | `instructor.qmd` | A quick-glance guide for the instructor: timings, key messages, things not to forget and checkpoints |
 | `example-project/` | The folder attendees download: `messy-project/` (bad structure and names), `tidy-project/` (the best practices), `one-document/` (one report, many formats) and `take-home/` (a checklist) |
-| `example-project.zip` | The same folder as a zip, linked from the home page. Rebuild it with `python3 build_example_zip.py` after any change to `example-project/` |
+| `build_example_zip.py` | Zips `example-project/` into `example-project.zip`, the download linked from the home page. The zip is built automatically, so it isn't committed |
 | `_quarto.yml`, `custom.scss`, `_brand.yml` | Site settings, styles and branding |
 | `assets/` | Images |
-| `docs/` | The rendered website (generated, so don't edit it) |
+| `.github/workflows/publish.yml` | Renders the website and publishes it to the `gh-pages` branch on every push to `main` |
 
 ## Teaching the course
 
@@ -39,11 +39,16 @@ Then:
 
 ```bash
 git clone https://github.com/Bristol-Training/reproducible-research.git
-cd <repo>
+cd reproducible-research
+python3 build_example_zip.py
 quarto preview
 ```
 
-`quarto preview` opens the course in your browser and reloads it whenever you save a `.qmd` file.
+`build_example_zip.py` makes the example folder download, so the link on the home page works. `quarto preview` opens the course in your browser and reloads it whenever you save a `.qmd` file. The rendered site goes in `docs/`, which isn't committed.
+
+## Publishing
+
+The website is published automatically. Every push to `main` runs the GitHub Action in `.github/workflows/publish.yml`, which builds `example-project.zip`, renders the site and pushes it to the `gh-pages` branch. GitHub Pages serves the site from that branch. You can also run the Action by hand from the **Actions** tab.
 
 ## Contributing
 
@@ -60,7 +65,7 @@ Corrections and suggestions are welcome.
 3. Edit the `.qmd` files and check the result with `quarto preview`.
 4. Commit and push your branch, then open a pull request on GitHub describing what you changed and why.
 
-Only commit the `.qmd` files (and any new images in `assets/`, and the files in `example-project/` with the rebuilt `example-project.zip`), not the `docs/` folder. The maintainer re-renders the website after merging.
+Commit only the source files: the `.qmd` files, any new images in `assets/` and any changes to `example-project/`. Don't commit `docs/` or `example-project.zip`. They're ignored by git, and the website is rebuilt automatically after merging.
 
 ## Credits
 

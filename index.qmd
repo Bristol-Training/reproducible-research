@@ -29,7 +29,7 @@ The course takes about two hours. Each topic has a hands-on activity (and someti
 - Quarto, for the activity where you turn one document into several formats. RStudio and Positron include it. Otherwise [install it](https://quarto.org/docs/get-started/) (version 1.4 or later)
 - The example folder (use the button on this page)
 
-## Learning objectives
+## Learning outcomes
 
 By the end of this course, you will be able to:
 
