@@ -1,9 +1,0 @@
-column,type,description,units / values
-species,text,Penguin species,"Adelie, Chinstrap, Gentoo"
-island,text,Island where the penguin was observed,"Biscoe, Dream, Torgersen"
-bill_len,number,Bill length,mm
-bill_dep,number,Bill depth,mm
-flipper_len,number,Flipper length,mm
-body_mass,number,Body mass,grams
-sex,text,Sex of the penguin,"female, male"
-year,number,Year of the study,"2007, 2008 or 2009"
