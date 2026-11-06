@@ -151,6 +151,10 @@ a.btn { color: #fff; }
 }
 
 
+// Right-hand "Contents": make the entry for the section you are reading stand out
+#TOC .nav-link.active { font-weight: 700; border-left-width: 3px; }
+
+
 // ---- Notes page: clear breaks between sections ----
 // (scoped by `body-classes: notes-page` in notes.qmd)
 
