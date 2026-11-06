@@ -694,7 +694,7 @@ An environment is a project's own folder of installed packages. Projects can no 
 :::
 
 ::: notes
-Other tools do the same job: venv, conda and pixi for Python, and conda or pixi for R. The idea is the same whichever you use: a file that records what the project needs.
+Other tools do the same job: conda and pixi (which can install Python, R and other software in one environment), and Python's built-in venv. The idea is the same whichever you use: a file that records what the project needs. Point out that the notes (section 3.2) have a fuller table with conda and pixi in it.
 :::
 
 ## Send your project to someone, and it works
@@ -749,7 +749,7 @@ Good enough for almost every project. Perfect is not the goal!
 :::
 
 ::: notes
-STOP HERE and switch to the demo. R: in a project that uses renv, delete `renv/library` and run `renv::restore()`. Python: in a project that uses uv, delete `.venv` and run `uv sync`. Say: "this is what your colleague does when you send them the project". Note that renv records package versions but not the version of R itself. If you have no environment ready, show the lock file and describe it instead. If it fails, say so and move on: this is a watch-only demo.
+STOP HERE and switch to the demo. R: in a project that uses renv, delete `renv/library` and run `renv::restore()`. Python: in a copy of `python-project` from the example folder, run `uv init --no-package`, then `uv add pandas matplotlib`, then `uv run code/analysis.py`. Delete `.venv` and run `uv sync` to rebuild it (the steps are in its README). Say: "this is what your colleague does when you send them the project". Note that renv records package versions but not the version of R itself. If you have no environment ready, show the lock file in `python-project/finished/` and describe it instead. If it fails, say so and move on: this is a watch-only demo.
 :::
 
 ## The new laptop test {.demo-slide}
@@ -940,6 +940,7 @@ Go back to the objectives slide and tick them off.
 - [Bristol Training courses](https://bristol-training.github.io/)
 - Version control: see our git and GitHub course
 - Sharing data (Q-FAIR): the next few slides, and the notes
+- Try it all yourself: the final exercise in the notes builds a whole project, with an environment and a report
 
 ## Thank you {.center}
 

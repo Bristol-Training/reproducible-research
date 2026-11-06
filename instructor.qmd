@@ -11,7 +11,7 @@ format: html
 |---|---|---|---|---|---|
 | 1 | Project structures | 25 | 1 | none | Rescue the messy project |
 | 2 | Documentation & Quarto | 45 | 2, 3 | Change the data, the report updates | Be the new colleague. One document, many formats |
-| 3 | Virtual environments | 30 | 4 | Delete the environment, rebuild it | The new laptop test |
+| 3 | Virtual environments | 30 | 4 | Set up an environment, delete it, rebuild it | The new laptop test |
 | 4 | Your first step | 15 | 5 | none | Your checklist |
 | (+) | Optional: Q-FAIR | +5 | 5 | none | Q-FAIR detective |
 
@@ -28,7 +28,7 @@ format: html
 - Download and unzip the **example folder**. Copy `tidy-project/` somewhere you can change it.
 - You need **R and Quarto 1.4+** on your own machine for the section 2 demo. Run `code/run_all.R` once to check it works.
 - Press Render on `one-document/report.qmd`: attendees will do this. Attendees need **Quarto only**, not R or Python.
-- For the environment demo, prepare a small project with an environment (`renv` for R, or `uv` for Python) that you can delete and restore.
+- For the environment demo, install [uv](https://docs.astral.sh/uv/) and run through the steps in `python-project/README.md` once, in a copy of the folder (the first run downloads the packages). Or prepare a small R project that uses `renv`.
 - Check the links on the slides and notes.
 
 ## Ground rules {.unnumbered}
@@ -40,6 +40,8 @@ format: html
 - If running late, skip the **optional** slides first, then shorten a *Your turn*, not a section.
 
 # 1. Project structures (25 min)
+
+**Demo:** none. **Activity:** *Rescue the messy project*: look at `messy-project/` together, then on their own they sort every file into raw data, processed data, code or outputs, and you show `tidy-project/` as the answer.
 
 **Checkpoints:** by 5 min *Together*; by 9 *Your turn*; by 15 *Answer*; finish at 25.
 
@@ -58,6 +60,8 @@ format: html
 **If running late:** shorten *Together*. **Watch out for:** "it is quicker to fix the typo in the raw file".
 
 # 2. Documentation & Quarto (45 min)
+
+**Demo:** *Change the data*: in a copy of `tidy-project/`, uncomment the 2008 line in `code/01_clean_data.R`, run `code/run_all.R`, and every number in the report changes. **Activities:** *Be the new colleague* (from `messy-project/notes.txt`, write down three things they can't work out; the answer is the README and data dictionary) and *One document, many formats* (render `one-document/report.qmd` to HTML, PDF and Word).
 
 **Checkpoints:** by 3 min *Be the new colleague* (Together); by 13 Quarto slides; by 21 demo; by 25 *One document*, Together; by 31 *Your turn*; by 38 *Answer*; finish at 45.
 
@@ -81,6 +85,8 @@ format: html
 
 # 3. Virtual environments (30 min)
 
+**Demo:** *Delete it, then rebuild it*: in a copy of `python-project/`, set up an environment with `uv init --no-package` and `uv add pandas matplotlib`, delete `.venv`, and rebuild it with `uv sync` (steps in its README). **Activity:** *The new laptop test*: a colleague's project fails on a new laptop, and they list everything they would need to know to run it; the answer is the README and a lock file.
+
 **Checkpoints:** by 10 min the demo; by 15 *Together*; by 17 *Your turn*; by 23 *Answer*; finish at 30.
 
 **Key messages**
@@ -98,9 +104,11 @@ format: html
 - `renv` records package versions, not the version of R. Say so.
 - In *Your turn*, give no hints. Let them find the list.
 
-**If running late:** drop the "tools" slide. **Watch out for:** the demo going wrong (`uv` or `renv` not set up). If it does, show the lock file and describe it.
+**If running late:** drop the "tools" slide. **Watch out for:** the demo going wrong (`uv` or `renv` not set up). If it does, show the lock file in `python-project/finished/` and describe it.
 
 # 4. Your first step (15 min)
+
+**Demo:** none. **Activity:** *Your checklist*: they tick the checklist for a project of their own (or the messy one), circle **one** thing to start with, and post it in the chat. Optional extra: *Q-FAIR detective*.
 
 **Checkpoints:** by 3 min the checklist; by 9 *Quick wins*; by 12 the recap; finish at 15.
 
@@ -116,5 +124,6 @@ format: html
 - Point out the printable checklist in `take-home/` (PDF and Word).
 - Go back to the five objectives and tick them off.
 - Mention the separate git and GitHub course.
+- Point people to the **final exercise** in the notes (*Putting it all together*), to try after the course: a tidy project, an environment (R or Python) and a report with code, from scratch.
 
 **If time:** the **optional** slides after *Thank you* cover Q-FAIR (the principles, why it matters, four things to do) and a Q-FAIR detective activity. **Watch out for:** nothing, except people leaving with a long to-do list. One thing is enough.

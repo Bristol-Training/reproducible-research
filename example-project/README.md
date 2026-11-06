@@ -6,6 +6,7 @@ Everything you need for the course activities. You do not need to run any code.
 |---|---|---|
 | `messy-project/` | A project with a bad structure and bad names. Open it and see what you can work out | Sections 1 to 3 |
 | `tidy-project/` | The same project with all the good habits: a README, a data dictionary, clear folders, and a report | Sections 1 to 3 |
+| `python-project/` | A small Python project with no environment yet, for the uv demo. Its README has the steps | Section 3 |
 | `one-document/` | A short report to turn into HTML, PDF and Word. Open `report.qmd` and press **Render** | Section 2 |
 | `take-home/` | A one-page checklist to tick for your own project | Section 4 |
 

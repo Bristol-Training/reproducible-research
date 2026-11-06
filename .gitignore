@@ -6,6 +6,10 @@
 .RData
 .Rproj.user/
 
+# Python environments (for example, from trying the uv demo in example-project/)
+.venv/
+__pycache__/
+
 # Quarto build leftovers (any folder, including inside example-project/)
 .quarto/
 *_files/
@@ -20,3 +24,5 @@
 /site_libs/
 /example-project.zip
 /_freeze/
+
+/.quarto/
