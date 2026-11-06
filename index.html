@@ -49,9 +49,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-5de16f5e46225c21e2daa90d340bf64f.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-4bf69f5c7e991f1a0ce4a7ad1ed7eeaa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4bf69f5c7e991f1a0ce4a7ad1ed7eeaa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-4bf69f5c7e991f1a0ce4a7ad1ed7eeaa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-24cbafeafd43bd285ed186f61d7eceda.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-24cbafeafd43bd285ed186f61d7eceda.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-24cbafeafd43bd285ed186f61d7eceda.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -149,20 +149,39 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="columns">
-<div class="column" style="width:78%;">
+<div class="home-layout">
+<div class="course-sidebar">
+<section id="course-materials" class="level3">
+<h3 class="anchored" data-anchor-id="course-materials">Course materials</h3>
+<div class="sidebar-buttons">
+<p><a href="./slides.html" class="btn btn-primary btn-lg" target="_blank">Slides</a></p>
+<p><a href="./notes.html" class="btn btn-primary btn-lg" target="_blank">Notes</a></p>
+<p><a href="./capstone.html" class="btn btn-primary btn-lg" target="_blank">Capstone exercise</a></p>
+<p><a href="example-project.zip" class="btn btn-primary btn-lg" download="example-project.zip">Example folder</a></p>
+</div>
+</section>
+<section id="more" class="level3">
+<h3 class="anchored" data-anchor-id="more">More</h3>
+<ul>
+<li><a href="./instructor.html" target="_blank">Instructor notes</a></li>
+<li><a href="https://bristol-training.github.io/">Related courses</a> <!-- TODO: replace these links with resources relevant to your course --></li>
+</ul>
+</section>
+</div>
+<div class="home-main">
 <section id="about-this-course" class="level2">
 <h2 class="anchored" data-anchor-id="about-this-course">About this course</h2>
 <p>A reproducible project can be re-run, understood and shared by other people. It is also easier for you to return to months later.</p>
 <p>This course introduces the practical habits that make this possible. It covers project structure, documentation, Quarto reports, virtual environments and sharing data.</p>
-<p>The course takes about two hours. Each topic has a hands-on activity (and sometimes a short demo): we do a part together, you try something on your own, and then we look at the answer. <strong>You do not need to write or run any code.</strong> The notes are written so you can also work through the course on your own.</p>
+<p>The course takes about two hours. Each topic has a hands-on activity (and sometimes a short demo): we do a part together, you try something on your own, and then we look at the answer. The notes are written so you can also work through the course on your own.</p>
+<p>The course contains examples for both Python and R, with opportunities to include your own code and examples.</p>
 </section>
 <section id="prerequisites" class="level2">
 <h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
 <ul>
-<li>Some experience of working with data</li>
-<li>Quarto, for the activity where you turn one document into several formats. RStudio and Positron include it. Otherwise <a href="https://quarto.org/docs/get-started/">install it</a> (version 1.4 or later)</li>
-<li>The example folder (use the button on this page)</li>
+<li>Some experience of using code to analyse data (e.g.&nbsp;Python, R, Julia)</li>
+<li>Have Quarto installed, for the activity where you turn one document into several formats. RStudio and Positron include it. Otherwise <a href="https://quarto.org/docs/get-started/">install it</a> (version 1.4 or later)</li>
+<li>Download the example folder (use the button on this page)</li>
 </ul>
 </section>
 <section id="learning-outcomes" class="level2">
@@ -173,6 +192,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Describe what a good README and data dictionary contain, and why they matter.</li>
 <li>Explain why Quarto helps reproducibility, and make HTML, PDF and Word versions of a report from one document.</li>
 <li>Explain why environments matter, and say what someone needs in order to re-run your project on another computer.</li>
+<li>Apply these practices to your own coding projects, using the R and Python examples as a starting point.</li>
 <li>Choose one practice to start using on your own project, and know where to find out more.</li>
 </ol>
 </section>
@@ -211,25 +231,6 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Every section has slides and an activity for you, and sections 2 and 3 also have a short demo from the instructor. If there is time, there is also an optional extra on sharing your data (Q-FAIR), which is covered in full in the notes. After the course, there is an optional <a href="./capstone.html" target="_blank">capstone exercise</a> that puts it all together: you build a project from scratch, give it an environment and write a report with code, in R or Python.</p>
 </section>
-</div><div class="column" style="width:2%;">
-
-</div><div class="column" style="width:20%;">
-<div class="course-sidebar">
-<section id="course-materials" class="level3">
-<h3 class="anchored" data-anchor-id="course-materials">Course materials</h3>
-<p><a href="./slides.html" class="btn btn-primary btn-lg" target="_blank">Slides</a></p>
-<p><a href="./notes.html" class="btn btn-primary btn-lg" target="_blank">Notes</a></p>
-<p><a href="./capstone.html" class="btn btn-primary btn-lg" target="_blank">Capstone exercise</a></p>
-<p><a href="example-project.zip" class="btn btn-primary btn-lg" download="example-project.zip">Example folder</a></p>
-</section>
-<section id="more" class="level3">
-<h3 class="anchored" data-anchor-id="more">More</h3>
-<ul>
-<li><a href="./instructor.html" target="_blank">Instructor notes</a></li>
-<li><a href="https://bristol-training.github.io/">Related courses</a> <!-- TODO: replace these links with resources relevant to your course --></li>
-</ul>
-</section>
-</div>
 </div>
 </div>
 

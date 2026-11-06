@@ -84,9 +84,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-5de16f5e46225c21e2daa90d340bf64f.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b4cec67bc4e0f1e02cce63cb18a2fc59.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-b4cec67bc4e0f1e02cce63cb18a2fc59.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-b4cec67bc4e0f1e02cce63cb18a2fc59.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-81b652f83897fcf535fc39579fbaeb38.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-81b652f83897fcf535fc39579fbaeb38.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-81b652f83897fcf535fc39579fbaeb38.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -118,7 +118,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+<body class="nav-fixed notes-page quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -164,7 +164,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#workspace-setup" id="toc-workspace-setup" class="nav-link" data-scroll-target="#workspace-setup">Workspace setup</a></li>
   </ul></li>
-  <li><a href="#project-structures" id="toc-project-structures" class="nav-link" data-scroll-target="#project-structures"><span class="header-section-number">1</span> Project Structures</a>
+  <li><a href="#project-structures" id="toc-project-structures" class="nav-link" data-scroll-target="#project-structures"><span class="header-section-number">1</span> Project structures</a>
   <ul class="collapse">
   <li><a href="#why-bother" id="toc-why-bother" class="nav-link" data-scroll-target="#why-bother"><span class="header-section-number">1.1</span> Why bother?</a></li>
   <li><a href="#a-messy-project" id="toc-a-messy-project" class="nav-link" data-scroll-target="#a-messy-project"><span class="header-section-number">1.2</span> A messy project</a></li>
@@ -181,24 +181,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#weaving-text-and-analysis-together" id="toc-weaving-text-and-analysis-together" class="nav-link" data-scroll-target="#weaving-text-and-analysis-together"><span class="header-section-number">2.6</span> Weaving text and analysis together</a></li>
   <li><a href="#when-the-data-changes" id="toc-when-the-data-changes" class="nav-link" data-scroll-target="#when-the-data-changes"><span class="header-section-number">2.7</span> When the data changes</a></li>
   <li><a href="#one-document-many-formats" id="toc-one-document-many-formats" class="nav-link" data-scroll-target="#one-document-many-formats"><span class="header-section-number">2.8</span> One document, many formats</a></li>
-  <li><a href="#rendering" id="toc-rendering" class="nav-link" data-scroll-target="#rendering"><span class="header-section-number">2.9</span> Rendering</a></li>
-  <li><a href="#what-else-can-quarto-do" id="toc-what-else-can-quarto-do" class="nav-link" data-scroll-target="#what-else-can-quarto-do"><span class="header-section-number">2.10</span> What else can Quarto do?</a></li>
-  <li><a href="#optional-trying-it-yourself" id="toc-optional-trying-it-yourself" class="nav-link" data-scroll-target="#optional-trying-it-yourself"><span class="header-section-number">2.11</span> Optional: trying it yourself</a></li>
-  <li><a href="#learn-more-about-quarto" id="toc-learn-more-about-quarto" class="nav-link" data-scroll-target="#learn-more-about-quarto"><span class="header-section-number">2.12</span> Learn more about Quarto</a></li>
+  <li><a href="#what-else-can-quarto-do" id="toc-what-else-can-quarto-do" class="nav-link" data-scroll-target="#what-else-can-quarto-do"><span class="header-section-number">2.9</span> What else can Quarto do?</a></li>
+  <li><a href="#optional-trying-it-yourself" id="toc-optional-trying-it-yourself" class="nav-link" data-scroll-target="#optional-trying-it-yourself"><span class="header-section-number">2.10</span> Optional: trying it yourself</a></li>
+  <li><a href="#learn-more-about-quarto" id="toc-learn-more-about-quarto" class="nav-link" data-scroll-target="#learn-more-about-quarto"><span class="header-section-number">2.11</span> Learn more about Quarto</a></li>
   <li><a href="#try-it-yourself-1" id="toc-try-it-yourself-1" class="nav-link" data-scroll-target="#try-it-yourself-1">Try it yourself</a></li>
   </ul></li>
-  <li><a href="#virtual-environments" id="toc-virtual-environments" class="nav-link" data-scroll-target="#virtual-environments"><span class="header-section-number">3</span> Virtual Environments</a>
+  <li><a href="#virtual-environments" id="toc-virtual-environments" class="nav-link" data-scroll-target="#virtual-environments"><span class="header-section-number">3</span> Virtual environments</a>
   <ul class="collapse">
   <li><a href="#why-do-we-need-environments" id="toc-why-do-we-need-environments" class="nav-link" data-scroll-target="#why-do-we-need-environments"><span class="header-section-number">3.1</span> Why do we need environments?</a></li>
   <li><a href="#what-is-an-environment-and-how-does-it-work" id="toc-what-is-an-environment-and-how-does-it-work" class="nav-link" data-scroll-target="#what-is-an-environment-and-how-does-it-work"><span class="header-section-number">3.2</span> What is an environment, and how does it work?</a></li>
-  <li><a href="#send-your-project-to-someone-and-it-works" id="toc-send-your-project-to-someone-and-it-works" class="nav-link" data-scroll-target="#send-your-project-to-someone-and-it-works"><span class="header-section-number">3.3</span> Send your project to someone, and it works</a></li>
-  <li><a href="#what-environments-dont-cover" id="toc-what-environments-dont-cover" class="nav-link" data-scroll-target="#what-environments-dont-cover"><span class="header-section-number">3.4</span> What environments don’t cover</a></li>
-  <li><a href="#what-if-i-use-excel" id="toc-what-if-i-use-excel" class="nav-link" data-scroll-target="#what-if-i-use-excel"><span class="header-section-number">3.5</span> What if I use Excel?</a></li>
-  <li><a href="#optional-trying-it-yourself-1" id="toc-optional-trying-it-yourself-1" class="nav-link" data-scroll-target="#optional-trying-it-yourself-1"><span class="header-section-number">3.6</span> Optional: trying it yourself</a></li>
-  <li><a href="#learn-more-about-environments" id="toc-learn-more-about-environments" class="nav-link" data-scroll-target="#learn-more-about-environments"><span class="header-section-number">3.7</span> Learn more about environments</a></li>
+  <li><a href="#what-it-looks-like-in-r-and-python" id="toc-what-it-looks-like-in-r-and-python" class="nav-link" data-scroll-target="#what-it-looks-like-in-r-and-python"><span class="header-section-number">3.3</span> What it looks like in R and Python</a></li>
+  <li><a href="#send-your-project-to-someone-and-it-works" id="toc-send-your-project-to-someone-and-it-works" class="nav-link" data-scroll-target="#send-your-project-to-someone-and-it-works"><span class="header-section-number">3.4</span> Send your project to someone, and it works</a></li>
+  <li><a href="#what-environments-dont-cover" id="toc-what-environments-dont-cover" class="nav-link" data-scroll-target="#what-environments-dont-cover"><span class="header-section-number">3.5</span> What environments don’t cover</a></li>
+  <li><a href="#what-if-i-use-excel" id="toc-what-if-i-use-excel" class="nav-link" data-scroll-target="#what-if-i-use-excel"><span class="header-section-number">3.6</span> What if I use Excel?</a></li>
+  <li><a href="#optional-trying-it-yourself-1" id="toc-optional-trying-it-yourself-1" class="nav-link" data-scroll-target="#optional-trying-it-yourself-1"><span class="header-section-number">3.7</span> Optional: trying it yourself</a></li>
+  <li><a href="#learn-more-about-environments" id="toc-learn-more-about-environments" class="nav-link" data-scroll-target="#learn-more-about-environments"><span class="header-section-number">3.8</span> Learn more about environments</a></li>
   <li><a href="#try-it-yourself-2" id="toc-try-it-yourself-2" class="nav-link" data-scroll-target="#try-it-yourself-2">Try it yourself</a></li>
   </ul></li>
-  <li><a href="#your-first-step" id="toc-your-first-step" class="nav-link" data-scroll-target="#your-first-step"><span class="header-section-number">4</span> Your First Step</a>
+  <li><a href="#your-first-step" id="toc-your-first-step" class="nav-link" data-scroll-target="#your-first-step"><span class="header-section-number">4</span> Your first step</a>
   <ul class="collapse">
   <li><a href="#from-messy-to-shareable" id="toc-from-messy-to-shareable" class="nav-link" data-scroll-target="#from-messy-to-shareable"><span class="header-section-number">4.1</span> From messy to shareable</a></li>
   <li><a href="#your-checklist" id="toc-your-checklist" class="nav-link" data-scroll-target="#your-checklist"><span class="header-section-number">4.2</span> Your checklist</a></li>
@@ -206,7 +206,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#try-it-yourself-3" id="toc-try-it-yourself-3" class="nav-link" data-scroll-target="#try-it-yourself-3">Try it yourself</a></li>
   <li><a href="#where-next" id="toc-where-next" class="nav-link" data-scroll-target="#where-next"><span class="header-section-number">4.4</span> Where next?</a></li>
   </ul></li>
-  <li><a href="#sec-qfair" id="toc-sec-qfair" class="nav-link" data-scroll-target="#sec-qfair"><span class="header-section-number">5</span> Optional: Sharing Your Data (Q-FAIR)</a>
+  <li><a href="#sec-qfair" id="toc-sec-qfair" class="nav-link" data-scroll-target="#sec-qfair"><span class="header-section-number">5</span> Optional: Sharing your data (Q-FAIR)</a>
   <ul class="collapse">
   <li><a href="#q-fair-data-principles" id="toc-q-fair-data-principles" class="nav-link" data-scroll-target="#q-fair-data-principles"><span class="header-section-number">5.1</span> Q-FAIR data principles</a></li>
   <li><a href="#why-it-matters" id="toc-why-it-matters" class="nav-link" data-scroll-target="#why-it-matters"><span class="header-section-number">5.2</span> Why it matters</a></li>
@@ -248,14 +248,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="introduction" class="level1 unnumbered">
 <h1 class="unnumbered">Introduction</h1>
 <p>Welcome to this course! These notes go with the slides. You can use them afterwards to revisit the detail, and you can also <strong>work through them on your own</strong>: each section ends with a “Try it yourself” activity, with instructions and an answer you can open.</p>
-<p>The course introduces practical habits that make your research easier to re-run, understand and share. You do not need to write any code.</p>
+<p>The course introduces practical habits that make your research easier to re-run, understand and share. The course contains examples for both Python and R, with opportunities to include your own code and examples.</p>
 <p>By the end of this course you will be able to:</p>
 <ol type="1">
 <li>Organise a project into raw data, processed data, code and outputs, and explain why raw data is never edited.</li>
 <li>Describe what a good README and data dictionary contain, and why they matter.</li>
 <li>Explain why Quarto helps reproducibility, and make HTML, PDF and Word versions of a report from one document.</li>
 <li>Explain why environments matter, and say what someone needs in order to re-run your project on another computer.</li>
-<li>Choose one practice to start using on your own project, and know where to find out more (including sharing data with Q-FAIR).</li>
+<li>Apply these practices to your own coding projects, using the R and Python examples as a starting point.</li>
+<li>Choose one practice to start using on your own project, and know where to find out more.</li>
 </ol>
 <details class="how-to-read">
 <summary>
@@ -285,22 +286,12 @@ How to read this document
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> script.R</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>In each section there is a “Try it yourself” activity, which is also on the slides. Activities are shown in blue boxes, followed by a yellow box that contains the answer. Try each one yourself before looking at the answer.</p>
-<div id="exampleN" class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Exercise
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<p>In each section there is a “Try it yourself” activity, which is also on the slides. Activities are shown in a box with a red top edge, and each one ends with a yellow box that contains the answer. Try each one yourself before looking at the answer.</p>
+<div class="try-it">
+<p><span class="try-it-title">An example activity</span></p>
 <p>This is an exercise. Click the box below to see the answer.</p>
-</div>
-</div>
 <div id="answerN" class="callout callout-style-default callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -309,9 +300,10 @@ How to read this document
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>This is the answer.</p>
+</div>
 </div>
 </div>
 </div>
@@ -332,9 +324,9 @@ How to read this document
 </details>
 <section id="workspace-setup" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="workspace-setup">Workspace setup</h2>
-<p>You do not need to write or run any code in this course. You need two things.</p>
+<p>The live activities don’t need you to write or run any code: the only thing you run is <strong>Render</strong>. You need two things.</p>
 <p><strong>Quarto.</strong> We use <a href="https://quarto.org">Quarto</a> to build documents. RStudio and Positron include it, so if you use either you probably don’t need to install anything. To check, open a <code>.qmd</code> file and look for the <strong>Render</strong> button. Otherwise, <a href="https://quarto.org/docs/get-started/">install Quarto</a> for your operating system (VS Code users also need the Quarto extension). Use version 1.4 or later: <code>quarto --version</code> in a terminal shows which you have.</p>
-<p><strong>The example folder.</strong> <a href="example-project.zip" download="example-project.zip">Download the example folder</a> and unzip it. It has five folders:</p>
+<p><strong>The example folder.</strong> <a href="example-project.zip" download="example-project.zip">Download the example folder</a> and unzip it. It has six folders:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -364,6 +356,10 @@ How to read this document
 <td>A small Python project for trying environments with uv (optional)</td>
 </tr>
 <tr class="odd">
+<td><code>r-project/</code></td>
+<td>The same project in R, for trying environments with renv (optional)</td>
+</tr>
+<tr class="even">
 <td><code>take-home/</code></td>
 <td>A one-page checklist for your own project</td>
 </tr>
@@ -373,8 +369,9 @@ How to read this document
 </section>
 </section>
 <section id="project-structures" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Project Structures</h1>
-<p><em>How should I organise a project so that I, and others, can find things and re-run them?</em></p>
+<h1 data-number="1"><span class="header-section-number">1</span> Project structures</h1>
+<p><span class="lead-question">How should I organise a project so that I, and others, can find things and re-run them?</span></p>
+<p><span class="section-meta">About 25 min · Activity: rescue the messy project</span></p>
 <section id="why-bother" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="why-bother"><span class="header-section-number">1.1</span> Why bother?</h2>
 <p>A project that has grown organically tends to look like a folder full of files called <code>data.csv</code>, <code>data_final.csv</code>, <code>analysis2.R</code> and <code>analysis_NEW.py</code>. This causes three problems:</p>
@@ -390,19 +387,6 @@ How to read this document
 <li><strong>Confidence:</strong> you understand how the work fits together, and where it might fail.</li>
 <li><strong>Publication and jobs:</strong> sharing code and data is an increasingly common requirement, and tidy work is easy to trust.</li>
 </ul>
-<div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>You don’t need everything
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>How much structure a project needs is a judgement call. A small one-off analysis may not need all of this. Aim for what is useful, not what is perfect.</p>
-</div>
-</div>
 </section>
 <section id="a-messy-project" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="a-messy-project"><span class="header-section-number">1.2</span> A messy project</h2>
@@ -476,28 +460,18 @@ How to read this document
 </div>
 </div>
 </section>
-<section id="try-it-yourself" class="level2 unnumbered">
+<section id="try-it-yourself" class="level2 unnumbered try-it">
 <h2 class="unnumbered anchored" data-anchor-id="try-it-yourself">Try it yourself</h2>
-<div id="exercise1" class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Try it yourself: rescue the messy project
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<section id="exercise1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="exercise1">Rescue the messy project</h3>
 <p>Open <code>messy-project/</code> in the example folder (you do not need to run anything).</p>
 <ol type="1">
 <li>Try to answer: which file is the raw data? What do I run first? Which figure came from which analysis?</li>
 <li>Put every file under one heading: <strong>raw data</strong>, <strong>cleaned data</strong>, <strong>code</strong>, <strong>results</strong>, <strong>documents</strong>.</li>
 <li>Decide which file you would <strong>never edit</strong>, and which files you would <strong>delete</strong>.</li>
 </ol>
-</div>
-</div>
 <div id="answer1" class="callout callout-style-default callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -506,7 +480,7 @@ How to read this document
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
@@ -558,6 +532,8 @@ How to read this document
 </div>
 </div>
 </div>
+</section>
+</section>
 <div id="keypoints1" class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -577,10 +553,10 @@ How to read this document
 </div>
 </div>
 </section>
-</section>
 <section id="documentation-quarto" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Documentation &amp; Quarto</h1>
-<p><em>How do I explain my project, and report on it, so others (and future me) can use it?</em></p>
+<p><span class="lead-question">How do I explain my project, and report on it, so others (and future me) can use it?</span></p>
+<p><span class="section-meta">About 45 min · Demo · Activities: be the new colleague; one document, many formats</span></p>
 <section id="types-of-documentation" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="types-of-documentation"><span class="header-section-number">2.1</span> Types of documentation</h2>
 <table class="caption-top table">
@@ -903,32 +879,21 @@ How to read this document
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render report.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="rendering" class="level2" data-number="2.9">
-<h2 data-number="2.9" class="anchored" data-anchor-id="rendering"><span class="header-section-number">2.9</span> Rendering</h2>
-<p>Render the report from the terminal, or with the <em>Render</em> button in your IDE:</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Terminal/Command Prompt</strong></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render report.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>The result, <code>report.html</code>, appears next to <code>report.qmd</code>.</p>
-</section>
-<section id="what-else-can-quarto-do" class="level2" data-number="2.10">
-<h2 data-number="2.10" class="anchored" data-anchor-id="what-else-can-quarto-do"><span class="header-section-number">2.10</span> What else can Quarto do?</h2>
+<section id="what-else-can-quarto-do" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="what-else-can-quarto-do"><span class="header-section-number">2.9</span> What else can Quarto do?</h2>
 <ul>
-<li><strong>Reports</strong> in HTML, PDF and Word, with tables, figures and references.</li>
+<li><strong>Reports</strong> in HTML, PDF and Word, with numbered figures, tables and equations, and citations. You can cross-reference them: write <code>@fig-mass</code> and Quarto writes “Figure 1”, with a link, and keeps the numbers right as you add or move figures. The <a href="./capstone.html">capstone exercise</a> shows how.</li>
 <li><strong>Slides</strong>: the slides for this course are a Quarto presentation.</li>
 <li><strong>Websites</strong>: this course website is built with Quarto.</li>
-<li><strong>Papers and books</strong>: journal articles, theses and books, with citations and cross-references.</li>
+<li><strong>Papers and books</strong>: journal articles, theses and books, built from several files.</li>
 </ul>
 </section>
-<section id="optional-trying-it-yourself" class="level2" data-number="2.11">
-<h2 data-number="2.11" class="anchored" data-anchor-id="optional-trying-it-yourself"><span class="header-section-number">2.11</span> Optional: trying it yourself</h2>
-<p>You do not need to write any code in this course. If you want to write a Quarto report with code in it, with numbered sections, a table, a figure, cross-references and a citation, the <a href="./capstone.html">capstone exercise</a> takes you through it, in R or Python.</p>
+<section id="optional-trying-it-yourself" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="optional-trying-it-yourself"><span class="header-section-number">2.10</span> Optional: trying it yourself</h2>
+<p>The activities in this course don’t need any code. If you want to write a Quarto report with code in it, with numbered sections, a table, a figure, cross-references and a citation, the <a href="./capstone.html">capstone exercise</a> takes you through it, in R or Python.</p>
 </section>
-<section id="learn-more-about-quarto" class="level2" data-number="2.12">
-<h2 data-number="2.12" class="anchored" data-anchor-id="learn-more-about-quarto"><span class="header-section-number">2.12</span> Learn more about Quarto</h2>
+<section id="learn-more-about-quarto" class="level2" data-number="2.11">
+<h2 data-number="2.11" class="anchored" data-anchor-id="learn-more-about-quarto"><span class="header-section-number">2.11</span> Learn more about Quarto</h2>
 <ul>
 <li><a href="https://quarto.org/docs/get-started/">Get started</a> and the <a href="https://quarto.org/docs/guide/">guide</a>.</li>
 <li>Using code: <a href="https://quarto.org/docs/computations/r.html">R</a>, <a href="https://quarto.org/docs/computations/python.html">Python</a> and <a href="https://quarto.org/docs/computations/inline-code.html">inline code</a>.</li>
@@ -938,27 +903,17 @@ How to read this document
 <li><a href="https://quarto.org/docs/authoring/cross-references.html">Cross-references</a> and <a href="https://quarto.org/docs/authoring/citations.html">citations</a>.</li>
 </ul>
 </section>
-<section id="try-it-yourself-1" class="level2 unnumbered">
+<section id="try-it-yourself-1" class="level2 unnumbered try-it">
 <h2 class="unnumbered anchored" data-anchor-id="try-it-yourself-1">Try it yourself</h2>
-<div id="exercise2" class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Try it yourself: be the new colleague
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<section id="exercise2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="exercise2">Be the new colleague</h3>
 <p>You have inherited the messy project. Open <code>messy-project/notes.txt</code>: it is the only documentation. Look at the first rows of <code>messy-project/data.csv</code> too.</p>
 <ol type="1">
 <li>Write down <strong>three things you can’t work out</strong>. Think about how to run it, which software it needs, what the columns mean, and which file is the real data.</li>
 <li>Open <code>tidy-project/README.md</code> and <code>tidy-project/data/processed/penguins_clean_dictionary.csv</code>. Which of your three things do they answer?</li>
 </ol>
-</div>
-</div>
 <div id="answer2" class="callout callout-style-default callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -967,23 +922,16 @@ How to read this document
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Typical things you can’t work out from the messy project: how to run it and in what order (the notes say “i think”); which software and versions it needs; what <code>bill_dep</code> means and whether <code>body_mass</code> is in grams or kilograms; which data file is the real one; which figure is which.</p>
 <p>The README answers how to run it, what software it needs and what is where. The data dictionary answers what each column means, with its type and units. A good README answers three questions in the first minute: What is this project and is it finished? If I just want to run it, what do I do first? What do I need installed?</p>
 </div>
 </div>
 </div>
-<div id="exercise2b" class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Try it yourself: one document, many formats
-</div>
-</div>
-<div class="callout-body-container callout-body">
+</section>
+<section id="exercise2b" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="exercise2b">One document, many formats</h3>
 <p>You need Quarto, but not R or Python.</p>
 <ol type="1">
 <li>Open <code>one-document/report.qmd</code>.</li>
@@ -992,10 +940,8 @@ How to read this document
 <li>Open all three. Did your changes appear in each?</li>
 </ol>
 <p>If Render doesn’t work, open the ready-made files in <code>one-document/finished/</code>.</p>
-</div>
-</div>
 <div id="answer2b" class="callout callout-style-default callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1004,13 +950,15 @@ How to read this document
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Your changes appeared in every format, because there is only <strong>one source</strong>. That is the point: you never copy and paste between a web page, a PDF and a Word file.</p>
 <p>If only one format appeared, Render was set to a single format. Use the format menu, or the <code>quarto render report.qmd</code> command, to make all three.</p>
 </div>
 </div>
 </div>
+</section>
+</section>
 <div id="keypoints2" class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1030,10 +978,10 @@ How to read this document
 </div>
 </div>
 </section>
-</section>
 <section id="virtual-environments" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Virtual Environments</h1>
-<p><em>How do I make sure my code still runs next month, or on someone else’s computer?</em></p>
+<h1 data-number="3"><span class="header-section-number">3</span> Virtual environments</h1>
+<p><span class="lead-question">How do I make sure my code still runs next month, or on someone else’s computer?</span></p>
+<p><span class="section-meta">About 30 min · Demo · Activity: the new laptop test</span></p>
 <section id="why-do-we-need-environments" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="why-do-we-need-environments"><span class="header-section-number">3.1</span> Why do we need environments?</h2>
 <p>Imagine this sequence:</p>
@@ -1137,8 +1085,43 @@ How to read this document
 <p>* <code>environment.yml</code> lists the packages, but not always their exact versions, so it isn’t a true lock file. Make it with <code>conda env export &gt; environment.yml</code>, or use <a href="https://conda.github.io/conda-lock/">conda-lock</a> for a full lock file.</p>
 <p>Other tools do the same job, such as Python’s built-in <code>venv</code> with a <code>requirements.txt</code> file. The idea is the same whichever you use: a file that records what the project needs.</p>
 </section>
-<section id="send-your-project-to-someone-and-it-works" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="send-your-project-to-someone-and-it-works"><span class="header-section-number">3.3</span> Send your project to someone, and it works</h2>
+<section id="what-it-looks-like-in-r-and-python" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="what-it-looks-like-in-r-and-python"><span class="header-section-number">3.3</span> What it looks like in R and Python</h2>
+<p>You don’t need to run this in the course. It shows what using an environment looks like, so you can try it on a project of your own. There are only two steps to remember: make the environment once, and rebuild it from the lock file whenever you need to. The example folder has a small project in each language to practise on, <code>r-project/</code> and <code>python-project/</code>, with the steps in their READMEs.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Python</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>With the <a href="https://rstudio.github.io/renv/">renv</a> package, in the R console, in your project:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">init</span>()                   <span class="co"># make the environment, and the lock file renv.lock</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)    <span class="co"># new packages now go into this project's environment</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()               <span class="co"># record them, at these versions, in renv.lock</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>On another computer, or after deleting the <code>renv/library</code> folder:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">restore</span>()                <span class="co"># rebuild the environment from renv.lock</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>With <a href="https://docs.astral.sh/uv/">uv</a>, in a terminal, in your project folder:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal/Command Prompt</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init <span class="at">--no-package</span>           <span class="co"># start a project</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add pandas matplotlib       <span class="co"># make the environment (.venv), install the packages, record them in uv.lock</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run code/analysis.py        <span class="co"># run your code inside the environment</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>On another computer, or after deleting the <code>.venv</code> folder:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal/Command Prompt</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> sync                        <span class="co"># rebuild the environment from uv.lock</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="send-your-project-to-someone-and-it-works" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="send-your-project-to-someone-and-it-works"><span class="header-section-number">3.4</span> Send your project to someone, and it works</h2>
 <p>This is the payoff. Because the lock file records exactly what the project needs, you can send your project to a colleague, a reviewer, or yourself on a new laptop, and they can rebuild the same environment with one command:</p>
 <pre><code>your project + lock file  -&gt;  colleague rebuilds the environment  -&gt;  same packages, same results</code></pre>
 <ul>
@@ -1146,8 +1129,8 @@ How to read this document
 <li><strong>Don’t send:</strong> the environment itself. It is large, and specific to your computer.</li>
 </ul>
 </section>
-<section id="what-environments-dont-cover" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="what-environments-dont-cover"><span class="header-section-number">3.4</span> What environments don’t cover</h2>
+<section id="what-environments-dont-cover" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="what-environments-dont-cover"><span class="header-section-number">3.5</span> What environments don’t cover</h2>
 <ul>
 <li>They record <strong>packages</strong>. Also write down the version of <strong>R or Python</strong> in your README. (<code>uv</code> can pin the Python version; <code>renv</code> records the R version but doesn’t install it.)</li>
 <li>The <strong>operating system</strong> and hardware can still differ.</li>
@@ -1155,20 +1138,20 @@ How to read this document
 </ul>
 <p>That is good enough for almost every project. Perfect is not the goal.</p>
 </section>
-<section id="what-if-i-use-excel" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="what-if-i-use-excel"><span class="header-section-number">3.5</span> What if I use Excel?</h2>
+<section id="what-if-i-use-excel" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="what-if-i-use-excel"><span class="header-section-number">3.6</span> What if I use Excel?</h2>
 <p>There are no packages to install, but the software version can still matter: formulas and functions differ between Excel versions, and add-ins vary. Write the program and its version in your README (for example <em>Excel for Microsoft 365, version 2410</em>), along with any add-ins used. The next person then knows what you used, which is the same idea.</p>
 </section>
-<section id="optional-trying-it-yourself-1" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="optional-trying-it-yourself-1"><span class="header-section-number">3.6</span> Optional: trying it yourself</h2>
-<p>You do not need to run any commands in this course. If you want to try environments yourself:</p>
+<section id="optional-trying-it-yourself-1" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="optional-trying-it-yourself-1"><span class="header-section-number">3.7</span> Optional: trying it yourself</h2>
+<p>The live session doesn’t need you to run any commands. If you want to try environments yourself:</p>
 <ul>
-<li><strong>To repeat the demo from the session</strong>, copy <code>python-project/</code> from the example folder and follow the steps in its <code>README.md</code>. It uses <code>uv</code>: you set up an environment, delete it, and rebuild it from the lock file.</li>
+<li><strong>To repeat the demo from the session</strong>, copy <code>r-project/</code> (R, with <code>renv</code>) or <code>python-project/</code> (Python, with <code>uv</code>) from the example folder and follow the steps in its <code>README.md</code>: you set up an environment, delete it, and rebuild it from the lock file.</li>
 <li><strong>To give a project of your own an environment</strong>, in R (with <code>renv</code>) or Python (with <code>uv</code>), work through the <a href="./capstone.html">capstone exercise</a>.</li>
 </ul>
 </section>
-<section id="learn-more-about-environments" class="level2" data-number="3.7">
-<h2 data-number="3.7" class="anchored" data-anchor-id="learn-more-about-environments"><span class="header-section-number">3.7</span> Learn more about environments</h2>
+<section id="learn-more-about-environments" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="learn-more-about-environments"><span class="header-section-number">3.8</span> Learn more about environments</h2>
 <ul>
 <li><a href="https://docs.astral.sh/uv/">uv</a>: Python projects and environments.</li>
 <li><a href="https://rstudio.github.io/renv/articles/renv.html">renv</a>: R environments.</li>
@@ -1178,24 +1161,14 @@ How to read this document
 <li><a href="https://jatonline.github.io/managing-dependencies-using-uv-and-pixi/">Managing dependencies with uv and pixi</a>.</li>
 </ul>
 </section>
-<section id="try-it-yourself-2" class="level2 unnumbered">
+<section id="try-it-yourself-2" class="level2 unnumbered try-it">
 <h2 class="unnumbered anchored" data-anchor-id="try-it-yourself-2">Try it yourself</h2>
-<div id="exercise3" class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Try it yourself: the new laptop test
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<section id="exercise3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="exercise3">The new laptop test</h3>
 <p>A colleague emails you their project: <em>“It runs fine on my laptop!”</em> You open it on your own laptop, and it says there is no package called <code>ggplot2</code>.</p>
 <p>On your own, <strong>list everything you would need to know</strong> to run this project on a new computer. Write down as many things as you can.</p>
-</div>
-</div>
 <div id="answer3" class="callout callout-style-default callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1204,7 +1177,7 @@ How to read this document
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
@@ -1244,6 +1217,8 @@ How to read this document
 </div>
 </div>
 </div>
+</section>
+</section>
 <div id="keypoints3" class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1264,10 +1239,10 @@ How to read this document
 </div>
 </div>
 </section>
-</section>
 <section id="your-first-step" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Your First Step</h1>
-<p><em>What will you do differently on Monday?</em></p>
+<h1 data-number="4"><span class="header-section-number">4</span> Your first step</h1>
+<p><span class="lead-question">What will you do differently on Monday?</span></p>
+<p><span class="section-meta">About 15 min · Activity: your checklist</span></p>
 <section id="from-messy-to-shareable" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="from-messy-to-shareable"><span class="header-section-number">4.1</span> From messy to shareable</h2>
 <p>This whole course is one journey:</p>
@@ -1354,27 +1329,17 @@ How to read this document
 </tbody>
 </table>
 </section>
-<section id="try-it-yourself-3" class="level2 unnumbered">
+<section id="try-it-yourself-3" class="level2 unnumbered try-it">
 <h2 class="unnumbered anchored" data-anchor-id="try-it-yourself-3">Try it yourself</h2>
-<div id="exercise4" class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Try it yourself: your first step
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<section id="exercise4" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="exercise4">Your checklist</h3>
 <ol type="1">
 <li>Tick the checklist for a project of your own (or for <code>messy-project/</code> if you don’t have one).</li>
 <li><strong>Circle one</strong> thing to start with this week.</li>
 <li>Write it down, or tell someone, so you do it.</li>
 </ol>
-</div>
-</div>
 <div id="answer4" class="callout callout-style-default callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1383,12 +1348,13 @@ How to read this document
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>There is no single right answer, but a good first step is small and quick. If you can’t decide, start with the first thing in the quick wins table that you haven’t done yet. A README is a very good first step: it takes 15 minutes, and it helps everyone, including future you.</p>
 </div>
 </div>
 </div>
+</section>
 </section>
 <section id="where-next" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="where-next"><span class="header-section-number">4.4</span> Where next?</h2>
@@ -1421,8 +1387,9 @@ How to read this document
 </section>
 </section>
 <section id="sec-qfair" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Optional: Sharing Your Data (Q-FAIR)</h1>
-<p><em>How do I know my data is good enough to share, and how do I share it?</em></p>
+<h1 data-number="5"><span class="header-section-number">5</span> Optional: Sharing your data (Q-FAIR)</h1>
+<p><span class="lead-question">How do I know my data is good enough to share, and how do I share it?</span></p>
+<p><span class="section-meta">Optional extra · Activity: Q-FAIR detective</span></p>
 <p>This section is optional in the live course, but it is written in full so you can work through it on your own.</p>
 <section id="q-fair-data-principles" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="q-fair-data-principles"><span class="header-section-number">5.1</span> Q-FAIR data principles</h2>
@@ -1545,28 +1512,18 @@ How to read this document
 <p><strong>4. Deposit it.</strong> Put the data in a repository that gives it a permanent home and a <strong>DOI</strong> (a persistent identifier you can cite), such as <a href="https://zenodo.org">Zenodo</a>, your institution’s data repository (at Bristol this is <em>data.bris</em>), or one specific to your field.</p>
 <p><strong>Sensitive data.</strong> Some data can’t be shared openly, for example because it contains personal information. You can usually still share the <strong>metadata</strong> (the README and data dictionary) and explain how others can apply for access. Check with your research data team or ethics committee before depositing anything involving people.</p>
 </section>
-<section id="try-it-yourself-4" class="level2 unnumbered">
+<section id="try-it-yourself-4" class="level2 unnumbered try-it">
 <h2 class="unnumbered anchored" data-anchor-id="try-it-yourself-4">Try it yourself</h2>
-<div id="exercise5" class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Try it yourself: Q-FAIR detective
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<section id="exercise5" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="exercise5">Q-FAIR detective</h3>
 <p>For each of these three datasets, mark every letter of <strong>Q-FAIR</strong> with a ✔ or an ✘.</p>
 <ul>
 <li><strong>A.</strong> A spreadsheet called <code>final_data_v7.xlsx</code> on my laptop. Email me if you want it. I would have to remember what some of the columns mean.</li>
 <li><strong>B.</strong> A CSV in a repository, with a DOI, a README, a data dictionary and a CC BY licence.</li>
 <li><strong>C.</strong> A CSV on the department shared drive, with a README. No licence, and you need to ask the group’s admin for access.</li>
 </ul>
-</div>
-</div>
 <div id="answer5" class="callout callout-style-default callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1575,7 +1532,7 @@ How to read this document
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <thead>
@@ -1619,6 +1576,8 @@ How to read this document
 </div>
 </div>
 </div>
+</section>
+</section>
 <div id="keypoints5" class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1639,7 +1598,6 @@ How to read this document
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

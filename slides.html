@@ -101,7 +101,7 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-c5075299cb02acb4714c0b74ffb8c982.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-c73e998d9f01dab084e5d2ca781621f2.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -212,7 +212,7 @@ Dr Josh Tyler - Jean Golding Institute
 
 </section>
 <section id="todays-mission" class="slide level2 big center">
-<h2>Today’s mission:</h2>
+<h2>Today’s mission</h2>
 <div class="big center">
 <p>Make your research easier to re-run, understand and share.</p>
 </div>
@@ -231,21 +231,21 @@ Dr Josh Tyler - Jean Golding Institute
       }</style></aside>
 </section>
 <section id="how-today-works" class="slide level2">
-<h2>How today works:</h2>
+<h2>How today works</h2>
 <div class="medium">
 <p>Do it together. Then try it yourself.</p>
 </div>
 <div class="small">
 <ul>
 <li>Each topic is <strong>one short activity</strong>: we do a part together, you try something on your own, then I show the answer</li>
-<li>You <strong>don’t need to run any code</strong>: the only thing we run is <strong>Render</strong></li>
+<li>The activities <strong>don’t need you to run any code</strong>: the only thing we run is <strong>Render</strong></li>
 <li>Everything you need is in the <strong>example folder</strong></li>
 <li>Stuck? <strong>Type in the chat</strong></li>
 </ul>
 </div>
 </section>
 <section id="the-journey" class="slide level2">
-<h2>The Journey</h2>
+<h2>The journey</h2>
 <div class="cards journey">
 <div class="card fragment">
 <p><strong>1 · Structure</strong> <em>Where does everything go?</em> Raw data, processed data, code and outputs, and never editing the raw data <span class="hands-on">Hands-on: rescue a messy project</span></p>
@@ -261,7 +261,7 @@ Dr Josh Tyler - Jean Golding Institute
 </div>
 </div>
 <aside class="notes">
-<p>Click through the four cards one at a time. Every topic follows the same pattern: slides, then a short activity (together, your turn, answer). Nobody needs to run any code. Sections 2 and 3 also have a short demo from you.</p>
+<p>Click through the four cards one at a time. Every topic follows the same pattern: slides, then a short activity (together, your turn, answer). Nobody needs to run any code in the activities. Sections 2 and 3 also have a short demo from you.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -282,11 +282,12 @@ Dr Josh Tyler - Jean Golding Institute
 <li><strong>Describe</strong> what a good README and data dictionary contain, and why they matter</li>
 <li><strong>Explain</strong> why Quarto helps reproducibility, and <strong>make</strong> HTML, PDF and Word versions of a report from one document</li>
 <li><strong>Explain</strong> why environments matter, and say what someone needs in order to <strong>re-run</strong> your project on another computer</li>
+<li><strong>Apply</strong> these practices to your own coding projects, using the R and Python examples as a starting point</li>
 <li><strong>Choose</strong> one practice to start using on your own project, and know where to find out more</li>
 </ol>
 </div>
 <aside class="notes">
-<p>These are the five things people should be able to do by the end. 1 is the first activity, 2 is “be the new colleague”, 3 is “one document, many formats”, 4 is “the new laptop test” and 5 is “your first step”. We come back to this list at the end.</p>
+<p>These are the six things people should be able to do by the end. 1 is the first activity, 2 is “be the new colleague”, 3 is “one document, many formats”, 4 is “the new laptop test”, 5 runs through sections 2 and 3 (the R and Python examples and demos) and 6 is “your checklist”. We come back to this list at the end.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -301,7 +302,7 @@ Dr Josh Tyler - Jean Golding Institute
 </section>
 <section>
 <section id="project-structures" class="title-slide slide level1 section-divider center" data-background-color="var(--jgi-red)">
-<h1><span class="section-number">01</span> Project Structures</h1>
+<h1><span class="section-number">01</span> Project structures</h1>
 <p><span class="section-question">How should I organise a project so I, and others, can find things and re-run them?</span></p>
 </section>
 <section id="why-bother" class="slide level2">
@@ -948,7 +949,6 @@ data_final_v2.csv</code></pre>
 <li>Every number, table and figure is recalculated</li>
 <li>Sentences with inline code update too</li>
 <li>There is nothing to copy and paste</li>
-<li>Dynamic referencing to figures, tables &amp; equations</li>
 </ul>
 </div>
 <div class="good">
@@ -1038,7 +1038,7 @@ data_final_v2.csv</code></pre>
 <p><span class="answer-tag">Answer</span> <span class="demo-meta">3 min</span></p>
 <div class="cards grid2">
 <div class="card">
-<p><strong>Reports</strong> HTML, PDF and Word documents, with tables, figures and references</p>
+<p><strong>Reports</strong> HTML, PDF and Word, with numbered figures, tables and equations that you can cross-reference, and citations</p>
 </div>
 <div class="card">
 <p><strong>Slides</strong> This deck is a Quarto presentation</p>
@@ -1047,11 +1047,11 @@ data_final_v2.csv</code></pre>
 <p><strong>Websites</strong> This course website is built with Quarto</p>
 </div>
 <div class="card">
-<p><strong>Papers and books</strong> Journal articles, theses and books, with citations and cross-references</p>
+<p><strong>Papers and books</strong> Journal articles, theses and books, built from several files</p>
 </div>
 </div>
 <aside class="notes">
-<p>Answer. Your changes showed up in every format, because there is only one source. And Quarto does far more than reports: this deck, the notes and the site are all Quarto.</p>
+<p>Answer. Your changes showed up in every format, because there is only one source. And Quarto does far more than reports: this deck, the notes and the site are all Quarto. On Reports, mention cross-references: write <strong>?@fig-mass</strong> and Quarto writes “Figure 1”, and keeps the numbers right as you add or move figures. The capstone exercise shows how.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1077,7 +1077,7 @@ data_final_v2.csv</code></pre>
 </section></section>
 <section>
 <section id="virtual-environments" class="title-slide slide level1 section-divider center" data-background-color="var(--jgi-red)">
-<h1><span class="section-number">03</span> Virtual Environments</h1>
+<h1><span class="section-number">03</span> Virtual environments</h1>
 <p><span class="section-question">How do I make sure my code still runs next month, or on someone else’s computer?</span></p>
 </section>
 <section id="the-problem-it-worked-last-year" class="slide level2">
@@ -1277,7 +1277,7 @@ data_final_v2.csv</code></pre>
 </ol>
 </div>
 <aside class="notes">
-<p>STOP HERE and switch to the demo. R: in a project that uses renv, delete <code>renv/library</code> and run <code>renv::restore()</code>. Python: in a copy of <code>python-project</code> from the example folder, run <code>uv init --no-package</code>, then <code>uv add pandas matplotlib</code>, then <code>uv run code/analysis.py</code>. Delete <code>.venv</code> and run <code>uv sync</code> to rebuild it (the steps are in its README). Say: “this is what your colleague does when you send them the project”. Note that renv records package versions but not the version of R itself. If you have no environment ready, show the lock file in <code>python-project/finished/</code> and describe it instead. If it fails, say so and move on: this is a watch-only demo.</p>
+<p>STOP HERE and switch to the demo. R: in a copy of <code>r-project</code> from the example folder, run <code>renv::init()</code>, then <code>source("code/analysis.R")</code>. Close the project, delete <code>renv/library</code>, open it again (ggplot2 is now missing) and run <code>renv::restore()</code>. Python: in a copy of <code>python-project</code> from the example folder, run <code>uv init --no-package</code>, then <code>uv add pandas matplotlib</code>, then <code>uv run code/analysis.py</code>. Delete <code>.venv</code> and run <code>uv sync</code> to rebuild it (the steps are in its README). Say: “this is what your colleague does when you send them the project”. Note that renv records package versions but not the version of R itself. If you have no environment ready, show the lock file in <code>r-project/finished/</code> or <code>python-project/finished/</code> and describe it instead. If it fails, say so and move on: this is a watch-only demo.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1551,6 +1551,7 @@ data_final_v2.csv</code></pre>
 <li>✔ <strong>Describe</strong> what a good README and data dictionary contain</li>
 <li>✔ <strong>Make</strong> HTML, PDF and Word versions of a report from one document</li>
 <li>✔ <strong>Say</strong> what someone needs to re-run your project on another computer</li>
+<li>✔ <strong>Apply</strong> these practices to your own coding projects, in R or Python</li>
 <li>✔ <strong>Choose</strong> one practice to start using this week</li>
 </ul>
 </div>
