@@ -9,7 +9,7 @@ execute:
   message: false
 ---
 
-## Today's mission: {.big .center}
+## Today's mission {.big .center}
 
 ::: {.big .center}
 Make your research easier to re-run, understand and share.
@@ -19,7 +19,7 @@ Make your research easier to re-run, understand and share.
 Works for R, Python and spreadsheet users. Demo in Positron, but everything can be done in any IDE or the terminal. The notes are a reference for afterwards; the slides and demos carry the session.
 :::
 
-## How today works:
+## How today works
 
 ::: {.medium}
 Do it together. Then try it yourself.
@@ -27,12 +27,12 @@ Do it together. Then try it yourself.
 
 ::: {.small}
 - Each topic is **one short activity**: we do a part together, you try something on your own, then I show the answer
-- You **don't need to run any code**: the only thing we run is **Render**
+- The activities **don't need you to run any code**: the only thing we run is **Render**
 - Everything you need is in the **example folder**
 - Stuck? **Type in the chat**
 :::
 
-## The Journey
+## The journey
 
 ::: {.cards .journey}
 ::: {.card .fragment}
@@ -62,7 +62,7 @@ Pull it together into a checklist for your own project
 :::
 
 ::: notes
-Click through the four cards one at a time. Every topic follows the same pattern: slides, then a short activity (together, your turn, answer). Nobody needs to run any code. Sections 2 and 3 also have a short demo from you.
+Click through the four cards one at a time. Every topic follows the same pattern: slides, then a short activity (together, your turn, answer). Nobody needs to run any code in the activities. Sections 2 and 3 also have a short demo from you.
 :::
 
 ## By the end, you will be able to
@@ -72,14 +72,15 @@ Click through the four cards one at a time. Every topic follows the same pattern
 2. **Describe** what a good README and data dictionary contain, and why they matter
 3. **Explain** why Quarto helps reproducibility, and **make** HTML, PDF and Word versions of a report from one document
 4. **Explain** why environments matter, and say what someone needs in order to **re-run** your project on another computer
-5. **Choose** one practice to start using on your own project, and know where to find out more
+5. **Apply** these practices to your own coding projects, using the R and Python examples as a starting point
+6. **Choose** one practice to start using on your own project, and know where to find out more
 :::
 
 ::: notes
-These are the five things people should be able to do by the end. 1 is the first activity, 2 is "be the new colleague", 3 is "one document, many formats", 4 is "the new laptop test" and 5 is "your first step". We come back to this list at the end.
+These are the six things people should be able to do by the end. 1 is the first activity, 2 is "be the new colleague", 3 is "one document, many formats", 4 is "the new laptop test", 5 runs through sections 2 and 3 (the R and Python examples and demos) and 6 is "your checklist". We come back to this list at the end.
 :::
 
-# [01]{.section-number} Project Structures {.section-divider background-color="var(--jgi-red)"}
+# [01]{.section-number} Project structures {.section-divider background-color="var(--jgi-red)"}
 
 [How should I organise a project so I, and others, can find things and re-run them?]{.section-question}
 
@@ -502,7 +503,6 @@ Point at each part on the previous slide. Inline code is the clever bit: the num
 - Every number, table and figure is recalculated
 - Sentences with inline code update too
 - There is nothing to copy and paste
-- Dynamic referencing to figures, tables & equations
 :::
 
 ::: {.good}
@@ -569,7 +569,7 @@ Your turn, 7 min. They need only Quarto, not R or Python. Watch the chat for que
 ::: {.cards .grid2}
 ::: {.card}
 **Reports**
-HTML, PDF and Word documents, with tables, figures and references
+HTML, PDF and Word, with numbered figures, tables and equations that you can cross-reference, and citations
 :::
 ::: {.card}
 **Slides**
@@ -581,12 +581,12 @@ This course website is built with Quarto
 :::
 ::: {.card}
 **Papers and books**
-Journal articles, theses and books, with citations and cross-references
+Journal articles, theses and books, built from several files
 :::
 :::
 
 ::: notes
-Answer. Your changes showed up in every format, because there is only one source. And Quarto does far more than reports: this deck, the notes and the site are all Quarto.
+Answer. Your changes showed up in every format, because there is only one source. And Quarto does far more than reports: this deck, the notes and the site are all Quarto. On Reports, mention cross-references: write @fig-mass and Quarto writes "Figure 1", and keeps the numbers right as you add or move figures. The capstone exercise shows how.
 :::
 
 ## Learn more about Quarto
@@ -598,7 +598,7 @@ Answer. Your changes showed up in every format, because there is only one source
 - [The Quarto gallery](https://quarto.org/docs/gallery/): examples to copy from
 :::
 
-# [03]{.section-number} Virtual Environments {.section-divider background-color="var(--jgi-red)"}
+# [03]{.section-number} Virtual environments {.section-divider background-color="var(--jgi-red)"}
 
 [How do I make sure my code still runs next month, or on someone else's computer?]{.section-question}
 
@@ -749,7 +749,7 @@ Good enough for almost every project. Perfect is not the goal!
 :::
 
 ::: notes
-STOP HERE and switch to the demo. R: in a project that uses renv, delete `renv/library` and run `renv::restore()`. Python: in a copy of `python-project` from the example folder, run `uv init --no-package`, then `uv add pandas matplotlib`, then `uv run code/analysis.py`. Delete `.venv` and run `uv sync` to rebuild it (the steps are in its README). Say: "this is what your colleague does when you send them the project". Note that renv records package versions but not the version of R itself. If you have no environment ready, show the lock file in `python-project/finished/` and describe it instead. If it fails, say so and move on: this is a watch-only demo.
+STOP HERE and switch to the demo. R: in a copy of `r-project` from the example folder, run `renv::init()`, then `source("code/analysis.R")`. Close the project, delete `renv/library`, open it again (ggplot2 is now missing) and run `renv::restore()`. Python: in a copy of `python-project` from the example folder, run `uv init --no-package`, then `uv add pandas matplotlib`, then `uv run code/analysis.py`. Delete `.venv` and run `uv sync` to rebuild it (the steps are in its README). Say: "this is what your colleague does when you send them the project". Note that renv records package versions but not the version of R itself. If you have no environment ready, show the lock file in `r-project/finished/` or `python-project/finished/` and describe it instead. If it fails, say so and move on: this is a watch-only demo.
 :::
 
 ## The new laptop test {.demo-slide}
@@ -923,6 +923,7 @@ Answer, 3 min. The biggest wins for the least effort are at the top. Encourage e
 - ✔ **Describe** what a good README and data dictionary contain
 - ✔ **Make** HTML, PDF and Word versions of a report from one document
 - ✔ **Say** what someone needs to re-run your project on another computer
+- ✔ **Apply** these practices to your own coding projects, in R or Python
 - ✔ **Choose** one practice to start using this week
 :::
 

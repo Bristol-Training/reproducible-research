@@ -5,7 +5,7 @@ format: html
 number-sections: false
 ---
 
-*Can I build a project, from scratch, that someone else could run?*
+[Can I build a project, from scratch, that someone else could run?]{.lead-question}
 
 This is an exercise to do after the course, on your own. It uses every section of the course: you build a tidy project, give it an environment, and write a report with code in it, laid out like a short paper. At the end, you test it the way a colleague would.
 

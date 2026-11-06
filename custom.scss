@@ -83,6 +83,29 @@ pre.sourceCode.bash { background-color: lightgray; }
 }
 .card > p:first-child > strong:first-child { display: block; color: $jgi-red; }
 
+/* home page: materials box on the right on wide screens, on top on narrow screens */
+.home-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+}
+@media (min-width: 992px) {
+  .home-layout {
+    grid-template-columns: minmax(0, 1fr) 260px;
+    grid-template-areas: "main side";
+    column-gap: 2.5rem;
+  }
+  .home-layout > .home-main { grid-area: main; }
+  .home-layout > .course-sidebar { grid-area: side; align-self: start; }
+}
+/* buttons: one per row on phones and in the desktop side column, two per row on tablets */
+.sidebar-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75em;
+}
+.course-sidebar .sidebar-buttons .btn { margin-bottom: 0; }
+
 /* boxed side column on the home page */
 .course-sidebar {
   background: $pale;
@@ -127,6 +150,61 @@ a.btn { color: #fff; }
   margin: 1em 0;
 }
 
+
+// ---- Notes page: clear breaks between sections ----
+// (scoped by `body-classes: notes-page` in notes.qmd)
+
+/* each main section starts like a new chapter: space, a thick red rule, and a "Section N" label */
+.notes-page section.level1 ~ section.level1 {
+  margin-top: 4.5rem;
+  padding-top: 2rem;
+  border-top: 0.35rem solid $jgi-red;
+}
+.notes-page section.level1 > h1 {
+  color: $jgi-red;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.4em;
+}
+.notes-page section.level1 > h1 .header-section-number {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #595959;
+  margin-bottom: 0.3em;
+  &::before { content: "Section "; }
+}
+
+/* small "time and activities" line under each section's question */
+.section-meta {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #444;
+  background: $pale;
+  border-radius: 1em;
+  padding: 0.2em 0.9em;
+}
+
+/* the "Try it yourself" activity sits in its own shaded panel */
+.try-it {
+  background: #fff;
+  border: 2px solid darken($pale, 20%);
+  border-top: 0.45rem solid $jgi-red;
+  border-radius: 0.5em;
+  padding: 0.25rem 1.25rem 0.5rem;
+  margin: 2.5rem 0 1.5rem;
+}
+.try-it > h2 { color: $jgi-red; margin-top: 1rem; }
+/* each activity's name, and the example's label in "How to read this document" */
+.try-it > h3, .try-it .try-it-title {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 1.25rem 0 0.5rem;
+}
+.try-it .callout { margin-bottom: 1rem; }
 
 // Collapsible "How to read this document" guide
 details.how-to-read { margin: 1.5rem 0; }

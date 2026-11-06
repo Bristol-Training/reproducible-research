@@ -23,4 +23,4 @@ Body measurements of 333 penguins on three islands. **Status:** complete.
 
 ## Data
 
-Penguin measurements from R's built-in `penguins` data (see `?penguins` in R for the source and licence).
+Penguin measurements from near Palmer Station, Antarctica (Gorman, Williams and Fraser, 2014). The same data is built into R 4.5 and later as `penguins`: see `?penguins` for the source and licence.

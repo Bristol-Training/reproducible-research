@@ -6,8 +6,10 @@
 .RData
 .Rproj.user/
 
-# Python environments (for example, from trying the uv demo in example-project/)
+# Environments (for example, from trying the uv or renv demo in example-project/)
 .venv/
+renv/library/
+renv/staging/
 __pycache__/
 
 # Quarto build leftovers (any folder, including inside example-project/)

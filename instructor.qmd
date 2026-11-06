@@ -1,19 +1,20 @@
 ---
 title: "Instructor notes"
 format: html
+number-sections: false
 ---
 
 # At a glance {.unnumbered}
 
-**How it runs:** slides, then (in sections 2 and 3) a short **watch-only demo** (the "wow"), then one **activity**: *Together* (we do a part), *Your turn* (they do it on their own), *Answer* (you show it). Attendees never run code: the only thing they run is **Render**. The steps for each demo and activity are in the **speaker notes** of its slide (press **S** in the deck).
+**How it runs:** slides, then (in sections 2 and 3) a short **watch-only demo** (the "wow"), then one **activity**: *Together* (we do a part), *Your turn* (they do it on their own), *Answer* (you show it). In the live session, attendees never run code: the only thing they run is **Render**. The R and Python examples are for them to read, and the capstone is where they write their own. The steps for each demo and activity are in the **speaker notes** of its slide (press **S** in the deck).
 
 | # | Section | Min | Objective | Demo (you) | Activity |
 |---|---|---|---|---|---|
 | 1 | Project structures | 25 | 1 | none | Rescue the messy project |
-| 2 | Documentation & Quarto | 45 | 2, 3 | Change the data, the report updates | Be the new colleague. One document, many formats |
-| 3 | Virtual environments | 30 | 4 | Set up an environment, delete it, rebuild it | The new laptop test |
-| 4 | Your first step | 15 | 5 | none | Your checklist |
-| (+) | Optional: Q-FAIR | +5 | 5 | none | Q-FAIR detective |
+| 2 | Documentation & Quarto | 45 | 2, 3, 5 | Change the data, the report updates | Be the new colleague. One document, many formats |
+| 3 | Virtual environments | 30 | 4, 5 | Set up an environment, delete it, rebuild it | The new laptop test |
+| 4 | Your first step | 15 | 6 | none | Your checklist |
+| (+) | Optional: Q-FAIR | +5 | 6 | none | Q-FAIR detective |
 
 **By the end, attendees can:**
 
@@ -21,14 +22,15 @@ format: html
 2. Describe what a good README and data dictionary contain, and why they matter.
 3. Explain why Quarto helps reproducibility, and make HTML, PDF and Word versions of a report from one document.
 4. Explain why environments matter, and say what someone needs in order to re-run your project on another computer.
-5. Choose one practice to start using on your own project, and know where to find out more.
+5. Apply these practices to your own coding projects, using the R and Python examples as a starting point.
+6. Choose one practice to start using on your own project, and know where to find out more.
 
 ## Before you start {.unnumbered}
 
 - Download and unzip the **example folder**. Copy `tidy-project/` somewhere you can change it.
 - You need **R and Quarto 1.4+** on your own machine for the section 2 demo. Run `code/run_all.R` once to check it works.
 - Press Render on `one-document/report.qmd`: attendees will do this. Attendees need **Quarto only**, not R or Python.
-- For the environment demo, install [uv](https://docs.astral.sh/uv/) and run through the steps in `python-project/README.md` once, in a copy of the folder (the first run downloads the packages). Or prepare a small R project that uses `renv`.
+- For the environment demo, choose R or Python. Run through the steps in `r-project/README.md` (needs the `renv` package) or `python-project/README.md` (needs [uv](https://docs.astral.sh/uv/)) once, in a copy of the folder: the first run downloads the packages.
 - Check the links on the slides and notes.
 
 ## Ground rules {.unnumbered}
@@ -85,7 +87,7 @@ format: html
 
 # 3. Virtual environments (30 min)
 
-**Demo:** *Delete it, then rebuild it*: in a copy of `python-project/`, set up an environment with `uv init --no-package` and `uv add pandas matplotlib`, delete `.venv`, and rebuild it with `uv sync` (steps in its README). **Activity:** *The new laptop test*: a colleague's project fails on a new laptop, and they list everything they would need to know to run it; the answer is the README and a lock file.
+**Demo:** *Delete it, then rebuild it*: in a copy of `r-project/` or `python-project/`, set up an environment (`renv::init()`, or `uv init --no-package` and `uv add pandas matplotlib`), delete it (`renv/library` or `.venv`), and rebuild it from the lock file (`renv::restore()` or `uv sync`). The steps are in each folder's README. **Activity:** *The new laptop test*: a colleague's project fails on a new laptop, and they list everything they would need to know to run it; the answer is the README and a lock file.
 
 **Checkpoints:** by 10 min the demo; by 15 *Together*; by 17 *Your turn*; by 23 *Answer*; finish at 30.
 
@@ -104,7 +106,7 @@ format: html
 - `renv` records package versions, not the version of R. Say so.
 - In *Your turn*, give no hints. Let them find the list.
 
-**If running late:** drop the "tools" slide. **Watch out for:** the demo going wrong (`uv` or `renv` not set up). If it does, show the lock file in `python-project/finished/` and describe it.
+**If running late:** drop the "tools" slide. **Watch out for:** the demo going wrong (`uv` or `renv` not set up). If it does, show the lock file in `r-project/finished/` or `python-project/finished/` and describe it.
 
 # 4. Your first step (15 min)
 
@@ -122,7 +124,7 @@ format: html
 
 - Ask people to **circle one** thing, and post it in the chat.
 - Point out the printable checklist in `take-home/` (PDF and Word).
-- Go back to the five objectives and tick them off.
+- Go back to the six objectives and tick them off.
 - Mention the separate git and GitHub course.
 - Point people to the **capstone exercise** (*Putting it all together*, linked from the home page), to try after the course: a tidy project, an environment (R or Python) and a report with code, from scratch.
 

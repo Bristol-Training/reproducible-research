@@ -11,9 +11,29 @@ toc: false
 number-sections: false
 ---
 
-::::: {.columns}
+::::: {.home-layout}
 
-:::: {.column width="78%"}
+:::: {.course-sidebar}
+### Course materials
+
+::: {.sidebar-buttons}
+[Slides](slides.qmd){.btn .btn-primary .btn-lg target="_blank"}
+
+[Notes](notes.qmd){.btn .btn-primary .btn-lg target="_blank"}
+
+[Capstone exercise](capstone.qmd){.btn .btn-primary .btn-lg target="_blank"}
+
+[Example folder](example-project.zip){.btn .btn-primary .btn-lg download="example-project.zip"}
+:::
+
+### More
+
+- [Instructor notes](instructor.qmd){target="_blank"}
+- [Related courses](https://bristol-training.github.io/)
+<!-- TODO: replace these links with resources relevant to your course -->
+::::
+
+:::: {.home-main}
 
 ## About this course
 
@@ -21,13 +41,15 @@ A reproducible project can be re-run, understood and shared by other people. It 
 
 This course introduces the practical habits that make this possible. It covers project structure, documentation, Quarto reports, virtual environments and sharing data.
 
-The course takes about two hours. Each topic has a hands-on activity (and sometimes a short demo): we do a part together, you try something on your own, and then we look at the answer. **You do not need to write or run any code.** The notes are written so you can also work through the course on your own.
+The course takes about two hours. Each topic has a hands-on activity (and sometimes a short demo): we do a part together, you try something on your own, and then we look at the answer. The notes are written so you can also work through the course on your own.
+
+The course contains examples for both Python and R, with opportunities to include your own code and examples.
 
 ## Prerequisites
 
-- Some experience of working with data
-- Quarto, for the activity where you turn one document into several formats. RStudio and Positron include it. Otherwise [install it](https://quarto.org/docs/get-started/) (version 1.4 or later)
-- The example folder (use the button on this page)
+- Some experience of using code to analyse data (e.g. Python, R, Julia)
+- Have Quarto installed, for the activity where you turn one document into several formats. RStudio and Positron include it. Otherwise [install it](https://quarto.org/docs/get-started/) (version 1.4 or later)
+- Download the example folder (use the button on this page)
 
 ## Learning outcomes
 
@@ -37,7 +59,8 @@ By the end of this course, you will be able to:
 2. Describe what a good README and data dictionary contain, and why they matter.
 3. Explain why Quarto helps reproducibility, and make HTML, PDF and Word versions of a report from one document.
 4. Explain why environments matter, and say what someone needs in order to re-run your project on another computer.
-5. Choose one practice to start using on your own project, and know where to find out more.
+5. Apply these practices to your own coding projects, using the R and Python examples as a starting point.
+6. Choose one practice to start using on your own project, and know where to find out more.
 
 ## Course outline
 
@@ -50,29 +73,6 @@ By the end of this course, you will be able to:
 
 Every section has slides and an activity for you, and sections 2 and 3 also have a short demo from the instructor. If there is time, there is also an optional extra on sharing your data (Q-FAIR), which is covered in full in the notes. After the course, there is an optional [capstone exercise](capstone.qmd){target="_blank"} that puts it all together: you build a project from scratch, give it an environment and write a report with code, in R or Python.
 
-::::
-
-:::: {.column width="2%"}
-::::
-
-:::: {.column width="20%"}
-::: {.course-sidebar}
-### Course materials
-
-[Slides](slides.qmd){.btn .btn-primary .btn-lg target="_blank"}
-
-[Notes](notes.qmd){.btn .btn-primary .btn-lg target="_blank"}
-
-[Capstone exercise](capstone.qmd){.btn .btn-primary .btn-lg target="_blank"}
-
-[Example folder](example-project.zip){.btn .btn-primary .btn-lg download="example-project.zip"}
-
-### More
-
-- [Instructor notes](instructor.qmd){target="_blank"}
-- [Related courses](https://bristol-training.github.io/)
-<!-- TODO: replace these links with resources relevant to your course -->
-:::
 ::::
 
 :::::

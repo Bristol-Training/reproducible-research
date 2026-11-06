@@ -6,7 +6,7 @@ A reproducible project can be re-run, understood and shared by other people. It 
 
 This course introduces the practical habits that make this possible. It covers project structure, documentation, Quarto reports, virtual environments and sharing data.
 
-The course takes about two hours. Each topic has a hands-on activity (together, your turn, then the answer), and sections 2 and 3 have a short demo, and attendees run no code. The notes are written so they can also be used for self-study.
+The course takes about two hours. Each topic has a hands-on activity (together, your turn, then the answer), and sections 2 and 3 have a short demo. The examples are in R and Python, but the live activities need no code: the only thing attendees run is Render. The notes are written so they can also be used for self-study.
 
 ## What is in this repository
 
@@ -17,7 +17,7 @@ The course takes about two hours. Each topic has a hands-on activity (together, 
 | `notes.qmd` | The notes. Reference for attendees, and written so they can be used for self-study, with a "Try it yourself" activity and answer for each section |
 | `capstone.qmd` | The capstone exercise (*Putting it all together*): an optional exercise for after the course, building a project from scratch with an environment and a report with code, in R or Python |
 | `instructor.qmd` | A quick-glance guide for the instructor: timings, key messages, things not to forget and checkpoints |
-| `example-project/` | The folder attendees download: `messy-project/` (bad structure and names), `tidy-project/` (the best practices), `one-document/` (one report, many formats), `python-project/` (for the uv demo) and `take-home/` (a checklist) |
+| `example-project/` | The folder attendees download: `messy-project/` (bad structure and names), `tidy-project/` (the best practices), `one-document/` (one report, many formats), `python-project/` and `r-project/` (for the environment demo, with uv or renv) and `take-home/` (a checklist) |
 | `build_example_zip.py` | Zips `example-project/` into `example-project.zip`, the download linked from the home page. The zip is built automatically, so it isn't committed |
 | `_quarto.yml`, `custom.scss`, `_brand.yml` | Site settings, styles and branding |
 | `assets/` | Images |
@@ -29,7 +29,7 @@ Read `instructor.qmd` first. Before teaching:
 
 1. Download and unzip the example folder, and copy `tidy-project/` somewhere you can change it.
 2. Check that **R** and **Quarto 1.4 or later** are installed on your machine (RStudio and Positron include Quarto), and run `tidy-project/code/run_all.R` once to check the demos work. Attendees need only Quarto, not R.
-3. For the Section 3 demo, install [uv](https://docs.astral.sh/uv/) and run through the steps in `example-project/python-project/README.md` once, in a copy of the folder. Or prepare a small R project that uses `renv`.
+3. For the Section 3 demo, choose R or Python, and run through the steps in `example-project/r-project/README.md` (needs the `renv` package) or `example-project/python-project/README.md` (needs [uv](https://docs.astral.sh/uv/)) once, in a copy of the folder.
 4. Press Render on `one-document/report.qmd`.
 
 ## Building the course locally

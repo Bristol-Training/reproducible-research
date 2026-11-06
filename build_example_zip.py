@@ -8,7 +8,7 @@ import zipfile
 
 SRC = "example-project"
 OUT = "example-project.zip"
-SKIP_DIRS = {".quarto", ".Rproj.user", "__pycache__", ".venv"}
+SKIP_DIRS = {".quarto", ".Rproj.user", "__pycache__", ".venv", "renv"}
 
 with zipfile.ZipFile(OUT, "w", zipfile.ZIP_DEFLATED) as z:
     for root, dirs, files in os.walk(SRC):
