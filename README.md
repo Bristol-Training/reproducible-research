@@ -22,7 +22,8 @@ The course takes about two hours. Each topic has a hands-on activity (together, 
 | `build_example_zip.py` | Zips `example-project/` into `example-project.zip`, the download linked from the home page. The zip is built automatically, so it isn't committed |
 | `_quarto.yml`, `custom.scss`, `_brand.yml` | Site settings, styles and branding |
 | `assets/` | Images |
-| `.github/` | The GitHub Action that renders the website and publishes it to the `gh-pages` branch on every push to `main`, and its helper script |
+| `.github/` | The GitHub Action that renders the website and publishes it to the `gh-pages` branch on every push to `main` |
+| `DESCRIPTION` | The R packages the website's code needs (see [Code in the pages](#code-in-the-pages)) |
 
 ## Teaching the course
 
@@ -56,12 +57,12 @@ The website is published automatically. Every push to `main` runs the GitHub Act
 
 Code chunks that run (` ```{r} ` or ` ```{python} `) are *frozen* (`freeze: auto` in `_quarto.yml`). Their results are saved, and a page's code only runs again when that page changes. The Action keeps the saved results in its cache, so you don't need to render locally before pushing.
 
-The Action installs what the code needs by itself:
+The Action installs what the code needs from two files in this folder:
 
-- **R**: installed if any page has an R chunk. Packages are found from `library()`, `require()` and `pkg::` in the chunks.
-- **Python**: installed if any page has a Python chunk. Packages are found from `import` lines in the chunks, skipping the standard library. Common packages whose install name differs from their import name (such as `sklearn`, installed as `scikit-learn`) are handled. For anything the check misses, or to pin a version, add an optional `requirements.txt` file to this folder (one package per line).
+- **`DESCRIPTION`** (R): if it exists, R is installed along with the packages listed under `Imports:`. The pages' R code needs `knitr` and `rmarkdown`. Add any other package your R chunks use.
+- **`requirements.txt`** (Python): if it exists, Python is installed along with the packages listed in it (one per line, optionally pinned). Include `jupyter`. There is no such file now, because no page runs Python.
 
-If nothing has changed since the last run, the Action doesn't install R or Python at all. To check what it will install, run `python3 .github/scripts/detect_deps.py`.
+If you add a package to either file, the Action re-installs and re-runs the code. If nothing has changed since the last run, it doesn't install R or Python at all.
 
 ## Contributing
 
