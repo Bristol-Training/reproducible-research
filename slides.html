@@ -1051,7 +1051,7 @@ data_final_v2.csv</code></pre>
 </div>
 </div>
 <aside class="notes">
-<p>Answer. Your changes showed up in every format, because there is only one source. And Quarto does far more than reports: this deck, the notes and the site are all Quarto. On Reports, mention cross-references: write <strong>?@fig-mass</strong> and Quarto writes “Figure 1”, and keeps the numbers right as you add or move figures. The capstone exercise shows how.</p>
+<p>Answer. Your changes showed up in every format, because there is only one source. And Quarto does far more than reports: this deck, the notes and the site are all Quarto. On Reports, mention cross-references: write <code>@fig-mass</code> and Quarto writes “Figure 1”, and keeps the numbers right as you add or move figures. The capstone exercise shows how.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1277,7 +1277,7 @@ data_final_v2.csv</code></pre>
 </ol>
 </div>
 <aside class="notes">
-<p>STOP HERE and switch to the demo. R: in a copy of <code>r-project</code> from the example folder, run <code>renv::init()</code>, then <code>source("code/analysis.R")</code>. Close the project, delete <code>renv/library</code>, open it again (ggplot2 is now missing) and run <code>renv::restore()</code>. Python: in a copy of <code>python-project</code> from the example folder, run <code>uv init --no-package</code>, then <code>uv add pandas matplotlib</code>, then <code>uv run code/analysis.py</code>. Delete <code>.venv</code> and run <code>uv sync</code> to rebuild it (the steps are in its README). Say: “this is what your colleague does when you send them the project”. Note that renv records package versions but not the version of R itself. If you have no environment ready, show the lock file in <code>r-project/finished/</code> or <code>python-project/finished/</code> and describe it instead. If it fails, say so and move on: this is a watch-only demo.</p>
+<p>STOP HERE and switch to the demo. R: in a copy of <code>environment-demo/r</code> from the example folder, run <code>renv::init()</code>, then <code>source("code/analysis.R")</code>. Close the project, delete <code>renv/library</code>, open it again (ggplot2 is now missing) and run <code>renv::restore()</code>. Python: in a copy of <code>environment-demo/python</code> from the example folder, run <code>uv init --no-package</code>, then <code>uv add pandas matplotlib</code>, then <code>uv run code/analysis.py</code>. Delete <code>.venv</code> and run <code>uv sync</code> to rebuild it (the steps are in its README). Say: “this is what your colleague does when you send them the project”. Note that renv records package versions but not the version of R itself. If you have no environment ready, show the lock file in <code>environment-demo/r/finished/</code> or <code>environment-demo/python/finished/</code> and describe it instead. If it fails, say so and move on: this is a watch-only demo.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1469,7 +1469,7 @@ data_final_v2.csv</code></pre>
 </div>
 </div>
 <aside class="notes">
-<p>Your turn, 6 min. They tick the checklist for a project of their own (or the messy one if they have none). Then circle ONE thing, and post it in the chat. The printable checklist is in <code>take-home/</code> (PDF and Word).</p>
+<p>Your turn, 6 min. They tick the checklist for a project of their own (or the messy one if they have none). Then circle ONE thing, and post it in the chat. The printable checklist is in the example folder (<code>checklist.pdf</code> and <code>checklist.docx</code>).</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;

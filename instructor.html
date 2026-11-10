@@ -245,7 +245,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Download and unzip the <strong>example folder</strong>. Copy <code>tidy-project/</code> somewhere you can change it.</li>
 <li>You need <strong>R and Quarto 1.4+</strong> on your own machine for the section 2 demo. Run <code>code/run_all.R</code> once to check it works.</li>
 <li>Press Render on <code>one-document/report.qmd</code>: attendees will do this. Attendees need <strong>Quarto only</strong>, not R or Python.</li>
-<li>For the environment demo, choose R or Python. Run through the steps in <code>r-project/README.md</code> (needs the <code>renv</code> package) or <code>python-project/README.md</code> (needs <a href="https://docs.astral.sh/uv/">uv</a>) once, in a copy of the folder: the first run downloads the packages.</li>
+<li>For the environment demo, choose R or Python. Run through the steps in <code>environment-demo/r/README.md</code> (needs the <code>renv</code> package) or <code>environment-demo/python/README.md</code> (needs <a href="https://docs.astral.sh/uv/">uv</a>) once, in a copy of the folder: the first run downloads the packages.</li>
 <li>Check the links on the slides and notes.</li>
 </ul>
 </section>
@@ -302,7 +302,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="virtual-environments-30-min" class="level1">
 <h1>3. Virtual environments (30 min)</h1>
-<p><strong>Demo:</strong> <em>Delete it, then rebuild it</em>: in a copy of <code>r-project/</code> or <code>python-project/</code>, set up an environment (<code>renv::init()</code>, or <code>uv init --no-package</code> and <code>uv add pandas matplotlib</code>), delete it (<code>renv/library</code> or <code>.venv</code>), and rebuild it from the lock file (<code>renv::restore()</code> or <code>uv sync</code>). The steps are in each folder’s README. <strong>Activity:</strong> <em>The new laptop test</em>: a colleague’s project fails on a new laptop, and they list everything they would need to know to run it; the answer is the README and a lock file.</p>
+<p><strong>Demo:</strong> <em>Delete it, then rebuild it</em>: in a copy of <code>environment-demo/r/</code> or <code>environment-demo/python/</code>, set up an environment (<code>renv::init()</code>, or <code>uv init --no-package</code> and <code>uv add pandas matplotlib</code>), delete it (<code>renv/library</code> or <code>.venv</code>), and rebuild it from the lock file (<code>renv::restore()</code> or <code>uv sync</code>). The steps are in each folder’s README. <strong>Activity:</strong> <em>The new laptop test</em>: a colleague’s project fails on a new laptop, and they list everything they would need to know to run it; the answer is the README and a lock file.</p>
 <p><strong>Checkpoints:</strong> by 10 min the demo; by 15 <em>Together</em>; by 17 <em>Your turn</em>; by 23 <em>Answer</em>; finish at 30.</p>
 <p><strong>Key messages</strong></p>
 <ul>
@@ -319,7 +319,7 @@ ul.task-list li input[type="checkbox"] {
 <li><code>renv</code> records package versions, not the version of R. Say so.</li>
 <li>In <em>Your turn</em>, give no hints. Let them find the list.</li>
 </ul>
-<p><strong>If running late:</strong> drop the “tools” slide. <strong>Watch out for:</strong> the demo going wrong (<code>uv</code> or <code>renv</code> not set up). If it does, show the lock file in <code>r-project/finished/</code> or <code>python-project/finished/</code> and describe it.</p>
+<p><strong>If running late:</strong> drop the “tools” slide. <strong>Watch out for:</strong> the demo going wrong (<code>uv</code> or <code>renv</code> not set up). If it does, show the lock file in <code>environment-demo/r/finished/</code> or <code>environment-demo/python/finished/</code> and describe it.</p>
 </section>
 <section id="your-first-step-15-min" class="level1">
 <h1>4. Your first step (15 min)</h1>
@@ -334,7 +334,7 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Don’t forget</strong></p>
 <ul>
 <li>Ask people to <strong>circle one</strong> thing, and post it in the chat.</li>
-<li>Point out the printable checklist in <code>take-home/</code> (PDF and Word).</li>
+<li>Point out the printable checklist in the example folder (<code>checklist.pdf</code> and <code>checklist.docx</code>).</li>
 <li>Go back to the six objectives and tick them off.</li>
 <li>Mention the separate git and GitHub course.</li>
 <li>Point people to the <strong>capstone exercise</strong> (<em>Putting it all together</em>, linked from the home page), to try after the course: a tidy project, an environment (R or Python) and a report with code, from scratch.</li>

@@ -326,12 +326,8 @@ How to read this document
 <h2 class="unnumbered anchored" data-anchor-id="workspace-setup">Workspace setup</h2>
 <p>The live activities don’t need you to write or run any code: the only thing you run is <strong>Render</strong>. You need two things.</p>
 <p><strong>Quarto.</strong> We use <a href="https://quarto.org">Quarto</a> to build documents. RStudio and Positron include it, so if you use either you probably don’t need to install anything. To check, open a <code>.qmd</code> file and look for the <strong>Render</strong> button. Otherwise, <a href="https://quarto.org/docs/get-started/">install Quarto</a> for your operating system (VS Code users also need the Quarto extension). Use version 1.4 or later: <code>quarto --version</code> in a terminal shows which you have.</p>
-<p><strong>The example folder.</strong> <a href="example-project.zip" download="example-project.zip">Download the example folder</a> and unzip it. It has six folders:</p>
+<p><strong>The example folder.</strong> <a href="example-project.zip" download="example-project.zip">Download the example folder</a> and unzip it. It has five folders, and the checklist:</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Folder</th>
@@ -352,15 +348,15 @@ How to read this document
 <td>A short report to turn into HTML, PDF and Word</td>
 </tr>
 <tr class="even">
-<td><code>python-project/</code></td>
-<td>A small Python project for trying environments with uv (optional)</td>
+<td><code>environment-demo/</code></td>
+<td>A small project in R (<code>r/</code>) and in Python (<code>python/</code>), for trying environments with renv or uv (optional)</td>
 </tr>
 <tr class="odd">
-<td><code>r-project/</code></td>
-<td>The same project in R, for trying environments with renv (optional)</td>
+<td><code>capstone-answer/</code></td>
+<td>A finished answer to the <a href="./capstone.html">capstone exercise</a>, in R (<code>r/</code>) and in Python (<code>python/</code>)</td>
 </tr>
 <tr class="even">
-<td><code>take-home/</code></td>
+<td><code>checklist.pdf</code>, <code>checklist.docx</code></td>
 <td>A one-page checklist for your own project</td>
 </tr>
 </tbody>
@@ -371,7 +367,7 @@ How to read this document
 <section id="project-structures" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Project structures</h1>
 <p><span class="lead-question">How should I organise a project so that I, and others, can find things and re-run them?</span></p>
-<p><span class="section-meta">About 25 min · Activity: rescue the messy project</span></p>
+<p><span class="section-meta">About 25 min · Activity: Rescue the messy project</span></p>
 <section id="why-bother" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="why-bother"><span class="header-section-number">1.1</span> Why bother?</h2>
 <p>A project that has grown organically tends to look like a folder full of files called <code>data.csv</code>, <code>data_final.csv</code>, <code>analysis2.R</code> and <code>analysis_NEW.py</code>. This causes three problems:</p>
@@ -982,7 +978,7 @@ How to read this document
 <section id="virtual-environments" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Virtual environments</h1>
 <p><span class="lead-question">How do I make sure my code still runs next month, or on someone else’s computer?</span></p>
-<p><span class="section-meta">About 30 min · Demo · Activity: the new laptop test</span></p>
+<p><span class="section-meta">About 30 min · Demo · Activity: The new laptop test</span></p>
 <section id="why-do-we-need-environments" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="why-do-we-need-environments"><span class="header-section-number">3.1</span> Why do we need environments?</h2>
 <p>Imagine this sequence:</p>
@@ -1088,7 +1084,7 @@ How to read this document
 </section>
 <section id="what-it-looks-like-in-r-and-python" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="what-it-looks-like-in-r-and-python"><span class="header-section-number">3.3</span> What it looks like in R and Python</h2>
-<p>You don’t need to run this in the course. It shows what using an environment looks like, so you can try it on a project of your own. There are only two steps to remember: make the environment once, and rebuild it from the lock file whenever you need to. The example folder has a small project in each language to practise on, <code>r-project/</code> and <code>python-project/</code>, with the steps in their READMEs.</p>
+<p>You don’t need to run this in the course. It shows what using an environment looks like, so you can try it on a project of your own. There are only two steps to remember: make the environment once, and rebuild it from the lock file whenever you need to. The example folder has a small project in each language to practise on, <code>environment-demo/r/</code> and <code>environment-demo/python/</code>, with the steps in their READMEs.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Python</a></li></ul>
 <div class="tab-content">
@@ -1147,7 +1143,7 @@ How to read this document
 <h2 data-number="3.7" class="anchored" data-anchor-id="optional-trying-it-yourself-1"><span class="header-section-number">3.7</span> Optional: trying it yourself</h2>
 <p>The live session doesn’t need you to run any commands. If you want to try environments yourself:</p>
 <ul>
-<li><strong>To repeat the demo from the session</strong>, copy <code>r-project/</code> (R, with <code>renv</code>) or <code>python-project/</code> (Python, with <code>uv</code>) from the example folder and follow the steps in its <code>README.md</code>: you set up an environment, delete it, and rebuild it from the lock file.</li>
+<li><strong>To repeat the demo from the session</strong>, copy <code>environment-demo/r/</code> (R, with <code>renv</code>) or <code>environment-demo/python/</code> (Python, with <code>uv</code>) from the example folder and follow the steps in its <code>README.md</code>: you set up an environment, delete it, and rebuild it from the lock file.</li>
 <li><strong>To give a project of your own an environment</strong>, in R (with <code>renv</code>) or Python (with <code>uv</code>), work through the <a href="./capstone.html">capstone exercise</a>.</li>
 </ul>
 </section>
@@ -1243,7 +1239,7 @@ How to read this document
 <section id="your-first-step" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Your first step</h1>
 <p><span class="lead-question">What will you do differently on Monday?</span></p>
-<p><span class="section-meta">About 15 min · Activity: your checklist</span></p>
+<p><span class="section-meta">About 15 min · Activity: Your checklist</span></p>
 <section id="from-messy-to-shareable" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="from-messy-to-shareable"><span class="header-section-number">4.1</span> From messy to shareable</h2>
 <p>This whole course is one journey:</p>
@@ -1259,7 +1255,7 @@ How to read this document
 </section>
 <section id="your-checklist" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="your-checklist"><span class="header-section-number">4.2</span> Your checklist</h2>
-<p>Tick what your own project already does. There is a one-page version to print or edit in <code>take-home/</code> (PDF and Word).</p>
+<p>Tick what your own project already does. There is a one-page version to print or edit in the example folder (<code>checklist.pdf</code> and <code>checklist.docx</code>).</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">

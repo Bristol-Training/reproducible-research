@@ -356,7 +356,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p><strong>4a. A header like a paper’s.</strong> As well as the title, add a date, an abstract, numbered sections and a table of contents. <code>echo: false</code> hides the code, so readers see only the results. The code is still in the file.</p>
+<section id="a.-a-header-like-a-papers" class="level3">
+<h3 class="anchored" data-anchor-id="a.-a-header-like-a-papers">4a. A header like a paper’s</h3>
+<p>As well as the title, add a date, an abstract, numbered sections and a table of contents. <code>echo: false</code> hides the code, so readers see only the results. The code is still in the file.</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>report.qmd</strong></pre>
@@ -379,7 +381,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">docx</span><span class="kw">:</span><span class="at"> default</span></span>
 <span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p><strong>4b. Read the data.</strong> Under the header, add a chunk that reads the clean data and keeps one species, and a sentence with <strong>inline code</strong>, so the number updates when the data changes:</p>
+</section>
+<section id="b.-read-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="b.-read-the-data">4b. Read the data</h3>
+<p>Under the header, add a chunk that reads the clean data and keeps one species, and a sentence with <strong>inline code</strong>, so the number updates when the data changes:</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">Python</a></li></ul>
 <div class="tab-content">
@@ -423,7 +428,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p><strong>4c. A table, with a caption.</strong> Add a <code>## Results</code> heading, then a chunk whose <code>label</code> starts with <code>tbl-</code>. Quarto numbers it as a table:</p>
+</section>
+<section id="c.-a-table-with-a-caption" class="level3">
+<h3 class="anchored" data-anchor-id="c.-a-table-with-a-caption">4c. A table, with a caption</h3>
+<p>Add a <code>## Results</code> heading, then a chunk whose <code>label</code> starts with <code>tbl-</code>. Quarto numbers it as a table:</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false" href="">Python</a></li></ul>
 <div class="tab-content">
@@ -455,7 +463,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p><strong>4d. A figure, with a caption.</strong> In the same way, a label starting with <code>fig-</code> makes a numbered figure. <code>fig-alt</code> describes it for people who use a screen reader:</p>
+</section>
+<section id="d.-a-figure-with-a-caption" class="level3">
+<h3 class="anchored" data-anchor-id="d.-a-figure-with-a-caption">4d. A figure, with a caption</h3>
+<p>In the same way, a label starting with <code>fig-</code> makes a numbered figure. <code>fig-alt</code> describes it for people who use a screen reader:</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false" href="">Python</a></li></ul>
 <div class="tab-content">
@@ -492,7 +503,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p><strong>4e. Refer to them.</strong> Write <code>@tbl-sex</code> or <code>@fig-mass</code> in the text, and Quarto replaces it with “Table 1” or “Figure 1”, with a link. The numbers stay right if you add more tables or figures. Put the result in a sentence too, with inline code:</p>
+</section>
+<section id="e.-refer-to-them" class="level3">
+<h3 class="anchored" data-anchor-id="e.-refer-to-them">4e. Refer to them</h3>
+<p>Write <code>@tbl-sex</code> or <code>@fig-mass</code> in the text, and Quarto replaces it with “Table 1” or “Figure 1”, with a link. The numbers stay right if you add more tables or figures. Put the result in a sentence too, with inline code:</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false" href="">Python</a></li></ul>
 <div class="tab-content">
@@ -516,7 +530,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p><strong>4f. Cite a source.</strong> Make a file called <code>references.bib</code>, with the paper the data comes from. (Reference managers such as Zotero can export <code>.bib</code> files for you.)</p>
+</section>
+<section id="f.-cite-a-source" class="level3">
+<h3 class="anchored" data-anchor-id="f.-cite-a-source">4f. Cite a source</h3>
+<p>Make a file called <code>references.bib</code>, with two sources: the paper the data comes from, and the <code>palmerpenguins</code> package that shares it. Each entry starts with a <strong>citation key</strong> (here <code>gorman2014</code> and <code>palmerpenguins</code>), which is the name you use to cite it. Reference managers such as Zotero can export <code>.bib</code> files for you.</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>references.bib</strong></pre>
@@ -531,10 +548,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">number</span>  = {3},</span>
 <span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">pages</span>   = {e90081},</span>
 <span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">doi</span>     = {10.1371/journal.pone.0090081}</span>
-<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a><span class="va">@manual</span>{<span class="ot">palmerpenguins</span>,</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span>   = {palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data},</span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">author</span>  = {Horst, Allison Marie and Hill, Alison Presmanes and Gorman, Kristen B.},</span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>  <span class="dt">year</span>    = {2020},</span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>  <span class="dt">note</span>    = {R package version 0.1.0},</span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>  <span class="dt">doi</span>     = {10.5281/zenodo.3960218},</span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>  <span class="dt">url</span>     = {https://allisonhorst.github.io/palmerpenguins/}</span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Add <code>bibliography: references.bib</code> to the header. Add an <code>## Introduction</code> that cites it with <code>[@gorman2014]</code>, and a <code>## References</code> heading at the end. Quarto adds the citation, and the reference list under that heading.</p>
-<p><strong>4g. Render all the formats.</strong> Open the HTML, PDF and Word versions in <code>outputs/</code>. The section numbers, captions, cross-references and citation are in all three, from one file. You should find 119 Gentoo penguins, with males about 805 g heavier than females.</p>
+<p>Add <code>bibliography: references.bib</code> to the header. Add an <code>## Introduction</code> that cites both sources by their keys, with <code>[@gorman2014]</code> and <code>[@palmerpenguins]</code>, and a <code>## References</code> heading at the end. Quarto formats each citation, and adds the reference list under that heading.</p>
+</section>
+<section id="g.-render-all-the-formats" class="level3">
+<h3 class="anchored" data-anchor-id="g.-render-all-the-formats">4g. Render all the formats</h3>
+<p>Open the HTML, PDF and Word versions in <code>outputs/</code>. The section numbers, captions, cross-references and citations are in all three, from one file. You should find 119 Gentoo penguins, with males about 805 g heavier than females.</p>
+</section>
 </section>
 <section id="step-5-record-it" class="level2">
 <h2 class="anchored" data-anchor-id="step-5-record-it">Step 5: Record it</h2>
@@ -584,6 +614,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Do you get the same report, with the same numbers? If anything was missing from your README, add it. For a real test, zip the project (without the environment) and send it to a colleague: can they run it from the README alone?</p>
+<p>To compare your project with a finished one, open <code>capstone-answer/</code> in the example folder. It has the whole project in R (<code>r/</code>) and in Python (<code>python/</code>), with the lock file and the rendered report in <code>outputs/</code>. The main files are below too.</p>
 <div class="callout callout-style-default callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -632,32 +663,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb26-26"><a href="#cb26-26" aria-hidden="true" tabindex="-1"></a><span class="fu">## Introduction</span></span>
 <span id="cb26-27"><a href="#cb26-27" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-28"><a href="#cb26-28" aria-hidden="true" tabindex="-1"></a>Penguins near Palmer Station, Antarctica, were measured between</span>
-<span id="cb26-29"><a href="#cb26-29" aria-hidden="true" tabindex="-1"></a>2007 and 2009 <span class="co">[</span><span class="ot">@gorman2014</span><span class="co">]</span>. Here we look at one species, Gentoo.</span>
-<span id="cb26-30"><a href="#cb26-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-31"><a href="#cb26-31" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
+<span id="cb26-29"><a href="#cb26-29" aria-hidden="true" tabindex="-1"></a>2007 and 2009 <span class="co">[</span><span class="ot">@gorman2014</span><span class="co">]</span>. We use the version of the data in</span>
+<span id="cb26-30"><a href="#cb26-30" aria-hidden="true" tabindex="-1"></a>the palmerpenguins package <span class="co">[</span><span class="ot">@palmerpenguins</span><span class="co">]</span>, and look at one</span>
+<span id="cb26-31"><a href="#cb26-31" aria-hidden="true" tabindex="-1"></a>species, Gentoo.</span>
 <span id="cb26-32"><a href="#cb26-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-33"><a href="#cb26-33" aria-hidden="true" tabindex="-1"></a>After removing incomplete rows, there are <span class="in">`{r} nrow(gentoo)`</span> Gentoo</span>
-<span id="cb26-34"><a href="#cb26-34" aria-hidden="true" tabindex="-1"></a>penguins in the data.</span>
-<span id="cb26-35"><a href="#cb26-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-36"><a href="#cb26-36" aria-hidden="true" tabindex="-1"></a><span class="fu">## Results</span></span>
+<span id="cb26-33"><a href="#cb26-33" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
+<span id="cb26-34"><a href="#cb26-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-35"><a href="#cb26-35" aria-hidden="true" tabindex="-1"></a>After removing incomplete rows, there are <span class="in">`{r} nrow(gentoo)`</span> Gentoo</span>
+<span id="cb26-36"><a href="#cb26-36" aria-hidden="true" tabindex="-1"></a>penguins in the data.</span>
 <span id="cb26-37"><a href="#cb26-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-38"><a href="#cb26-38" aria-hidden="true" tabindex="-1"></a>On average, males were <span class="in">`{r} round(diff(by_sex$body_mass))`</span> g heavier</span>
-<span id="cb26-39"><a href="#cb26-39" aria-hidden="true" tabindex="-1"></a>than females (@tbl-sex and @fig-mass).</span>
-<span id="cb26-40"><a href="#cb26-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-41"><a href="#cb26-41" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb26-42"><a href="#cb26-42" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-sex</span></span>
-<span id="cb26-43"><a href="#cb26-43" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: "Mean body mass of Gentoo penguins, by sex"</span></span>
-<span id="cb26-44"><a href="#cb26-44" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(by_sex, <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Sex"</span>, <span class="st">"Mean body mass (g)"</span>), <span class="at">digits =</span> <span class="dv">0</span>)</span>
-<span id="cb26-45"><a href="#cb26-45" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb26-46"><a href="#cb26-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-47"><a href="#cb26-47" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb26-48"><a href="#cb26-48" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-mass</span></span>
-<span id="cb26-49"><a href="#cb26-49" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Body mass of Gentoo penguins, by sex"</span></span>
-<span id="cb26-50"><a href="#cb26-50" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-alt: "Boxplot of Gentoo body mass: males are heavier than females"</span></span>
-<span id="cb26-51"><a href="#cb26-51" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(body_mass <span class="sc">~</span> sex, <span class="at">data =</span> gentoo, <span class="at">xlab =</span> <span class="st">"Sex"</span>, <span class="at">ylab =</span> <span class="st">"Body mass (g)"</span>)</span>
-<span id="cb26-52"><a href="#cb26-52" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb26-53"><a href="#cb26-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-54"><a href="#cb26-54" aria-hidden="true" tabindex="-1"></a><span class="fu">## References</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb26-38"><a href="#cb26-38" aria-hidden="true" tabindex="-1"></a><span class="fu">## Results</span></span>
+<span id="cb26-39"><a href="#cb26-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-40"><a href="#cb26-40" aria-hidden="true" tabindex="-1"></a>On average, males were <span class="in">`{r} round(diff(by_sex$body_mass))`</span> g heavier</span>
+<span id="cb26-41"><a href="#cb26-41" aria-hidden="true" tabindex="-1"></a>than females (@tbl-sex and @fig-mass).</span>
+<span id="cb26-42"><a href="#cb26-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-43"><a href="#cb26-43" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb26-44"><a href="#cb26-44" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-sex</span></span>
+<span id="cb26-45"><a href="#cb26-45" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: "Mean body mass of Gentoo penguins, by sex"</span></span>
+<span id="cb26-46"><a href="#cb26-46" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(by_sex, <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Sex"</span>, <span class="st">"Mean body mass (g)"</span>), <span class="at">digits =</span> <span class="dv">0</span>)</span>
+<span id="cb26-47"><a href="#cb26-47" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb26-48"><a href="#cb26-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-49"><a href="#cb26-49" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb26-50"><a href="#cb26-50" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-mass</span></span>
+<span id="cb26-51"><a href="#cb26-51" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Body mass of Gentoo penguins, by sex"</span></span>
+<span id="cb26-52"><a href="#cb26-52" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-alt: "Boxplot of Gentoo body mass: males are heavier than females"</span></span>
+<span id="cb26-53"><a href="#cb26-53" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(body_mass <span class="sc">~</span> sex, <span class="at">data =</span> gentoo, <span class="at">xlab =</span> <span class="st">"Sex"</span>, <span class="at">ylab =</span> <span class="st">"Body mass (g)"</span>)</span>
+<span id="cb26-54"><a href="#cb26-54" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb26-55"><a href="#cb26-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-56"><a href="#cb26-56" aria-hidden="true" tabindex="-1"></a><span class="fu">## References</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -687,12 +720,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb27-22"><a href="#cb27-22" aria-hidden="true" tabindex="-1"></a>  and <span class="in">`penguins_clean_dictionary.csv`</span>, which explains each column</span>
 <span id="cb27-23"><a href="#cb27-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`code/`</span> the scripts</span>
 <span id="cb27-24"><a href="#cb27-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`report.qmd`</span> the report, and <span class="in">`references.bib`</span> its references</span>
-<span id="cb27-25"><a href="#cb27-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`outputs/`</span> the rendered report. Safe to delete</span>
-<span id="cb27-26"><a href="#cb27-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-27"><a href="#cb27-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
-<span id="cb27-28"><a href="#cb27-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-29"><a href="#cb27-29" aria-hidden="true" tabindex="-1"></a>Penguin measurements from near Palmer Station, Antarctica</span>
-<span id="cb27-30"><a href="#cb27-30" aria-hidden="true" tabindex="-1"></a>(Gorman, Williams and Fraser, 2014).</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb27-25"><a href="#cb27-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`_quarto.yml`</span> settings for the report (it puts the results in <span class="in">`outputs/`</span>)</span>
+<span id="cb27-26"><a href="#cb27-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`outputs/`</span> the rendered report. Safe to delete</span>
+<span id="cb27-27"><a href="#cb27-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-28"><a href="#cb27-28" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
+<span id="cb27-29"><a href="#cb27-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-30"><a href="#cb27-30" aria-hidden="true" tabindex="-1"></a>Penguin measurements from near Palmer Station, Antarctica</span>
+<span id="cb27-31"><a href="#cb27-31" aria-hidden="true" tabindex="-1"></a>(Gorman, Williams and Fraser, 2014).</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <div id="tabset-10-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-10-2-tab">
@@ -732,39 +766,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb28-30"><a href="#cb28-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## Introduction</span></span>
 <span id="cb28-31"><a href="#cb28-31" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-32"><a href="#cb28-32" aria-hidden="true" tabindex="-1"></a>Penguins near Palmer Station, Antarctica, were measured between</span>
-<span id="cb28-33"><a href="#cb28-33" aria-hidden="true" tabindex="-1"></a>2007 and 2009 <span class="co">[</span><span class="ot">@gorman2014</span><span class="co">]</span>. Here we look at one species, Gentoo.</span>
-<span id="cb28-34"><a href="#cb28-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-35"><a href="#cb28-35" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
+<span id="cb28-33"><a href="#cb28-33" aria-hidden="true" tabindex="-1"></a>2007 and 2009 <span class="co">[</span><span class="ot">@gorman2014</span><span class="co">]</span>. We use the version of the data in</span>
+<span id="cb28-34"><a href="#cb28-34" aria-hidden="true" tabindex="-1"></a>the palmerpenguins package <span class="co">[</span><span class="ot">@palmerpenguins</span><span class="co">]</span>, and look at one</span>
+<span id="cb28-35"><a href="#cb28-35" aria-hidden="true" tabindex="-1"></a>species, Gentoo.</span>
 <span id="cb28-36"><a href="#cb28-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-37"><a href="#cb28-37" aria-hidden="true" tabindex="-1"></a>After removing incomplete rows, there are <span class="in">`{python} len(gentoo)`</span> Gentoo</span>
-<span id="cb28-38"><a href="#cb28-38" aria-hidden="true" tabindex="-1"></a>penguins in the data.</span>
-<span id="cb28-39"><a href="#cb28-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-40"><a href="#cb28-40" aria-hidden="true" tabindex="-1"></a><span class="fu">## Results</span></span>
+<span id="cb28-37"><a href="#cb28-37" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
+<span id="cb28-38"><a href="#cb28-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-39"><a href="#cb28-39" aria-hidden="true" tabindex="-1"></a>After removing incomplete rows, there are <span class="in">`{python} len(gentoo)`</span> Gentoo</span>
+<span id="cb28-40"><a href="#cb28-40" aria-hidden="true" tabindex="-1"></a>penguins in the data.</span>
 <span id="cb28-41"><a href="#cb28-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-42"><a href="#cb28-42" aria-hidden="true" tabindex="-1"></a>On average, males were <span class="in">`{python} int(by_sex["male"] - by_sex["female"])`</span> g heavier</span>
-<span id="cb28-43"><a href="#cb28-43" aria-hidden="true" tabindex="-1"></a>than females (@tbl-sex and @fig-mass).</span>
-<span id="cb28-44"><a href="#cb28-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-45"><a href="#cb28-45" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb28-46"><a href="#cb28-46" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-sex</span></span>
-<span id="cb28-47"><a href="#cb28-47" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: "Mean body mass of Gentoo penguins, by sex"</span></span>
-<span id="cb28-48"><a href="#cb28-48" aria-hidden="true" tabindex="-1"></a>table <span class="op">=</span> by_sex.reset_index()</span>
-<span id="cb28-49"><a href="#cb28-49" aria-hidden="true" tabindex="-1"></a>table.columns <span class="op">=</span> [<span class="st">"Sex"</span>, <span class="st">"Mean body mass (g)"</span>]</span>
-<span id="cb28-50"><a href="#cb28-50" aria-hidden="true" tabindex="-1"></a>Markdown(table.to_markdown(index<span class="op">=</span><span class="va">False</span>))</span>
-<span id="cb28-51"><a href="#cb28-51" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-52"><a href="#cb28-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-53"><a href="#cb28-53" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb28-54"><a href="#cb28-54" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-mass</span></span>
-<span id="cb28-55"><a href="#cb28-55" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Body mass of Gentoo penguins, by sex"</span></span>
-<span id="cb28-56"><a href="#cb28-56" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-alt: "Boxplot of Gentoo body mass: males are heavier than females"</span></span>
-<span id="cb28-57"><a href="#cb28-57" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> gentoo.boxplot(column<span class="op">=</span><span class="st">"body_mass"</span>, by<span class="op">=</span><span class="st">"sex"</span>, grid<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb28-58"><a href="#cb28-58" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">""</span>)</span>
-<span id="cb28-59"><a href="#cb28-59" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="st">""</span>)</span>
-<span id="cb28-60"><a href="#cb28-60" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Sex"</span>)</span>
-<span id="cb28-61"><a href="#cb28-61" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Body mass (g)"</span>)</span>
-<span id="cb28-62"><a href="#cb28-62" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb28-63"><a href="#cb28-63" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-64"><a href="#cb28-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-65"><a href="#cb28-65" aria-hidden="true" tabindex="-1"></a><span class="fu">## References</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb28-42"><a href="#cb28-42" aria-hidden="true" tabindex="-1"></a><span class="fu">## Results</span></span>
+<span id="cb28-43"><a href="#cb28-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-44"><a href="#cb28-44" aria-hidden="true" tabindex="-1"></a>On average, males were <span class="in">`{python} int(by_sex["male"] - by_sex["female"])`</span> g heavier</span>
+<span id="cb28-45"><a href="#cb28-45" aria-hidden="true" tabindex="-1"></a>than females (@tbl-sex and @fig-mass).</span>
+<span id="cb28-46"><a href="#cb28-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-47"><a href="#cb28-47" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-48"><a href="#cb28-48" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-sex</span></span>
+<span id="cb28-49"><a href="#cb28-49" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: "Mean body mass of Gentoo penguins, by sex"</span></span>
+<span id="cb28-50"><a href="#cb28-50" aria-hidden="true" tabindex="-1"></a>table <span class="op">=</span> by_sex.reset_index()</span>
+<span id="cb28-51"><a href="#cb28-51" aria-hidden="true" tabindex="-1"></a>table.columns <span class="op">=</span> [<span class="st">"Sex"</span>, <span class="st">"Mean body mass (g)"</span>]</span>
+<span id="cb28-52"><a href="#cb28-52" aria-hidden="true" tabindex="-1"></a>Markdown(table.to_markdown(index<span class="op">=</span><span class="va">False</span>))</span>
+<span id="cb28-53"><a href="#cb28-53" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-54"><a href="#cb28-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-55"><a href="#cb28-55" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb28-56"><a href="#cb28-56" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-mass</span></span>
+<span id="cb28-57"><a href="#cb28-57" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Body mass of Gentoo penguins, by sex"</span></span>
+<span id="cb28-58"><a href="#cb28-58" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-alt: "Boxplot of Gentoo body mass: males are heavier than females"</span></span>
+<span id="cb28-59"><a href="#cb28-59" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> gentoo.boxplot(column<span class="op">=</span><span class="st">"body_mass"</span>, by<span class="op">=</span><span class="st">"sex"</span>, grid<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb28-60"><a href="#cb28-60" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">""</span>)</span>
+<span id="cb28-61"><a href="#cb28-61" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="st">""</span>)</span>
+<span id="cb28-62"><a href="#cb28-62" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Sex"</span>)</span>
+<span id="cb28-63"><a href="#cb28-63" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Body mass (g)"</span>)</span>
+<span id="cb28-64"><a href="#cb28-64" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb28-65"><a href="#cb28-65" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-66"><a href="#cb28-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-67"><a href="#cb28-67" aria-hidden="true" tabindex="-1"></a><span class="fu">## References</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -794,12 +830,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb29-22"><a href="#cb29-22" aria-hidden="true" tabindex="-1"></a>  and <span class="in">`penguins_clean_dictionary.csv`</span>, which explains each column</span>
 <span id="cb29-23"><a href="#cb29-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`code/`</span> the scripts</span>
 <span id="cb29-24"><a href="#cb29-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`report.qmd`</span> the report, and <span class="in">`references.bib`</span> its references</span>
-<span id="cb29-25"><a href="#cb29-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`outputs/`</span> the rendered report. Safe to delete</span>
-<span id="cb29-26"><a href="#cb29-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-27"><a href="#cb29-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
-<span id="cb29-28"><a href="#cb29-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-29"><a href="#cb29-29" aria-hidden="true" tabindex="-1"></a>Penguin measurements from near Palmer Station, Antarctica</span>
-<span id="cb29-30"><a href="#cb29-30" aria-hidden="true" tabindex="-1"></a>(Gorman, Williams and Fraser, 2014).</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb29-25"><a href="#cb29-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`_quarto.yml`</span> settings for the report (it puts the results in <span class="in">`outputs/`</span>)</span>
+<span id="cb29-26"><a href="#cb29-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`outputs/`</span> the rendered report. Safe to delete</span>
+<span id="cb29-27"><a href="#cb29-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-28"><a href="#cb29-28" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
+<span id="cb29-29"><a href="#cb29-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-30"><a href="#cb29-30" aria-hidden="true" tabindex="-1"></a>Penguin measurements from near Palmer Station, Antarctica</span>
+<span id="cb29-31"><a href="#cb29-31" aria-hidden="true" tabindex="-1"></a>(Gorman, Williams and Fraser, 2014).</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
