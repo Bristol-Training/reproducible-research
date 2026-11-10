@@ -1,0 +1,67 @@
+---
+title: "Body mass of Gentoo penguins"
+author: "Your name here"
+date: today
+abstract: |
+  Male Gentoo penguins are heavier than females. This report
+  measures the difference.
+number-sections: true
+execute:
+  echo: false
+bibliography: references.bib
+format:
+  html:
+    toc: true
+    embed-resources: true
+  typst: default
+  docx: default
+---
+
+```{python}
+import matplotlib.pyplot as plt
+import pandas as pd
+from IPython.display import Markdown
+
+clean = pd.read_csv("data/processed/penguins_clean.csv")
+gentoo = clean[clean["species"] == "Gentoo"]
+by_sex = gentoo.groupby("sex")["body_mass"].mean().round()
+```
+
+## Introduction
+
+Penguins near Palmer Station, Antarctica, were measured between
+2007 and 2009 [@gorman2014]. We use the version of the data in
+the palmerpenguins package [@palmerpenguins], and look at one
+species, Gentoo.
+
+## Data
+
+After removing incomplete rows, there are `{python} len(gentoo)` Gentoo
+penguins in the data.
+
+## Results
+
+On average, males were `{python} int(by_sex["male"] - by_sex["female"])` g heavier
+than females (@tbl-sex and @fig-mass).
+
+```{python}
+#| label: tbl-sex
+#| tbl-cap: "Mean body mass of Gentoo penguins, by sex"
+table = by_sex.reset_index()
+table.columns = ["Sex", "Mean body mass (g)"]
+Markdown(table.to_markdown(index=False))
+```
+
+```{python}
+#| label: fig-mass
+#| fig-cap: "Body mass of Gentoo penguins, by sex"
+#| fig-alt: "Boxplot of Gentoo body mass: males are heavier than females"
+ax = gentoo.boxplot(column="body_mass", by="sex", grid=False)
+ax.set_title("")
+plt.suptitle("")
+ax.set_xlabel("Sex")
+ax.set_ylabel("Body mass (g)")
+plt.show()
+```
+
+## References

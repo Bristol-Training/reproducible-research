@@ -80,16 +80,16 @@ The live activities don't need you to write or run any code: the only thing you 
 
 **Quarto.** We use [Quarto](https://quarto.org) to build documents. RStudio and Positron include it, so if you use either you probably don't need to install anything. To check, open a `.qmd` file and look for the **Render** button. Otherwise, [install Quarto](https://quarto.org/docs/get-started/) for your operating system (VS Code users also need the Quarto extension). Use version 1.4 or later: `quarto --version` in a terminal shows which you have.
 
-**The example folder.** [Download the example folder](example-project.zip){download="example-project.zip"} and unzip it. It has six folders:
+**The example folder.** [Download the example folder](example-project.zip){download="example-project.zip"} and unzip it. It has five folders, and the checklist:
 
 | Folder | What it is |
 |---|---|
 | `messy-project/` | A project with a bad structure and bad names |
 | `tidy-project/` | The same project with all the good habits |
 | `one-document/` | A short report to turn into HTML, PDF and Word |
-| `python-project/` | A small Python project for trying environments with uv (optional) |
-| `r-project/` | The same project in R, for trying environments with renv (optional) |
-| `take-home/` | A one-page checklist for your own project |
+| `environment-demo/` | A small project in R (`r/`) and in Python (`python/`), for trying environments with renv or uv (optional) |
+| `capstone-answer/` | A finished answer to the [capstone exercise](capstone.qmd), in R (`r/`) and in Python (`python/`) |
+| `checklist.pdf`, `checklist.docx` | A one-page checklist for your own project |
 
 If you want to do the optional [capstone exercise](capstone.qmd), you will also need R or Python, and [uv](https://docs.astral.sh/uv/) (Python) or the `renv` package (R).
 
@@ -97,7 +97,7 @@ If you want to do the optional [capstone exercise](capstone.qmd), you will also 
 
 [How should I organise a project so that I, and others, can find things and re-run them?]{.lead-question}
 
-[About 25 min · Activity: rescue the messy project]{.section-meta}
+[About 25 min · Activity: Rescue the messy project]{.section-meta}
 
 ## Why bother?
 
@@ -507,7 +507,7 @@ If only one format appeared, Render was set to a single format. Use the format m
 
 [How do I make sure my code still runs next month, or on someone else's computer?]{.lead-question}
 
-[About 30 min · Demo · Activity: the new laptop test]{.section-meta}
+[About 30 min · Demo · Activity: The new laptop test]{.section-meta}
 
 ## Why do we need environments?
 
@@ -556,7 +556,7 @@ Other tools do the same job, such as Python's built-in `venv` with a `requiremen
 
 ## What it looks like in R and Python
 
-You don't need to run this in the course. It shows what using an environment looks like, so you can try it on a project of your own. There are only two steps to remember: make the environment once, and rebuild it from the lock file whenever you need to. The example folder has a small project in each language to practise on, `r-project/` and `python-project/`, with the steps in their READMEs.
+You don't need to run this in the course. It shows what using an environment looks like, so you can try it on a project of your own. There are only two steps to remember: make the environment once, and rebuild it from the lock file whenever you need to. The example folder has a small project in each language to practise on, `environment-demo/r/` and `environment-demo/python/`, with the steps in their READMEs.
 
 ::: {.panel-tabset}
 
@@ -621,7 +621,7 @@ There are no packages to install, but the software version can still matter: for
 
 The live session doesn't need you to run any commands. If you want to try environments yourself:
 
-- **To repeat the demo from the session**, copy `r-project/` (R, with `renv`) or `python-project/` (Python, with `uv`) from the example folder and follow the steps in its `README.md`: you set up an environment, delete it, and rebuild it from the lock file.
+- **To repeat the demo from the session**, copy `environment-demo/r/` (R, with `renv`) or `environment-demo/python/` (Python, with `uv`) from the example folder and follow the steps in its `README.md`: you set up an environment, delete it, and rebuild it from the lock file.
 - **To give a project of your own an environment**, in R (with `renv`) or Python (with `uv`), work through the [capstone exercise](capstone.qmd).
 
 ## Learn more about environments
@@ -639,7 +639,7 @@ The live session doesn't need you to run any commands. If you want to try enviro
 
 ### The new laptop test {#exercise3 .unnumbered}
 
-A colleague emails you their project: *"It runs fine on my laptop!"* You open it on your own laptop, and it says there is no package called `ggplot2`.
+A colleague emails you their project: *"It runs fine on my laptop!"*  You open it on your own laptop, and it says there is no package called `ggplot2`.
 
 On your own, **list everything you would need to know** to run this project on a new computer. Write down as many things as you can.
 
@@ -669,7 +669,7 @@ Almost all of this can be written down once, in a README. A lock file records th
 
 [What will you do differently on Monday?]{.lead-question}
 
-[About 15 min · Activity: your checklist]{.section-meta}
+[About 15 min · Activity: Your checklist]{.section-meta}
 
 ## From messy to shareable
 
@@ -689,7 +689,7 @@ Each step is a habit, and you can start with any of them.
 
 ## Your checklist
 
-Tick what your own project already does. There is a one-page version to print or edit in `take-home/` (PDF and Word).
+Tick what your own project already does. There is a one-page version to print or edit in the example folder (`checklist.pdf` and `checklist.docx`).
 
 | | |
 |---|---|

@@ -586,7 +586,7 @@ Journal articles, theses and books, built from several files
 :::
 
 ::: notes
-Answer. Your changes showed up in every format, because there is only one source. And Quarto does far more than reports: this deck, the notes and the site are all Quarto. On Reports, mention cross-references: write @fig-mass and Quarto writes "Figure 1", and keeps the numbers right as you add or move figures. The capstone exercise shows how.
+Answer. Your changes showed up in every format, because there is only one source. And Quarto does far more than reports: this deck, the notes and the site are all Quarto. On Reports, mention cross-references: write `@fig-mass` and Quarto writes "Figure 1", and keeps the numbers right as you add or move figures. The capstone exercise shows how.
 :::
 
 ## Learn more about Quarto
@@ -749,7 +749,7 @@ Good enough for almost every project. Perfect is not the goal!
 :::
 
 ::: notes
-STOP HERE and switch to the demo. R: in a copy of `r-project` from the example folder, run `renv::init()`, then `source("code/analysis.R")`. Close the project, delete `renv/library`, open it again (ggplot2 is now missing) and run `renv::restore()`. Python: in a copy of `python-project` from the example folder, run `uv init --no-package`, then `uv add pandas matplotlib`, then `uv run code/analysis.py`. Delete `.venv` and run `uv sync` to rebuild it (the steps are in its README). Say: "this is what your colleague does when you send them the project". Note that renv records package versions but not the version of R itself. If you have no environment ready, show the lock file in `r-project/finished/` or `python-project/finished/` and describe it instead. If it fails, say so and move on: this is a watch-only demo.
+STOP HERE and switch to the demo. R: in a copy of `environment-demo/r` from the example folder, run `renv::init()`, then `source("code/analysis.R")`. Close the project, delete `renv/library`, open it again (ggplot2 is now missing) and run `renv::restore()`. Python: in a copy of `environment-demo/python` from the example folder, run `uv init --no-package`, then `uv add pandas matplotlib`, then `uv run code/analysis.py`. Delete `.venv` and run `uv sync` to rebuild it (the steps are in its README). Say: "this is what your colleague does when you send them the project". Note that renv records package versions but not the version of R itself. If you have no environment ready, show the lock file in `environment-demo/r/finished/` or `environment-demo/python/finished/` and describe it instead. If it fails, say so and move on: this is a watch-only demo.
 :::
 
 ## The new laptop test {.demo-slide}
@@ -891,7 +891,7 @@ Together, 3 min. This is the whole course on one slide. Every step is a habit, a
 :::
 
 ::: notes
-Your turn, 6 min. They tick the checklist for a project of their own (or the messy one if they have none). Then circle ONE thing, and post it in the chat. The printable checklist is in `take-home/` (PDF and Word).
+Your turn, 6 min. They tick the checklist for a project of their own (or the messy one if they have none). Then circle ONE thing, and post it in the chat. The printable checklist is in the example folder (`checklist.pdf` and `checklist.docx`).
 :::
 
 ## Quick wins {.demo-slide}

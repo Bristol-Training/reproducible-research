@@ -28,3 +28,8 @@ __pycache__/
 /_freeze/
 
 /.quarto/
+
+# The checklist's rendered files: the copies that matter are in example-project/
+/checklist/*.html
+/checklist/*.pdf
+/checklist/*.docx

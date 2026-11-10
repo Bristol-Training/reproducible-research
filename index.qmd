@@ -45,6 +45,8 @@ The course takes about two hours. Each topic has a hands-on activity (and someti
 
 The course contains examples for both Python and R, with opportunities to include your own code and examples.
 
+The examples use the [Palmer penguins](https://allisonhorst.github.io/palmerpenguins/) dataset: measurements of three penguin species near Palmer Station, Antarctica. It is small and easy to understand, so we can focus on how the project is organised rather than on the analysis.
+
 ## Prerequisites
 
 - Some experience of using code to analyse data (e.g. Python, R, Julia)
@@ -72,6 +74,13 @@ By the end of this course, you will be able to:
 | 4 | Your first step | 15 min |
 
 Every section has slides and an activity for you, and sections 2 and 3 also have a short demo from the instructor. If there is time, there is also an optional extra on sharing your data (Q-FAIR), which is covered in full in the notes. After the course, there is an optional [capstone exercise](capstone.qmd){target="_blank"} that puts it all together: you build a project from scratch, give it an environment and write a report with code, in R or Python.
+
+## References & Citations
+
+The penguins data used throughout the course comes from:
+
+- Horst, A. M., Hill, A. P. and Gorman, K. B. (2020). *palmerpenguins: Palmer Archipelago (Antarctica) penguin data*. R package version 0.1.0. [doi:10.5281/zenodo.3960218](https://doi.org/10.5281/zenodo.3960218)
+- Gorman, K. B., Williams, T. D. and Fraser, W. R. (2014). Ecological sexual dimorphism and environmental variability within a community of Antarctic penguins (genus *Pygoscelis*). *PLoS ONE*, 9(3), e90081. [doi:10.1371/journal.pone.0090081](https://doi.org/10.1371/journal.pone.0090081)
 
 ::::
 

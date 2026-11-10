@@ -161,7 +161,9 @@ uv run quarto render report.qmd
 
 :::
 
-**4a. A header like a paper's.** As well as the title, add a date, an abstract, numbered sections and a table of contents. `echo: false` hides the code, so readers see only the results. The code is still in the file.
+### 4a. A header like a paper's
+
+As well as the title, add a date, an abstract, numbered sections and a table of contents. `echo: false` hides the code, so readers see only the results. The code is still in the file.
 
 ```{.yaml filename="report.qmd"}
 ---
@@ -183,7 +185,9 @@ format:
 ---
 ```
 
-**4b. Read the data.** Under the header, add a chunk that reads the clean data and keeps one species, and a sentence with **inline code**, so the number updates when the data changes:
+### 4b. Read the data
+
+Under the header, add a chunk that reads the clean data and keeps one species, and a sentence with **inline code**, so the number updates when the data changes:
 
 ::: {.panel-tabset}
 
@@ -223,7 +227,9 @@ penguins in the data.
 
 :::
 
-**4c. A table, with a caption.** Add a `## Results` heading, then a chunk whose `label` starts with `tbl-`. Quarto numbers it as a table:
+### 4c. A table, with a caption
+
+Add a `## Results` heading, then a chunk whose `label` starts with `tbl-`. Quarto numbers it as a table:
 
 ::: {.panel-tabset}
 
@@ -251,7 +257,9 @@ Markdown(table.to_markdown(index=False))
 
 :::
 
-**4d. A figure, with a caption.** In the same way, a label starting with `fig-` makes a numbered figure. `fig-alt` describes it for people who use a screen reader:
+### 4d. A figure, with a caption
+
+In the same way, a label starting with `fig-` makes a numbered figure. `fig-alt` describes it for people who use a screen reader:
 
 ::: {.panel-tabset}
 
@@ -284,7 +292,9 @@ plt.show()
 
 :::
 
-**4e. Refer to them.** Write `@tbl-sex` or `@fig-mass` in the text, and Quarto replaces it with "Table 1" or "Figure 1", with a link. The numbers stay right if you add more tables or figures. Put the result in a sentence too, with inline code:
+### 4e. Refer to them
+
+Write `@tbl-sex` or `@fig-mass` in the text, and Quarto replaces it with "Table 1" or "Figure 1", with a link. The numbers stay right if you add more tables or figures. Put the result in a sentence too, with inline code:
 
 ::: {.panel-tabset}
 
@@ -304,7 +314,9 @@ than females (@tbl-sex and @fig-mass).
 
 :::
 
-**4f. Cite a source.** Make a file called `references.bib`, with the paper the data comes from. (Reference managers such as Zotero can export `.bib` files for you.)
+### 4f. Cite a source
+
+Make a file called `references.bib`, with two sources: the paper the data comes from, and the `palmerpenguins` package that shares it. Each entry starts with a **citation key** (here `gorman2014` and `palmerpenguins`), which is the name you use to cite it. Reference managers such as Zotero can export `.bib` files for you.
 
 ```{.bibtex filename="references.bib"}
 @article{gorman2014,
@@ -318,11 +330,22 @@ than females (@tbl-sex and @fig-mass).
   pages   = {e90081},
   doi     = {10.1371/journal.pone.0090081}
 }
+
+@manual{palmerpenguins,
+  title   = {palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data},
+  author  = {Horst, Allison Marie and Hill, Alison Presmanes and Gorman, Kristen B.},
+  year    = {2020},
+  note    = {R package version 0.1.0},
+  doi     = {10.5281/zenodo.3960218},
+  url     = {https://allisonhorst.github.io/palmerpenguins/}
+}
 ```
 
-Add `bibliography: references.bib` to the header. Add an `## Introduction` that cites it with `[@gorman2014]`, and a `## References` heading at the end. Quarto adds the citation, and the reference list under that heading.
+Add `bibliography: references.bib` to the header. Add an `## Introduction` that cites both sources by their keys, with `[@gorman2014]` and `[@palmerpenguins]`, and a `## References` heading at the end. Quarto formats each citation, and adds the reference list under that heading.
 
-**4g. Render all the formats.** Open the HTML, PDF and Word versions in `outputs/`. The section numbers, captions, cross-references and citation are in all three, from one file. You should find 119 Gentoo penguins, with males about 805 g heavier than females.
+### 4g. Render all the formats
+
+Open the HTML, PDF and Word versions in `outputs/`. The section numbers, captions, cross-references and citations are in all three, from one file. You should find 119 Gentoo penguins, with males about 805 g heavier than females.
 
 ## Step 5: Record it
 
@@ -379,6 +402,8 @@ uv run quarto render report.qmd
 
 Do you get the same report, with the same numbers? If anything was missing from your README, add it. For a real test, zip the project (without the environment) and send it to a colleague: can they run it from the README alone?
 
+To compare your project with a finished one, open `capstone-answer/` in the example folder. It has the whole project in R (`r/`) and in Python (`python/`), with the lock file and the rendered report in `outputs/`. The main files are below too.
+
 ::: {.callout-caution icon=false title="The finished files (click to open)" collapse="true"}
 
 ::: {.panel-tabset}
@@ -414,7 +439,9 @@ by_sex <- aggregate(body_mass ~ sex, data = gentoo, FUN = mean)
 ## Introduction
 
 Penguins near Palmer Station, Antarctica, were measured between
-2007 and 2009 [@gorman2014]. Here we look at one species, Gentoo.
+2007 and 2009 [@gorman2014]. We use the version of the data in
+the palmerpenguins package [@palmerpenguins], and look at one
+species, Gentoo.
 
 ## Data
 
@@ -467,6 +494,7 @@ Does body mass differ between male and female Gentoo penguins?
   and `penguins_clean_dictionary.csv`, which explains each column
 - `code/` the scripts
 - `report.qmd` the report, and `references.bib` its references
+- `_quarto.yml` settings for the report (it puts the results in `outputs/`)
 - `outputs/` the rendered report. Safe to delete
 
 ## Data
@@ -510,7 +538,9 @@ by_sex = gentoo.groupby("sex")["body_mass"].mean().round()
 ## Introduction
 
 Penguins near Palmer Station, Antarctica, were measured between
-2007 and 2009 [@gorman2014]. Here we look at one species, Gentoo.
+2007 and 2009 [@gorman2014]. We use the version of the data in
+the palmerpenguins package [@palmerpenguins], and look at one
+species, Gentoo.
 
 ## Data
 
@@ -570,6 +600,7 @@ Does body mass differ between male and female Gentoo penguins?
   and `penguins_clean_dictionary.csv`, which explains each column
 - `code/` the scripts
 - `report.qmd` the report, and `references.bib` its references
+- `_quarto.yml` settings for the report (it puts the results in `outputs/`)
 - `outputs/` the rendered report. Safe to delete
 
 ## Data

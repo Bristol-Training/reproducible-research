@@ -1,0 +1,7 @@
+# The checklist is rendered on its own, not as part of the website.
+# After changing it, render it here, then copy the PDF and Word files
+# into example-project/ (the folder attendees download):
+#     quarto render checklist.qmd
+#     cp checklist.pdf checklist.docx ../example-project/
+project:
+  type: default

@@ -8,12 +8,16 @@ import zipfile
 
 SRC = "example-project"
 OUT = "example-project.zip"
-SKIP_DIRS = {".quarto", ".Rproj.user", "__pycache__", ".venv", "renv"}
+SKIP_DIRS = {".quarto", ".Rproj.user", "__pycache__", ".venv"}
+# Inside renv/, keep activate.R and settings.json (the capstone answer needs
+# them), but skip the installed packages and caches.
+SKIP_RENV_DIRS = {"library", "local", "cellar", "lock", "python", "sandbox", "staging"}
 
 with zipfile.ZipFile(OUT, "w", zipfile.ZIP_DEFLATED) as z:
     for root, dirs, files in os.walk(SRC):
-        # skip build caches; sort so the zip order is stable
-        dirs[:] = sorted(d for d in dirs if d not in SKIP_DIRS)
+        # skip build caches and environments; sort so the zip order is stable
+        skip = SKIP_DIRS | (SKIP_RENV_DIRS if os.path.basename(root) == "renv" else set())
+        dirs[:] = sorted(d for d in dirs if d not in skip)
         for name in sorted(files):
             if name == ".DS_Store":
                 continue

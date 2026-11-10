@@ -17,7 +17,8 @@ The course takes about two hours. Each topic has a hands-on activity (together, 
 | `notes.qmd` | The notes. Reference for attendees, and written so they can be used for self-study, with a "Try it yourself" activity and answer for each section |
 | `capstone.qmd` | The capstone exercise (*Putting it all together*): an optional exercise for after the course, building a project from scratch with an environment and a report with code, in R or Python |
 | `instructor.qmd` | A quick-glance guide for the instructor: timings, key messages, things not to forget and checkpoints |
-| `example-project/` | The folder attendees download: `messy-project/` (bad structure and names), `tidy-project/` (the best practices), `one-document/` (one report, many formats), `python-project/` and `r-project/` (for the environment demo, with uv or renv) and `take-home/` (a checklist) |
+| `example-project/` | The folder attendees download: `messy-project/` (bad structure and names), `tidy-project/` (the best practices), `one-document/` (one report, many formats), `environment-demo/` (R and Python projects for the environment demo, with renv or uv), `capstone-answer/` (a finished capstone, in R and Python) and `checklist.pdf`/`.docx` |
+| `checklist/` | The source of the checklist. It's rendered on its own: see the comment in its `_quarto.yml` |
 | `build_example_zip.py` | Zips `example-project/` into `example-project.zip`, the download linked from the home page. The zip is built automatically, so it isn't committed |
 | `_quarto.yml`, `custom.scss`, `_brand.yml` | Site settings, styles and branding |
 | `assets/` | Images |
@@ -29,7 +30,7 @@ Read `instructor.qmd` first. Before teaching:
 
 1. Download and unzip the example folder, and copy `tidy-project/` somewhere you can change it.
 2. Check that **R** and **Quarto 1.4 or later** are installed on your machine (RStudio and Positron include Quarto), and run `tidy-project/code/run_all.R` once to check the demos work. Attendees need only Quarto, not R.
-3. For the Section 3 demo, choose R or Python, and run through the steps in `example-project/r-project/README.md` (needs the `renv` package) or `example-project/python-project/README.md` (needs [uv](https://docs.astral.sh/uv/)) once, in a copy of the folder.
+3. For the Section 3 demo, choose R or Python, and run through the steps in `example-project/environment-demo/r/README.md` (needs the `renv` package) or `example-project/environment-demo/python/README.md` (needs [uv](https://docs.astral.sh/uv/)) once, in a copy of the folder.
 4. Press Render on `one-document/report.qmd`.
 
 ## Building the course locally

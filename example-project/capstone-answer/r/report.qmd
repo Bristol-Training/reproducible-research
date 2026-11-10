@@ -1,0 +1,56 @@
+---
+title: "Body mass of Gentoo penguins"
+author: "Your name here"
+date: today
+abstract: |
+  Male Gentoo penguins are heavier than females. This report
+  measures the difference.
+number-sections: true
+execute:
+  echo: false
+bibliography: references.bib
+format:
+  html:
+    toc: true
+    embed-resources: true
+  typst: default
+  docx: default
+---
+
+```{r}
+clean <- read.csv("data/processed/penguins_clean.csv")
+gentoo <- subset(clean, species == "Gentoo")
+by_sex <- aggregate(body_mass ~ sex, data = gentoo, FUN = mean)
+```
+
+## Introduction
+
+Penguins near Palmer Station, Antarctica, were measured between
+2007 and 2009 [@gorman2014]. We use the version of the data in
+the palmerpenguins package [@palmerpenguins], and look at one
+species, Gentoo.
+
+## Data
+
+After removing incomplete rows, there are `{r} nrow(gentoo)` Gentoo
+penguins in the data.
+
+## Results
+
+On average, males were `{r} round(diff(by_sex$body_mass))` g heavier
+than females (@tbl-sex and @fig-mass).
+
+```{r}
+#| label: tbl-sex
+#| tbl-cap: "Mean body mass of Gentoo penguins, by sex"
+knitr::kable(by_sex, col.names = c("Sex", "Mean body mass (g)"), digits = 0)
+```
+
+```{r}
+#| label: fig-mass
+#| fig-cap: "Body mass of Gentoo penguins, by sex"
+#| fig-alt: "Boxplot of Gentoo body mass: males are heavier than females"
+boxplot(body_mass ~ sex, data = gentoo, xlab = "Sex", ylab = "Body mass (g)")
+```
+
+## References

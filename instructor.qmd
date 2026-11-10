@@ -30,7 +30,7 @@ number-sections: false
 - Download and unzip the **example folder**. Copy `tidy-project/` somewhere you can change it.
 - You need **R and Quarto 1.4+** on your own machine for the section 2 demo. Run `code/run_all.R` once to check it works.
 - Press Render on `one-document/report.qmd`: attendees will do this. Attendees need **Quarto only**, not R or Python.
-- For the environment demo, choose R or Python. Run through the steps in `r-project/README.md` (needs the `renv` package) or `python-project/README.md` (needs [uv](https://docs.astral.sh/uv/)) once, in a copy of the folder: the first run downloads the packages.
+- For the environment demo, choose R or Python. Run through the steps in `environment-demo/r/README.md` (needs the `renv` package) or `environment-demo/python/README.md` (needs [uv](https://docs.astral.sh/uv/)) once, in a copy of the folder: the first run downloads the packages.
 - Check the links on the slides and notes.
 
 ## Ground rules {.unnumbered}
@@ -87,7 +87,7 @@ number-sections: false
 
 # 3. Virtual environments (30 min)
 
-**Demo:** *Delete it, then rebuild it*: in a copy of `r-project/` or `python-project/`, set up an environment (`renv::init()`, or `uv init --no-package` and `uv add pandas matplotlib`), delete it (`renv/library` or `.venv`), and rebuild it from the lock file (`renv::restore()` or `uv sync`). The steps are in each folder's README. **Activity:** *The new laptop test*: a colleague's project fails on a new laptop, and they list everything they would need to know to run it; the answer is the README and a lock file.
+**Demo:** *Delete it, then rebuild it*: in a copy of `environment-demo/r/` or `environment-demo/python/`, set up an environment (`renv::init()`, or `uv init --no-package` and `uv add pandas matplotlib`), delete it (`renv/library` or `.venv`), and rebuild it from the lock file (`renv::restore()` or `uv sync`). The steps are in each folder's README. **Activity:** *The new laptop test*: a colleague's project fails on a new laptop, and they list everything they would need to know to run it; the answer is the README and a lock file.
 
 **Checkpoints:** by 10 min the demo; by 15 *Together*; by 17 *Your turn*; by 23 *Answer*; finish at 30.
 
@@ -106,7 +106,7 @@ number-sections: false
 - `renv` records package versions, not the version of R. Say so.
 - In *Your turn*, give no hints. Let them find the list.
 
-**If running late:** drop the "tools" slide. **Watch out for:** the demo going wrong (`uv` or `renv` not set up). If it does, show the lock file in `r-project/finished/` or `python-project/finished/` and describe it.
+**If running late:** drop the "tools" slide. **Watch out for:** the demo going wrong (`uv` or `renv` not set up). If it does, show the lock file in `environment-demo/r/finished/` or `environment-demo/python/finished/` and describe it.
 
 # 4. Your first step (15 min)
 
@@ -123,7 +123,7 @@ number-sections: false
 **Don't forget**
 
 - Ask people to **circle one** thing, and post it in the chat.
-- Point out the printable checklist in `take-home/` (PDF and Word).
+- Point out the printable checklist in the example folder (`checklist.pdf` and `checklist.docx`).
 - Go back to the six objectives and tick them off.
 - Mention the separate git and GitHub course.
 - Point people to the **capstone exercise** (*Putting it all together*, linked from the home page), to try after the course: a tidy project, an environment (R or Python) and a report with code, from scratch.

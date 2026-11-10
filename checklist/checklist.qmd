@@ -1,9 +1,15 @@
 ---
 title: "Your reproducibility checklist"
 format:
-  html:
-    embed-resources: true
-  typst: default
+  typst:
+    # In the PDF, the course credit goes in the page footer (instead of the
+    # page number). The Word version has it as the last paragraph.
+    include-in-header:
+      text: |
+        #set page(footer: align(center, text(size: 8pt, fill: luma(90))[
+          From the _Reproducible Research_ course by the Jean Golding Institute, University of Bristol.\
+          Course materials: #link("https://bristol-training.github.io/reproducible-research/")[bristol-training.github.io/reproducible-research] · Licensed under CC-BY 4.0
+        ]))
   docx: default
 ---
 
@@ -46,3 +52,9 @@ Tick what your project already does. Then pick **one** thing to start with this 
 ## My first step this week
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+::: {.content-visible unless-format="typst"}
+
+From the *Reproducible Research* course by the [Jean Golding Institute](https://www.bristol.ac.uk/golding/), University of Bristol. Course materials: <https://bristol-training.github.io/reproducible-research/>. Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+:::
