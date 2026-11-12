@@ -620,14 +620,14 @@
     "href": "slides.html#what-environments-dont-cover",
     "title": "Reproducible Research",
     "section": "What environments don’t cover",
-    "text": "What environments don’t cover\n\n\nThey record packages. Also write down the version of R or Python in your README (uv can pin Python; renv records the R version but doesn’t install it)\nThe operating system and hardware can still differ\nThey don’t include your data\n\n\n\nGood enough for almost every project. Perfect is not the goal!"
+    "text": "What environments don’t cover\n\nThey record packages. Also write down the version of R or Python in your README (uv can pin Python; renv records the R version but doesn’t install it)\nThe operating system and hardware can still differ\nThey don’t include your data\n\n\nGood enough for almost every project. Perfect is not the goal!"
   },
   {
     "objectID": "slides.html#no-code-record-it-anyway",
     "href": "slides.html#no-code-record-it-anyway",
     "title": "Reproducible Research",
     "section": "No code? Record it anyway",
-    "text": "No code? Record it anyway\n\n✔ Write the program, its version and any add-ins in your README: the next person then knows what you used"
+    "text": "No code? Record it anyway\n\n\nWrite a list of programs\n\n\nRecord the versions\n\n\nList your plugins\n\n\nNote your operating system\n\n\n\nAll of this can live in your README: the next person then knows what you used!"
   },
   {
     "objectID": "slides.html#live-demo-delete-it-then-rebuild-it",
