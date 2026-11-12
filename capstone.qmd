@@ -17,19 +17,23 @@ It takes about an hour or two. Do it in R or in Python: where the steps differ, 
 
 ## What you will build
 
-```
-penguin-project/
-├── README.md                     what it is, and how to run it
-├── _quarto.yml                   puts the report in outputs/
-├── report.qmd                    the report
-├── references.bib                the reference list
-├── data/
-│   ├── raw/penguins.csv          the original data (never edited)
-│   └── processed/                made by the cleaning script
-├── code/01_clean_data.R (or .py) cleans the data
-├── outputs/                      the rendered report (HTML, PDF, Word)
-└── the environment               renv.lock or uv.lock: the lock file
-```
+::: {.file-tree}
+
+| File or folder | What it is |
+|:--|:--|
+| `penguin-project/` | |
+| `├── README.md` | What the project is, and how to run it |
+| `├── _quarto.yml` | Report settings: puts the report in `outputs/` |
+| `├── report.qmd` | The report |
+| `├── references.bib` | The reference list |
+| `├── data/` | |
+| `│   ├── raw/penguins.csv` | The original data: never edited |
+| `│   └── processed/` | Made by the cleaning script |
+| `├── code/01_clean_data.R` | Cleans the data (`01_clean_data.py` in Python) |
+| `├── outputs/` | The rendered report (HTML, PDF and Word) |
+| `└── renv.lock` | The lock file, which records the environment (`uv.lock` in Python) |
+
+:::
 
 ## Step 1: A tidy project
 

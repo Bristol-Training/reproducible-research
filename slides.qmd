@@ -9,9 +9,9 @@ execute:
   message: false
 ---
 
-## Today's mission {.big .center}
+## Today's mission: {.big .center}
 
-::: {.big .center}
+::: {.center}
 Make your research easier to re-run, understand and share.
 :::
 
@@ -217,21 +217,25 @@ Answer, part one. Go through the table row by row. Ask who disagreed, and why. T
 
 [Answer]{.answer-tag} [2 min]{.demo-meta}
 
-```
-tidy-project/
-├── README.md                          how to run it
-├── report.qmd                         the report
-├── _quarto.yml                        report settings
-├── data/
-│   ├── raw/penguins.csv               never edited
-│   └── processed/
-│       ├── penguins_clean.csv         made by the code
-│       └── penguins_clean_dictionary.csv   explains each column
-├── code/
-│   ├── 01_clean_data.R                numbered, in order
-│   └── run_all.R                      rebuilds everything
-└── outputs/                           made by the code: safe to delete
-```
+::: {.file-tree}
+
+| File or folder | What it is |
+|:--|:--|
+| `tidy-project/` | |
+| `├── README.md` | How to run it |
+| `├── report.qmd` | The report |
+| `├── _quarto.yml` | Report settings |
+| `├── data/` | |
+| `│   ├── raw/penguins.csv` | The original data: never edited |
+| `│   └── processed/` | |
+| `│       ├── penguins_clean.csv` | Made by the code |
+| `│       └── penguins_clean_dictionary.csv` | Explains each column |
+| `├── code/` | |
+| `│   ├── 01_clean_data.R` | Numbered, in the order to run them |
+| `│   └── run_all.R` | Rebuilds everything |
+| `└── outputs/` | Made by the code: safe to delete |
+
+:::
 
 ::: notes
 Answer, part two. This is the project you rebuilt in the demo. Point out that it is the same data, just organised. The README and the data dictionary come next.
@@ -266,18 +270,24 @@ Go through the four in turn, and ask who they are writing for. Comments are for 
 
 ## What goes in a README?
 
+:::: {.columns}
+::: {.column width="50%"}
 - **Summary** and status
 - **Quickstart**: which files, in what order
 - **Setup**: what to install first
 - **Contents**: what each folder holds
-
-::: {.good}
-✔ No code? A README is still the best way to document your project
 :::
 
+::: {.column width="50%"}
 ::: {.callout-note}
 ## Using AI
 Be careful getting an LLM to create your README. While it can save time, you may inadvertently upload all your data and results by giving access to your folders! Instead, draft one yourself and then use a chatbot to help refine it!
+:::
+:::
+::::
+
+::: {.good .compact}
+✔ No code? A README is still the best way to document your project
 :::
 
 ::: notes
