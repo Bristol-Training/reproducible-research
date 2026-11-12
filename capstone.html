@@ -84,9 +84,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-5de16f5e46225c21e2daa90d340bf64f.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7ec182fc45f846cbb2f53f4de118878f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-7ec182fc45f846cbb2f53f4de118878f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-7ec182fc45f846cbb2f53f4de118878f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-36bd492cef619e43063146ce1b082821.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-36bd492cef619e43063146ce1b082821.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-36bd492cef619e43063146ce1b082821.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -253,7 +253,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td style="text-align: left;"><code>│   └── processed/</code></td>
-<td style="text-align: left;">Made by the cleaning script</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>│       ├── penguins_clean.csv</code></td>
+<td style="text-align: left;">The cleaned data, made by the cleaning script</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>│       └── penguins_clean_dictionary.csv</code></td>
+<td style="text-align: left;">Explains each column (you write this)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><code>├── code/01_clean_data.R</code></td>
@@ -264,12 +272,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">The rendered report (HTML, PDF and Word)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><code>└── renv.lock</code></td>
+<td style="text-align: left;"><code>├── renv.lock</code></td>
 <td style="text-align: left;">The lock file, which records the environment (<code>uv.lock</code> in Python)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>└── renv/</code></td>
+<td style="text-align: left;">The environment itself: disposable (<code>.venv/</code> in Python)</td>
 </tr>
 </tbody>
 </table>
 </div>
+<p>In Python, uv also makes <code>pyproject.toml</code> and <code>.python-version</code>, which describe the project and its Python version. Keep them with the lock file.</p>
 </section>
 <section id="step-1-a-tidy-project" class="level2">
 <h2 class="anchored" data-anchor-id="step-1-a-tidy-project">Step 1: A tidy project</h2>

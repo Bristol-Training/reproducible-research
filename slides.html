@@ -101,7 +101,7 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-4cfa9c17365b66b967c62b67db0dc4c0.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-870c0864a36529d066426fa98ff8dfcc.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -212,7 +212,7 @@ Dr Josh Tyler - Jean Golding Institute
 
 </section>
 <section id="todays-mission" class="slide level2 big center">
-<h2>Today’s mission:</h2>
+<h2>Today’s mission</h2>
 <div class="center">
 <p>Make your research easier to re-run, understand and share.</p>
 </div>
@@ -279,7 +279,7 @@ Dr Josh Tyler - Jean Golding Institute
 <div class="small">
 <ol type="1">
 <li><strong>Organise</strong> a project into raw data, processed data, code and outputs, and explain why raw data is never edited</li>
-<li><strong>Describe</strong> what a good README and data dictionary contain, and why they matter</li>
+<li><strong>Describe</strong> what a good README and data dictionary contain, and why they matter, particularly for Data Management Plans</li>
 <li><strong>Explain</strong> why Quarto helps reproducibility, and <strong>make</strong> HTML, PDF and Word versions of a report from one document</li>
 <li><strong>Explain</strong> why environments matter, and say what someone needs in order to <strong>re-run</strong> your project on another computer</li>
 <li><strong>Apply</strong> these practices to your own coding projects, using the R and Python examples as a starting point</li>
@@ -362,16 +362,16 @@ Dr Josh Tyler - Jean Golding Institute
 <section id="look-at-the-messy-project" class="slide level2 demo-slide">
 <h2>Look at the messy project</h2>
 <p><span class="demo-tag">Together</span> <span class="demo-meta">4 min</span></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a>messy-project/</span>
-<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a>Copy of data.csv          notes.txt</span>
-<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a>analysis.R                plot1.png</span>
-<span id="cb1-4"><a aria-hidden="true" tabindex="-1"></a>analysis2 (copy).R        plot_new.png</span>
-<span id="cb1-5"><a aria-hidden="true" tabindex="-1"></a>analysis_OLD.R            report_draft.docx</span>
-<span id="cb1-6"><a aria-hidden="true" tabindex="-1"></a>clean.R                   results.xlsx</span>
-<span id="cb1-7"><a aria-hidden="true" tabindex="-1"></a>data.csv                  results_v3.xlsx</span>
-<span id="cb1-8"><a aria-hidden="true" tabindex="-1"></a>data_FINAL_USE_THIS.csv   untitled.R</span>
-<span id="cb1-9"><a aria-hidden="true" tabindex="-1"></a>data_final.csv</span>
-<span id="cb1-10"><a aria-hidden="true" tabindex="-1"></a>data_final_v2.csv</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<pre><code>messy-project/
+Copy of data.csv          notes.txt
+analysis.R                plot1.png
+analysis2 (copy).R        plot_new.png
+analysis_OLD.R            report_draft.docx
+clean.R                   results.xlsx
+data.csv                  results_v3.xlsx
+data_FINAL_USE_THIS.csv   untitled.R
+data_final.csv
+data_final_v2.csv</code></pre>
 <div class="cards">
 <div class="card">
 <p><strong>1</strong></p>
@@ -566,7 +566,7 @@ data_final_v2.csv</code></pre>
 </table>
 </div>
 <aside class="notes">
-<p>Answer, part two. This is the project you rebuilt in the demo. Point out that it is the same data, just organised. The README and the data dictionary come next.</p>
+<p>Answer, part two. This is <code>tidy-project/</code> from the example folder. Point out that it is the same data, just organised. The README and the data dictionary come next.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -702,14 +702,13 @@ data_final_v2.csv</code></pre>
 <p><code>messy-project/notes.txt</code> is the <strong>only documentation</strong>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a>run clean.R first?? i think</span>
 <span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a aria-hidden="true" tabindex="-1"></a>then analysis2 (copy).R</span>
-<span id="cb3-4"><a aria-hidden="true" tabindex="-1"></a>NOT analysis.R (that one is old)</span>
-<span id="cb3-5"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a aria-hidden="true" tabindex="-1"></a>data_final_v2 has the weird rows removed</span>
-<span id="cb3-7"><a aria-hidden="true" tabindex="-1"></a>BUT i fixed a few values by hand</span>
-<span id="cb3-8"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a aria-hidden="true" tabindex="-1"></a>figure 2 in the paper is plot_new.png (i think)</span>
-<span id="cb3-10"><a aria-hidden="true" tabindex="-1"></a>ask Sam about the Gentoo ones</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-3"><a aria-hidden="true" tabindex="-1"></a>then analysis2 (copy).R  NOT analysis.R (that one is old)</span>
+<span id="cb3-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a aria-hidden="true" tabindex="-1"></a>data_final_v2 has the weird rows removed BUT i fixed a few values by hand</span>
+<span id="cb3-6"><a aria-hidden="true" tabindex="-1"></a>remember to delete the weird rows first!!</span>
+<span id="cb3-7"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a aria-hidden="true" tabindex="-1"></a>figure 2 in the paper is plot_new.png (i think)</span>
+<span id="cb3-9"><a aria-hidden="true" tabindex="-1"></a>ask Sam about the Gentoo ones</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="medium">
 <p>You have inherited this project. What <strong>can’t</strong> you work out?</p>
 </div>
@@ -794,12 +793,6 @@ data_final_v2.csv</code></pre>
 <h2>The data dictionary</h2>
 <p><span class="answer-tag">Answer</span> <span class="demo-meta">2 min</span></p>
 <table class="caption-top">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>column</th>
@@ -831,7 +824,7 @@ data_final_v2.csv</code></pre>
 <td><code>sex</code></td>
 <td>text</td>
 <td>Sex of the penguin</td>
-<td>female, male; blank if not recorded</td>
+<td>female, male</td>
 </tr>
 </tbody>
 </table>
@@ -1466,7 +1459,10 @@ data_final_v2.csv</code></pre>
 <h2>From messy to shareable</h2>
 <p><span class="demo-tag">Together</span> <span class="demo-meta">3 min</span></p>
 <div class="flow">
-<p><span class="step light">Messy</span> <span class="arrow">→</span> <span class="step">Tidy</span> <span class="arrow">→</span> <span class="step">Documented</span> <br> <span class="arrow">→</span> <span class="step">Reported</span> <span class="arrow">→</span> <span class="step">Recorded</span> <span class="arrow">→</span> <span class="step">Shareable</span></p>
+<p><span class="step light">Messy</span> <span class="arrow">→</span> <span class="step">Tidy</span> <span class="arrow">→</span> <span class="step">Documented</span> <span class="arrow">→</span></p>
+</div>
+<div class="flow">
+<p><span class="step">Reported</span> <span class="arrow">→</span> <span class="step">Recorded</span> <span class="arrow">→</span> <span class="step">Shareable</span></p>
 </div>
 <div class="small">
 <ul>
