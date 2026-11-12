@@ -101,7 +101,7 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-e74c52dcdb9ec856325531cc5337e0c6.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-4cfa9c17365b66b967c62b67db0dc4c0.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -212,8 +212,8 @@ Dr Josh Tyler - Jean Golding Institute
 
 </section>
 <section id="todays-mission" class="slide level2 big center">
-<h2>Today’s mission</h2>
-<div class="big center">
+<h2>Today’s mission:</h2>
+<div class="center">
 <p>Make your research easier to re-run, understand and share.</p>
 </div>
 <aside class="notes">
@@ -501,19 +501,70 @@ data_final_v2.csv</code></pre>
 <section id="the-tidy-version" class="slide level2 demo-slide">
 <h2>The tidy version</h2>
 <p><span class="answer-tag">Answer</span> <span class="demo-meta">2 min</span></p>
-<pre><code>tidy-project/
-├── README.md                          how to run it
-├── report.qmd                         the report
-├── _quarto.yml                        report settings
-├── data/
-│   ├── raw/penguins.csv               never edited
-│   └── processed/
-│       ├── penguins_clean.csv         made by the code
-│       └── penguins_clean_dictionary.csv   explains each column
-├── code/
-│   ├── 01_clean_data.R                numbered, in order
-│   └── run_all.R                      rebuilds everything
-└── outputs/                           made by the code: safe to delete</code></pre>
+<div class="file-tree">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">File or folder</th>
+<th style="text-align: left;">What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>tidy-project/</code></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>├── README.md</code></td>
+<td style="text-align: left;">How to run it</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>├── report.qmd</code></td>
+<td style="text-align: left;">The report</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>├── _quarto.yml</code></td>
+<td style="text-align: left;">Report settings</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>├── data/</code></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>│   ├── raw/penguins.csv</code></td>
+<td style="text-align: left;">The original data: never edited</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>│   └── processed/</code></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>│       ├── penguins_clean.csv</code></td>
+<td style="text-align: left;">Made by the code</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>│       └── penguins_clean_dictionary.csv</code></td>
+<td style="text-align: left;">Explains each column</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>├── code/</code></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>│   ├── 01_clean_data.R</code></td>
+<td style="text-align: left;">Numbered, in the order to run them</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>│   └── run_all.R</code></td>
+<td style="text-align: left;">Rebuilds everything</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>└── outputs/</code></td>
+<td style="text-align: left;">Made by the code: safe to delete</td>
+</tr>
+</tbody>
+</table>
+</div>
 <aside class="notes">
 <p>Answer, part two. This is the project you rebuilt in the demo. Point out that it is the same data, just organised. The README and the data dictionary come next.</p>
 <style type="text/css">
@@ -605,15 +656,15 @@ data_final_v2.csv</code></pre>
 </section>
 <section id="what-goes-in-a-readme" class="slide level2">
 <h2>What goes in a README?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
 <li><strong>Summary</strong> and status</li>
 <li><strong>Quickstart</strong>: which files, in what order</li>
 <li><strong>Setup</strong>: what to install first</li>
 <li><strong>Contents</strong>: what each folder holds</li>
 </ul>
-<div class="good">
-<p>✔ No code? A README is still the best way to document your project</p>
-</div>
+</div><div class="column" style="width:50%;">
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -626,6 +677,10 @@ data_final_v2.csv</code></pre>
 <p>Be careful getting an LLM to create your README. While it can save time, you may inadvertently upload all your data and results by giving access to your folders! Instead, draft one yourself and then use a chatbot to help refine it!</p>
 </div>
 </div>
+</div>
+</div></div>
+<div class="good compact">
+<p>✔ No code? A README is still the best way to document your project</p>
 </div>
 <aside class="notes">
 <p>Show a real README. Point out it is just a text file written in Markdown. The next activity is about what makes one useful.</p>
@@ -645,16 +700,16 @@ data_final_v2.csv</code></pre>
 <h2>Be the new colleague</h2>
 <p><span class="demo-tag">Together</span> <span class="demo-meta">2 min</span></p>
 <p><code>messy-project/notes.txt</code> is the <strong>only documentation</strong>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a>run clean.R first?? i think</span>
-<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a aria-hidden="true" tabindex="-1"></a>then analysis2 (copy).R</span>
-<span id="cb4-4"><a aria-hidden="true" tabindex="-1"></a>NOT analysis.R (that one is old)</span>
-<span id="cb4-5"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a aria-hidden="true" tabindex="-1"></a>data_final_v2 has the weird rows removed</span>
-<span id="cb4-7"><a aria-hidden="true" tabindex="-1"></a>BUT i fixed a few values by hand</span>
-<span id="cb4-8"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-9"><a aria-hidden="true" tabindex="-1"></a>figure 2 in the paper is plot_new.png (i think)</span>
-<span id="cb4-10"><a aria-hidden="true" tabindex="-1"></a>ask Sam about the Gentoo ones</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a>run clean.R first?? i think</span>
+<span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a aria-hidden="true" tabindex="-1"></a>then analysis2 (copy).R</span>
+<span id="cb3-4"><a aria-hidden="true" tabindex="-1"></a>NOT analysis.R (that one is old)</span>
+<span id="cb3-5"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a aria-hidden="true" tabindex="-1"></a>data_final_v2 has the weird rows removed</span>
+<span id="cb3-7"><a aria-hidden="true" tabindex="-1"></a>BUT i fixed a few values by hand</span>
+<span id="cb3-8"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a aria-hidden="true" tabindex="-1"></a>figure 2 in the paper is plot_new.png (i think)</span>
+<span id="cb3-10"><a aria-hidden="true" tabindex="-1"></a>ask Sam about the Gentoo ones</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="medium">
 <p>You have inherited this project. What <strong>can’t</strong> you work out?</p>
 </div>
@@ -704,23 +759,23 @@ data_final_v2.csv</code></pre>
 <section id="the-readme" class="slide level2 demo-slide">
 <h2>The README</h2>
 <p><span class="answer-tag">Answer</span> <span class="demo-meta">2 min</span></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu"># Penguin body mass analysis</span></span>
-<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a aria-hidden="true" tabindex="-1"></a>Body measurements of 333 penguins on three islands. **Status:** complete.</span>
-<span id="cb5-4"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">## Quickstart</span></span>
-<span id="cb5-6"><a aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Open this folder in RStudio or Positron</span>
-<span id="cb5-7"><a aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Run <span class="in">`code/run_all.R`</span></span>
-<span id="cb5-8"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a aria-hidden="true" tabindex="-1"></a><span class="fu">## Setup</span></span>
-<span id="cb5-10"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>R 4.3 or later</span>
-<span id="cb5-11"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Quarto 1.4 or later</span>
-<span id="cb5-12"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-13"><a aria-hidden="true" tabindex="-1"></a><span class="fu">## Contents</span></span>
-<span id="cb5-14"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`data/raw/`</span> the original data (never edited)</span>
-<span id="cb5-15"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`data/processed/`</span> cleaned data, and a data dictionary</span>
-<span id="cb5-16"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`code/`</span> the scripts</span>
-<span id="cb5-17"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`report.qmd`</span> the report</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu"># Penguin body mass analysis</span></span>
+<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a aria-hidden="true" tabindex="-1"></a>Body measurements of 333 penguins on three islands. **Status:** complete.</span>
+<span id="cb4-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">## Quickstart</span></span>
+<span id="cb4-6"><a aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Open this folder in RStudio or Positron</span>
+<span id="cb4-7"><a aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Run <span class="in">`code/run_all.R`</span></span>
+<span id="cb4-8"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a aria-hidden="true" tabindex="-1"></a><span class="fu">## Setup</span></span>
+<span id="cb4-10"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>R 4.3 or later</span>
+<span id="cb4-11"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Quarto 1.4 or later</span>
+<span id="cb4-12"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a aria-hidden="true" tabindex="-1"></a><span class="fu">## Contents</span></span>
+<span id="cb4-14"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`data/raw/`</span> the original data (never edited)</span>
+<span id="cb4-15"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`data/processed/`</span> cleaned data, and a data dictionary</span>
+<span id="cb4-16"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`code/`</span> the scripts</span>
+<span id="cb4-17"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`report.qmd`</span> the report</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <aside class="notes">
 <p>Answer, part one: the README from <code>tidy-project</code>. It answers all three questions: how to run it, what software, what is where. The next slide shows the data dictionary, which answers the column question.</p>
 <style type="text/css">
@@ -878,19 +933,19 @@ data_final_v2.csv</code></pre>
 </section>
 <section id="weaving-text-and-analysis-together" class="slide level2">
 <h2>Weaving text and analysis together</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Penguin report"</span></span>
-<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
-<span id="cb6-4"><a aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Josh Tyler</span></span>
-<span id="cb6-5"><a aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb6-6"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
-<span id="cb6-8"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-9"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb6-10"><a aria-hidden="true" tabindex="-1"></a>clean <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/processed/penguins_clean.csv"</span>)</span>
-<span id="cb6-11"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb6-12"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-13"><a aria-hidden="true" tabindex="-1"></a>There are <span class="in">`{r} nrow(clean)`</span> penguins in the data.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Penguin report"</span></span>
+<span id="cb5-3"><a aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb5-4"><a aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Josh Tyler</span></span>
+<span id="cb5-5"><a aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-6"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
+<span id="cb5-8"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-10"><a aria-hidden="true" tabindex="-1"></a>clean <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/processed/penguins_clean.csv"</span>)</span>
+<span id="cb5-11"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-12"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a aria-hidden="true" tabindex="-1"></a>There are <span class="in">`{r} nrow(clean)`</span> penguins in the data.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <aside class="notes">
 <p>In a real file the header sits between two lines of three dashes. Next slide: the four parts.</p>
 <style type="text/css">
