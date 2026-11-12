@@ -731,20 +731,35 @@ This is the payoff. The lock file travels with the project, by email, zip or git
 
 ## What environments don't cover
 
-::: {.small}
+
 - They record **packages**. Also write down the version of **R or Python** in your README (`uv` can pin Python; `renv` records the R version but doesn't install it)
 - The **operating system** and hardware can still differ
 - They don't include your **data**
-:::
 
-::: {.muted}
+::: {.medium}
 Good enough for almost every project. Perfect is not the goal!
 :::
 
 ## No code? Record it anyway
 
-::: {.good}
-✔ Write the program, its version and any add-ins in your README: the next person then knows what you used
+::: {.cards .grid2}
+:::: {.card}
+Write a list of programs
+::::
+::::{.card}
+Record the versions
+::::
+::::{.card}
+List your plugins
+::::
+::::{.card}
+Note your operating system
+::::
+
+:::
+
+::: {.big .center}
+All of this can live in your README: the next person then knows what you used!
 :::
 
 ## Live demo: delete it, then rebuild it {.demo-slide}

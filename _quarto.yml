@@ -13,7 +13,7 @@ project:
   resources:
     - example-project.zip
 
-author: "Dr Josh Tyler - Jean Golding Institute"
+author: "Jean Golding Institute"
 
 # Keep the results of code chunks, and only re-run a page's code when that
 # page changes. The GitHub Action stores the results between runs.
