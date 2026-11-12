@@ -30,7 +30,6 @@ number-sections: false
 
 - [Instructor notes](instructor.qmd){target="_blank"}
 - [Related courses](https://bristol-training.github.io/)
-<!-- TODO: replace these links with resources relevant to your course -->
 ::::
 
 :::: {.home-main}

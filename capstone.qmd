@@ -28,12 +28,17 @@ It takes about an hour or two. Do it in R or in Python: where the steps differ, 
 | `├── references.bib` | The reference list |
 | `├── data/` | |
 | `│   ├── raw/penguins.csv` | The original data: never edited |
-| `│   └── processed/` | Made by the cleaning script |
+| `│   └── processed/` | |
+| `│       ├── penguins_clean.csv` | The cleaned data, made by the cleaning script |
+| `│       └── penguins_clean_dictionary.csv` | Explains each column (you write this) |
 | `├── code/01_clean_data.R` | Cleans the data (`01_clean_data.py` in Python) |
 | `├── outputs/` | The rendered report (HTML, PDF and Word) |
-| `└── renv.lock` | The lock file, which records the environment (`uv.lock` in Python) |
+| `├── renv.lock` | The lock file, which records the environment (`uv.lock` in Python) |
+| `└── renv/` | The environment itself: disposable (`.venv/` in Python) |
 
 :::
+
+In Python, uv also makes `pyproject.toml` and `.python-version`, which describe the project and its Python version. Keep them with the lock file.
 
 ## Step 1: A tidy project
 

@@ -19,7 +19,7 @@ number-sections: false
 **By the end, attendees can:**
 
 1. Organise a project into raw data, processed data, code and outputs, and explain why raw data is never edited.
-2. Describe what a good README and data dictionary contain, and why they matter.
+2. Describe what a good README and data dictionary contain, and why they matter, particularly for Data Management Plans.
 3. Explain why Quarto helps reproducibility, and make HTML, PDF and Word versions of a report from one document.
 4. Explain why environments matter, and say what someone needs in order to re-run your project on another computer.
 5. Apply these practices to your own coding projects, using the R and Python examples as a starting point.
@@ -43,7 +43,7 @@ number-sections: false
 
 # 1. Project structures (25 min)
 
-**Demo:** none. **Activity:** *Rescue the messy project*: look at `messy-project/` together, then on their own they sort every file into raw data, processed data, code or outputs, and you show `tidy-project/` as the answer.
+**Demo:** none. **Activity:** *Rescue the messy project*: look at `messy-project/` together, then on their own they sort every file into raw data, cleaned data, code, results or documents, and you show `tidy-project/` as the answer.
 
 **Checkpoints:** by 5 min *Together*; by 9 *Your turn*; by 15 *Answer*; finish at 25.
 

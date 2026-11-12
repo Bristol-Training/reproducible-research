@@ -9,7 +9,7 @@ execute:
   message: false
 ---
 
-## Today's mission: {.big .center}
+## Today's mission {.big .center}
 
 ::: {.center}
 Make your research easier to re-run, understand and share.
@@ -69,7 +69,7 @@ Click through the four cards one at a time. Every topic follows the same pattern
 
 ::: {.small}
 1. **Organise** a project into raw data, processed data, code and outputs, and explain why raw data is never edited
-2. **Describe** what a good README and data dictionary contain, and why they matter
+2. **Describe** what a good README and data dictionary contain, and why they matter, particularly for Data Management Plans
 3. **Explain** why Quarto helps reproducibility, and **make** HTML, PDF and Word versions of a report from one document
 4. **Explain** why environments matter, and say what someone needs in order to **re-run** your project on another computer
 5. **Apply** these practices to your own coding projects, using the R and Python examples as a starting point
@@ -127,7 +127,7 @@ Spreadsheet users: same idea. Raw file untouched, a working copy, one named shee
 
 [Together]{.demo-tag} [4 min]{.demo-meta}
 
-```{.md}
+```
 messy-project/
 Copy of data.csv          notes.txt
 analysis.R                plot1.png
@@ -238,7 +238,7 @@ Answer, part one. Go through the table row by row. Ask who disagreed, and why. T
 :::
 
 ::: notes
-Answer, part two. This is the project you rebuilt in the demo. Point out that it is the same data, just organised. The README and the data dictionary come next.
+Answer, part two. This is `tidy-project/` from the example folder. Point out that it is the same data, just organised. The README and the data dictionary come next.
 :::
 
 # [02]{.section-number} Documentation & Quarto {.section-divider background-color="var(--jgi-red)"}
@@ -303,11 +303,10 @@ Show a real README. Point out it is just a text file written in Markdown. The ne
 ```{.md}
 run clean.R first?? i think
 
-then analysis2 (copy).R
-NOT analysis.R (that one is old)
+then analysis2 (copy).R  NOT analysis.R (that one is old)
 
-data_final_v2 has the weird rows removed
-BUT i fixed a few values by hand
+data_final_v2 has the weird rows removed BUT i fixed a few values by hand
+remember to delete the weird rows first!!
 
 figure 2 in the paper is plot_new.png (i think)
 ask Sam about the Gentoo ones
@@ -379,7 +378,7 @@ Answer, part one: the README from `tidy-project`. It answers all three questions
 | `species` | text | Penguin species | Adelie, Chinstrap, Gentoo |
 | `bill_len` | number | Bill length | mm |
 | `body_mass` | number | Body mass | grams |
-| `sex` | text | Sex of the penguin | female, male; blank if not recorded |
+| `sex` | text | Sex of the penguin | female, male |
 
 ::: notes
 Answer, part two. The dictionary has one row per column: what it is, its type and its units. Copying the column names is the easy part. The descriptions are the value, and only the person who knows the data can write them.
@@ -838,7 +837,10 @@ Answer. Compare their lists with the table. Almost everything on it can be writt
 [Together]{.demo-tag} [3 min]{.demo-meta}
 
 ::: {.flow}
-[Messy]{.step .light} [→]{.arrow} [Tidy]{.step} [→]{.arrow} [Documented]{.step} <br> [→]{.arrow} [Reported]{.step} [→]{.arrow} [Recorded]{.step} [→]{.arrow} [Shareable]{.step}
+[Messy]{.step .light} [→]{.arrow} [Tidy]{.step} [→]{.arrow} [Documented]{.step} [→]{.arrow}
+:::
+::: {.flow}
+[Reported]{.step} [→]{.arrow} [Recorded]{.step} [→]{.arrow} [Shareable]{.step}
 :::
 
 ::: {.small}
