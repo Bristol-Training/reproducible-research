@@ -238,7 +238,7 @@ Jean Golding Institute
 <div class="small">
 <ul>
 <li>Each topic is <strong>one short activity</strong>: we do a part together, you try something on your own, then I show the answer</li>
-<li>The activities <strong>don’t need you to run any code</strong>: the only thing we run is <strong>Render</strong></li>
+<li>The activities <strong>don’t need you to install software or run code</strong>: we inspect real files and explore examples in your browser</li>
 <li>Everything you need is in the <strong>example folder</strong></li>
 <li>Stuck? <strong>Type in the chat</strong></li>
 </ul>
@@ -251,17 +251,17 @@ Jean Golding Institute
 <p><strong>1 · Structure</strong> <em>Where does everything go?</em> Raw data, processed data, code and outputs, and never editing the raw data <span class="hands-on">Hands-on: rescue a messy project</span></p>
 </div>
 <div class="card fragment">
-<p><strong>2 · Documentation</strong> <em>How do I explain it, and report on it?</em> A README, a data dictionary, and Quarto: one document, many formats <span class="hands-on">Hands-on: be the new colleague, render a document</span></p>
+<p><strong>2 · Documentation</strong> <em>How do I explain it, and report on it?</em> A README, a data dictionary, and Quarto: reports made straight from the data <span class="hands-on">Hands-on: be the new colleague, explore Quarto in the wild</span></p>
 </div>
 <div class="card fragment">
-<p><strong>3 · Environments</strong> <em>Will it run on another computer?</em> Why environments matter, and how a lock file lets you send a project that works <span class="hands-on">Hands-on: the new laptop test</span></p>
+<p><strong>3 · Environments</strong> <em>Will it run on another computer?</em> Why package updates break old code, and how a lock file rescues it <span class="hands-on">Hands-on: spot the handover trap &amp; peek inside a lock file</span></p>
 </div>
 <div class="card fragment">
 <p><strong>4 · Your first step</strong> <em>What will you do next?</em> Pull it together into a checklist for your own project <span class="hands-on">Hands-on: your checklist</span></p>
 </div>
 </div>
 <aside class="notes">
-<p>Click through the four cards one at a time. Every topic follows the same pattern: slides, then a short activity (together, your turn, answer). Nobody needs to run any code in the activities. Sections 2 and 3 also have a short demo from you.</p>
+<p>Click through the four cards one at a time. Every topic follows the same pattern: slides, then a short activity (together, your turn, answer). Nobody needs to install software or run code in the activities. Sections 2 and 3 also have a short watch-only demo from you.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -280,14 +280,14 @@ Jean Golding Institute
 <ol type="1">
 <li><strong>Organise</strong> a project into raw data, processed data, code and outputs, and explain why raw data is never edited</li>
 <li><strong>Describe</strong> what a good README and data dictionary contain, and why they matter, particularly for Data Management Plans</li>
-<li><strong>Explain</strong> why Quarto helps reproducibility, and <strong>make</strong> HTML, PDF and Word versions of a report from one document</li>
-<li><strong>Explain</strong> why environments matter, and say what someone needs in order to <strong>re-run</strong> your project on another computer</li>
+<li><strong>Explain</strong> why Quarto helps reproducibility, <strong>identify</strong> the parts of a Quarto source file, and see how one file makes HTML, PDF and Word</li>
+<li><strong>Explain</strong> why package updates break old code, what a lock file records, and what to share (and never share) with a colleague</li>
 <li><strong>Apply</strong> these practices to your own coding projects, using the R and Python examples as a starting point</li>
 <li><strong>Choose</strong> one practice to start using on your own project, and know where to find out more</li>
 </ol>
 </div>
 <aside class="notes">
-<p>These are the six things people should be able to do by the end. 1 is the first activity, 2 is “be the new colleague”, 3 is “one document, many formats”, 4 is “the new laptop test”, 5 runs through sections 2 and 3 (the R and Python examples and demos) and 6 is “your checklist”. We come back to this list at the end.</p>
+<p>These are the six things people should be able to do by the end. 1 is the first activity, 2 is “be the new colleague”, 3 is “explore Quarto in the wild”, 4 is “spot the handover trap”, 5 runs through sections 2 and 3 (the R and Python examples and demos) and 6 is “your checklist”. We come back to this list at the end.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1003,44 +1003,20 @@ data_final_v2.csv</code></pre>
 <p>✔ Change the data (or the code), not the report</p>
 </div>
 </section>
-<section id="live-demo-change-the-data" class="slide level2 demo-slide">
-<h2>Live demo: change the data</h2>
-<p><span class="demo-tag">Live demo</span> <span class="demo-meta">4 min</span></p>
-<div class="medium">
-<ol type="1">
-<li>Open the report, which is made from the data</li>
-<li>Change the data</li>
-<li>Render: every number changes</li>
-</ol>
-</div>
-<aside class="notes">
-<p>STOP HERE and switch to the demo. In a copy of <code>tidy-project</code>, open <code>report.qmd</code>. In <code>code/01_clean_data.R</code>, uncomment the line that keeps only 2008 and later, then run <code>code/run_all.R</code> (or re-run the script and render). Open the new report: the number of penguins and the results have changed, and nobody copied or pasted anything. Message: change the data or the code, not the report. If it fails, say so and move on.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="one-document-many-formats" class="slide level2 demo-slide">
-<h2>One document, many formats</h2>
-<p><span class="demo-tag">Together</span> <span class="demo-meta">6 min</span></p>
+<section id="one-source-many-formats" class="slide level2">
+<h2>One source, many formats</h2>
 <div class="flow">
 <p><span class="step">report.qmd</span> <span class="arrow">→</span> <span class="step light">HTML</span> <span class="step light">PDF</span> <span class="step light">Word</span></p>
 </div>
-<div class="medium">
-<p>One file. Three formats.</p>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span><span class="at"> default</span></span>
+<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">typst</span><span class="kw">:</span><span class="at"> default</span><span class="co">   # makes a clean PDF (no LaTeX needed!)</span></span>
+<span id="cb6-4"><a aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">docx</span><span class="kw">:</span><span class="at"> default</span><span class="co">    # makes a Word document for co-authors</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="small">
-<p>The PDF is made with <strong>Typst</strong>, so you don’t need LaTeX.</p>
+<p>Change a filter, a sentence or the data <strong>once</strong>, and every format updates together.</p>
 </div>
 <aside class="notes">
-<p>Together, 6 min. Open <code>one-document/report.qmd</code>. Show the header (it lists html, typst and docx), the text, the table and the figure, all in one file. Render it to HTML, then change the format and render to PDF (Typst) and Word. Show all three side by side. If you have time, add <code>revealjs</code> for slides. Message: write once, publish many ways. If Render fails, open the files in <code>one-document/finished/</code>.</p>
+<p>Point out why this matters in real research: journals want PDF, co-authors often ask for Word so they can use Track Changes, and web pages are great for sharing. Typst comes built into Quarto so nobody has to install LaTeX.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1053,22 +1029,70 @@ data_final_v2.csv</code></pre>
           display:block!important;
       }</style></aside>
 </section>
-<section id="one-document-many-formats-1" class="slide level2 demo-slide">
-<h2>One document, many formats</h2>
-<p><span class="your-turn-tag">Your turn</span> <span class="demo-meta">7 min</span></p>
+<section id="live-demo-one-change-three-formats" class="slide level2 demo-slide">
+<h2>Live demo: one change, three formats</h2>
+<p><span class="demo-tag">Live demo</span> <span class="demo-meta">4 min</span></p>
 <div class="medium">
 <ol type="1">
-<li>Open <code>one-document/report.qmd</code></li>
-<li>Change the <strong>title</strong>, the <strong>author</strong> and <strong>one sentence</strong></li>
-<li>Render it as <strong>HTML</strong>, then <strong>PDF</strong>, then <strong>Word</strong></li>
-<li>Open all three: did your changes appear in each?</li>
+<li>Open <code>tidy-project/report.qmd</code> and its HTML report</li>
+<li>Change <code>"Gentoo"</code> to <code>"Chinstrap"</code> in <strong>one place</strong></li>
+<li>Render: every number, table and figure updates across <strong>HTML, PDF and Word</strong></li>
+</ol>
+</div>
+<aside class="notes">
+<p>STOP HERE and switch to the demo. In a copy of <code>tidy-project/</code>, open <code>report.qmd</code> and <code>outputs/report.html</code> side by side. Point out <code>echo: false</code> (readers see results, not code), inline numbers in the text, and <code>@tbl-sex</code> / <code>@fig-mass</code> turning into “Table 1” and “Figure 1”. Say: “Reviewer 2 asks: what about Chinstrap penguins?” Change <code>chosen_species &lt;- "Gentoo"</code> to <code>"Chinstrap"</code> and press Render (or run <code>quarto render report.qmd</code>). Open <code>outputs/report.html</code>, <code>report.pdf</code> and <code>report.docx</code>: the heading, sample size, means, Table 1 and Figure 1 have all updated across all three formats, with zero copy and paste. If Render fails, show the ready-made files in <code>tidy-project/outputs/</code> and move on.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="explore-quarto-in-the-wild" class="slide level2 demo-slide">
+<h2>Explore Quarto in the wild</h2>
+<p><span class="demo-tag">Together</span> <span class="demo-meta">2 min</span></p>
+<div class="cards grid2">
+<div class="card">
+<p><strong>A live research paper</strong> <a href="https://quarto-ext.github.io/manuscript-template-jupyter/"><em>La Palma Earthquakes</em> manuscript</a> — HTML, PDF and Word side by side, linked to the exact notebook behind every figure</p>
+</div>
+<div class="card">
+<p><strong>The Quarto Gallery</strong> <a href="https://quarto.org/docs/gallery/">quarto.org/docs/gallery</a> — articles, reports, slides, websites and books, each with a <strong><code>&lt;/&gt; Source</code></strong> button</p>
+</div>
+</div>
+<aside class="notes">
+<p>Together, 2 min. Paste both links into the chat! Briefly open the La Palma Earthquakes manuscript on your screen: point out the PDF/Word download links on the right and click into one figure’s notebook link to show the code behind the figure. Then open the Quarto Gallery for 20 seconds and point out the <code>&lt;/&gt; Source</code> button next to every example so everyone knows what to click on the next slide.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="explore-quarto-in-the-wild-1" class="slide level2 demo-slide">
+<h2>Explore Quarto in the wild</h2>
+<p><span class="your-turn-tag">Your turn</span> <span class="demo-meta">6 min</span></p>
+<div class="medium">
+<ol type="1">
+<li>Open the <a href="https://quarto.org/docs/gallery/">Quarto Gallery</a> or the <a href="https://quarto-ext.github.io/manuscript-template-jupyter/"><em>La Palma</em> paper</a></li>
+<li>Pick <strong>one example</strong> close to your own work, and click <strong><code>&lt;/&gt; Source</code></strong></li>
+<li>Spot <strong>two ingredients</strong> in the <code>.qmd</code> file (header, <code>format:</code>, code chunk, inline code, <code>@fig-</code> or <code>[@citation]</code>)</li>
 </ol>
 </div>
 <div class="small">
-<p>Press <strong>Render</strong> (choose the format), or run <code>quarto render report.qmd</code> to make all three. Not working? Open the files in <code>finished/</code>.</p>
+<p><strong>Post in the chat:</strong> which example did you pick, and where would Quarto save <em>you</em> the most copy-pasting?</p>
 </div>
 <aside class="notes">
-<p>Your turn, 7 min. They need only Quarto, not R or Python. Watch the chat for questions. Common slips: Render only makes the first format, so use the format menu or the terminal command; or they open the original in finished/. If Render fails for someone, let them look at <code>finished/</code>.</p>
+<p>Your turn, 6 min, in their browser — no software needed. Encourage spreadsheet/non-coding attendees too: Quarto makes websites, slides and Word/PDF reports from plain Markdown even without code chunks. Watch the chat and pick 3 or 4 interesting examples to read out on the next slide.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1081,25 +1105,25 @@ data_final_v2.csv</code></pre>
           display:block!important;
       }</style></aside>
 </section>
-<section id="what-else-can-quarto-make" class="slide level2 demo-slide">
-<h2>What else can Quarto make?</h2>
+<section id="what-people-use-quarto-for" class="slide level2 demo-slide">
+<h2>What people use Quarto for</h2>
 <p><span class="answer-tag">Answer</span> <span class="demo-meta">3 min</span></p>
 <div class="cards grid2">
 <div class="card">
-<p><strong>Reports</strong> HTML, PDF and Word, with numbered figures, tables and equations that you can cross-reference, and citations</p>
+<p><strong>Reports</strong> HTML, PDF and Word, with <code>@fig-mass</code> cross-references that renumber automatically, and <code>[@citations]</code></p>
 </div>
 <div class="card">
-<p><strong>Slides</strong> This deck is a Quarto presentation</p>
+<p><strong>Papers and manuscripts</strong> Like <em>La Palma</em>: publish the article alongside the exact code and data that produced every figure</p>
 </div>
 <div class="card">
-<p><strong>Websites</strong> This course website is built with Quarto</p>
+<p><strong>Slides</strong> This presentation is a single <code>.qmd</code> file</p>
 </div>
 <div class="card">
-<p><strong>Papers and books</strong> Journal articles, theses and books, built from several files</p>
+<p><strong>Websites and theses</strong> This course website (and whole books or PhD theses) built from plain-text files</p>
 </div>
 </div>
 <aside class="notes">
-<p>Answer. Your changes showed up in every format, because there is only one source. And Quarto does far more than reports: this deck, the notes and the site are all Quarto. On Reports, mention cross-references: write <code>@fig-mass</code> and Quarto writes “Figure 1”, and keeps the numbers right as you add or move figures. The capstone exercise shows how.</p>
+<p>Answer, 3 min. Read out a few picks from the chat. Point out that <code>tidy-project/report.qmd</code> (and its rendered HTML, PDF and Word files in <code>tidy-project/outputs/</code>) is in their example folder to look at any time, and the optional capstone exercise walks through building a paper-style report with cross-references and citations from scratch.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1326,18 +1350,18 @@ data_final_v2.csv</code></pre>
 <p>All of this can live in your README: the next person then knows what you used!</p>
 </div>
 </section>
-<section id="live-demo-delete-it-then-rebuild-it" class="slide level2 demo-slide">
-<h2>Live demo: delete it, then rebuild it</h2>
-<p><span class="demo-tag">Live demo</span> <span class="demo-meta">5 min</span></p>
+<section id="live-demo-2023-code-meets-a-2026-laptop" class="slide level2 demo-slide">
+<h2>Live demo: 2023 code meets a 2026 laptop</h2>
+<p><span class="demo-tag">Live demo</span> <span class="demo-meta">4 min</span></p>
 <div class="medium">
 <ol type="1">
-<li>Here is a project’s environment</li>
-<li>Delete it</li>
-<li>Rebuild it from the lock file: one command</li>
+<li>Run a 2023 script with <strong>today’s</strong> packages: <strong>it crashes</strong> 💥</li>
+<li>Look at <code>uv.lock</code>: the exact package recipe from 2023</li>
+<li>Rebuild the environment with <strong>one command</strong> (<code>uv sync</code>): <strong>it runs!</strong></li>
 </ol>
 </div>
 <aside class="notes">
-<p>STOP HERE and switch to the demo. R: in a copy of <code>environment-demo/r</code> from the example folder, run <code>renv::init()</code>, then <code>source("code/analysis.R")</code>. Close the project, delete <code>renv/library</code>, open it again (ggplot2 is now missing) and run <code>renv::restore()</code>. Python: in a copy of <code>environment-demo/python</code> from the example folder, run <code>uv init --no-package</code>, then <code>uv add pandas matplotlib</code>, then <code>uv run code/analysis.py</code>. Delete <code>.venv</code> and run <code>uv sync</code> to rebuild it (the steps are in its README). Say: “this is what your colleague does when you send them the project”. Note that renv records package versions but not the version of R itself. If you have no environment ready, show the lock file in <code>environment-demo/r/finished/</code> or <code>environment-demo/python/finished/</code> and describe it instead. If it fails, say so and move on: this is a watch-only demo.</p>
+<p>STOP HERE and switch to the demo in a copy of <code>environment-demo/python-example/</code>. Open <code>code/analysis.py</code> briefly: written in 2023, never edited since. 1. Run it with today’s latest packages (simulating <code>pip install pandas matplotlib</code>): <code>uv run --no-project --with pandas --with matplotlib code/analysis.py</code> It crashes with <code>AttributeError: 'np.NaN' was removed in the NumPy 2.0 release</code>! Point out: the author only asked for <code>pandas</code> and <code>matplotlib</code> — <code>numpy</code> came along behind the scenes, updated to 2.0, and broke untouched code. 2. Now rebuild the original 2023 environment from <code>uv.lock</code> and run: <code>uv sync</code> <code>uv run code/analysis.py</code> In ~1 second it installs <code>numpy 1.26.4</code> into <code>.venv/</code> and prints the results cleanly — without touching any newer projects on your laptop! (R equivalent in <code>environment-demo/r-example/</code>: <code>renv::restore()</code> rebuilds from <code>renv.lock</code>.)</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1350,19 +1374,23 @@ data_final_v2.csv</code></pre>
           display:block!important;
       }</style></aside>
 </section>
-<section id="the-new-laptop-test" class="slide level2 demo-slide">
-<h2>The new laptop test</h2>
+<section id="spot-the-handover-trap" class="slide level2 demo-slide">
+<h2>Spot the handover trap</h2>
 <p><span class="demo-tag">Together</span> <span class="demo-meta">2 min</span></p>
-<div class="medium">
-<p>A colleague emails you their project: <em>“It runs fine on my laptop!”</em></p>
-<p>You open it on <strong>your</strong> laptop:</p>
+<p>Three colleagues send you their project so you can re-run Figure 1:</p>
+<div class="cards">
+<div class="card">
+<p><strong>A · Alex</strong> <em>“Easy — my README says <code>install pandas and matplotlib</code>.”</em></p>
 </div>
-<pre><code>Error: there is no package called 'ggplot2'</code></pre>
-<div class="medium">
-<p>What would you need to know to make it run?</p>
+<div class="card">
+<p><strong>B · Blair</strong> <em>“To be safe, I zipped up my <code>.venv</code> (or <code>renv/library</code>) folder — sorry it’s 450 MB!”</em></p>
+</div>
+<div class="card">
+<p><strong>C · Casey</strong> <em>“Here’s my code, README (with the Python/R version), and <code>uv.lock</code> (or <code>renv.lock</code>).”</em></p>
+</div>
 </div>
 <aside class="notes">
-<p>Together, 2 min. Set the scene, then move to the next slide.</p>
+<p>Together, 2 min. Read out the three handovers — everyone has either done or received A or B! Don’t give the answer away yet: move straight to the Your Turn slide, where they open a real lock file in the example folder to see why.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1375,17 +1403,19 @@ data_final_v2.csv</code></pre>
           display:block!important;
       }</style></aside>
 </section>
-<section id="the-new-laptop-test-1" class="slide level2 demo-slide">
-<h2>The new laptop test</h2>
+<section id="peek-inside-a-lock-file" class="slide level2 demo-slide">
+<h2>Peek inside a lock file</h2>
 <p><span class="your-turn-tag">Your turn</span> <span class="demo-meta">6 min</span></p>
-<div class="medium">
-<p>On your own, list <strong>everything you would need to know</strong> to run this project on a new computer.</p>
-</div>
+<p>Open <strong><code>environment-demo/python-example/</code></strong> (<code>pyproject.toml</code> + <code>uv.lock</code>) <strong>or</strong> <strong><code>environment-demo/r-example/</code></strong> (<code>code/analysis.R</code> + <code>renv.lock</code>) in any text editor:</p>
 <div class="small">
-<p>Write down as many things as you can. There is no wrong answer.</p>
+<ol type="1">
+<li><strong>Hidden packages:</strong> Python asked for <strong>2</strong> packages (<code>pandas</code>, <code>matplotlib</code>); R asked for <strong>1</strong> (<code>ggplot2</code>). Roughly how many packages are actually inside the lock file — and why?</li>
+<li><strong>Exact version:</strong> Which version of <code>numpy</code> (in <code>uv.lock</code>) or <code>ggplot2</code> (in <code>renv.lock</code>) was recorded?</li>
+<li><strong>Verdict:</strong> What goes wrong with <strong>Alex (A)</strong> and <strong>Blair (B)</strong>?</li>
+</ol>
 </div>
 <aside class="notes">
-<p>Your turn, 6 min, on their own. No code. Resist giving hints: let them find the list. At the end, ask people to type their list in the chat, and read out a few.</p>
+<p>Your turn, 6 min. No code or terminal needed: <code>uv.lock</code> and <code>renv.lock</code> are plain text files that open in Notepad, TextEdit, Positron, RStudio or a browser. Ask people to post the package count they found and what goes wrong with A and B in the chat.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1398,47 +1428,49 @@ data_final_v2.csv</code></pre>
           display:block!important;
       }</style></aside>
 </section>
-<section id="the-new-laptop-test-2" class="slide level2 demo-slide">
-<h2>The new laptop test</h2>
+<section id="spot-the-handover-trap-1" class="slide level2 demo-slide">
+<h2>Spot the handover trap</h2>
 <p><span class="answer-tag">Answer</span> <span class="demo-meta">3 min</span></p>
 <div class="doc-table">
 <table class="caption-top">
 <colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>You need to know</th>
-<th>Where it should be written down</th>
+<th></th>
+<th>What happens</th>
+<th>Why</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Which <strong>software</strong>, and which version</td>
-<td>The README (Setup)</td>
+<td><strong>Inside the lock file</strong></td>
+<td><strong>14 packages</strong> in <code>uv.lock</code> (from 2!)<br><strong>18 packages</strong> in <code>renv.lock</code> (from 1!)</td>
+<td>Packages rely on hidden sub-packages (<code>numpy 1.26.4</code> in Python; <code>ggplot2 4.0.2</code> + <code>scales</code>, <code>rlang</code>, <code>vctrs</code>… in R)</td>
 </tr>
 <tr class="even">
-<td>Which <strong>packages</strong>, and which versions</td>
-<td>A lock file</td>
+<td><strong>A · Alex</strong> (<code>install pandas</code>)</td>
+<td>✘ Breaks later</td>
+<td>Installs <em>today’s</em> newest versions — including updated sub-packages</td>
 </tr>
 <tr class="odd">
-<td>Where the <strong>data</strong> is</td>
-<td>The README, and a <code>data/raw</code> folder</td>
+<td><strong>B · Blair</strong> (450 MB <code>.venv</code> zip)</td>
+<td>✘ Breaks on other laptops</td>
+<td>Built for Blair’s OS, chip and file paths — huge and non-portable</td>
 </tr>
 <tr class="even">
-<td><strong>What to run</strong>, and in what order</td>
-<td>The README (Quickstart), or one script</td>
-</tr>
-<tr class="odd">
-<td>Where the <strong>results</strong> come from</td>
-<td>The code, not copy and paste</td>
+<td><strong>C · Casey</strong> (README + lock file)</td>
+<td>✔ Works anywhere</td>
+<td>Tiny text recipe; <code>uv sync</code> or <code>renv::restore()</code> rebuilds a fresh environment</td>
 </tr>
 </tbody>
 </table>
 </div>
 <aside class="notes">
-<p>Answer. Compare their lists with the table. Almost everything on it can be written down once in a README, and a lock file does the packages automatically. This is exactly what <code>tidy-project/README.md</code> does.</p>
+<p>Answer, 3 min. Seeing 14–18 packages inside the lock file when the author only asked for 1 or 2 is the big lightbulb moment: writing “uses ggplot2” or “uses pandas” in a README never captures all the sub-packages underneath, whereas a lock file records every single one automatically.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1612,8 +1644,8 @@ data_final_v2.csv</code></pre>
 <ul>
 <li>✔ <strong>Organise</strong> a project, and never edit the raw data</li>
 <li>✔ <strong>Describe</strong> what a good README and data dictionary contain</li>
-<li>✔ <strong>Make</strong> HTML, PDF and Word versions of a report from one document</li>
-<li>✔ <strong>Say</strong> what someone needs to re-run your project on another computer</li>
+<li>✔ <strong>Explain</strong> how Quarto keeps text, figures and numbers in sync across HTML, PDF and Word</li>
+<li>✔ <strong>Explain</strong> why package updates break old code, what a lock file records, and what to share</li>
 <li>✔ <strong>Apply</strong> these practices to your own coding projects, in R or Python</li>
 <li>✔ <strong>Choose</strong> one practice to start using this week</li>
 </ul>

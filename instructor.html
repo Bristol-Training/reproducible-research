@@ -167,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="at-a-glance" class="level1 unnumbered">
 <h1 class="unnumbered">At a glance</h1>
-<p><strong>How it runs:</strong> slides, then (in sections 2 and 3) a short <strong>watch-only demo</strong> (the “wow”), then one <strong>activity</strong>: <em>Together</em> (we do a part), <em>Your turn</em> (they do it on their own), <em>Answer</em> (you show it). In the live session, attendees never run code: the only thing they run is <strong>Render</strong>. The R and Python examples are for them to read, and the capstone is where they write their own. The steps for each demo and activity are in the <strong>speaker notes</strong> of its slide (press <strong>S</strong> in the deck).</p>
+<p><strong>How it runs:</strong> slides, then (in sections 2 and 3) a short <strong>watch-only demo</strong> (the “wow”), then one <strong>activity</strong>: <em>Together</em> (we do a part), <em>Your turn</em> (they do it on their own), <em>Answer</em> (you show it). In the live session, attendees never need to install software or run code: they inspect files in the example folder and explore examples in their browser. The R and Python examples are for them to read, and the optional capstone is where they write their own afterwards. The steps for each demo and activity are in the <strong>speaker notes</strong> of its slide (press <strong>S</strong> in the deck).</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 16%">
@@ -201,16 +201,16 @@ ul.task-list li input[type="checkbox"] {
 <td>Documentation &amp; Quarto</td>
 <td>45</td>
 <td>2, 3, 5</td>
-<td>Change the data, the report updates</td>
-<td>Be the new colleague. One document, many formats</td>
+<td>Change <code>"Gentoo"</code> to <code>"Chinstrap"</code>, update HTML/PDF/Word</td>
+<td>Be the new colleague. Explore Quarto in the wild</td>
 </tr>
 <tr class="odd">
 <td>3</td>
 <td>Virtual environments</td>
 <td>30</td>
 <td>4, 5</td>
-<td>Set up an environment, delete it, rebuild it</td>
-<td>The new laptop test</td>
+<td>2023 script crashes today → <code>uv sync</code> rescues it</td>
+<td>Spot the handover trap &amp; peek inside a lock file</td>
 </tr>
 <tr class="even">
 <td>4</td>
@@ -234,26 +234,29 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li>Organise a project into raw data, processed data, code and outputs, and explain why raw data is never edited.</li>
 <li>Describe what a good README and data dictionary contain, and why they matter, particularly for Data Management Plans.</li>
-<li>Explain why Quarto helps reproducibility, and make HTML, PDF and Word versions of a report from one document.</li>
-<li>Explain why environments matter, and say what someone needs in order to re-run your project on another computer.</li>
+<li>Explain why Quarto helps reproducibility, identify the parts of a Quarto source file, and see how one file makes HTML, PDF and Word.</li>
+<li>Explain why package updates break old code, what a lock file records, and what to share (and never share) with a colleague.</li>
 <li>Apply these practices to your own coding projects, using the R and Python examples as a starting point.</li>
 <li>Choose one practice to start using on your own project, and know where to find out more.</li>
 </ol>
 <section id="before-you-start" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="before-you-start">Before you start</h2>
 <ul>
-<li>Download and unzip the <strong>example folder</strong>. Copy <code>tidy-project/</code> somewhere you can change it.</li>
-<li>You need <strong>R and Quarto 1.4+</strong> on your own machine for the section 2 demo. Run <code>code/run_all.R</code> once to check it works.</li>
-<li>Press Render on <code>one-document/report.qmd</code>: attendees will do this. Attendees need <strong>Quarto only</strong>, not R or Python.</li>
-<li>For the environment demo, choose R or Python. Run through the steps in <code>environment-demo/r/README.md</code> (needs the <code>renv</code> package) or <code>environment-demo/python/README.md</code> (needs <a href="https://docs.astral.sh/uv/">uv</a>) once, in a copy of the folder: the first run downloads the packages.</li>
-<li>Check the links on the slides and notes.</li>
+<li>Download and unzip the <strong>example folder</strong>. Copy <code>tidy-project/</code> and <code>environment-demo/python-example/</code> somewhere you can run them.</li>
+<li><strong>Section 2 demo:</strong> You need <strong>R</strong> (<code>knitr</code>, <code>rmarkdown</code>) and <strong>Quarto 1.4+</strong> on your own machine. Render <code>tidy-project/report.qmd</code> once beforehand to check HTML, Typst PDF and Word all build cleanly.</li>
+<li><strong>Section 2 activity links</strong> (ready to paste into the Zoom/Teams chat):
+<ul>
+<li><em>La Palma Earthquakes</em> manuscript: <code>https://quarto-ext.github.io/manuscript-template-jupyter/</code></li>
+<li>Quarto Gallery: <code>https://quarto.org/docs/gallery/</code></li>
+</ul></li>
+<li><strong>Section 3 demo:</strong> Uses <a href="https://docs.astral.sh/uv/">uv</a> in a copy of <code>environment-demo/python-example/</code>. Run both commands in its <code>README.md</code> once beforehand so <code>uv</code> caches the packages locally (the live demo then runs in ~1 second!).</li>
 </ul>
 </section>
 <section id="ground-rules" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="ground-rules">Ground rules</h2>
 <ul>
-<li><strong>Nobody runs code except Render.</strong> Never debug live. If a demo fails, say so, show the finished version, and move on.</li>
-<li>Demos are watch-only. The activities are on paper or in a document.</li>
+<li><strong>Nobody runs code in the live session.</strong> Never debug live. If a demo fails, say so, show the ready-made files in <code>tidy-project/outputs/</code> or <code>environment-demo/</code>, and move on.</li>
+<li>Demos are watch-only. Activities use the example folder or a web browser.</li>
 <li>The course is <strong>online</strong>: no pair work. Every <em>Your turn</em> is done on your own, and people share answers by typing in the chat. Read a few out.</li>
 <li>Wording works for everyone in the university. Spreadsheet users do the same activities.</li>
 <li>If running late, skip the <strong>optional</strong> slides first, then shorten a <em>Your turn</em>, not a section.</li>
@@ -280,46 +283,44 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="documentation-quarto-45-min" class="level1">
 <h1>2. Documentation &amp; Quarto (45 min)</h1>
-<p><strong>Demo:</strong> <em>Change the data</em>: in a copy of <code>tidy-project/</code>, uncomment the 2008 line in <code>code/01_clean_data.R</code>, run <code>code/run_all.R</code>, and every number in the report changes. <strong>Activities:</strong> <em>Be the new colleague</em> (from <code>messy-project/notes.txt</code>, write down three things they can’t work out; the answer is the README and data dictionary) and <em>One document, many formats</em> (render <code>one-document/report.qmd</code> to HTML, PDF and Word).</p>
-<p><strong>Checkpoints:</strong> by 3 min <em>Be the new colleague</em> (Together); by 13 Quarto slides; by 21 demo; by 25 <em>One document</em>, Together; by 31 <em>Your turn</em>; by 38 <em>Answer</em>; finish at 45.</p>
+<p><strong>Demo:</strong> <em>One change, three formats</em>: in a copy of <code>tidy-project/</code>, open <code>report.qmd</code> and <code>outputs/report.html</code>. Change <code>chosen_species &lt;- "Gentoo"</code> to <code>"Chinstrap"</code>, render (<code>quarto render report.qmd</code> or the Render button), and show that every number, table and figure updated across HTML, PDF and Word. <strong>Activities:</strong> <em>Be the new colleague</em> (from <code>messy-project/notes.txt</code>, write down three things they can’t work out; the answer is the README and data dictionary) and <em>Explore Quarto in the wild</em> (browse the <em>La Palma</em> manuscript or the Quarto Gallery, click <code>&lt;/&gt; Source</code> on one example, spot two <code>.qmd</code> ingredients, and post in the chat where Quarto would save them copy-pasting).</p>
+<p><strong>Checkpoints:</strong> by 3 min <em>Be the new colleague</em> (Together); by 13 Quarto slides; by 22 demo; by 26 <em>Explore Quarto</em>, Together; by 28 <em>Your turn</em>; by 34 <em>Answer</em>; finish at 45.</p>
 <p><strong>Key messages</strong></p>
 <ul>
 <li>Four kinds of documentation. Write for the person who will read it.</li>
 <li>A README answers: what is it, how do I run it, what do I need. A README that is wrong is worse than none.</li>
 <li>A data dictionary: copying the column names is easy. The descriptions are the value.</li>
 <li>Quarto: the report <em>is</em> the analysis. No copy and paste. Data changes, so render again.</li>
-<li>One document can make many formats, and this deck, the notes and the website are all Quarto.</li>
+<li>One plain-text <code>.qmd</code> file can make HTML, PDF (via Typst, no LaTeX needed), Word, slides, websites and full journal manuscripts.</li>
 </ul>
 <p><strong>Don’t forget</strong></p>
 <ul>
 <li>Read the messy <code>notes.txt</code> out loud with a straight face.</li>
 <li>Open the Quarto part with “who has copied a number into Word and then found the data had changed?”</li>
-<li>At the demo: change the data, and let them watch every number change.</li>
-<li>In <em>One document</em>, make sure each person renders <strong>all three</strong> formats (the format menu, or <code>quarto render report.qmd</code>).</li>
-<li>Show the “Learn more about Quarto” slide at the end.</li>
+<li>At the demo: point out <code>@tbl-sex</code> / <code>@fig-mass</code> turning into Table 1 / Figure 1, change <code>"Gentoo"</code> to <code>"Chinstrap"</code>, and open HTML, PDF and Word side by side.</li>
+<li>Paste the <em>La Palma</em> manuscript and Quarto Gallery links into the chat before <em>Your turn</em>, and point out the <code>&lt;/&gt; Source</code> button so everyone knows what to click.</li>
 </ul>
-<p><strong>If running late:</strong> skip the “old way vs the Quarto way” slide. <strong>Watch out for:</strong> Render failing (Quarto not set up) or only making one format. Send them to <code>one-document/finished/</code>. Inline code needs Quarto 1.4 or later.</p>
+<p><strong>If running late:</strong> skip the “old way vs the Quarto way” slide. <strong>Watch out for:</strong> people thinking they need to write R/Python to use Quarto — remind them Quarto works with plain Markdown too, and they can inspect <code>tidy-project/report.qmd</code> locally at their own pace.</p>
 </section>
 <section id="virtual-environments-30-min" class="level1">
 <h1>3. Virtual environments (30 min)</h1>
-<p><strong>Demo:</strong> <em>Delete it, then rebuild it</em>: in a copy of <code>environment-demo/r/</code> or <code>environment-demo/python/</code>, set up an environment (<code>renv::init()</code>, or <code>uv init --no-package</code> and <code>uv add pandas matplotlib</code>), delete it (<code>renv/library</code> or <code>.venv</code>), and rebuild it from the lock file (<code>renv::restore()</code> or <code>uv sync</code>). The steps are in each folder’s README. <strong>Activity:</strong> <em>The new laptop test</em>: a colleague’s project fails on a new laptop, and they list everything they would need to know to run it; the answer is the README and a lock file.</p>
-<p><strong>Checkpoints:</strong> by 10 min the demo; by 15 <em>Together</em>; by 17 <em>Your turn</em>; by 23 <em>Answer</em>; finish at 30.</p>
+<p><strong>Demo:</strong> <em>2023 code meets a 2026 laptop</em>: in a copy of <code>environment-demo/python-example/</code>, run <code>uv run --no-project --with pandas --with matplotlib code/analysis.py</code> — it crashes because <code>NumPy 2.0</code> removed <code>np.NaN</code>. Then run <code>uv sync</code> and <code>uv run code/analysis.py</code> — <code>uv.lock</code> restores <code>numpy 1.26.4</code> in ~1 second and the untouched 2023 script runs cleanly. <strong>Activity:</strong> <em>Spot the handover trap &amp; peek inside a lock file</em>: open <code>environment-demo/python-example/</code> (<code>pyproject.toml</code> + <code>uv.lock</code>) or <code>environment-demo/r-example/</code> (<code>code/analysis.R</code> + <code>renv.lock</code>) in any text editor, count the hidden sub-packages recorded inside the lock file, check the exact version of <code>numpy</code> or <code>ggplot2</code>, and decide what goes wrong with Alex’s vague README and Blair’s 450 MB <code>.venv</code> zip.</p>
+<p><strong>Checkpoints:</strong> by 10 min the demo; by 14 <em>Together</em>; by 16 <em>Your turn</em>; by 22 <em>Answer</em>; finish at 30.</p>
 <p><strong>Key messages</strong></p>
 <ul>
-<li>“It worked last year”: packages change, and one computer has one shared set.</li>
-<li>An environment is a project’s own packages. The lock file is the recipe, and the environment is disposable.</li>
-<li>Send your project to someone: the code, README and lock file, not the environment. They rebuild it with one command.</li>
-<li>What it doesn’t cover: the R or Python version, the operating system, the data.</li>
-<li>Spreadsheets: write the program and its version in the README.</li>
+<li>“It worked last year”: packages change, and installing 1 or 2 packages silently pulls in a dozen sub-packages underneath.</li>
+<li>An environment is a project’s own packages. The lock file is the plain-text recipe, and the environment folder is disposable.</li>
+<li>Send your project to someone: the code, README and lock file — <strong>never</strong> the <code>.venv</code> or <code>renv/library</code> folder. They rebuild it with one command.</li>
+<li>What it doesn’t cover: the R or Python version (write it in the README; <code>uv</code> can also pin Python), the operating system, the data.</li>
+<li>Spreadsheets: write the program, version and add-ins in the README.</li>
 </ul>
 <p><strong>Don’t forget</strong></p>
 <ul>
-<li>Spend the time on the <em>why</em>. The demo is only for the wow.</li>
-<li>At the demo, say “this is what your colleague does when you send them the project”.</li>
-<li><code>renv</code> records package versions, not the version of R. Say so.</li>
-<li>In <em>Your turn</em>, give no hints. Let them find the list.</li>
+<li>Spend the time on the <em>why</em>. In the demo, highlight that the author only asked for <code>pandas</code> and <code>matplotlib</code> — <code>numpy</code> updated behind the scenes!</li>
+<li>Remind attendees that <code>uv.lock</code> and <code>renv.lock</code> are ordinary text files they can open in Notepad, TextEdit or any editor.</li>
+<li>Seeing <strong>14 packages</strong> in <code>uv.lock</code> (from 2!) or <strong>18 packages</strong> in <code>renv.lock</code> (from 1!) is the lightbulb moment.</li>
 </ul>
-<p><strong>If running late:</strong> drop the “tools” slide. <strong>Watch out for:</strong> the demo going wrong (<code>uv</code> or <code>renv</code> not set up). If it does, show the lock file in <code>environment-demo/r/finished/</code> or <code>environment-demo/python/finished/</code> and describe it.</p>
+<p><strong>If running late:</strong> drop the “tools” slide. <strong>Watch out for:</strong> the demo going wrong (<code>uv</code> not found). If it does, open <code>environment-demo/python-example/uv.lock</code> directly, point to <code>numpy 1.26.4</code>, and move straight into the activity.</p>
 </section>
 <section id="your-first-step-15-min" class="level1">
 <h1>4. Your first step (15 min)</h1>
