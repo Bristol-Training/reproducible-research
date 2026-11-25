@@ -325,7 +325,7 @@ Together, 2 min. Read the notes out loud with a straight face. The data has colu
 [Your turn]{.your-turn-tag} [4 min]{.demo-meta}
 
 ::: {.medium}
-Write down **three things** you can't work out.
+Write down **three things** you need to know to work on this project.
 :::
 
 ::: {.small}
