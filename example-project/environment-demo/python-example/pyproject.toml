@@ -1,0 +1,10 @@
+[project]
+name = "penguin-analysis-2023"
+version = "0.1.0"
+description = "Penguin body mass summary written before NumPy 2.0"
+readme = "README.md"
+requires-python = ">=3.12, <3.13"
+dependencies = [
+    "matplotlib",
+    "pandas",
+]

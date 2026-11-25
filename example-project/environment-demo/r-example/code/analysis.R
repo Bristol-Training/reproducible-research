@@ -2,11 +2,12 @@
 # Run from the project folder (the one that contains `data/` and `code/`):
 #     Rscript code/analysis.R
 
+# Notice we only load ONE package here (ggplot2), yet renv.lock records 18 packages!
 library(ggplot2)
 
 penguins <- na.omit(read.csv("data/penguins.csv"))
 
-# average body mass (grams) of each species
+# Average body mass (grams) of each species
 mass <- aggregate(body_mass ~ species, data = penguins, FUN = mean)
 mass$body_mass <- round(mass$body_mass)
 cat(nrow(penguins), "penguins\n")

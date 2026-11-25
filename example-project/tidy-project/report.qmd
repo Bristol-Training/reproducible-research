@@ -1,6 +1,8 @@
 ---
 title: "Penguin body mass"
-author: "Your name here"
+author: "Jean Golding Institute"
+execute:
+  echo: false
 format:
   html:
     embed-resources: true
@@ -8,26 +10,32 @@ format:
   docx: default
 ---
 
-## Data
-
 ```{r}
 clean <- read.csv("data/processed/penguins_clean.csv")
 
-# keep one species: filter out Adelie and Chinstrap
-gentoo <- subset(clean, species == "Gentoo")
+# Demo: change "Gentoo" to "Adelie" or "Chinstrap", then render again!
+chosen_species <- "Gentoo"
+species_data <- subset(clean, species == chosen_species)
+by_sex <- aggregate(body_mass ~ sex, data = species_data, FUN = mean)
 ```
 
-After removing incomplete rows, there are `{r} nrow(clean)` penguins in the data. `{r} nrow(gentoo)` of them are Gentoo penguins, which is the species we look at here.
+## Data
 
-## Results
+After removing incomplete rows, there are `{r} nrow(clean)` penguins in the dataset across all three islands. Here we focus on the `{r} nrow(species_data)` **`{r} chosen_species`** penguins.
 
-The mean body mass of Gentoo penguins was `{r} round(mean(gentoo$body_mass))` g.
+## Results for `{r} chosen_species` penguins
+
+The mean body mass of `{r} chosen_species` penguins was `{r} round(mean(species_data$body_mass))` g. On average, males were `{r} round(diff(by_sex$body_mass))` g heavier than females (@tbl-sex and @fig-mass).
 
 ```{r}
-aggregate(body_mass ~ sex, data = gentoo, FUN = mean)
+#| label: tbl-sex
+#| tbl-cap: "Mean body mass by sex"
+knitr::kable(by_sex, col.names = c("Sex", "Mean body mass (g)"), digits = 0)
 ```
 
 ```{r}
-#| fig-alt: "Boxplot of Gentoo body mass, for females and males"
-boxplot(body_mass ~ sex, data = gentoo, ylab = "Body mass (g)")
+#| label: fig-mass
+#| fig-cap: "Body mass by sex"
+#| fig-alt: "Boxplot comparing female and male penguin body mass"
+boxplot(body_mass ~ sex, data = species_data, xlab = "Sex", ylab = "Body mass (g)")
 ```

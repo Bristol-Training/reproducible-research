@@ -19,8 +19,8 @@ By the end of this course you will be able to:
 
 1. Organise a project into raw data, processed data, code and outputs, and explain why raw data is never edited.
 2. Describe what a good README and data dictionary contain, and why they matter, particularly for Data Management Plans.
-3. Explain why Quarto helps reproducibility, and make HTML, PDF and Word versions of a report from one document.
-4. Explain why environments matter, and say what someone needs in order to re-run your project on another computer.
+3. Explain why Quarto helps reproducibility, identify the parts of a Quarto source file, and see how one file makes HTML, PDF and Word.
+4. Explain why package updates break old code, what a lock file records, and what to share (and never share) with a colleague.
 5. Apply these practices to your own coding projects, using the R and Python examples as a starting point.
 6. Choose one practice to start using on your own project, and know where to find out more.
 
@@ -76,22 +76,22 @@ These are important concepts and technical notes.
 
 ## Workspace setup {.unnumbered}
 
-The live activities don't need you to write or run any code: the only thing you run is **Render**. You need two things.
+The live activities don't need you to install any software or run any code: you only inspect files in the example folder and explore examples in your web browser.
 
-**Quarto.** We use [Quarto](https://quarto.org) to build documents. RStudio and Positron include it, so if you use either you probably don't need to install anything. To check, open a `.qmd` file and look for the **Render** button. Otherwise, [install Quarto](https://quarto.org/docs/get-started/) for your operating system (VS Code users also need the Quarto extension). Use version 1.4 or later: `quarto --version` in a terminal shows which you have.
-
-**The example folder.** [Download the example folder](example-project.zip){download="example-project.zip"} and unzip it. It has five folders, and the checklist:
+**The example folder.** [Download the example folder](example-project.zip){download="example-project.zip"} and unzip it. It contains four folders and a printable checklist:
 
 | Folder | What it is |
 |---|---|
 | `messy-project/` | A project with a bad structure and bad names |
-| `tidy-project/` | The same project with all the good habits |
-| `one-document/` | A short report to turn into HTML, PDF and Word |
-| `environment-demo/` | A small project in R (`r/`) and in Python (`python/`), for trying environments with renv or uv (optional) |
+| `tidy-project/` | The same project with all the good habits, including a Quarto report (`report.qmd`) rendered to HTML, PDF and Word in `outputs/` |
+| `environment-demo/` | Small projects in Python (`python-example/`, with `uv.lock`) and R (`r-example/`, with `renv.lock`) for peeking inside a real lock file, plus optional steps to try the environment demo yourself |
 | `capstone-answer/` | A finished answer to the [capstone exercise](capstone.qmd), in R (`r/`) and in Python (`python/`) |
 | `checklist.pdf`, `checklist.docx` | A one-page checklist for your own project |
 
-If you want to do the optional [capstone exercise](capstone.qmd), you will also need R or Python, and [uv](https://docs.astral.sh/uv/) (Python) or the `renv` package (R).
+**Optional software (for after the course).** If you want to render `.qmd` files yourself or work through the optional [capstone exercise](capstone.qmd), you will need:
+
+- **[Quarto](https://quarto.org/docs/get-started/)** (version 1.4 or later). RStudio and Positron include it; VS Code users also need the Quarto extension. Run `quarto --version` in a terminal to check.
+- **R or Python**, along with the `renv` package (R) or [uv](https://docs.astral.sh/uv/) (Python).
 
 # Project structures
 
@@ -227,7 +227,7 @@ Compare your answer with `tidy-project/`. To see the "everything can be re-made"
 
 [How do I explain my project, and report on it, so others (and future me) can use it?]{.lead-question}
 
-[About 45 min · Demo · Activities: be the new colleague; one document, many formats]{.section-meta}
+[About 45 min · Demo · Activities: be the new colleague; explore Quarto in the wild]{.section-meta}
 
 ## Types of documentation
 
@@ -453,7 +453,9 @@ quarto render report.qmd
 
 ## Optional: trying it yourself
 
-The activities in this course don't need any code. If you want to write a Quarto report with code in it, with numbered sections, a table, a figure, cross-references and a citation, the [capstone exercise](capstone.qmd) takes you through it, in R or Python.
+The activities in this course don't need any software installed. To see a small working Quarto report locally, open `tidy-project/report.qmd` alongside the HTML, PDF and Word versions in `tidy-project/outputs/`. If you have R and Quarto installed, try changing `chosen_species <- "Gentoo"` to `"Chinstrap"` in `tidy-project/report.qmd` and rendering again: every number, table and figure updates across all three formats.
+
+If you want to write a Quarto report from scratch — with numbered sections, a table, a figure, cross-references and citations — the [capstone exercise](capstone.qmd) takes you through it step by step, in R or Python.
 
 ## Learn more about Quarto
 
@@ -461,7 +463,7 @@ The activities in this course don't need any code. If you want to write a Quarto
 - Using code: [R](https://quarto.org/docs/computations/r.html), [Python](https://quarto.org/docs/computations/python.html) and [inline code](https://quarto.org/docs/computations/inline-code.html).
 - [Output formats](https://quarto.org/docs/output-formats/all-formats.html), [websites](https://quarto.org/docs/websites/) and [presentations](https://quarto.org/docs/presentations/).
 - [The Quarto gallery](https://quarto.org/docs/gallery/): examples to copy from.
-- [Manuscripts](https://quarto.org/docs/manuscripts/): writing a journal article with Quarto, with a worked example.
+- [Manuscripts](https://quarto.org/docs/manuscripts/): writing a journal article with Quarto, such as the [*La Palma Earthquakes* example](https://quarto-ext.github.io/manuscript-template-jupyter/).
 - [Cross-references](https://quarto.org/docs/authoring/cross-references.html) and [citations](https://quarto.org/docs/authoring/citations.html).
 
 ::::: {.try-it}
@@ -481,21 +483,19 @@ Typical things you can't work out from the messy project: how to run it and in w
 The README answers how to run it, what software it needs and what is where. The data dictionary answers what each column means, with its type and units. A good README answers three questions in the first minute: What is this project and is it finished? If I just want to run it, what do I do first? What do I need installed?
 :::
 
-### One document, many formats {#exercise2b .unnumbered}
+### Explore Quarto in the wild {#exercise2b .unnumbered}
 
-You need Quarto, but not R or Python.
+You only need a web browser.
 
-1. Open `one-document/report.qmd`.
-2. Change the **title**, the **author** and **one sentence**.
-3. Render it as **HTML**, then **PDF**, then **Word**: press Render and choose each format, or run `quarto render report.qmd` to make all three.
-4. Open all three. Did your changes appear in each?
-
-If Render doesn't work, open the ready-made files in `one-document/finished/`.
+1. Open the [*La Palma Earthquakes* Quarto manuscript](https://quarto-ext.github.io/manuscript-template-jupyter/) (notice the HTML, PDF and Word versions on the right, and click into one figure's notebook link to see the code behind it) **or** browse the [Quarto Gallery](https://quarto.org/docs/gallery/).
+2. Pick **one example** close to something you write in your own work (an article, report, slide deck, dashboard or website) and click **`</> Source`** to view its `.qmd` file.
+3. Spot **two ingredients** from this section in the plain-text source: the `---` YAML header, `format:`, a code chunk, inline code, a `@fig-` or `@tbl-` cross-reference, or a `[@citation]`.
+4. Decide where Quarto would save *you* the most copy-pasting.
 
 ::: {#answer2b .callout-caution icon=false title='Answer (click to open)' collapse="true"}
-Your changes appeared in every format, because there is only **one source**. That is the point: you never copy and paste between a web page, a PDF and a Word file.
+Every example in the gallery — whether a journal paper, a Word report, a slide deck or a website — starts as a plain-text `.qmd` file with the same building blocks: a YAML header (`---`), Markdown prose, and (where needed) code chunks, inline code, `@fig-` cross-references and `[@citations]`.
 
-If only one format appeared, Render was set to a single format. Use the format menu, or the `quarto render report.qmd` command, to make all three.
+To inspect a small self-contained example in your downloaded files, compare `tidy-project/report.qmd` with the finished HTML, PDF and Word documents in `tidy-project/outputs/`.
 :::
 
 :::::
@@ -511,7 +511,7 @@ If only one format appeared, Render was set to a single format. Use the format m
 
 [How do I make sure my code still runs next month, or on someone else's computer?]{.lead-question}
 
-[About 30 min · Demo · Activity: The new laptop test]{.section-meta}
+[About 30 min · Demo · Activity: Spot the handover trap]{.section-meta}
 
 ## Why do we need environments?
 
@@ -529,10 +529,10 @@ Imagine this sequence:
 
 Your computer has **one shared set of packages**, so two projects that need different versions can't both be happy. This happens for several reasons:
 
-- **Packages change.** Functions are renamed, defaults change and bugs are fixed.
-- **Your code depends on them.** The same code with a different package version can give a different result.
+- **Packages change.** Functions are renamed, defaults change and bugs are fixed (for example, `NumPy 2.0` removed `np.NaN`, breaking older Python scripts overnight).
+- **Hidden sub-packages change too.** Installing `pandas` and `matplotlib` silently pulls in a dozen other packages underneath (such as `numpy`); installing `ggplot2` in R pulls in 17 more. Writing "uses pandas" in a README never records all of those versions.
 - **Other computers differ.** A colleague, a new laptop or an HPC cluster will have different versions installed: "it works on my machine".
-- **Nothing records it.** Your project doesn't say which versions it needs, so nobody can tell what went wrong.
+- **Nothing records it.** Without a lock file, nobody can tell which versions originally worked.
 
 ## What is an environment, and how does it work?
 
@@ -560,7 +560,7 @@ Other tools do the same job, such as Python's built-in `venv` with a `requiremen
 
 ## What it looks like in R and Python
 
-You don't need to run this in the course. It shows what using an environment looks like, so you can try it on a project of your own. There are only two steps to remember: make the environment once, and rebuild it from the lock file whenever you need to. The example folder has a small project in each language to practise on, `environment-demo/r/` and `environment-demo/python/`, with the steps in their READMEs.
+You don't need to run this in the course. It shows what using an environment looks like, so you can try it on a project of your own. There are only two steps to remember: make the environment once, and rebuild it from the lock file whenever you need to. The example folder has a small project in each language to practise on, `environment-demo/r-example/` and `environment-demo/python-example/`, with the steps in their READMEs.
 
 ::: {.panel-tabset}
 
@@ -625,7 +625,7 @@ There are no packages to install, but the software version can still matter: for
 
 The live session doesn't need you to run any commands. If you want to try environments yourself:
 
-- **To repeat the demo from the session**, copy `environment-demo/r/` (R, with `renv`) or `environment-demo/python/` (Python, with `uv`) from the example folder and follow the steps in its `README.md`: you set up an environment, delete it, and rebuild it from the lock file.
+- **To repeat the 2023-vs-today demo from the session**, copy `environment-demo/python-example/` (Python, with `uv`) or `environment-demo/r-example/` (R, with `renv`) from the example folder and follow the steps in its `README.md`: see how today's packages break the 2023 script, then rebuild the original environment from the lock file in one command.
 - **To give a project of your own an environment**, in R (with `renv`) or Python (with `uv`), work through the [capstone exercise](capstone.qmd).
 
 ## Learn more about environments
@@ -641,22 +641,27 @@ The live session doesn't need you to run any commands. If you want to try enviro
 
 ## Try it yourself {.unnumbered}
 
-### The new laptop test {#exercise3 .unnumbered}
+### Spot the handover trap {#exercise3 .unnumbered}
 
-A colleague emails you their project: *"It runs fine on my laptop!"*  You open it on your own laptop, and it says there is no package called `ggplot2`.
+Three colleagues send you their project so you can re-run Figure 1:
 
-On your own, **list everything you would need to know** to run this project on a new computer. Write down as many things as you can.
+- **A · Alex:** *"Easy — my README says `install pandas and matplotlib` (or `install.packages('ggplot2')`)."*
+- **B · Blair:** *"To be safe, I zipped up my `.venv` (or `renv/library`) folder — sorry it's 450 MB!"*
+- **C · Casey:** *"Here's my code, README (with the Python/R version), and `uv.lock` (or `renv.lock`)."*
+
+Open **`environment-demo/python-example/`** (`pyproject.toml` and `uv.lock`) **or** **`environment-demo/r-example/`** (`code/analysis.R` and `renv.lock`) in any text editor (you do not need to run anything):
+
+1. **Hidden packages:** Python asked for **2** packages (`pandas`, `matplotlib`); R asked for **1** (`ggplot2`). Roughly how many packages are actually recorded inside the lock file — and why?
+2. **Exact version:** Which exact version of `numpy` (in `uv.lock`) or `ggplot2` (in `renv.lock`) was recorded?
+3. **Verdict:** What goes wrong with **Alex (A)** and **Blair (B)**?
 
 ::: {#answer3 .callout-caution icon=false title='Answer (click to open)' collapse="true"}
-| You need to know | Where it should be written down |
-|---|---|
-| Which **software**, and which version | The README (Setup) |
-| Which **packages**, and which versions | A lock file |
-| Where the **data** is | The README, and a `data/raw` folder |
-| **What to run**, and in what order | The README (Quickstart), or one script |
-| Where the **results** come from | The code, not copy and paste |
-
-Almost all of this can be written down once, in a README. A lock file records the packages for you. Look at `tidy-project/README.md`: it answers most of these.
+1. **Hidden packages:** `uv.lock` records **14 packages** even though `pyproject.toml` only asked for 2 (`pandas` and `matplotlib`). `renv.lock` records **18 packages** even though `code/analysis.R` only loads `ggplot2`. Almost every package relies on sub-packages underneath, and an update to any one of them can break your code or change a result.
+2. **Exact version:** `uv.lock` records `numpy` version **`1.26.4`** (before `NumPy 2.0` removed `np.NaN`). `renv.lock` records `ggplot2` version **`4.0.2`** (under R `4.5.2`).
+3. **The three handovers:**
+   - **A · Alex (`install pandas`):** installs *today's* newest versions — including updated sub-packages like `numpy 2.x` — so code that ran two years ago can crash or give different numbers.
+   - **B · Blair (450 MB `.venv` / `renv/library` zip):** an installed environment is huge and built for Blair's operating system, chip and local folder paths, so it breaks on another machine.
+   - **C · Casey (code + README + lock file):** works anywhere. The lock file is a tiny plain-text recipe, and `uv sync` or `renv::restore()` builds a fresh environment with the exact same versions.
 :::
 
 :::::
